@@ -138,6 +138,8 @@ h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.5}
 .btn-line{background:#06c755;color:#fff}
 .btn-ghost{border:1px solid var(--gold);color:var(--gold-l);background:rgba(201,165,85,.06)}
 .btn small{font-size:11px;font-weight:500;letter-spacing:.05em;display:block}
+.fv-cta .btn,.last-cta .btns .btn{flex-direction:column;gap:2px}
+.fv-cta .btn br,.last-cta .btns .btn br{display:none}
 
 /* ============ 固定ヘッダー & 常時表示予約バー ============ */
 .header{
@@ -329,9 +331,10 @@ h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.5}
 .last-cta .bg{position:absolute;inset:0;z-index:-1}
 .last-cta .bg .ph{position:absolute;inset:0;border:none;aspect-ratio:auto}
 .last-cta .bg::after{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg, rgba(12,13,16,.92) 0%, rgba(19,28,46,.85) 50%, rgba(12,13,16,.95) 100%);
+  content:"";position:absolute;inset:0;z-index:2;
+  background:linear-gradient(180deg, rgba(12,13,16,.92) 0%, rgba(19,28,46,.82) 50%, rgba(12,13,16,.95) 100%);
 }
+.last-cta .bg .ph>.slot{filter:brightness(.55) saturate(.75) blur(2px);transform:scale(1.02)}
 .last-cta h2{font-size:clamp(24px,6vw,36px);letter-spacing:.12em}
 .last-cta p{margin-top:14px;color:#d8d2c4;font-size:14px}
 .last-cta .btns{display:grid;gap:12px;max-width:420px;margin:34px auto 0}
