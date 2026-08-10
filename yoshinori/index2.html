@@ -199,6 +199,9 @@ body.menu-open .drawer{opacity:1;visibility:visible}
   object-fit:cover;object-position:65% center;filter:brightness(1.06);
 }
 @media(min-width:768px){.fv-bg .fv-img{object-position:center}}
+@media(max-width:767px){
+  .fv{align-items:center;min-height:86svh;padding:88px 0 48px}
+}
 .fv-bg::after{
   content:"";position:absolute;inset:0;
   background:linear-gradient(180deg, rgba(12,13,16,.34) 0%, rgba(12,13,16,.26) 40%, rgba(12,13,16,.94) 100%);
