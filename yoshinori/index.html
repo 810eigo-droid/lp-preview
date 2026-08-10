@@ -156,13 +156,35 @@ h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.5}
 .fixed-cta{
   position:fixed;bottom:0;left:0;right:0;z-index:100;
   display:grid;grid-template-columns:1fr 1fr;gap:8px;
-  padding:10px 12px calc(10px + env(safe-area-inset-bottom));
+  padding:5px 10px calc(5px + env(safe-area-inset-bottom));
   background:rgba(12,13,16,.92);backdrop-filter:blur(8px);
   border-top:1px solid rgba(201,165,85,.3);
 }
-.fixed-cta .btn{padding:13px 8px;font-size:13.5px;border-radius:3px}
+.fixed-cta .btn{padding:8px 6px;font-size:13px;border-radius:3px}
 @media(min-width:768px){
   .fixed-cta{left:auto;right:24px;bottom:24px;width:340px;border:1px solid rgba(201,165,85,.3);border-radius:6px}
+}
+
+
+/* ============ ハンバーガーメニュー ============ */
+.menu-btn{
+  width:40px;height:38px;background:none;border:1px solid rgba(201,165,85,.5);border-radius:3px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;
+}
+.menu-btn span{display:block;width:18px;height:1.5px;background:var(--gold-l);transition:.3s}
+body.menu-open .menu-btn span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+body.menu-open .menu-btn span:nth-child(2){opacity:0}
+body.menu-open .menu-btn span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.drawer{
+  position:fixed;inset:0;z-index:99;background:rgba(12,13,16,.96);backdrop-filter:blur(6px);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;
+  opacity:0;visibility:hidden;transition:opacity .3s, visibility .3s;
+}
+body.menu-open .drawer{opacity:1;visibility:visible}
+.drawer a{font-family:var(--serif);font-size:17px;letter-spacing:.15em;padding:10px 20px}
+.drawer .drawer-cta{
+  margin-top:16px;background:linear-gradient(135deg,var(--gold),#b08c3e);color:#181205;
+  border-radius:4px;padding:12px 36px;font-weight:700;
 }
 
 /* ============ ① ファーストビュー ============ */
@@ -355,8 +377,22 @@ h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.5}
 <!-- 固定ヘッダー -->
 <header class="header">
   <div class="logo">包丁人よしのり<small>SAPPORO・ODORI</small></div>
-  <a class="btn btn-gold" href="#reserve">ご予約</a>
+  <button class="menu-btn" aria-label="メニューを開く" onclick="document.body.classList.toggle('menu-open')">
+    <span></span><span></span><span></span>
+  </button>
 </header>
+
+<!-- 全画面メニュー -->
+<nav class="drawer" onclick="document.body.classList.remove('menu-open')">
+  <a href="#reason">選ばれる理由</a>
+  <a href="#shop">店舗紹介</a>
+  <a href="#course">宴会コース</a>
+  <a href="#dishes">人気料理</a>
+  <a href="#voice">お客様の声</a>
+  <a href="#faq">よくある質問</a>
+  <a href="#access">アクセス</a>
+  <a class="drawer-cta" href="#reserve">ご予約はこちら</a>
+</nav>
 
 <!-- 常時表示 予約バー -->
 <div class="fixed-cta">
@@ -385,7 +421,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.5}
 </section>
 
 <!-- ═══════════════ 選ばれる理由 ═══════════════ -->
-<section class="section reason">
+<section class="section reason" id="reason">
   <div class="inner">
     <div class="sec-head">
       <span class="en">Reasons</span>
@@ -421,7 +457,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.5}
 </section>
 
 <!-- ═══════════════ 店舗紹介 ═══════════════ -->
-<section class="section shop">
+<section class="section shop" id="shop">
   <div class="inner">
     <div class="sec-head">
       <span class="en">About</span>
@@ -530,7 +566,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.5}
 <!-- ═══════════════ 人気料理 ═══════════════ -->
 <section class="section">
   <div class="inner">
-    <div class="sec-head">
+    <div class="sec-head" id="dishes">
       <span class="en">Specialities</span>
       <h2>人気料理のご紹介</h2>
       <div class="rule"></div>
@@ -556,7 +592,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.5}
 </section>
 
 <!-- ═══════════════ お客様の声 ═══════════════ -->
-<section class="section voice">
+<section class="section voice" id="voice">
   <div class="inner">
     <div class="sec-head">
       <span class="en">Voice</span>
@@ -608,7 +644,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.5}
 </section>
 
 <!-- ═══════════════ よくある質問 ═══════════════ -->
-<section class="section" style="padding-top:0">
+<section class="section" style="padding-top:0" id="faq">
   <div class="inner">
     <div class="sec-head">
       <span class="en">FAQ</span>
