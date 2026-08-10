@@ -4,7 +4,9 @@
 
 | プレビュー | URL |
 |---|---|
-| 包丁人よしのり 宴会LP | https://810eigo-droid.github.io/lp-preview/yoshinori/ |
+| 包丁人よしのり 宴会LP(通常版・透かしなし) | https://810eigo-droid.github.io/lp-preview/yoshinori/ |
+| 同 サンプルA(全面ダーク・透かし入り) | https://810eigo-droid.github.io/lp-preview/yoshinori/index2.html |
+| 同 サンプルB(紺×白ミックス・透かし入り) | https://810eigo-droid.github.io/lp-preview/yoshinori/index3.html |
 
 ※ 各ページには `noindex` を入れてあり、検索エンジンには載らない。本公開時は本番サーバーへ移す。
 
