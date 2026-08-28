@@ -613,6 +613,21 @@ body.menu-open .drawer{opacity:1;visibility:visible}
   .info-note{font-size:12.5px}
   .voice-card .who{font-size:13px}
 }
+
+/* ============ トップへ戻るボタン ============ */
+.to-top{
+  position:fixed;right:12px;bottom:calc(64px + env(safe-area-inset-bottom));z-index:99;
+  width:42px;height:42px;border-radius:50%;cursor:pointer;
+  border:1px solid rgba(201,165,85,.65);background:rgba(12,13,16,.72);
+  color:var(--gold-l);font-size:18px;line-height:1;
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;visibility:hidden;transform:translateY(8px);
+  transition:opacity .3s, visibility .3s, transform .3s;
+  backdrop-filter:blur(4px);
+}
+body.scrolled .to-top{opacity:1;visibility:visible;transform:none}
+.to-top:active{background:rgba(201,165,85,.35)}
+@media(min-width:768px){.to-top{right:24px;bottom:96px}}
 </style>
 </head>
 <body>
@@ -1038,7 +1053,13 @@ body.menu-open .drawer{opacity:1;visibility:visible}
   <p style="margin-top:14px">© 包丁人よしのり All Rights Reserved.</p>
 </footer>
 
+<button type="button" class="to-top" aria-label="ページの先頭へ戻る" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
 <script>
+window.addEventListener('scroll', function () {
+  document.body.classList.toggle('scrolled', window.scrollY > window.innerHeight * 0.8);
+}, { passive: true });
+
 window.addEventListener('load', function () {
   // 舞い散る金箔
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
