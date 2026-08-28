@@ -31,6 +31,7 @@
     "postalCode": "060-0062",
     "addressCountry": "JP"
   },
+  "telephone": "+81-11-231-2495",
   "priceRange": "¥4,750〜¥6,400",
   "openingHours": "Mo-Su 17:00-22:30",
   "acceptsReservations": "True",
@@ -188,6 +189,46 @@ body.menu-open .drawer{opacity:1;visibility:visible}
 .drawer .drawer-cta{
   margin-top:16px;background:linear-gradient(135deg,var(--gold),#b08c3e);color:#181205;
   border-radius:4px;padding:12px 36px;font-weight:700;
+}
+
+
+/* ============ FV: 料金ボックス・アイコンバッジ・SP専用レイアウト ============ */
+.fv-shihan{margin-top:18px;font-size:12.5px;letter-spacing:.18em;color:var(--gold-l)}
+.fv-price{
+  margin-top:10px;display:inline-block;border:1px solid rgba(201,165,85,.65);
+  border-radius:4px;padding:12px 26px;background:rgba(12,13,16,.45);text-align:center;
+}
+.fv-price .line{display:block;font-size:12.5px;letter-spacing:.14em;color:#ddd6c8}
+.fv-price b{
+  font-family:var(--serif);font-size:30px;color:var(--gold-l);letter-spacing:.06em;line-height:1.4;
+}
+.fv-price b small{font-size:14px;letter-spacing:.02em}
+.fv-badges i{
+  font-style:normal;flex:none;width:22px;height:22px;border-radius:50%;
+  border:1px solid rgba(201,165,85,.6);color:var(--gold-l);
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:11px;margin-right:7px;font-family:var(--serif);
+}
+.fv-badges span{display:inline-flex;align-items:center}
+@media(max-width:767px){
+  /* モック準拠: 写真を最上部に全幅、以下中央揃え */
+  .fv{padding:64px 0 40px;min-height:0;align-items:flex-start}
+  .fv .inner{display:flex;flex-direction:column}
+  .fv .inner .fv-photo{order:-1;max-width:none;width:calc(100% + 40px);margin:0 -20px 26px}
+  .fv .inner .fv-photo .ph{border:none;border-radius:0;box-shadow:none;aspect-ratio:5/4}
+  .fv .inner .fv-photo .cap{display:none}
+  .fv-left{text-align:center}
+  .fv-lead{font-size:11px}
+  .fv-lead::before{content:"— "}
+  .fv-lead::after{content:" —"}
+  .fv h1{font-size:23px;line-height:1.8}
+  .fv-sub{font-size:12.5px}
+  .fv-price{display:block;margin:12px auto 0;max-width:340px}
+  .fv-badges{
+    display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:20px;text-align:left;
+  }
+  .fv-badges span{font-size:11px;padding:6px 10px}
+  .fv-cta{margin-top:24px;max-width:none}
 }
 
 /* ============ ① ファーストビュー ============ */
@@ -490,7 +531,7 @@ body.menu-open .drawer{opacity:1;visibility:visible}
 <!-- 常時表示 予約バー -->
 <div class="fixed-cta">
   <a class="btn btn-gold" href="https://www.hotpepper.jp/strJ000765175/yoyaku/hpds/?ROUTE_KBN=20&dspn=wk2YyLXBIqzGpVKQwRiVfOR4-gXHmbBTuTIRyrO_ui34Fw_Ff1JY7NBSjSiBqKMqxSYJiJutD4idLABW_xkUfQ" target="_blank" rel="noopener">ネット予約</a>
-  <a class="btn btn-ghost" href="tel:011-000-0000">電話予約</a>
+  <a class="btn btn-ghost" href="tel:011-231-2495">電話予約</a>
 </div>
 
 <!-- ═══════════════ ファーストビュー ═══════════════ -->
@@ -504,13 +545,17 @@ body.menu-open .drawer{opacity:1;visibility:visible}
     <p class="fv-lead">札幌・大通｜和食と日本酒の宴会処</p>
     <h1>旬を味わい、日本酒を愉しむ。<br><span class="gold">大人の宴会</span>を彩る和食店</h1>
     <p class="fv-sub">市場直送鮮魚 × 薩摩地鶏 × 天婦羅 × 全国の銘酒。<br>25名様〜お店丸ごと貸切OK。歓送迎会・懇親会・打ち上げに、<br>幹事様も安心の「包丁人よしのり」</p>
-    <p class="fv-sub" style="margin-top:10px;color:var(--gold-l)">北海道日本料理師範の本格和食<br><b style="font-size:1.25em">135分飲み放題付き宴会コース 4,750円(税込)〜</b></p>
+    <p class="fv-shihan">— 北海道日本料理師範の本格和食 —</p>
+    <div class="fv-price">
+      <span class="line">135分飲み放題付き宴会コース</span>
+      <b>4,750<small>円(税込)</small>〜</b>
+    </div>
     <div class="fv-badges">
-      <span>大通駅 徒歩5分</span><span>135分ロング飲み放題</span><span>2名様〜OK</span><span>25名様〜貸切(最大40名)</span><span>インボイス対応</span><span>喫煙可能</span>
+      <span><i>駅</i>大通駅 徒歩5分</span><span><i>飲</i>135分ロング飲み放題</span><span><i>宴</i>2名様〜OK</span><span><i>貸</i>25名様〜貸切(最大40名)</span><span><i>票</i>インボイス対応</span><span><i>煙</i>喫煙可能</span>
     </div>
     <div class="fv-cta">
       <a class="btn btn-gold" href="https://www.hotpepper.jp/strJ000765175/yoyaku/hpds/?ROUTE_KBN=20&dspn=wk2YyLXBIqzGpVKQwRiVfOR4-gXHmbBTuTIRyrO_ui34Fw_Ff1JY7NBSjSiBqKMqxSYJiJutD4idLABW_xkUfQ" target="_blank" rel="noopener">ネット予約はこちら<br><small>ホットペッパーグルメ・24時間受付</small></a>
-      <a class="btn btn-ghost" href="tel:011-000-0000">電話予約はこちら<br><small>011-000-0000（仮）</small></a>
+      <a class="btn btn-ghost" href="tel:011-231-2495">電話予約はこちら<br><small>011-231-2495</small></a>
     </div>
     </div>
 
@@ -850,11 +895,11 @@ body.menu-open .drawer{opacity:1;visibility:visible}
           <tr><th>アクセス</th><td>地下鉄大通駅より徒歩5分</td></tr>
           <tr><th>営業時間</th><td>月〜日・祝日・祝前日 17:00〜22:30<br>（料理L.O. 21:00／ドリンクL.O. 21:30）<br><span style="font-size:11.5px;color:var(--muted)">※営業時間が21時・22時までの場合もございます</span></td></tr>
           <tr><th>定休日</th><td>不定休</td></tr>
-          <tr><th>電話番号</th><td><a href="tel:011-000-0000">011-000-0000（仮）</a></td></tr>
+          <tr><th>電話番号</th><td><a href="tel:011-231-2495">011-231-2495</a></td></tr>
           <tr><th>席数</th><td>テーブル席20名様まで／宴会最大40名様<br>25名様〜貸切OK（20名様以上は現金会計）</td></tr>
           <tr><th>ご予約</th><td><a href="https://www.hotpepper.jp/strJ000765175/" target="_blank" rel="noopener" style="color:var(--gold-l);text-decoration:underline">ホットペッパーグルメ</a>／LINE（@axq7247r）</td></tr>
         </table>
-        <p class="info-note">※電話番号は公開前に正式な番号へ差し替えます。</p>
+        
       </div>
     </div>
   </div>
@@ -871,7 +916,7 @@ body.menu-open .drawer{opacity:1;visibility:visible}
     <p>札幌・大通での会社宴会、接待、歓送迎会は<br>「包丁人よしのり」にお任せください。</p>
     <div class="btns">
       <a class="btn btn-gold" href="https://www.hotpepper.jp/strJ000765175/yoyaku/hpds/?ROUTE_KBN=20&dspn=wk2YyLXBIqzGpVKQwRiVfOR4-gXHmbBTuTIRyrO_ui34Fw_Ff1JY7NBSjSiBqKMqxSYJiJutD4idLABW_xkUfQ" target="_blank" rel="noopener">ネット予約はこちら<br><small>ホットペッパーグルメ・24時間受付</small></a>
-      <a class="btn btn-ghost" href="tel:011-000-0000">電話で予約する<br><small class="tel-num">011-000-0000（仮）</small></a>
+      <a class="btn btn-ghost" href="tel:011-231-2495">電話で予約する<br><small class="tel-num">011-231-2495</small></a>
       <a class="btn btn-line" href="https://line.me/R/ti/p/@axq7247r" target="_blank" rel="noopener">LINEで予約・相談する<br><small>ID: @axq7247r</small></a>
     </div>
   </div>
