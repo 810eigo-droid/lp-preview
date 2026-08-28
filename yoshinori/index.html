@@ -193,6 +193,36 @@ body.menu-open .drawer{opacity:1;visibility:visible}
 
 
 
+
+/* ============ FV: 舞い散る金箔 ============ */
+.fv{overflow:hidden}
+.fv .inner{position:relative;z-index:2}
+.kinpaku{position:absolute;inset:0;z-index:1;pointer-events:none}
+.kinpaku i{
+  position:absolute;top:-6%;display:block;
+  border-radius:62% 38% 55% 45% / 48% 62% 38% 52%;
+  background:linear-gradient(135deg,#f7e7b5 0%,#d9b96a 45%,#c9a555 65%,#8f6f2e 100%);
+  will-change:transform;
+  animation-name:kinFall,kinTwinkle;
+  animation-timing-function:linear,ease-in-out;
+  animation-iteration-count:infinite,infinite;
+  opacity:0;
+}
+@keyframes kinFall{
+  0%{transform:translate3d(0,-6vh,0) rotate(0deg) rotateY(0deg);opacity:0}
+  5%{opacity:.85}
+  25%{transform:translate3d(22px,24vh,0) rotate(80deg) rotateY(170deg)}
+  50%{transform:translate3d(-18px,50vh,0) rotate(160deg) rotateY(340deg)}
+  75%{transform:translate3d(20px,78vh,0) rotate(250deg) rotateY(510deg)}
+  94%{opacity:.75}
+  100%{transform:translate3d(-10px,112vh,0) rotate(330deg) rotateY(680deg);opacity:0}
+}
+@keyframes kinTwinkle{
+  0%,100%{filter:brightness(.85)}
+  50%{filter:brightness(1.7) drop-shadow(0 0 3px rgba(240,220,160,.9))}
+}
+@media (prefers-reduced-motion: reduce){.kinpaku{display:none}}
+
 /* ============ FVアニメーション ============ */
 @keyframes fvFadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 @keyframes fvBurst{
@@ -1007,6 +1037,26 @@ body.menu-open .drawer{opacity:1;visibility:visible}
 
 <script>
 window.addEventListener('load', function () {
+  // 舞い散る金箔
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var fv = document.querySelector('.fv');
+    if (fv) {
+      var box = document.createElement('div');
+      box.className = 'kinpaku';
+      box.setAttribute('aria-hidden', 'true');
+      for (var i = 0; i < 14; i++) {
+        var f = document.createElement('i');
+        f.style.left = (Math.random() * 100) + '%';
+        f.style.width = (5 + Math.random() * 6) + 'px';
+        f.style.height = (7 + Math.random() * 7) + 'px';
+        f.style.animationDuration = (9 + Math.random() * 9) + 's, ' + (1.4 + Math.random() * 2.2) + 's';
+        f.style.animationDelay = (-Math.random() * 18) + 's, ' + (Math.random() * 2) + 's';
+        box.appendChild(f);
+      }
+      fv.insertBefore(box, fv.querySelector('.inner'));
+    }
+  }
+
   document.querySelectorAll('[data-slideshow]').forEach(function (ph) {
     var imgs = Array.prototype.filter.call(ph.querySelectorAll('img.slot'), function (im) { return im.isConnected && im.naturalWidth > 0; });
     if (imgs.length < 2) return;
