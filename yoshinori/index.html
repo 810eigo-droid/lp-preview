@@ -557,6 +557,9 @@ body.menu-open .drawer{opacity:1;visibility:visible}
 .cancel-box li{margin-left:1.3em;margin-bottom:6px}
 .ph>.slot{transition:opacity 1s ease}
 [data-slideshow]>.slot{object-position:center 40%}
+.fit-contain{background:#0d1524}
+.fit-contain>.slot{object-fit:contain;object-position:center}
+.fit-contain:has(>.slot)::before{display:none}
 .ss-arrow{
   position:absolute;top:50%;transform:translateY(-50%);z-index:3;
   width:36px;height:36px;border-radius:50%;cursor:pointer;
@@ -689,7 +692,7 @@ body.menu-open .drawer{opacity:1;visibility:visible}
         <span class="no">壱</span>
         <h3>北海道日本料理師範による本格和食</h3>
         <p>熟練の包丁人が真心こめて作ります。旬魚のお造り、薩摩地鶏、揚げたての天婦羅——札幌の宴会にふさわしい確かな味をお約束します。</p>
-        <div class="ph r-3x2" style="margin-top:14px"><span class="ph-num">【photo03.webp】</span><span class="ph-lbl">コース写真</span><img class="slot" src="images/photo03.webp" alt="宴会コースの料理(秋冬限定お鍋付き)" loading="lazy" onerror="this.remove()"></div>
+        <div class="ph r-1x1 fit-contain" style="margin:14px auto 0;max-width:480px"><span class="ph-num">【photo03.webp】</span><span class="ph-lbl">コース写真</span><img class="slot" src="images/photo03.webp" alt="宴会コースの料理(秋冬限定お鍋付き)" loading="lazy" onerror="this.remove()"></div>
         <p style="font-size:11.5px;margin-top:6px;color:var(--muted)">※写真は秋冬限定・お鍋付きのコース例です</p>
       </div>
       <div class="reason-card">
@@ -754,7 +757,7 @@ body.menu-open .drawer{opacity:1;visibility:visible}
     <div class="course-list" style="grid-template-columns:1fr">
 
       <div class="course-card reco">
-        <div class="ph r-1x1" data-slideshow style="max-width:560px;margin:0 auto">
+        <div class="ph r-1x1 fit-contain" data-slideshow style="max-width:560px;margin:0 auto">
           <span class="ph-num">【photo09 / photo10 / photo10-1 / photo10-2】</span><span class="ph-lbl">4,750円コース写真(あるものだけ表示)</span>
           <img class="slot" src="images/photo09.webp" alt="全8品和食宴会コースの料理" onerror="this.remove()">
           <img class="slot" src="images/photo10.webp" alt="全8品和食宴会コースの料理 その2" onerror="this.remove()">
@@ -772,7 +775,7 @@ body.menu-open .drawer{opacity:1;visibility:visible}
       </div>
 
       <div class="course-card">
-        <div class="ph r-1x1" data-slideshow style="max-width:560px;margin:0 auto">
+        <div class="ph r-1x1 fit-contain" data-slideshow style="max-width:560px;margin:0 auto">
           <span class="ph-num">【photo11.webp / photo12.webp】</span><span class="ph-lbl">5,400円コース写真 2枚</span>
           <img class="slot" src="images/photo11.webp" alt="全9品贅沢和食コースの料理" onerror="this.remove()">
           <img class="slot" src="images/photo12.webp" alt="全9品贅沢和食コースの料理 その2" onerror="this.remove()">
@@ -788,7 +791,7 @@ body.menu-open .drawer{opacity:1;visibility:visible}
       </div>
 
       <div class="course-card">
-        <div class="ph r-1x1" data-slideshow style="max-width:560px;margin:0 auto">
+        <div class="ph r-1x1 fit-contain" data-slideshow style="max-width:560px;margin:0 auto">
           <span class="ph-num">【photo13.webp / photo14.webp】</span><span class="ph-lbl">6,400円コース写真 2枚</span>
           <img class="slot" src="images/photo13.webp" alt="全10品特選和食コースの料理" onerror="this.remove()">
           <img class="slot" src="images/photo14.webp" alt="全10品特選和食コースの料理 その2" onerror="this.remove()">
