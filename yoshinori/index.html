@@ -314,7 +314,11 @@ body.menu-open .drawer{opacity:1;visibility:visible}
   padding:2px 10px;border-radius:2px;margin-left:10px;vertical-align:2px;letter-spacing:.1em;
 }
 .voice-card p{font-size:13.5px;color:#d8d2c4}
-.voice-card .who{margin-top:12px;font-size:12px;color:var(--muted)}
+.voice-card .who{margin-top:14px;font-size:12px;color:var(--muted);display:flex;align-items:center;gap:10px}
+.voice-card .who .av{
+  width:46px;height:46px;border-radius:50%;object-fit:cover;flex:none;
+  border:1px solid rgba(201,165,85,.55);background:var(--navy-2);
+}
 
 /* ============ ⑦ 安心情報 ============ */
 .safety-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:720px;margin:0 auto}
@@ -674,22 +678,22 @@ body.menu-open .drawer{opacity:1;visibility:visible}
       <div class="voice-card">
         <div class="stars">★★★★★<span class="scene">会社宴会</span></div>
         <p>部署の宴会で20名で利用しました。個々の料理が宴会コースとは思えないクオリティで、上司にも「良い店を見つけたね」と褒められました。幹事として鼻が高かったです。</p>
-        <div class="who">40代・男性（会社員）</div>
+        <div class="who"><img class="av" src="images/photo19.webp" alt="" loading="lazy" onerror="this.remove()"><span>40代・男性（会社員）</span></div>
       </div>
       <div class="voice-card">
         <div class="stars">★★★★★<span class="scene">接待利用</span></div>
         <p>取引先との会食で利用。落ち着いた店内と丁寧な接客で、商談もスムーズに進みました。インボイス対応なのも会社利用にはありがたい。接待の定番にさせてもらいます。</p>
-        <div class="who">50代・男性（営業職）</div>
+        <div class="who"><img class="av" src="images/photo20.webp" alt="" loading="lazy" onerror="this.remove()"><span>50代・男性（営業職）</span></div>
       </div>
       <div class="voice-card">
         <div class="stars">★★★★★<span class="scene">日本酒好き</span></div>
         <p>日本酒の品揃えが素晴らしい。飲み放題に銘柄日本酒が13種も入っているのは驚きでした。札幌で日本酒を飲むならここ、と自信を持って言えるお店です。</p>
-        <div class="who">60代・男性</div>
+        <div class="who"><img class="av" src="images/photo21.webp" alt="" loading="lazy" onerror="this.remove()"><span>60代・男性</span></div>
       </div>
       <div class="voice-card">
         <div class="stars">★★★★★<span class="scene">歓送迎会</span></div>
         <p>異動する同僚の送別会で貸切利用しました。他のお客様を気にせず盛り上がれて、135分の飲み放題もたっぷり。大通駅から近く、二次会への移動も楽でした。</p>
-        <div class="who">40代・女性（会社員）</div>
+        <div class="who"><img class="av" src="images/photo22.webp" alt="" loading="lazy" onerror="this.remove()"><span>40代・女性（会社員）</span></div>
       </div>
     </div>
   </div>
