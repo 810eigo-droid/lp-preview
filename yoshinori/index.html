@@ -192,6 +192,66 @@ body.menu-open .drawer{opacity:1;visibility:visible}
 }
 
 
+
+/* ============ FVアニメーション ============ */
+@keyframes fvFadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes fvBurst{
+  0%{opacity:0;transform:scale(.6);filter:blur(4px)}
+  55%{opacity:1;transform:scale(1.14);filter:blur(0)}
+  75%{transform:scale(.97)}
+  100%{opacity:1;transform:scale(1)}
+}
+@keyframes fvFlash{
+  0%{opacity:0;transform:translate(-50%,-50%) scale(.4)}
+  35%{opacity:.75}
+  100%{opacity:0;transform:translate(-50%,-50%) scale(2.1)}
+}
+@keyframes fvShine{0%{background-position:130% 0}100%{background-position:-70% 0}}
+@keyframes iconPulse{
+  0%{box-shadow:0 0 0 0 rgba(201,165,85,.5)}
+  70%{box-shadow:0 0 0 8px rgba(201,165,85,0)}
+  100%{box-shadow:0 0 0 0 rgba(201,165,85,0)}
+}
+/* 見出し: フレーズごとに時間差で登場 */
+.fv h1 .ph1{opacity:0;animation:fvFadeUp .7s cubic-bezier(.2,.7,.3,1) forwards}
+.fv h1 .ph1:nth-child(1){animation-delay:.2s}
+.fv h1 .ph1:nth-child(2){animation-delay:.38s}
+/* 3フレーズ目(大人の宴会を彩る和食店)はバースト */
+.fv h1 .ph1:nth-child(4){animation-name:fvBurst;animation-duration:.85s;animation-delay:.75s;position:relative}
+.fv h1 .ph1:nth-child(4)::before{
+  content:"";position:absolute;left:50%;top:50%;width:130%;aspect-ratio:1;
+  transform:translate(-50%,-50%);pointer-events:none;opacity:0;
+  background:radial-gradient(closest-side, rgba(230,207,150,.55), rgba(230,207,150,0) 70%);
+  animation:fvFlash .9s ease-out 1.05s 1;
+}
+/* 金文字は着地後もきらめきが流れる */
+.fv h1 .gold{
+  background:linear-gradient(100deg,#c9a555 25%,#fff3cf 42%,#e6cf96 50%,#fff3cf 58%,#c9a555 75%);
+  background-size:220% 100%;
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:fvShine 3.4s linear 1.9s infinite;
+}
+/* バッジ: 順番にふわっと登場 + アイコンの金の波紋 */
+.fv-badges span{opacity:0;animation:fvFadeUp .55s cubic-bezier(.2,.7,.3,1) forwards}
+.fv-badges span:nth-child(1){animation-delay:1.15s}
+.fv-badges span:nth-child(2){animation-delay:1.27s}
+.fv-badges span:nth-child(3){animation-delay:1.39s}
+.fv-badges span:nth-child(4){animation-delay:1.51s}
+.fv-badges span:nth-child(5){animation-delay:1.63s}
+.fv-badges span:nth-child(6){animation-delay:1.75s}
+.fv-badges i{animation:iconPulse 2.8s ease-out infinite}
+.fv-badges span:nth-child(2) i{animation-delay:.45s}
+.fv-badges span:nth-child(3) i{animation-delay:.9s}
+.fv-badges span:nth-child(4) i{animation-delay:1.35s}
+.fv-badges span:nth-child(5) i{animation-delay:1.8s}
+.fv-badges span:nth-child(6) i{animation-delay:2.25s}
+/* 動きを減らす設定のユーザーには静止表示 */
+@media (prefers-reduced-motion: reduce){
+  .fv h1 .ph1,.fv-badges span{animation:none;opacity:1}
+  .fv h1 .ph1:nth-child(4)::before,.fv-badges i{animation:none}
+  .fv h1 .gold{animation:none;background:none;color:var(--gold-l)}
+}
+
 /* ============ FV: 料金ボックス・アイコンバッジ・SP専用レイアウト ============ */
 .fv h1 .ph1,.fv-sub span{display:inline-block}
 .br-sp{display:none}
