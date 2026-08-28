@@ -664,6 +664,29 @@ body.scrolled .to-top{opacity:1;visibility:visible;transform:none}
 @keyframes rvPop{0%{transform:scale(.55)}60%{transform:scale(1.08)}100%{transform:scale(1)}}
 .btn.rv.in:hover{transform:translateY(-1px)}
 @media (prefers-reduced-motion: reduce){.rv{opacity:1;transform:none;transition:none}.rv-burst.in{animation:none}}
+
+/* ============ こだわりチップのプチプチ登場 / 口コミの流れる表示 ============ */
+.pops span{opacity:0;transform:scale(.2)}
+.pops.in span{animation:chipPop .6s cubic-bezier(.34,1.56,.64,1) forwards}
+.pops.in span:nth-child(2){animation-delay:.14s}
+.pops.in span:nth-child(3){animation-delay:.28s}
+.pops.in span:nth-child(4){animation-delay:.42s}
+@keyframes chipPop{
+  0%{opacity:0;transform:scale(.2)}
+  65%{opacity:1;transform:scale(1.18)}
+  82%{transform:scale(.94)}
+  100%{opacity:1;transform:scale(1)}
+}
+.voice-card p{clip-path:inset(-2px 101% -2px -2px);transition:clip-path 1.2s ease .4s}
+.voice-card.in p{clip-path:inset(-2px -2px -2px -2px)}
+.rv-flow{clip-path:inset(-8px 101% -8px -8px);transition:clip-path 1.4s ease .15s}
+.rv-flow.in{clip-path:inset(-8px)}
+@media (prefers-reduced-motion: reduce){
+  .rv-flow{clip-path:none;transition:none}
+  .pops span{opacity:1;transform:none}
+  .pops.in span{animation:none}
+  .voice-card p{clip-path:none;transition:none}
+}
 </style>
 </head>
 <body>
@@ -785,7 +808,7 @@ body.scrolled .to-top{opacity:1;visibility:visible;transform:none}
       <p style="margin-top:14px">大通駅徒歩5分の好立地。暖簾をくぐると、そこには肩肘張らずに本格和食を楽しめる空間があります。旬魚や薩摩地鶏、季節の天婦羅など、四季折々の味覚を職人の技で丁寧に仕上げます。全国各地から厳選した日本酒は30種類以上をご用意。</p>
       <p style="margin-top:14px">接待や会食はもちろん、会社宴会、同窓会、ご友人との集まりまで幅広く対応。落ち着いた和の空間で、本格和食と銘酒を気軽にお楽しみいただけます。</p>
       <p style="margin-top:14px"><b>「美味しい料理で宴会を成功させたい」</b><br>そんな幹事様に選ばれ続けている和食店です。</p>
-      <div class="kodawari">
+      <div class="kodawari pops">
         <span>旬の食材</span><span>職人の技</span><span>和の空間</span><span>幹事様も安心</span>
       </div>
     </div>
@@ -930,22 +953,22 @@ body.scrolled .to-top{opacity:1;visibility:visible;transform:none}
     <p class="voice-note">※以下はご利用シーンのイメージです</p>
 
     <div class="voice-grid">
-      <div class="voice-card">
+      <div class="voice-card rv rv-b" style="transition-delay:0.0s">
         <div class="stars">★★★★★<span class="scene">会社宴会</span></div>
         <p>部署の宴会で20名で利用しました。個々の料理が宴会コースとは思えないクオリティで、上司にも「良い店を見つけたね」と褒められました。幹事として鼻が高かったです。</p>
         <div class="who"><img class="av" src="images/photo19.webp" alt="" loading="lazy" onerror="this.remove()"><span>40代・男性（会社員）</span></div>
       </div>
-      <div class="voice-card">
+      <div class="voice-card rv rv-b" style="transition-delay:0.15s">
         <div class="stars">★★★★★<span class="scene">接待利用</span></div>
         <p>取引先との会食で利用。落ち着いた店内と丁寧な接客で、商談もスムーズに進みました。インボイス対応なのも会社利用にはありがたい。接待の定番にさせてもらいます。</p>
         <div class="who"><img class="av" src="images/photo20.webp" alt="" loading="lazy" onerror="this.remove()"><span>50代・男性（営業職）</span></div>
       </div>
-      <div class="voice-card">
+      <div class="voice-card rv rv-b" style="transition-delay:0.3s">
         <div class="stars">★★★★★<span class="scene">日本酒好き</span></div>
         <p>日本酒の品揃えが素晴らしい。飲み放題に銘柄日本酒が13種も入っているのは驚きでした。札幌で日本酒を飲むならここ、と自信を持って言えるお店です。</p>
         <div class="who"><img class="av" src="images/photo21.webp" alt="" loading="lazy" onerror="this.remove()"><span>60代・男性</span></div>
       </div>
-      <div class="voice-card">
+      <div class="voice-card rv rv-b" style="transition-delay:0.44999999999999996s">
         <div class="stars">★★★★★<span class="scene">歓送迎会</span></div>
         <p>異動する同僚の送別会で貸切利用しました。他のお客様を気にせず盛り上がれて、135分の飲み放題もたっぷり。大通駅から近く、二次会への移動も楽でした。</p>
         <div class="who"><img class="av" src="images/photo22.webp" alt="" loading="lazy" onerror="this.remove()"><span>40代・女性（会社員）</span></div>
@@ -1081,8 +1104,8 @@ body.scrolled .to-top{opacity:1;visibility:visible;transform:none}
   </div>
   <div class="inner">
     <p class="sec-head en" style="color:var(--gold);letter-spacing:.35em;font-family:var(--serif);font-size:11px;margin-bottom:16px">Reservation</p>
-    <h2>大切な宴会を、<br>特別なひとときへ。</h2>
-    <p>札幌・大通での会社宴会、接待、歓送迎会は<br>「包丁人よしのり」にお任せください。</p>
+    <h2 class="rv-flow">大切な宴会を、<br>特別なひとときへ。</h2>
+    <p class="rv-flow" style="transition-delay:.7s">札幌・大通での会社宴会、接待、歓送迎会は<br>「包丁人よしのり」にお任せください。</p>
     <div class="btns">
       <a class="btn btn-gold rv rv-l" href="https://www.hotpepper.jp/strJ000765175/yoyaku/hpds/?ROUTE_KBN=20&dspn=wk2YyLXBIqzGpVKQwRiVfOR4-gXHmbBTuTIRyrO_ui34Fw_Ff1JY7NBSjSiBqKMqxSYJiJutD4idLABW_xkUfQ" target="_blank" rel="noopener">ネット予約はこちら<br><small>ホットペッパーグルメ・24時間受付</small></a>
       <a class="btn btn-ghost rv rv-r" href="tel:011-231-2495">電話で予約する<br><small class="tel-num">011-231-2495</small></a>
@@ -1126,7 +1149,7 @@ window.addEventListener('load', function () {
   }
 
   // ボタンのスクロール登場
-  var rvEls = document.querySelectorAll('.rv');
+  var rvEls = document.querySelectorAll('.rv,.pops,.rv-flow');
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
     rvEls.forEach(function (el) { el.classList.add('in'); });
   } else {
