@@ -27,7 +27,7 @@
 | photo06.webp | 人物写真(店舗紹介) | 1086×1448 縦 |
 | photo07-1.webp / photo07-2.webp / photo07-3.webp | 店内写真②(店舗紹介・3枚) | 正方形 |
 | photo08.webp | 春夏のコース写真 | 1086×1448 縦 |
-| photo09.webp / photo10.webp | 4,750円コース 2枚(スライドショー) | 縦 / 正方形 |
+| photo09.webp / photo10-1.webp / photo10-2.webp | 4,750円コース 3枚(スライドショー) | 縦 / - / - |
 | photo11.webp / photo12.webp | 5,400円コース 2枚(スライドショー) | 正方形 / 縦 |
 | photo13.webp / photo14.webp | 6,400円コース 2枚(スライドショー) | 正方形 / 縦 |
 | photo15.webp | 人気料理: 刺身盛り合わせ | 1448×1086 |
