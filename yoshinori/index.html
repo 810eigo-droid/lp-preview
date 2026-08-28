@@ -204,6 +204,17 @@ body.menu-open .drawer{opacity:1;visibility:visible}
 @media(max-width:767px){
   .fv{align-items:center;min-height:86svh;padding:88px 0 48px}
 }
+/* FV 2枚構成: 背景 + 額装入口写真 */
+.fv-photo{margin:30px auto 0;max-width:300px;width:100%}
+.fv-photo .ph{
+  border:1px solid rgba(201,165,85,.6);border-radius:4px;
+  box-shadow:0 14px 44px rgba(0,0,0,.55);
+}
+.fv-photo .cap{font-size:10.5px;color:var(--muted);letter-spacing:.08em;margin-top:9px;text-align:center}
+@media(min-width:900px){
+  .fv .inner{display:grid;grid-template-columns:1fr 360px;gap:56px;align-items:center}
+  .fv-photo{margin:0;max-width:360px;justify-self:end}
+}
 .fv-bg::after{
   content:"";position:absolute;inset:0;
   background:linear-gradient(180deg, rgba(12,13,16,.34) 0%, rgba(12,13,16,.26) 40%, rgba(12,13,16,.94) 100%);
@@ -442,10 +453,11 @@ body.menu-open .drawer{opacity:1;visibility:visible}
 <!-- ═══════════════ ファーストビュー ═══════════════ -->
 <section class="fv">
   <div class="fv-bg">
-    <div class="ph"><span class="ph-num">【photo01.webp】</span><span class="ph-lbl">店舗入口写真（正方形可）</span></div>
-    <img class="fv-img" src="images/photo01.webp" alt="包丁人よしのり 店舗入口" onerror="this.remove()">
+    <div class="ph"><span class="ph-num">【photo00.webp】</span><span class="ph-lbl">FV背景（ぼかし店内・横長16:9）</span></div>
+    <img class="fv-img" src="images/photo00.webp" alt="" onerror="this.remove()">
   </div>
   <div class="inner">
+    <div class="fv-left">
     <p class="fv-lead">札幌・大通｜和食と日本酒の宴会処</p>
     <h1>旬を味わい、日本酒を愉しむ。<br><span class="gold">大人の宴会</span>を彩る和食店</h1>
     <p class="fv-sub">市場直送鮮魚 × 薩摩地鶏 × 天婦羅 × 全国の銘酒。<br>25名様〜お店丸ごと貸切OK。歓送迎会・懇親会・打ち上げに、<br>幹事様も安心の「包丁人よしのり」</p>
@@ -456,6 +468,13 @@ body.menu-open .drawer{opacity:1;visibility:visible}
     <div class="fv-cta">
       <a class="btn btn-gold" href="https://www.hotpepper.jp/strJ000765175/yoyaku/hpds/?ROUTE_KBN=20&dspn=wk2YyLXBIqzGpVKQwRiVfOR4-gXHmbBTuTIRyrO_ui34Fw_Ff1JY7NBSjSiBqKMqxSYJiJutD4idLABW_xkUfQ" target="_blank" rel="noopener">ネット予約はこちら<br><small>ホットペッパーグルメ・24時間受付</small></a>
       <a class="btn btn-ghost" href="tel:011-000-0000">電話予約はこちら<br><small>011-000-0000（仮）</small></a>
+    </div>
+    </div>
+
+    <!-- 入口写真(額装) -->
+    <div class="fv-photo">
+      <div class="ph r-1x1"><span class="ph-num">【photo01.webp】</span><span class="ph-lbl">店舗入口写真（正方形）</span><img class="slot" src="images/photo01.webp" alt="包丁人よしのり 店舗入口" onerror="this.remove()"></div>
+      <p class="cap">札幌市中央区南2条西2丁目11-5 札幌NSビル2F</p>
     </div>
   </div>
 </section>
