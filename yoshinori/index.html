@@ -444,6 +444,25 @@ body.menu-open .drawer{opacity:1;visibility:visible}
 .ss-dot.on{background:var(--gold);transform:scale(1.3)}
 @media(min-width:640px){.dish-grid{grid-template-columns:repeat(2,1fr)}}
 @media(min-width:960px){.dish-grid{grid-template-columns:repeat(4,1fr)}}
+
+/* ============ 紺×白ミックス: 白セクション ============ */
+.light{background:#f7f3ea;color:#3a4353}
+.light h2,.light h3{color:#1a2740}
+.light .sec-head .en{color:#a9843c}
+.light .sec-head .rule,.light .sec-head .rule::after{background:#b08c3e}
+.light .reason-card{background:#fff;border-color:rgba(176,140,62,.35);box-shadow:0 2px 14px rgba(26,39,64,.06)}
+.light .reason-card p{color:#5a6172}
+.light .reason-card .no{color:#a9843c}
+.light .shop-copy p{color:#4a5364}
+.light .kodawari span{color:#8a6b28;border-color:rgba(176,140,62,.55);background:#fff}
+.light .dish p{color:#5a6172}
+.light .safety-item{background:#fff;border-color:rgba(176,140,62,.35);color:#2a3446;box-shadow:0 2px 14px rgba(26,39,64,.05)}
+.light .faq-item{background:#fff;border-color:rgba(176,140,62,.3)}
+.light .faq-item summary{color:#1a2740}
+.light .faq-item summary .q,.light .faq-item summary::after{color:#a9843c}
+.light .faq-item .a{color:#4a5364}
+.light .faq-item .a .m{color:#a9843c}
+.light .ph{border-color:rgba(176,140,62,.4)}
 </style>
 </head>
 <body>
@@ -504,7 +523,7 @@ body.menu-open .drawer{opacity:1;visibility:visible}
 </section>
 
 <!-- ═══════════════ 選ばれる理由 ═══════════════ -->
-<section class="section reason" id="reason">
+<section class="section reason light" id="reason">
   <div class="inner">
     <div class="sec-head">
       <span class="en">Reasons</span>
@@ -539,7 +558,7 @@ body.menu-open .drawer{opacity:1;visibility:visible}
 </section>
 
 <!-- ═══════════════ 店舗紹介 ═══════════════ -->
-<section class="section shop" id="shop">
+<section class="section shop light" id="shop">
   <div class="inner">
     <div class="sec-head">
       <span class="en">About</span>
@@ -656,7 +675,7 @@ body.menu-open .drawer{opacity:1;visibility:visible}
 </section>
 
 <!-- ═══════════════ 人気料理 ═══════════════ -->
-<section class="section light-none">
+<section class="section light">
   <div class="inner">
     <div class="sec-head" id="dishes">
       <span class="en">Specialities</span>
@@ -722,7 +741,7 @@ body.menu-open .drawer{opacity:1;visibility:visible}
 </section>
 
 <!-- ═══════════════ 安心情報 ═══════════════ -->
-<section class="section">
+<section class="section light">
   <div class="inner">
     <div class="sec-head">
       <span class="en">Information</span>
@@ -760,7 +779,7 @@ body.menu-open .drawer{opacity:1;visibility:visible}
 </section>
 
 <!-- ═══════════════ よくある質問 ═══════════════ -->
-<section class="section" style="padding-top:64px" id="faq">
+<section class="section light" style="padding-top:64px" id="faq">
   <div class="inner">
     <div class="sec-head">
       <span class="en">FAQ</span>
