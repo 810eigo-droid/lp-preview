@@ -651,6 +651,19 @@ body.scrolled .to-top{opacity:1;visibility:visible;transform:none}
   text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(201,165,85,.6);
 }
 .voice-note{text-align:center;font-size:11.5px;color:var(--muted);margin-bottom:26px}
+
+/* ============ ボタンのスクロール登場アニメーション ============ */
+.rv{opacity:0;transition:opacity .65s cubic-bezier(.2,.7,.3,1), transform .65s cubic-bezier(.2,.7,.3,1)}
+.rv-l{transform:translateX(-70px)}
+.rv-r{transform:translateX(70px)}
+.rv-t{transform:translateY(-46px)}
+.rv-b{transform:translateY(46px)}
+.rv-burst{transform:scale(.55)}
+.rv.in{opacity:1;transform:translate(0,0) scale(1)}
+.rv-burst.in{animation:rvPop .7s cubic-bezier(.2,.7,.3,1)}
+@keyframes rvPop{0%{transform:scale(.55)}60%{transform:scale(1.08)}100%{transform:scale(1)}}
+.btn.rv.in:hover{transform:translateY(-1px)}
+@media (prefers-reduced-motion: reduce){.rv{opacity:1;transform:none;transition:none}.rv-burst.in{animation:none}}
 </style>
 </head>
 <body>
@@ -702,8 +715,8 @@ body.scrolled .to-top{opacity:1;visibility:visible;transform:none}
       <span><i>駅</i>大通駅 徒歩5分</span><span><i>飲</i>135分ロング飲み放題</span><span><i>宴</i>2名様〜OK</span><span><i>貸</i>25名様〜貸切(最大40名)</span><span><i>票</i>インボイス対応</span><span><i>煙</i>喫煙可能</span>
     </div>
     <div class="fv-cta">
-      <a class="btn btn-gold" href="https://www.hotpepper.jp/strJ000765175/yoyaku/hpds/?ROUTE_KBN=20&dspn=wk2YyLXBIqzGpVKQwRiVfOR4-gXHmbBTuTIRyrO_ui34Fw_Ff1JY7NBSjSiBqKMqxSYJiJutD4idLABW_xkUfQ" target="_blank" rel="noopener">ネット予約はこちら<br><small>ホットペッパーグルメ・24時間受付</small></a>
-      <a class="btn btn-line" href="https://line.me/R/ti/p/@axq7247r" target="_blank" rel="noopener">LINEで予約・相談する<br><small>友だち追加でかんたん予約</small></a>
+      <a class="btn btn-gold rv rv-l" style="transition-delay:1.95s" href="https://www.hotpepper.jp/strJ000765175/yoyaku/hpds/?ROUTE_KBN=20&dspn=wk2YyLXBIqzGpVKQwRiVfOR4-gXHmbBTuTIRyrO_ui34Fw_Ff1JY7NBSjSiBqKMqxSYJiJutD4idLABW_xkUfQ" target="_blank" rel="noopener">ネット予約はこちら<br><small>ホットペッパーグルメ・24時間受付</small></a>
+      <a class="btn btn-line rv rv-r" style="transition-delay:2.1s" href="https://line.me/R/ti/p/@axq7247r" target="_blank" rel="noopener">LINEで予約・相談する<br><small>友だち追加でかんたん予約</small></a>
     </div>
     </div>
 
@@ -809,7 +822,7 @@ body.scrolled .to-top{opacity:1;visibility:visible;transform:none}
           <p class="course-price">お一人様 <b>4,750</b> 円（税込）</p>
           <p class="course-desc">旬魚のお造り、薩摩地鶏のタタキ、職人仕込みの天婦羅など自慢の料理をバランスよく。春夏はサラダ、秋冬はお鍋に変更となります。</p>
           <p class="course-scene"><b>飲み放題：</b>基本飲み放題付き（サッポロ北海道生搾り、北の勝・大雪の蔵含む日本酒13種、焼酎20種、果実酒14種）<br>※金曜日・土曜日・祝前日は120分</p>
-          <a class="btn btn-gold" href="https://www.hotpepper.jp/strJ000765175/yoyaku/hpds/?ROUTE_KBN=20&dspn=wk2YyLXBIqzGpVKQwRiVfOR4-gXHmbBTuTIRyrO_ui34Fw_Ff1JY7NBSjSiBqKMqxSYJiJutD4idLABW_xkUfQ" target="_blank" rel="noopener">このコースを予約する</a>
+          <a class="btn btn-gold rv rv-l" href="https://www.hotpepper.jp/strJ000765175/yoyaku/hpds/?ROUTE_KBN=20&dspn=wk2YyLXBIqzGpVKQwRiVfOR4-gXHmbBTuTIRyrO_ui34Fw_Ff1JY7NBSjSiBqKMqxSYJiJutD4idLABW_xkUfQ" target="_blank" rel="noopener">このコースを予約する</a>
         </div>
       </div>
 
@@ -825,7 +838,7 @@ body.scrolled .to-top{opacity:1;visibility:visible;transform:none}
           <p class="course-price">お一人様 <b>5,400</b> 円（税込）</p>
           <p class="course-desc">歓送迎会に最適。活アワビ、薩摩地鶏、旬魚のお造りなど人気食材を贅沢に。春夏はサラダ、秋冬はお鍋に変更となります。</p>
           <p class="course-scene"><b>飲み放題：</b>基本飲み放題込み。ご予算に合わせて＋300円〜1,100円でドリンクのさらなるグレードアップが可能。</p>
-          <a class="btn btn-gold" href="https://www.hotpepper.jp/strJ000765175/yoyaku/hpds/?ROUTE_KBN=20&dspn=wk2YyLXBIqzGpVKQwRiVfOR4-gXHmbBTuTIRyrO_ui34Fw_Ff1JY7NBSjSiBqKMqxSYJiJutD4idLABW_xkUfQ" target="_blank" rel="noopener">このコースを予約する</a>
+          <a class="btn btn-gold rv rv-r" href="https://www.hotpepper.jp/strJ000765175/yoyaku/hpds/?ROUTE_KBN=20&dspn=wk2YyLXBIqzGpVKQwRiVfOR4-gXHmbBTuTIRyrO_ui34Fw_Ff1JY7NBSjSiBqKMqxSYJiJutD4idLABW_xkUfQ" target="_blank" rel="noopener">このコースを予約する</a>
         </div>
       </div>
 
@@ -841,7 +854,7 @@ body.scrolled .to-top{opacity:1;visibility:visible;transform:none}
           <p class="course-price">お一人様 <b>6,400</b> 円（税込）</p>
           <p class="course-desc">最高ランク。市場直送の旬魚、活鮑、薩摩地鶏、厳選和牛など職人が仕上げる逸品料理を堪能。春夏はサラダ、秋冬はお鍋に変更となります。</p>
           <p class="course-scene"><b>飲み放題：</b>基本飲み放題込み。特別な席に合わせてプレミアムな飲み放題への変更も人気。</p>
-          <a class="btn btn-gold" href="https://www.hotpepper.jp/strJ000765175/yoyaku/hpds/?ROUTE_KBN=20&dspn=wk2YyLXBIqzGpVKQwRiVfOR4-gXHmbBTuTIRyrO_ui34Fw_Ff1JY7NBSjSiBqKMqxSYJiJutD4idLABW_xkUfQ" target="_blank" rel="noopener">このコースを予約する</a>
+          <a class="btn btn-gold rv rv-b" href="https://www.hotpepper.jp/strJ000765175/yoyaku/hpds/?ROUTE_KBN=20&dspn=wk2YyLXBIqzGpVKQwRiVfOR4-gXHmbBTuTIRyrO_ui34Fw_Ff1JY7NBSjSiBqKMqxSYJiJutD4idLABW_xkUfQ" target="_blank" rel="noopener">このコースを予約する</a>
         </div>
       </div>
     </div>
@@ -910,8 +923,8 @@ body.scrolled .to-top{opacity:1;visibility:visible;transform:none}
       <div class="rule"></div>
     </div>
 
-    <a class="greview" href="https://www.google.com/maps/search/?api=1&query=%E5%8C%85%E4%B8%81%E4%BA%BA%E3%82%88%E3%81%97%E3%81%AE%E3%82%8A%20%E6%9C%AD%E5%B9%8C" target="_blank" rel="noopener">
-      <span class="score"><span class="stars">★</span> 4.1 <small>／ Googleの口コミ 103件</small></span>
+    <a class="greview rv rv-burst" href="https://www.google.com/maps/search/?api=1&query=%E5%8C%85%E4%B8%81%E4%BA%BA%E3%82%88%E3%81%97%E3%81%AE%E3%82%8A%20%E6%9C%AD%E5%B9%8C" target="_blank" rel="noopener">
+      <span class="score"><span class="stars">★</span> Googleの口コミ</span>
       <b>実際の口コミはこちらからご確認いただけます →</b>
     </a>
     <p class="voice-note">※以下はご利用シーンのイメージです</p>
@@ -1071,9 +1084,9 @@ body.scrolled .to-top{opacity:1;visibility:visible;transform:none}
     <h2>大切な宴会を、<br>特別なひとときへ。</h2>
     <p>札幌・大通での会社宴会、接待、歓送迎会は<br>「包丁人よしのり」にお任せください。</p>
     <div class="btns">
-      <a class="btn btn-gold" href="https://www.hotpepper.jp/strJ000765175/yoyaku/hpds/?ROUTE_KBN=20&dspn=wk2YyLXBIqzGpVKQwRiVfOR4-gXHmbBTuTIRyrO_ui34Fw_Ff1JY7NBSjSiBqKMqxSYJiJutD4idLABW_xkUfQ" target="_blank" rel="noopener">ネット予約はこちら<br><small>ホットペッパーグルメ・24時間受付</small></a>
-      <a class="btn btn-ghost" href="tel:011-231-2495">電話で予約する<br><small class="tel-num">011-231-2495</small></a>
-      <a class="btn btn-line" href="https://line.me/R/ti/p/@axq7247r" target="_blank" rel="noopener">LINEで予約・相談する<br><small>ID: @axq7247r</small></a>
+      <a class="btn btn-gold rv rv-l" href="https://www.hotpepper.jp/strJ000765175/yoyaku/hpds/?ROUTE_KBN=20&dspn=wk2YyLXBIqzGpVKQwRiVfOR4-gXHmbBTuTIRyrO_ui34Fw_Ff1JY7NBSjSiBqKMqxSYJiJutD4idLABW_xkUfQ" target="_blank" rel="noopener">ネット予約はこちら<br><small>ホットペッパーグルメ・24時間受付</small></a>
+      <a class="btn btn-ghost rv rv-r" href="tel:011-231-2495">電話で予約する<br><small class="tel-num">011-231-2495</small></a>
+      <a class="btn btn-line rv rv-burst" href="https://line.me/R/ti/p/@axq7247r" target="_blank" rel="noopener">LINEで予約・相談する<br><small>ID: @axq7247r</small></a>
     </div>
   </div>
 </section>
@@ -1110,6 +1123,19 @@ window.addEventListener('load', function () {
       }
       fv.insertBefore(box, fv.querySelector('.inner'));
     }
+  }
+
+  // ボタンのスクロール登場
+  var rvEls = document.querySelectorAll('.rv');
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+    rvEls.forEach(function (el) { el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.3 });
+    rvEls.forEach(function (el) { io.observe(el); });
   }
 
   document.querySelectorAll('[data-slideshow]').forEach(function (ph) {
