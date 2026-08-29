@@ -679,10 +679,14 @@ body.scrolled .to-top{opacity:1;visibility:visible;transform:none}
 }
 .voice-card p{clip-path:inset(-2px 101% -2px -2px);transition:clip-path 1.2s ease .4s}
 .voice-card.in p{clip-path:inset(-2px -2px -2px -2px)}
-.rv-flow{clip-path:inset(-8px 101% -8px -8px);transition:clip-path 1.4s ease .15s}
-.rv-flow.in{clip-path:inset(-8px)}
+.rv-flow{--fd:.15s}
+.rv-flow .flow-i{
+  display:block;clip-path:inset(-8px 101% -8px -8px);
+  transition:clip-path 1.4s ease;transition-delay:var(--fd);
+}
+.rv-flow.in .flow-i{clip-path:inset(-8px)}
 @media (prefers-reduced-motion: reduce){
-  .rv-flow{clip-path:none;transition:none}
+  .rv-flow .flow-i{clip-path:none;transition:none}
   .pops span{opacity:1;transform:none}
   .pops.in span{animation:none}
   .voice-card p{clip-path:none;transition:none}
@@ -698,6 +702,21 @@ body.scrolled .to-top{opacity:1;visibility:visible;transform:none}
 .fv-cta .btn-gold{animation:ctaBounce 3.8s ease-in-out 1.6s infinite}
 .fv-cta .btn-line{animation:ctaBounce 3.8s ease-in-out 2.3s infinite}
 @media (prefers-reduced-motion: reduce){.fv-cta .btn-gold,.fv-cta .btn-line{animation:none}}
+
+/* ============ 幹事様キャッチ(店舗紹介の決めゼリフ) ============ */
+.kanji-catch{margin-top:30px;text-align:center}
+.kanji-catch .q{
+  font-family:var(--serif);font-weight:700;
+  font-size:clamp(20px,5.6vw,27px);line-height:1.75;letter-spacing:.05em;color:#1a2740;
+}
+.kanji-catch .q .marker{
+  background:linear-gradient(transparent 55%, rgba(201,165,85,.5) 55%);
+  padding:0 2px;
+}
+.kanji-catch .a{
+  margin-top:8px;font-size:clamp(14px,3.9vw,16.5px);color:#4a5364;letter-spacing:.04em;
+}
+.kanji-catch .a b{color:#8a6b28}
 </style>
 </head>
 <body>
@@ -818,7 +837,10 @@ body.scrolled .to-top{opacity:1;visibility:visible;transform:none}
       <p>創業2009年。和食一筋の職人が手掛ける本格和食を、お手頃価格で気軽に楽しめる大人の和食処。</p>
       <p style="margin-top:14px">大通駅徒歩5分の好立地。暖簾をくぐると、そこには肩肘張らずに本格和食を楽しめる空間があります。旬魚や薩摩地鶏、季節の天婦羅など、四季折々の味覚を職人の技で丁寧に仕上げます。全国各地から厳選した日本酒は30種類以上をご用意。</p>
       <p style="margin-top:14px">接待や会食はもちろん、会社宴会、同窓会、ご友人との集まりまで幅広く対応。落ち着いた和の空間で、本格和食と銘酒を気軽にお楽しみいただけます。</p>
-      <p style="margin-top:14px"><b>「美味しい料理で宴会を成功させたい」</b><br>そんな幹事様に選ばれ続けている和食店です。</p>
+      <div class="kanji-catch rv-flow">
+        <p class="q">「美味しい料理で<span class="marker">宴会を成功</span>させたい」</p>
+        <p class="a">そんな幹事様に<b>選ばれ続けている</b>和食店です。</p>
+      </div>
       <div class="kodawari pops">
         <span>旬の食材</span><span>職人の技</span><span>和の空間</span><span>幹事様も安心</span>
       </div>
@@ -1116,7 +1138,7 @@ body.scrolled .to-top{opacity:1;visibility:visible;transform:none}
   <div class="inner">
     <p class="sec-head en" style="color:var(--gold);letter-spacing:.35em;font-family:var(--serif);font-size:11px;margin-bottom:16px">Reservation</p>
     <h2 class="rv-flow">大切な宴会を、<br>特別なひとときへ。</h2>
-    <p class="rv-flow" style="transition-delay:.7s">札幌・大通での会社宴会、接待、歓送迎会は<br>「包丁人よしのり」にお任せください。</p>
+    <p class="rv-flow" style="--fd:.7s">札幌・大通での会社宴会、接待、歓送迎会は<br>「包丁人よしのり」にお任せください。</p>
     <div class="btns">
       <a class="btn btn-gold rv rv-l" href="https://www.hotpepper.jp/strJ000765175/yoyaku/hpds/?ROUTE_KBN=20&dspn=wk2YyLXBIqzGpVKQwRiVfOR4-gXHmbBTuTIRyrO_ui34Fw_Ff1JY7NBSjSiBqKMqxSYJiJutD4idLABW_xkUfQ" target="_blank" rel="noopener">ネット予約はこちら<br><small>ホットペッパーグルメ・24時間受付</small></a>
       <a class="btn btn-ghost rv rv-r" href="tel:011-231-2495">電話で予約する<br><small class="tel-num">011-231-2495</small></a>
@@ -1158,6 +1180,13 @@ window.addEventListener('load', function () {
       fv.insertBefore(box, fv.querySelector('.inner'));
     }
   }
+
+  // 流れる表示: クリップ用の内側ラッパーを生成(交差判定を妨げないため)
+  document.querySelectorAll('.rv-flow').forEach(function (el) {
+    if (!el.querySelector('.flow-i')) {
+      el.innerHTML = '<span class="flow-i">' + el.innerHTML + '</span>';
+    }
+  });
 
   // ボタンのスクロール登場
   var rvEls = document.querySelectorAll('.rv,.pops,.rv-flow');
