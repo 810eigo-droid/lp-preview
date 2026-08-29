@@ -564,7 +564,8 @@ body.menu-open .drawer{opacity:1;visibility:visible}
 [data-slideshow]>.slot{object-position:center 40%}
 .fit-contain{background:#0d1524}
 .fit-contain>.slot{object-fit:contain;object-position:center}
-.fit-contain:has(>.slot)::before{display:none}
+.ph:has(>.slot)::before{display:none}
+.ph:has(>.slot) .ph-num,.ph:has(>.slot) .ph-lbl{display:none}
 .ss-arrow{
   position:absolute;top:50%;transform:translateY(-50%);z-index:3;
   width:36px;height:36px;border-radius:50%;cursor:pointer;
