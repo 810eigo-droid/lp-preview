@@ -77,6 +77,7 @@
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
+[id]{scroll-margin-top:74px}
 body{
   font-family:var(--sans);
   background:var(--black);
@@ -738,6 +739,8 @@ body.scrolled .to-top{opacity:1;visibility:visible;transform:none}
   display:inline-flex;align-items:center;justify-content:center;
   font-size:11px;margin-right:7px;font-family:var(--serif);
 }
+.ticker:hover .ticker-track{animation-play-state:paused}
+.tk-item:active{background:rgba(201,165,85,.25)}
 @keyframes tickerMove{to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion: reduce){
   .ticker-track{animation:none;flex-wrap:wrap;width:auto;justify-content:center}
@@ -808,8 +811,8 @@ body.scrolled .to-top{opacity:1;visibility:visible;transform:none}
 <!-- 特長の流れる帯 -->
 <div class="ticker">
   <div class="ticker-track">
-    <div class="ticker-group"><span class="tk-item"><i>駅</i>大通駅 徒歩5分</span><span class="tk-item"><i>飲</i>135分ロング飲み放題</span><span class="tk-item"><i>宴</i>2名様〜OK</span><span class="tk-item"><i>貸</i>25名様〜貸切(最大40名)</span><span class="tk-item"><i>票</i>インボイス対応</span><span class="tk-item"><i>煙</i>喫煙可能</span></div>
-    <div class="ticker-group" aria-hidden="true"><span class="tk-item"><i>駅</i>大通駅 徒歩5分</span><span class="tk-item"><i>飲</i>135分ロング飲み放題</span><span class="tk-item"><i>宴</i>2名様〜OK</span><span class="tk-item"><i>貸</i>25名様〜貸切(最大40名)</span><span class="tk-item"><i>票</i>インボイス対応</span><span class="tk-item"><i>煙</i>喫煙可能</span></div>
+    <div class="ticker-group"><a class="tk-item" href="#info"><i>駅</i>大通駅 徒歩5分</a><a class="tk-item" href="#info"><i>飲</i>135分ロング飲み放題</a><a class="tk-item" href="#info"><i>宴</i>2名様〜OK</a><a class="tk-item" href="#info"><i>貸</i>25名様〜貸切(最大40名)</a><a class="tk-item" href="#info"><i>票</i>インボイス対応</a><a class="tk-item" href="#info"><i>煙</i>喫煙可能</a></div>
+    <div class="ticker-group" aria-hidden="true"><a class="tk-item" href="#info" tabindex="-1"><i>駅</i>大通駅 徒歩5分</a><a class="tk-item" href="#info" tabindex="-1"><i>飲</i>135分ロング飲み放題</a><a class="tk-item" href="#info" tabindex="-1"><i>宴</i>2名様〜OK</a><a class="tk-item" href="#info" tabindex="-1"><i>貸</i>25名様〜貸切(最大40名)</a><a class="tk-item" href="#info" tabindex="-1"><i>票</i>インボイス対応</a><a class="tk-item" href="#info" tabindex="-1"><i>煙</i>喫煙可能</a></div>
   </div>
 </div>
 
@@ -1043,7 +1046,7 @@ body.scrolled .to-top{opacity:1;visibility:visible;transform:none}
 </section>
 
 <!-- ═══════════════ 安心情報 ═══════════════ -->
-<section class="section light">
+<section class="section light" id="info">
   <div class="inner">
     <div class="sec-head">
       <span class="en">Information</span>
