@@ -717,6 +717,33 @@ body.scrolled .to-top{opacity:1;visibility:visible;transform:none}
   margin-top:8px;font-size:clamp(14px,3.9vw,16.5px);color:#4a5364;letter-spacing:.04em;
 }
 .kanji-catch .a b{color:#8a6b28}
+
+/* ============ 特長の流れる帯(ティッカー) ============ */
+.ticker{
+  overflow:hidden;background:var(--navy-2);
+  border-top:1px solid rgba(201,165,85,.35);border-bottom:1px solid rgba(201,165,85,.35);
+  padding:11px 0;
+}
+.ticker-track{display:flex;width:max-content;animation:tickerMove 28s linear infinite}
+.ticker-group{display:flex;gap:14px;padding-right:14px}
+.tk-item{
+  display:inline-flex;align-items:center;white-space:nowrap;
+  font-size:12.5px;letter-spacing:.1em;padding:6px 16px;
+  border:1px solid rgba(201,165,85,.5);color:var(--gold-l);
+  background:rgba(12,13,16,.5);border-radius:2px;
+}
+.tk-item i{
+  font-style:normal;flex:none;width:22px;height:22px;border-radius:50%;
+  border:1px solid rgba(201,165,85,.6);color:var(--gold-l);
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:11px;margin-right:7px;font-family:var(--serif);
+}
+@keyframes tickerMove{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion: reduce){
+  .ticker-track{animation:none;flex-wrap:wrap;width:auto;justify-content:center}
+  .ticker-group[aria-hidden]{display:none}
+  .ticker-group{flex-wrap:wrap;justify-content:center}
+}
 </style>
 </head>
 <body>
@@ -764,9 +791,6 @@ body.scrolled .to-top{opacity:1;visibility:visible;transform:none}
       <span class="line">135分飲み放題付き宴会コース</span>
       <b>4,750<small>円(税込)</small>〜</b>
     </div>
-    <div class="fv-badges">
-      <span><i>駅</i>大通駅 徒歩5分</span><span><i>飲</i>135分ロング飲み放題</span><span><i>宴</i>2名様〜OK</span><span><i>貸</i>25名様〜貸切(最大40名)</span><span><i>票</i>インボイス対応</span><span><i>煙</i>喫煙可能</span>
-    </div>
     <div class="fv-cta">
       <a class="btn btn-gold" href="https://www.hotpepper.jp/strJ000765175/yoyaku/hpds/?ROUTE_KBN=20&dspn=wk2YyLXBIqzGpVKQwRiVfOR4-gXHmbBTuTIRyrO_ui34Fw_Ff1JY7NBSjSiBqKMqxSYJiJutD4idLABW_xkUfQ" target="_blank" rel="noopener">ネット予約はこちら<br><small>ホットペッパーグルメ・24時間受付</small></a>
       <a class="btn btn-line" href="https://line.me/R/ti/p/@axq7247r" target="_blank" rel="noopener">LINEで予約・相談する<br><small>友だち追加でかんたん予約</small></a>
@@ -780,6 +804,14 @@ body.scrolled .to-top{opacity:1;visibility:visible;transform:none}
     </div>
   </div>
 </section>
+
+<!-- 特長の流れる帯 -->
+<div class="ticker">
+  <div class="ticker-track">
+    <div class="ticker-group"><span class="tk-item"><i>駅</i>大通駅 徒歩5分</span><span class="tk-item"><i>飲</i>135分ロング飲み放題</span><span class="tk-item"><i>宴</i>2名様〜OK</span><span class="tk-item"><i>貸</i>25名様〜貸切(最大40名)</span><span class="tk-item"><i>票</i>インボイス対応</span><span class="tk-item"><i>煙</i>喫煙可能</span></div>
+    <div class="ticker-group" aria-hidden="true"><span class="tk-item"><i>駅</i>大通駅 徒歩5分</span><span class="tk-item"><i>飲</i>135分ロング飲み放題</span><span class="tk-item"><i>宴</i>2名様〜OK</span><span class="tk-item"><i>貸</i>25名様〜貸切(最大40名)</span><span class="tk-item"><i>票</i>インボイス対応</span><span class="tk-item"><i>煙</i>喫煙可能</span></div>
+  </div>
+</div>
 
 <!-- ═══════════════ 選ばれる理由 ═══════════════ -->
 <section class="section reason light" id="reason">
