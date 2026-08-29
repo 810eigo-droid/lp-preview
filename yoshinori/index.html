@@ -687,6 +687,17 @@ body.scrolled .to-top{opacity:1;visibility:visible;transform:none}
   .pops.in span{animation:none}
   .voice-card p{clip-path:none;transition:none}
 }
+
+/* ============ FVボタン: 常時表示+アテンションバウンス ============ */
+@keyframes ctaBounce{
+  0%,24%,100%{transform:translateY(0)}
+  8%{transform:translateY(-8px)}
+  14%{transform:translateY(0)}
+  19%{transform:translateY(-4px)}
+}
+.fv-cta .btn-gold{animation:ctaBounce 3.8s ease-in-out 1.6s infinite}
+.fv-cta .btn-line{animation:ctaBounce 3.8s ease-in-out 2.3s infinite}
+@media (prefers-reduced-motion: reduce){.fv-cta .btn-gold,.fv-cta .btn-line{animation:none}}
 </style>
 </head>
 <body>
@@ -738,8 +749,8 @@ body.scrolled .to-top{opacity:1;visibility:visible;transform:none}
       <span><i>駅</i>大通駅 徒歩5分</span><span><i>飲</i>135分ロング飲み放題</span><span><i>宴</i>2名様〜OK</span><span><i>貸</i>25名様〜貸切(最大40名)</span><span><i>票</i>インボイス対応</span><span><i>煙</i>喫煙可能</span>
     </div>
     <div class="fv-cta">
-      <a class="btn btn-gold rv rv-l" style="transition-delay:1.95s" href="https://www.hotpepper.jp/strJ000765175/yoyaku/hpds/?ROUTE_KBN=20&dspn=wk2YyLXBIqzGpVKQwRiVfOR4-gXHmbBTuTIRyrO_ui34Fw_Ff1JY7NBSjSiBqKMqxSYJiJutD4idLABW_xkUfQ" target="_blank" rel="noopener">ネット予約はこちら<br><small>ホットペッパーグルメ・24時間受付</small></a>
-      <a class="btn btn-line rv rv-r" style="transition-delay:2.1s" href="https://line.me/R/ti/p/@axq7247r" target="_blank" rel="noopener">LINEで予約・相談する<br><small>友だち追加でかんたん予約</small></a>
+      <a class="btn btn-gold" href="https://www.hotpepper.jp/strJ000765175/yoyaku/hpds/?ROUTE_KBN=20&dspn=wk2YyLXBIqzGpVKQwRiVfOR4-gXHmbBTuTIRyrO_ui34Fw_Ff1JY7NBSjSiBqKMqxSYJiJutD4idLABW_xkUfQ" target="_blank" rel="noopener">ネット予約はこちら<br><small>ホットペッパーグルメ・24時間受付</small></a>
+      <a class="btn btn-line" href="https://line.me/R/ti/p/@axq7247r" target="_blank" rel="noopener">LINEで予約・相談する<br><small>友だち追加でかんたん予約</small></a>
     </div>
     </div>
 
