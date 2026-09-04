@@ -4,6 +4,7 @@
 
 | プレビュー | URL |
 |---|---|
+| Good Pluck メンズアニソンD&Vプロジェクト オーディションLP（AIラフ忠実再現・画像はプレースホルダー） | https://810eigo-droid.github.io/lp-preview/goodpluck/ |
 | 包丁人よしのり 宴会LP【v2・実データ版】(透かしなし) | https://810eigo-droid.github.io/lp-preview/yoshinori/ |
 | 旧バージョン(v1・仮データ) | https://810eigo-droid.github.io/lp-preview/yoshinori/index-v1.html |
 | v1サンプルA(全面ダーク・透かし入り) | https://810eigo-droid.github.io/lp-preview/yoshinori/index2-1.html |
@@ -40,3 +41,19 @@
 | photo22.webp | お客様の声: 40代女性・歓送迎会(イラスト) | 正方形 |
 
 計19枚。枠側を実寸の縦横比に合わせて調整済みのため、リサイズ不要でそのままアップロードしてよい。
+
+## Good Pluck オーディションLP（goodpluck/）
+
+`goodpluck/images/` に以下の名前で置くと自動で差し替わる（無い間はプレースホルダー表示）。
+
+| ファイル名 | 内容 | 推奨 |
+|---|---|---|
+| logo.png | GPロゴ（背景透過） | 正方形・透過PNG |
+| fv_visual.webp | FVの5人グループビジュアル（ラフの人物イラスト） | 縦長 約4:4.6（例 1000×1150） |
+| project_city.webp | THE PROJECT用 東京タワー＋街並み | 横長 16:9 |
+| producer.webp | PRODUCER用 スタジオ写真 | 横長 16:9 |
+| qr.png | LINE公式アカウントQR（lin.ee/welphgP） | 正方形 |
+
+- 応募導線はすべて `https://lin.ee/welphgP`（FV丸バッジ／ENTRYボタン／追従CTA／フッター）。
+- PC表示では参考サイトと同様に右側480pxのスマホ幅カラム＋左側キャッチの構成。
+- ラフの「THE PROCECT」は「THE PROJECT」に修正済み。
