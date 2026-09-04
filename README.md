@@ -51,7 +51,7 @@
 | logo.png | GPロゴ（背景透過） | 正方形・透過PNG |
 | fv_visual.webp | FVの5人グループビジュアル（背景透過WebP） | 1173×1341 |
 | project_city.webp | THE PROJECT用 東京タワー＋街並み | 横長 16:9 |
-| producer.webp | PRODUCER用 スタジオ写真 | 横長 16:9 |
+| producer.webp | PRODUCER用 スタジオ写真（文字なし背景） | 2001×786 |
 | qr.png | LINE公式アカウントQR（lin.ee/welphgP） | 正方形 |
 
 - 応募導線はすべて `https://lin.ee/welphgP`（FV丸バッジ／ENTRYボタン／追従CTA／フッター）。

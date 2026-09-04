@@ -276,7 +276,54 @@ h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.5}
 .panel .wm{position:absolute;right:-20px;top:-10px;font-family:var(--en);font-size:150px;line-height:1;font-weight:500;
   color:rgba(198,160,74,.10);pointer-events:none;letter-spacing:-.05em}
 .project{background:linear-gradient(180deg,#e9f1fc,#eef4fc)}
+.project .panel{
+  min-height:330px;display:flex;align-items:center;border-radius:0;
+  background:
+    linear-gradient(90deg,rgba(255,255,255,.98) 0%,rgba(247,251,255,.94) 44%,rgba(234,244,255,.62) 67%,rgba(219,237,255,.18) 100%),
+    url("images/project_city.webp") 68% center/cover no-repeat;
+  border-top:2px solid rgba(255,255,255,.95);border-bottom:2px solid rgba(255,255,255,.95);
+  box-shadow:0 10px 30px rgba(29,74,166,.10);
+}
+.project .panel::before{display:none}
+.project .panel-body{position:relative;z-index:1;width:100%;padding:38px 22px 42px}
+.project .panel-body::after{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(120deg,transparent 70%,rgba(255,255,255,.34) 70.4%,transparent 71%);
+}
+.project .lbl{justify-content:flex-start;font-size:11px}
+.project .lbl::before{display:none}
+.project .lbl::after{flex:0 0 40px}
+.project h2{font-size:clamp(24px,7vw,29px);color:var(--blue-d);text-shadow:0 1px 10px rgba(255,255,255,.9)}
+.project .panel p:last-child{max-width:390px;font-size:12.5px;line-height:1.9;text-shadow:0 1px 8px rgba(255,255,255,.95)}
+@media(max-width:390px){
+  .project .panel{min-height:350px;background-position:center,72% center}
+  .project .panel-body{padding:34px 20px 38px}
+  .project h2{font-size:23px}
+  .project .panel p:last-child{max-width:315px;font-size:12px}
+}
 .producer{background:#eef4fc;padding-bottom:20px}
+.producer .panel{
+  min-height:340px;display:flex;align-items:center;border-radius:0;
+  background:
+    linear-gradient(90deg,rgba(255,255,255,.98) 0%,rgba(247,251,255,.95) 45%,rgba(229,241,254,.69) 68%,rgba(184,216,248,.16) 100%),
+    url("images/producer.webp") 76% center/cover no-repeat;
+  border-top:2px solid rgba(255,255,255,.95);border-bottom:2px solid rgba(255,255,255,.95);
+  box-shadow:0 10px 30px rgba(29,74,166,.10);
+}
+.producer .panel::before{display:none}
+.producer .panel-body{position:relative;z-index:1;width:100%;padding:38px 22px 42px}
+.producer .wm{left:-14px;right:auto;top:54px;z-index:0;font-size:118px;color:rgba(198,160,74,.09)}
+.producer .lbl{justify-content:flex-start;font-size:11px}
+.producer .lbl::before{display:none}
+.producer .lbl::after{flex:0 0 40px}
+.producer h2{max-width:410px;font-size:clamp(21px,6vw,25px);color:var(--blue-d);text-shadow:0 1px 10px rgba(255,255,255,.95)}
+.producer .panel p:last-child{max-width:395px;font-size:12px;line-height:1.9;text-shadow:0 1px 8px rgba(255,255,255,.98)}
+@media(max-width:390px){
+  .producer .panel{min-height:370px;background-position:center,78% center}
+  .producer .panel-body{padding:34px 20px 38px}
+  .producer h2{max-width:330px;font-size:21px}
+  .producer .panel p:last-child{max-width:315px;font-size:11.8px}
+}
 
 /* ------------------------------------------------------------
    REQUIREMENTS
@@ -469,11 +516,11 @@ h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.5}
   <section class="panel-sec project" id="project">
     <div class="panel rv">
       <div class="panel-body">
+        <!-- WordPressで編集する場合：この見出しと本文は通常のHTMLテキストです -->
         <p class="lbl left">The Project</p>
         <h2>アニソンで、<span class="big">世界を狙う。</span></h2>
         <p>Good Pluckでは、アーティストのプロデュース・マネジメントを行っています。<br>アニメ主題歌タイアップを目標に、<br>日本から<b>世界へ羽ばたける</b>メンズダンス＆ボーカルグループを立ち上げます。</p>
       </div>
-      <div class="ph r-16x9"><span class="ph-num">【project_city.webp】</span><span class="ph-lbl">東京タワー＋街並み（横長 16:9）</span><img class="slot" src="images/project_city.webp" alt="東京の街並み" loading="lazy" onerror="this.remove()"></div>
     </div>
   </section>
 
@@ -482,11 +529,11 @@ h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.5}
     <div class="panel rv">
       <span class="wm en">GP</span>
       <div class="panel-body">
+        <!-- WordPressで編集する場合：この見出しと本文は通常のHTMLテキストです -->
         <p class="lbl left">Producer</p>
         <h2>実績あるプロデューサーが<br><span class="big">プロデュース。</span></h2>
         <p>数多くのアニメや映画、ドラマの主題歌を手掛け、海外公演実績を多数持つ元アーティストのプロデューサーがこのプロジェクトに参加。<br>過去にもアイドルグループをメジャーデビュー、Zepp Tokyoワンマンライブへ導いた実績があります。</p>
       </div>
-      <div class="ph r-16x9"><span class="ph-num">【producer.webp】</span><span class="ph-lbl">スタジオのプロデューサー写真（横長 16:9）</span><img class="slot" src="images/producer.webp" alt="プロデューサー" loading="lazy" onerror="this.remove()"></div>
     </div>
   </section>
 
