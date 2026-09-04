@@ -642,6 +642,34 @@ body{background:#edf3fa;line-height:2;font-size:15px}
   .fv-pill{font-size:clamp(10px,2.8vw,12px);padding:6px 13px}
   .badge{width:clamp(104px,29vw,124px);height:clamp(104px,29vw,124px)}
 }
+
+/* Producer：文章を上、本人ビジュアルを下に大きく見せる縦長構成 */
+.producer .panel{
+  min-height:740px;display:flex;flex-direction:column;align-items:stretch;
+  background:linear-gradient(180deg,#fff 0%,#f8fbff 52%,#e8f4ff 100%);
+}
+.producer .panel-body{flex:0 0 auto;padding-bottom:24px}
+.producer .panel p:last-child{max-width:none;margin-top:24px}
+.producer-visual{
+  position:relative;flex:0 0 390px;min-height:390px;overflow:hidden;margin-top:auto;
+  background:#dcecfb;
+}
+.producer-visual::before{
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:
+    linear-gradient(180deg,#f8fbff 0%,rgba(248,251,255,.88) 8%,rgba(248,251,255,.28) 25%,transparent 43%),
+    linear-gradient(90deg,rgba(255,255,255,.20),transparent 48%);
+}
+.producer-visual img{
+  width:100%;height:100%;object-fit:cover;object-position:78% center;
+  filter:saturate(1.06) contrast(1.03);
+}
+@media(max-width:420px){
+  .producer .panel{min-height:730px}
+  .producer .panel-body{padding-top:48px;padding-bottom:18px}
+  .producer-visual{flex-basis:370px;min-height:370px}
+  .producer-visual img{object-position:79% center}
+}
 </style>
 </head>
 <body>
@@ -746,6 +774,9 @@ body{background:#edf3fa;line-height:2;font-size:15px}
         <p class="lbl left">Producer</p>
         <h2>実績あるプロデューサーが<br><span class="big">プロデュース。</span></h2>
         <p>数多くのアニメや映画、ドラマの主題歌を手掛け、海外公演実績を多数持つ元アーティストのプロデューサーがこのプロジェクトに参加。<br>過去にもアイドルグループをメジャーデビュー、Zepp Tokyoワンマンライブへ導いた実績があります。</p>
+      </div>
+      <div class="producer-visual">
+        <img src="images/producer.webp" alt="レコーディングスタジオで制作に臨むプロデューサー" loading="lazy">
       </div>
     </div>
   </section>
