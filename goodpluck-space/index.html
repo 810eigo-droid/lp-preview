@@ -546,7 +546,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.5}
    内容は変えず、余白・文字間・セクションの呼吸を中心に再構成。
    ============================================================ */
 :root{--lpw:520px}
-body{background:#edf3fa;line-height:2}
+body{background:#edf3fa;line-height:2;font-size:15px}
 .lp{background:#f8fbff}
 .inner{padding-left:30px;padding-right:30px}
 .lbl{letter-spacing:.4em;gap:18px}
@@ -575,7 +575,7 @@ body{background:#edf3fa;line-height:2}
 }
 .dia{grid-row:1/3;margin:0 auto;width:68px;height:68px}
 .c-ttl{align-self:end;font-size:18px;letter-spacing:.16em}
-.c-txt{align-self:start;margin-top:8px;font-size:13px;line-height:2}
+.c-txt{align-self:start;margin-top:8px;font-size:14px;line-height:2}
 
 .panel-sec{padding:42px 20px}
 .project{background:linear-gradient(180deg,#edf5fd 0%,#f9fcff 100%)}
@@ -586,22 +586,24 @@ body{background:#edf3fa;line-height:2}
 }
 .project .panel-body,.producer .panel-body{padding:58px 30px 62px}
 .project h2,.producer h2{margin-top:16px;line-height:1.58}
-.project .panel p:last-child,.producer .panel p:last-child{margin-top:24px;line-height:2.2}
+.project .panel p:last-child,.producer .panel p:last-child{margin-top:24px;font-size:14px;line-height:2.2}
 .project .panel{background-position:center,72% center}
 .producer .panel{background-position:center,80% center}
 
 .req{padding:88px 0 92px;background:linear-gradient(180deg,#edf5fd 0%,#fbfdff 52%,#eef5fc 100%)}
 .req-list{margin-top:38px}
-.req-list li{padding:16px 6px;gap:15px;line-height:1.8}
+.req-list li{padding:16px 6px;gap:15px;font-size:15.5px;line-height:1.8}
 .value{margin-top:54px;padding:38px 28px 40px;border-radius:14px}
 .value .script{font-size:37px}
 .value h3{margin-top:14px}
-.value p{margin-top:20px;line-height:2.15}
+.value p{margin-top:20px;font-size:14px;line-height:2.15}
 
 .entry{padding:70px 0 64px}
 .entry-top{gap:26px}
+.entry .sub{font-size:13px}
 .entry .btn{margin-top:32px}
 .entry-info{margin-top:46px;padding-top:38px;gap:24px}
+.company .addr{font-size:13.5px}
 .footer{padding:46px 0 32px}
 .sns{gap:20px 12px}
 .copy{margin-top:30px}
@@ -613,11 +615,32 @@ body{background:#edf3fa;line-height:2}
   .concept{padding-top:72px;padding-bottom:76px}
   .c-item{grid-template-columns:80px 1fr;min-height:126px;padding-top:23px;padding-bottom:25px}
   .c-item + .c-item::before,.c-item:nth-child(3)::before{left:80px}
-  .c-txt{font-size:12px}
+  .c-txt{font-size:14px}
   .panel-sec{padding-left:14px;padding-right:14px}
   .project .panel-body,.producer .panel-body{padding-left:25px;padding-right:25px}
   .req{padding-top:78px;padding-bottom:82px}
   .entry{padding-top:62px;padding-bottom:58px}
+}
+
+/* スマホFV：1080×1680相当の比率内へ全要素を収め、次セクションを少し見せる */
+@media(max-width:767px) and (orientation:portrait){
+  .fv{
+    height:min(155.556vw,calc(100svh - 48px));min-height:0;padding-top:0;overflow:hidden;
+  }
+  .fv-head{position:absolute;inset:0 0 auto;z-index:5;padding:20px 16px 0}
+  .fv-copy{padding-top:7px}
+  .fv-catch{font-size:clamp(10px,3vw,13px)}
+  .fv-h1{font-size:clamp(28px,8vw,35px);margin-top:7px}
+  .fv-sub{font-size:clamp(14px,4vw,17px);margin-top:7px}
+  .fv-en{font-size:clamp(7px,2.2vw,9.5px);margin-top:9px}
+  .fv-visual{position:absolute;inset:23% 0 0;margin:0}
+  .fv-visual .ph{height:100%;aspect-ratio:auto}
+  .fv-visual .ph>.slot{object-fit:contain;object-position:center bottom}
+  .fv-bottom{position:absolute;inset:auto 0 0;z-index:6;margin:0;padding:0 18px 16px}
+  .fv-script{font-size:clamp(43px,12vw,56px);margin-bottom:5px}
+  .fv-row{gap:10px;align-items:flex-end}
+  .fv-pill{font-size:clamp(10px,2.8vw,12px);padding:6px 13px}
+  .badge{width:clamp(104px,29vw,124px);height:clamp(104px,29vw,124px)}
 }
 </style>
 </head>
