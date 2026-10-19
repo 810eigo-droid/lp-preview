@@ -57,3 +57,11 @@
 - 応募導線はすべて `https://lin.ee/welphgP`（FV丸バッジ／ENTRYボタン／追従CTA／フッター）。
 - PC表示では参考サイトと同様に右側480pxのスマホ幅カラム＋左側キャッチの構成。
 - ラフの「THE PROCECT」は「THE PROJECT」に修正済み。
+
+## スコヤカ薬局 LP
+
+確認用URL: https://810eigo-droid.github.io/lp-preview/sukoyaka/
+
+`sukoyaka/index.html` はCSS・JS・画像を内蔵した確認用ページです。noindex,nofollowと確認用表示付き。WordPress貼り付け用コードは含みません。
+
+内蔵画像: hero.webp（FV）、empathy.webp（悩み）、future.webp（未来）、pharmacist.jpg（薬剤師）、cover.webp（資料表紙）、offer.webp（LINE案内）、wellness.webp（生活改善）、lifestyle.webp（暮らしの水彩）。
