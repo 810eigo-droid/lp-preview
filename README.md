@@ -65,3 +65,21 @@
 `sukoyaka/index.html` はCSS・JS・画像を内蔵した確認用ページです。noindex,nofollowと確認用表示付き。WordPress貼り付け用コードは含みません。
 
 内蔵画像: hero.webp（FV）、empathy.webp（悩み）、future.webp（未来）、pharmacist.jpg（薬剤師）、cover.webp（資料表紙）、offer.webp（LINE案内）、wellness.webp（生活改善）、lifestyle.webp（暮らしの水彩）。
+
+
+## デジレ・ランカトーレ マスタークラス 2027
+
+確認URL: https://810eigo-droid.github.io/lp-preview/rancatore/
+
+`rancatore/index.html`（CSS内包）。Googleフォームは未接続。
+
+| 画像 | 用途 |
+|---|---|
+| assets/dress.webp | 冒頭・IMG_0741 |
+| assets/portrait.webp | 講師紹介・IMG_0742 |
+| assets/lesson.webp | レッスン・IMG_0305 |
+| assets/IMG_0304.png | レッスン（画面UIをCSSで非表示） |
+| assets/IMG_0306.png | 申込前のレッスン（画面UIをCSSで非表示） |
+| assets/IMG_0297.jpeg | レッスン |
+| assets/IMG_1036.jpeg | 東京・SHINKAホール |
+| assets/IMG_1037.jpeg | 名古屋・ローゼンシュトラウス |
