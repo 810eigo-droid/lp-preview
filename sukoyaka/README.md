@@ -1,11 +1,10 @@
-# スコヤカ薬局：修正の入口
+# スコヤカ薬局：クライアント確認用LP
 
-今後の修正はこのフォルダを入口にします。
+- [画像版の確認ページ](https://810eigo-droid.github.io/lp-preview/sukoyaka/)
+- [HTML版の確認ページ](https://810eigo-droid.github.io/lp-preview/sukoyaka/html-fv/)
 
-- LPコード・WP貼り付け用コード・画像：このリポジトリの sukoyaka 配下へ集約予定。
-- 原稿・参考資料：[taf-clientのスコヤカ薬局](https://github.com/810eigo-droid/taf-client/tree/main/clients/スコヤカ薬局)
-- view-sukoyaka：空のリポジトリ。新しい保存先として使わない。
+HTML版はトップの文字を編集できる予備ページです。スマホ全幅対応を追加しています。
 
-本番はWP「漢方相談LP（画像版）」、HTML版は文言編集用の予備・下書き。WP側で直接編集がある場合は最新コードを優先する。
+ここは公開プレビュー専用です。顧客情報・案件メモ・WP貼り付け用コードは非公開の taf-client リポジトリ内 clients/スコヤカ薬局 で管理します。
 
-2026-10-30：HTML版の元デザイン（背景上に文字を重ねるFV）を使った2ブロック版と画像を作成。スマホ全幅対応を追加。WP反映・表示検証は未完了。画像版の全幅対応は次回作業。
+view-sukoyaka は使わず、このフォルダを公開プレビューの入口にします。
