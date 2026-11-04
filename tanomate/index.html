@@ -403,4 +403,38 @@
 })();
 </script>
 
+<style>
+/* A slow shine only while a CTA is in view. */
+.tm-button-sparkle{position:relative;isolation:isolate;overflow:hidden}
+.tm-lp .tm-approved-link.tm-button-sparkle{position:absolute;border-radius:999px}
+.tm-button-sparkle::after{content:"";position:absolute;pointer-events:none;z-index:2;top:-50%;left:-60%;width:28%;height:200%;background:linear-gradient(90deg,transparent,#ffffff85,transparent);transform:skewX(-22deg);opacity:0}
+@keyframes tm-button-shine{0%,68%{left:-60%;opacity:0}70%{opacity:.85}88%{left:135%;opacity:.85}90%,100%{left:135%;opacity:0}}
+@media(prefers-reduced-motion:no-preference){
+.tm-button-sparkle.tm-button-in-view::after{animation:tm-button-shine 6s ease-in-out infinite;animation-delay:var(--tm-shine-delay,0s)}
+.tm-lp a.cta.tm-action:active,.tm-site-nav .tm-menu-contact:active{scale:.98}
+}
+@media(prefers-reduced-motion:reduce){.tm-button-sparkle::after{display:none}}
+</style>
+<script>
+(function(){
+ function initButtons(){
+  const reduced=matchMedia('(prefers-reduced-motion: reduce)');if(!('IntersectionObserver' in window))return;
+  const running=new Set();
+  const observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){
+   const el=entry.target;el.classList.toggle('tm-button-in-view',entry.isIntersecting);
+   if(!entry.isIntersecting||el.dataset.tmButtonPopped||reduced.matches||!el.animate)return;
+   el.dataset.tmButtonPopped='true';
+   const a=el.animate([{scale:'.97'},{scale:'1.025',offset:.6},{scale:'1'}],{duration:550,easing:'ease-out'});
+   running.add(a);a.onfinish=()=>running.delete(a);a.oncancel=()=>running.delete(a);
+  });},{threshold:.65});
+  document.querySelectorAll('.tm-lp a.cta,.tm-lp .tm-approved-link,.tm-site-nav .tm-menu-contact,.wpcf7-form.tm-tanomate-form .wpcf7-submit').forEach(function(el,i){
+   if(el.dataset.tmButtonReady)return;el.dataset.tmButtonReady='true';
+   if(el.tagName==='A')el.classList.add('tm-button-sparkle');
+   el.style.setProperty('--tm-shine-delay',(i%3)*.6+'s');observer.observe(el);
+  });
+  reduced.addEventListener('change',function(e){if(e.matches){running.forEach(a=>a.cancel());running.clear();}});
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initButtons,{once:true});else initButtons();
+})();
+</script>
 </body></html>
