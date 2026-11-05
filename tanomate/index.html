@@ -440,4 +440,32 @@
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initButtons,{once:true});else initButtons();
 })();
 </script>
+
+<!-- Slim mobile contact bar -->
+<style>
+.tm-floating-contact{display:none}
+@media(max-width:767px){
+.tm-floating-contact{box-sizing:border-box;position:fixed;z-index:99970;left:0;right:0;bottom:0;height:calc(48px + env(safe-area-inset-bottom,0px));padding:0 16px env(safe-area-inset-bottom,0px);display:flex;align-items:center;justify-content:center;gap:14px;background:linear-gradient(110deg,#ffa83a,#ff8b19);border-top:1px solid #ffffffb3;box-shadow:0 -3px 14px #08163514;color:#081635;text-decoration:none;font-family:"Noto Sans JP","Yu Gothic",Meiryo,sans-serif;font-size:16px;font-weight:800;line-height:1.2}
+.tm-floating-contact[hidden]{display:none!important}
+.tm-floating-contact span[aria-hidden]{font-size:22px}
+html.tm-floating-visible .tm-site-nav .tm-top-button{bottom:calc(60px + env(safe-area-inset-bottom,0px))}
+.tm-floating-contact:focus-visible{outline:3px solid #0078ff;outline-offset:-4px}
+}
+</style>
+<a class="tm-floating-contact" id="tm-floating-contact" href="#tm-contact-entry" hidden>無料相談・お見積り<span aria-hidden="true">→</span></a>
+<script>
+(function(){
+ function init(){
+  const bar=document.getElementById('tm-floating-contact');if(!bar||bar.dataset.ready)return;bar.dataset.ready='true';
+  const mobile=matchMedia('(max-width:767px)');let pending=false;
+  function visible(el){if(!el||!el.getClientRects().length)return false;const r=el.getBoundingClientRect();return r.top<innerHeight&&r.bottom>0;}
+  function update(){pending=false;const hero=document.querySelector('.tm-approved-main'),heading=document.getElementById('tm-contact-entry');const forms=Array.from(document.querySelectorAll('.wpcf7'));const nearContact=visible(heading)||forms.some(visible);const show=mobile.matches&&!!hero&&hero.getBoundingClientRect().bottom<0&&!nearContact;bar.hidden=!show;document.documentElement.classList.toggle('tm-floating-visible',show);}
+  function schedule(){if(!pending){pending=true;requestAnimationFrame(update);}}
+  addEventListener('scroll',schedule,{passive:true});addEventListener('resize',schedule);addEventListener('load',schedule);mobile.addEventListener('change',schedule);
+  bar.addEventListener('click',function(event){const target=document.getElementById('tm-contact-entry');if(!target)return;event.preventDefault();target.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});history.replaceState(null,'','#tm-contact-entry');});
+  update();
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
+})();
+</script>
 </body></html>
