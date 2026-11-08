@@ -1,5 +1,7 @@
-# RE:BIRTH 確認用初稿
+# RE:BIRTH デザイン確認用
 
-`index.html` は7セクションのデザイン確認用ページです。noindex・確認中表示付き。写真と施術動画はプレースホルダー、予約ボタンは暫定的に公式LINEへ接続しています。予約カレンダーURL確定後に差し替えます。
+最新版7セクション原稿に対応。写真は仮枠。予約先は公式LINEの暫定リンクです。
 
-差し替え予定の画像: `images/hero.webp`（顔と手の密着感）、`images/concerns.webp`（ターゲット女性）、`images/owner.webp`（櫻井様）、`images/offer.webp`（顔・首・デコルテの施術）。動画は施術の手の動きを見せる素材を選定します。
+images/ に以下のWebP画像を追加すると枠を自動置換します。hero.webp（頬・フェイスライン）、concerns.webp（女性の表情）、neck.webp（首）、decollete.webp（デコルテ）、treatment.webp（セミオーダー施術）、hands.webp（手の密着感）、owner.webp（オーナー）、offer.webp（初回体験）。画像なしでも枠を表示します。
+
+WordPress用HTMLは非公開taf-clientの clients/rebirth/delivery/wordpress-block.html。CSSは #rebirth-lp 内に限定。画像URLはWordPressのメディアURLに変更して使用。テーマ・権限によるHTML属性の削除有無は実環境で確認が必要です。
