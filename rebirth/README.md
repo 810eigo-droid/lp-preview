@@ -13,3 +13,7 @@ WordPress用HTMLは非公開taf-clientの clients/rebirth/delivery/wordpress-blo
 ## B案ファーストビュー（2026-11）
 
 B案（`b/index.html`）のFVは `hero-b-headline.png`（見出し）と `hero-b-ribbon.png`（奈良・学園前リボン）を使用。どちらも `hero-b-latest.png` からの切り出し。「たるみ改善フェイシャル体験」・料金・予約ボタンはHTML文字。
+
+## B案 動画セクション（2026-11）
+
+01〜03の3動画と説明文を削除し、縦長動画1本＋短い説明文の `rb-b-movie` に統合。新動画が届くまで仮で video2.mp4（フェイシャル）と `movie-poster-temp.jpg`（同動画から切り出した仮の表紙）を使用。届いたら `source` のURLと `poster` を差し替える。
