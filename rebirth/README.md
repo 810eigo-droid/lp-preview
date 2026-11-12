@@ -17,3 +17,7 @@ B案（`b/index.html`）のFVは `hero-b-headline.png`（見出し）と `hero-b
 ## B案 動画セクション（2026-11）
 
 01〜03の3動画と説明文を削除し、縦長動画1本＋短い説明文の `rb-b-movie` に統合。新動画が届くまで動画は re_birth-lp.mp4（WordPressメディア）、表紙は同動画から切り出した `movie-poster.jpg`。
+
+## 色合い見本（赤・黒・ゴールド）
+
+`gold/index.html` は冒頭のみの色合い見本（A案・B案とは別ページ）。画像は `hero.webp` と、支給ロゴから切り抜いた `logo-gold.png` を使用。
