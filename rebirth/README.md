@@ -16,4 +16,4 @@ B案（`b/index.html`）のFVは `hero-b-headline.png`（見出し）と `hero-b
 
 ## B案 動画セクション（2026-11）
 
-01〜03の3動画と説明文を削除し、縦長動画1本＋短い説明文の `rb-b-movie` に統合。新動画が届くまで仮で video2.mp4（フェイシャル）と `movie-poster-temp.jpg`（同動画から切り出した仮の表紙）を使用。届いたら `source` のURLと `poster` を差し替える。
+01〜03の3動画と説明文を削除し、縦長動画1本＋短い説明文の `rb-b-movie` に統合。新動画が届くまで動画は re_birth-lp.mp4（WordPressメディア）、表紙は同動画から切り出した `movie-poster.jpg`。
