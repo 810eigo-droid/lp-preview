@@ -9,3 +9,7 @@ WordPress用HTMLは非公開taf-clientの clients/rebirth/delivery/wordpress-blo
 ## V1保存とセクション画像
 
 変更前のページは `v1/index.html`、画像は `v1/images/` に固定保存。現行は画像 section01.png / section02.png を使用。FVボタンは画像上のリンク領域。復元する場合は v1/index.html を index.html に、v1/images の画像を images にコピーする。動画は外部WordPress URLのため、元動画が変更されればV1の動画も変わる。
+
+## B案ファーストビュー（2026-11）
+
+B案（`b/index.html`）のFVは `hero-b-headline.png`（見出し）と `hero-b-ribbon.png`（奈良・学園前リボン）を使用。どちらも `hero-b-latest.png` からの切り出し。「たるみ改善フェイシャル体験」・料金・予約ボタンはHTML文字。
