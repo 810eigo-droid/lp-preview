@@ -26,6 +26,37 @@ section[id]>div,section:not([id])>div{padding-top:64px!important;padding-bottom:
 a[href="form.html"]{padding:0 24px!important;font-size:17px!important}
 .sp-only{display:block}
 }
+
+/* ファーストビューの動き */
+.fv-c{display:inline-block;opacity:0;filter:blur(14px);transform:translateY(.25em);animation:fvBlur .75s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(.3s + var(--i)*.08s)}
+.fv-blur{opacity:0;filter:blur(10px);animation:fvBlur .8s ease-out .05s forwards}
+.fv-mask{clip-path:inset(0 100% 0 0);animation:fvWipe .55s cubic-bezier(.7,0,.2,1) 1s forwards,fvShake .5s cubic-bezier(.36,.07,.19,.97) 1.55s}
+.fv-up{opacity:0;transform:translateY(18px);animation:fvUp .7s ease-out var(--d,1.8s) forwards}
+.fv-frame{opacity:0;animation:fvFade 1.2s ease-out 1.1s forwards}
+.fv-panel{clip-path:inset(100% 0 0 0);animation:fvRise .8s cubic-bezier(.7,0,.2,1) .5s forwards}
+.fv-img{opacity:0;animation:fvImg .9s ease-out forwards,fvFloat 6s ease-in-out 2.4s infinite}
+.fv-img1{animation-delay:1.1s,2.4s}
+.fv-img2{animation-delay:1.4s,3.4s}
+.fv-mq{overflow:hidden;border-top:1px solid #3A2226;background:#150A0C;padding:14px 0}
+.fv-mq-in{display:flex;width:max-content;animation:fvMq 36s linear infinite}
+.fv-mq span{display:flex;align-items:center;flex:none}
+.fv-mq b{font:700 15px/1 'Shippori Mincho B1',serif;letter-spacing:.18em;color:#E3C78C;white-space:nowrap;padding:0 28px}
+.fv-mq i{width:6px;height:6px;background:#C10230;transform:rotate(45deg);flex:none}
+@keyframes fvBlur{to{opacity:1;filter:blur(0);transform:none}}
+@keyframes fvWipe{to{clip-path:inset(0 0 0 0)}}
+@keyframes fvShake{10%,90%{translate:-2px 0}20%,80%{translate:4px 0}30%,50%,70%{translate:-7px 0}40%,60%{translate:7px 0}}
+@keyframes fvUp{to{opacity:1;transform:none}}
+@keyframes fvFade{to{opacity:1}}
+@keyframes fvRise{to{clip-path:inset(0 0 0 0)}}
+@keyframes fvImg{from{opacity:0;filter:blur(16px) drop-shadow(0 28px 30px rgba(0,0,0,.55))}to{opacity:1}}
+@keyframes fvFloat{50%{translate:0 -10px}}
+@keyframes fvMq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){
+.fv-c,.fv-blur,.fv-up,.fv-frame,.fv-img{animation:none;opacity:1;filter:none;transform:none}
+.fv-img{filter:drop-shadow(0 24px 24px rgba(0,0,0,.6))}
+.fv-mask,.fv-panel{animation:none;clip-path:none}
+.fv-mq-in{animation:none}
+}
 </style>
 </head>
 <body>
@@ -54,25 +85,26 @@ a[href="form.html"]{padding:0 24px!important;font-size:17px!important}
 <section style="background-color: #150A0C; background-image: linear-gradient(#24141780 1px, transparent 1px), linear-gradient(90deg, #24141780 1px, transparent 1px); background-size: 56px 56px; color: #FFFFFF; position: relative; overflow: hidden">
 <div style="max-width: 1160px; margin: 0 auto; padding: 88px 24px 104px; display: grid" class="hero-grid" data-x="; gap: 56px; align-items: center">
 <div style="display: flex; flex-direction: column; gap: 28px">
-<div style="display: flex; align-items: center; gap: 14px; font-size: 14px; letter-spacing: 0.14em; color: #E3C78C">
+<div class="fv-blur" style="display: flex; align-items: center; gap: 14px; font-size: 14px; letter-spacing: 0.14em; color: #E3C78C">
 <span style="display: inline-block; width: 40px; height: 1px; background: #E3C78C"></span>
 <span>FIDO2認定 ／ 指紋認証 × フィッシング耐性</span>
 </div>
-<h1 style="margin: 0; font-family: 'Shippori Mincho B1', 'Hiragino Mincho ProN', serif; font-weight: 800; font-size: clamp(34px, 4.4vw, 60px); line-height: 1.3; letter-spacing: 0.02em">騙されても、<br><span style="display: inline-block; white-space: nowrap; background: var(--accent, #C10230); padding: 0 16px; margin-left: -6px">ログインさせない。</span></h1>
-<p style="margin: 0; font-size: clamp(17px, 1.5vw, 20px); line-height: 1.9; color: #EDE6E4; max-width: 34em">フィッシングメール対策は「社員教育」だけでは不十分です。<br>指紋認証セキュリティキー <strong style="color: #FFFFFF">ATKey</strong> が、ID・パスワードを盗まれても不正ログインを成立させない仕組みをつくります。</p>
-<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: center">
+<h1 style="margin: 0; font-family: 'Shippori Mincho B1', 'Hiragino Mincho ProN', serif; font-weight: 800; font-size: clamp(34px, 4.4vw, 60px); line-height: 1.3; letter-spacing: 0.02em" aria-label="騙されても、ログインさせない。"><span aria-hidden="true"><span class="fv-c" style="--i:0">騙</span><span class="fv-c" style="--i:1">さ</span><span class="fv-c" style="--i:2">れ</span><span class="fv-c" style="--i:3">て</span><span class="fv-c" style="--i:4">も</span><span class="fv-c" style="--i:5">、</span></span><br><span aria-hidden="true" class="fv-mask" style="display: inline-block; white-space: nowrap; background: var(--accent, #C10230); padding: 0 16px; margin-left: -6px">ログインさせない。</span></h1>
+<p class="fv-up" style="--d: 1.9s; margin: 0; font-size: clamp(17px, 1.5vw, 20px); line-height: 1.9; color: #EDE6E4; max-width: 34em">フィッシングメール対策は「社員教育」だけでは不十分です。<br>指紋認証セキュリティキー <strong style="color: #FFFFFF">ATKey</strong> が、ID・パスワードを盗まれても不正ログインを成立させない仕組みをつくります。</p>
+<div class="fv-up" style="--d: 2.15s; display: flex; flex-wrap: wrap; gap: 16px; align-items: center">
 <a href="#contact" style="display: inline-flex; align-items: center; gap: 12px; min-height: 64px; padding: 0 36px; background: var(--accent, #C10230); color: #FFFFFF; font-size: 18px; font-weight: 700; text-decoration: none; border-radius: 2px; box-shadow: 0 10px 0 #62011A">資料請求・デモ機のご相談
 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
 <span style="font-size: 14px; color: #C9BCBD">現状確認から、小さく評価を始められます</span>
 </div>
 </div>
 <div style="position: relative; min-height: 440px; display: flex; align-items: center; justify-content: center">
-<div style="position: absolute; inset: 24px 0 24px 40px; border: 1px solid #E3C78C; transform: skewX(-8deg)"></div>
-<div style="position: absolute; inset: 56px 40px 0 0; background: var(--accent, #C10230); transform: skewX(-8deg)"></div>
-<img src="images/atkey-card.png" alt="ATKey.Card NFC（カード型）" style="position: relative; width: 78%; max-width: 440px; transform: rotate(-8deg) translate(-8%, -14%); filter: drop-shadow(0 28px 30px rgba(0,0,0,0.55))">
-<img src="images/atkey-pro.png" alt="ATKey.Pro（USB型）" style="position: absolute; right: 0; bottom: 4%; width: 52%; max-width: 300px; filter: drop-shadow(0 24px 24px rgba(0,0,0,0.6))">
+<div class="fv-frame" style="position: absolute; inset: 24px 0 24px 40px; border: 1px solid #E3C78C; transform: skewX(-8deg)"></div>
+<div class="fv-panel" style="position: absolute; inset: 56px 40px 0 0; background: var(--accent, #C10230); transform: skewX(-8deg)"></div>
+<img src="images/atkey-card.png" alt="ATKey.Card NFC（カード型）" class="fv-img fv-img1" style="position: relative; width: 78%; max-width: 440px; transform: rotate(-8deg) translate(-8%, -14%); filter: drop-shadow(0 28px 30px rgba(0,0,0,0.55))">
+<img src="images/atkey-pro.png" alt="ATKey.Pro（USB型）" class="fv-img fv-img2" style="position: absolute; right: 0; bottom: 4%; width: 52%; max-width: 300px; filter: drop-shadow(0 24px 24px rgba(0,0,0,0.6))">
 </div>
 </div>
+<div class="fv-mq" aria-hidden="true"><div class="fv-mq-in"><span><b>FIDO2認定</b><i></i><b>パスワードレス</b><i></i><b>フィッシング耐性</b><i></i><b>指紋認証</b><i></i><b>秘密鍵は外に出ない</b><i></i><b>Microsoft Entra ID 連携</b><i></i><b>カード型・USB型</b><i></i><b>多要素認証</b><i></i></span><span><b>FIDO2認定</b><i></i><b>パスワードレス</b><i></i><b>フィッシング耐性</b><i></i><b>指紋認証</b><i></i><b>秘密鍵は外に出ない</b><i></i><b>Microsoft Entra ID 連携</b><i></i><b>カード型・USB型</b><i></i><b>多要素認証</b><i></i></span></div></div>
 <div style="background: #FFFFFF; color: #1D1416">
 <div style="max-width: 1160px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr))">
 <div style="padding: 26px 20px; display: flex; align-items: center; gap: 16px; border-left: 1px solid #E4DAD8">
