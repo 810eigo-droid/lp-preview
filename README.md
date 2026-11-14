@@ -5,6 +5,7 @@
 | プレビュー | URL |
 |---|---|
 | ACT株式会社 ATKey LP（BtoB・FIDO2指紋認証キー）【デザイン案v1】 | https://810eigo-droid.github.io/lp-preview/act-atkey/ |
+| 同 ファーストビューだけ（アニメーション確認用・「もう一度再生」ボタン付き） | https://810eigo-droid.github.io/lp-preview/act-atkey/fv.html |
 | 同 お問い合わせフォーム（3ステップ案・送信なし） | https://810eigo-droid.github.io/lp-preview/act-atkey/form.html |
 | Good Pluck メンズアニソンD&Vプロジェクト オーディションLP（AIラフ忠実再現・画像はプレースホルダー） | https://810eigo-droid.github.io/lp-preview/goodpluck/ |
 | 包丁人よしのり 宴会LP【v2・実データ版】(透かしなし) | https://810eigo-droid.github.io/lp-preview/yoshinori/ |
