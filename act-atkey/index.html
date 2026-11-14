@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>ATKey｜FIDO2対応 指紋認証セキュリティキー（確認用）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0}
+a{color:#A10228}a:hover{color:#7A011E}
+img{max-width:100%;height:auto}
+.pv-band{background:#F2E9C9;color:#3A2F10;font:12px/1.6 'Noto Sans JP',sans-serif;text-align:center;padding:6px 12px}
+h1,h2,h3,p,strong{word-break:auto-phrase}
+h1,h2,h3{text-wrap:balance}
+.hero-grid{grid-template-columns:1.3fr 1fr;gap:56px;align-items:center}
+.sp-only{display:none}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
+@media (max-width:640px){
+section>div,header>div,footer>div{padding-left:18px!important;padding-right:18px!important}
+section[id]>div,section:not([id])>div{padding-top:64px!important;padding-bottom:64px!important}
+.hero-grid{padding-top:48px!important;gap:24px}
+a[href="form.html"]{padding:0 24px!important;font-size:17px!important}
+.sp-only{display:block}
+}
+</style>
+</head>
+<body>
+<div class="pv-band">このページは TAF Design の確認用の見本です。文章・画像は調整中のものを含みます。（著作権：TAF Design）</div>
+<div style="--accent: #C10230; font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif; color: #1D1416; background: #FFFFFF; line-height: 1.8; font-size: 16px">
+
+<!-- ヘッダー -->
+<header style="background: #150A0C; border-bottom: 1px solid #3A2226">
+<div style="max-width: 1160px; margin: 0 auto; padding: 14px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px">
+<div style="display: flex; align-items: baseline; gap: 14px">
+<span style="font-family: 'Shippori Mincho B1', 'Hiragino Mincho ProN', serif; font-weight: 800; font-size: 26px; color: #FFFFFF; letter-spacing: 0.04em">ATKey</span>
+<span style="font-size: 12px; color: #C9BCBD; letter-spacing: 0.08em">ACT株式会社 ATkey事業部</span>
+</div>
+<nav style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; font-size: 14px">
+<a href="#problem" style="color: #EDE6E4; text-decoration: none">課題</a>
+<a href="#solution" style="color: #EDE6E4; text-decoration: none">FIDO2認証</a>
+<a href="#product" style="color: #EDE6E4; text-decoration: none">製品</a>
+<a href="#cases" style="color: #EDE6E4; text-decoration: none">導入事例</a>
+<a href="https://a-c-t.co.jp/" style="color: #EDE6E4; text-decoration: none">会社紹介</a>
+<a href="#contact" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px; background: var(--accent, #C10230); color: #FFFFFF; font-weight: 700; text-decoration: none; border-radius: 2px">資料請求・お問い合わせ</a>
+</nav>
+</div>
+</header>
+
+<!-- ヒーロー -->
+<section style="background-color: #150A0C; background-image: linear-gradient(#24141780 1px, transparent 1px), linear-gradient(90deg, #24141780 1px, transparent 1px); background-size: 56px 56px; color: #FFFFFF; position: relative; overflow: hidden">
+<div style="max-width: 1160px; margin: 0 auto; padding: 88px 24px 104px; display: grid" class="hero-grid" data-x="; gap: 56px; align-items: center">
+<div style="display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; align-items: center; gap: 14px; font-size: 14px; letter-spacing: 0.14em; color: #E3C78C">
+<span style="display: inline-block; width: 40px; height: 1px; background: #E3C78C"></span>
+<span>FIDO2認定 ／ 指紋認証 × フィッシング耐性</span>
+</div>
+<h1 style="margin: 0; font-family: 'Shippori Mincho B1', 'Hiragino Mincho ProN', serif; font-weight: 800; font-size: clamp(34px, 4.4vw, 60px); line-height: 1.3; letter-spacing: 0.02em">騙されても、<br><span style="display: inline-block; white-space: nowrap; background: var(--accent, #C10230); padding: 0 16px; margin-left: -6px">ログインさせない。</span></h1>
+<p style="margin: 0; font-size: clamp(17px, 1.5vw, 20px); line-height: 1.9; color: #EDE6E4; max-width: 34em">フィッシングメール対策は「社員教育」だけでは不十分です。<br>指紋認証セキュリティキー <strong style="color: #FFFFFF">ATKey</strong> が、ID・パスワードを盗まれても不正ログインを成立させない仕組みをつくります。</p>
+<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: center">
+<a href="#contact" style="display: inline-flex; align-items: center; gap: 12px; min-height: 64px; padding: 0 36px; background: var(--accent, #C10230); color: #FFFFFF; font-size: 18px; font-weight: 700; text-decoration: none; border-radius: 2px; box-shadow: 0 10px 0 #62011A">資料請求・デモ機のご相談
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+<span style="font-size: 14px; color: #C9BCBD">現状確認から、小さく評価を始められます</span>
+</div>
+</div>
+<div style="position: relative; min-height: 440px; display: flex; align-items: center; justify-content: center">
+<div style="position: absolute; inset: 24px 0 24px 40px; border: 1px solid #E3C78C; transform: skewX(-8deg)"></div>
+<div style="position: absolute; inset: 56px 40px 0 0; background: var(--accent, #C10230); transform: skewX(-8deg)"></div>
+<img src="images/atkey-card.png" alt="ATKey.Card NFC（カード型）" style="position: relative; width: 78%; max-width: 440px; transform: rotate(-8deg) translate(-8%, -14%); filter: drop-shadow(0 28px 30px rgba(0,0,0,0.55))">
+<img src="images/atkey-pro.png" alt="ATKey.Pro（USB型）" style="position: absolute; right: 0; bottom: 4%; width: 52%; max-width: 300px; filter: drop-shadow(0 24px 24px rgba(0,0,0,0.6))">
+</div>
+</div>
+<div style="background: #FFFFFF; color: #1D1416">
+<div style="max-width: 1160px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr))">
+<div style="padding: 26px 20px; display: flex; align-items: center; gap: 16px; border-left: 1px solid #E4DAD8">
+<span style="font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: 34px; color: var(--accent, #C10230); line-height: 1">FIDO2</span>
+<span style="font-size: 14px; line-height: 1.5; font-weight: 700">認定取得<br>セキュリティキー</span>
+</div>
+<div style="padding: 26px 20px; display: flex; align-items: center; gap: 16px; border-left: 1px solid #E4DAD8">
+<span style="font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: 34px; color: var(--accent, #C10230); line-height: 1">1<span style="font-size: 18px">秒以下</span></span>
+<span style="font-size: 14px; line-height: 1.5; font-weight: 700">指紋タッチで<br>すばやく認証</span>
+</div>
+<div style="padding: 26px 20px; display: flex; align-items: center; gap: 16px; border-left: 1px solid #E4DAD8">
+<span style="font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: 34px; color: var(--accent, #C10230); line-height: 1">PIN<span style="font-size: 18px">不要</span></span>
+<span style="font-size: 14px; line-height: 1.5; font-weight: 700">覚えるものを<br>増やさない</span>
+</div>
+<div style="padding: 26px 20px; display: flex; align-items: center; gap: 16px; border-left: 1px solid #E4DAD8; border-right: 1px solid #E4DAD8">
+<span style="font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: 34px; color: var(--accent, #C10230); line-height: 1">2<span style="font-size: 18px">形状</span></span>
+<span style="font-size: 14px; line-height: 1.5; font-weight: 700">カード型・USB型<br>から選べる</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 01 課題 -->
+<section id="problem" style="background: #F7F3F1; border-top: 1px solid #E4DAD8">
+<div style="max-width: 1160px; margin: 0 auto; padding: 104px 24px; display: flex; flex-direction: column; gap: 56px">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; align-items: center; gap: 14px; font-size: 13px; letter-spacing: 0.2em; color: #A10228; font-weight: 700"><span style="font-family: 'Shippori Mincho B1', serif; font-size: 22px">01</span><span style="width: 40px; height: 1px; background: #A10228"></span><span>PROBLEM</span></div>
+<h2 style="margin: 0; font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: clamp(30px, 3.6vw, 48px); line-height: 1.4">フィッシング攻撃は、<br>増え続け、巧妙になっている。</h2>
+<p style="margin: 0; max-width: 44em; color: #4A3F41">生成AIの活用により、文章・件名・デザインはさらに自然に。「本物らしさ」が高まり、経験だけでは見分けにくくなっています。</p>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(190px, 100%), 1fr)); gap: 12px">
+<div style="background: #FFFFFF; border: 1px solid #E4DAD8; padding: 20px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12px; color: #6B5F61; letter-spacing: 0.1em">件名の例</span><strong style="font-size: 16px; line-height: 1.5">Microsoft 365<br>ログイン確認</strong></div>
+<div style="background: #FFFFFF; border: 1px solid #E4DAD8; padding: 20px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12px; color: #6B5F61; letter-spacing: 0.1em">件名の例</span><strong style="font-size: 16px; line-height: 1.5">パスワード<br>期限切れ</strong></div>
+<div style="background: #FFFFFF; border: 1px solid #E4DAD8; padding: 20px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12px; color: #6B5F61; letter-spacing: 0.1em">件名の例</span><strong style="font-size: 16px; line-height: 1.5">請求書の<br>ご送付</strong></div>
+<div style="background: #FFFFFF; border: 1px solid #E4DAD8; padding: 20px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12px; color: #6B5F61; letter-spacing: 0.1em">件名の例</span><strong style="font-size: 16px; line-height: 1.5">宅配便の<br>不在通知</strong></div>
+<div style="background: #FFFFFF; border: 1px solid #E4DAD8; padding: 20px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12px; color: #6B5F61; letter-spacing: 0.1em">件名の例</span><strong style="font-size: 16px; line-height: 1.5">電子契約の<br>署名依頼</strong></div>
+</div>
+
+<div style="background: #150A0C; color: #FFFFFF; padding: 44px 40px; display: flex; flex-direction: column; gap: 28px">
+<div style="font-size: 15px; color: #E3C78C; letter-spacing: 0.08em">証券口座への不正アクセス・不正取引（2025年1〜5月）</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(210px, 100%), 1fr)); gap: 28px 24px">
+<div style="display: flex; flex-direction: column; gap: 4px; border-left: 3px solid var(--accent, #C10230); padding-left: 18px"><span style="font-size: 14px; color: #C9BCBD">不正売買総額</span><span style="font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: 44px; line-height: 1.2">約5,240<span style="font-size: 20px">億円</span></span></div>
+<div style="display: flex; flex-direction: column; gap: 4px; border-left: 3px solid var(--accent, #C10230); padding-left: 18px"><span style="font-size: 14px; color: #C9BCBD">不正アクセス件数</span><span style="font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: 44px; line-height: 1.2">10,422<span style="font-size: 20px">件</span></span></div>
+<div style="display: flex; flex-direction: column; gap: 4px; border-left: 3px solid var(--accent, #C10230); padding-left: 18px"><span style="font-size: 14px; color: #C9BCBD">不正取引件数</span><span style="font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: 44px; line-height: 1.2">5,958<span style="font-size: 20px">件</span></span></div>
+<div style="display: flex; flex-direction: column; gap: 4px; border-left: 3px solid var(--accent, #C10230); padding-left: 18px"><span style="font-size: 14px; color: #C9BCBD">被害証券会社数</span><span style="font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: 44px; line-height: 1.2">16<span style="font-size: 20px">社</span></span></div>
+</div>
+<div style="font-size: 12px; color: #C9BCBD">出典：金融庁「インターネット取引サービスへの不正アクセス・不正取引による被害」2025年5月</div>
+</div>
+</div>
+</section>
+
+<!-- 02 攻撃の流れと教育の限界 -->
+<section style="background: #FFFFFF">
+<div style="max-width: 1160px; margin: 0 auto; padding: 104px 24px; display: flex; flex-direction: column; gap: 56px">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; align-items: center; gap: 14px; font-size: 13px; letter-spacing: 0.2em; color: #A10228; font-weight: 700"><span style="font-family: 'Shippori Mincho B1', serif; font-size: 22px">02</span><span style="width: 40px; height: 1px; background: #A10228"></span><span>RISK</span></div>
+<h2 style="margin: 0; font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: clamp(30px, 3.6vw, 48px); line-height: 1.4">認証情報を盗まれると、<br>被害は連鎖し、拡大する。</h2>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 20px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 16px">
+<div style="border: 1px solid #1D1416; padding: 24px; display: flex; flex-direction: column; gap: 14px">
+<span style="font-family: 'Shippori Mincho B1', serif; font-size: 15px; font-weight: 700; color: #6B5F61">STEP 1</span>
+<svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1D1416" stroke-width="1.5"><rect x="3" y="5" width="18" height="14"/><path d="M3 6l9 7 9-7"/></svg>
+<strong style="font-size: 18px; line-height: 1.5">偽メールを受信</strong>
+</div>
+<div style="border: 1px solid #1D1416; padding: 24px; display: flex; flex-direction: column; gap: 14px">
+<span style="font-family: 'Shippori Mincho B1', serif; font-size: 15px; font-weight: 700; color: #6B5F61">STEP 2</span>
+<svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1D1416" stroke-width="1.5"><rect x="3" y="4" width="18" height="16"/><path d="M3 8h18M8 13h8M8 16h5"/></svg>
+<strong style="font-size: 18px; line-height: 1.5">偽ログイン画面へ誘導</strong>
+</div>
+<div style="border: 1px solid #1D1416; padding: 24px; display: flex; flex-direction: column; gap: 14px">
+<span style="font-family: 'Shippori Mincho B1', serif; font-size: 15px; font-weight: 700; color: #6B5F61">STEP 3</span>
+<svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1D1416" stroke-width="1.5"><rect x="3" y="8" width="18" height="8"/><path d="M7 12h.01M11 12h.01M15 12h.01"/></svg>
+<strong style="font-size: 18px; line-height: 1.5">ID・パスワードを入力</strong>
+</div>
+<div style="background: var(--accent, #C10230); color: #FFFFFF; padding: 24px; display: flex; flex-direction: column; gap: 14px">
+<span style="font-family: 'Shippori Mincho B1', serif; font-size: 15px; font-weight: 700">STEP 4</span>
+<svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+<strong style="font-size: 18px; line-height: 1.5">攻撃者が認証情報を取得</strong>
+</div>
+</div>
+<div style="background: #F7F3F1; padding: 20px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px">
+<span style="font-size: 14px; font-weight: 700">狙われるサービス</span>
+<span style="background: #FFFFFF; border: 1px solid #D5C8C6; padding: 4px 14px; font-size: 14px">Microsoft 365</span>
+<span style="background: #FFFFFF; border: 1px solid #D5C8C6; padding: 4px 14px; font-size: 14px">Google Workspace</span>
+<span style="background: #FFFFFF; border: 1px solid #D5C8C6; padding: 4px 14px; font-size: 14px">Salesforce</span>
+<span style="background: #FFFFFF; border: 1px solid #D5C8C6; padding: 4px 14px; font-size: 14px">VPN</span>
+<span style="background: #FFFFFF; border: 1px solid #D5C8C6; padding: 4px 14px; font-size: 14px">社内システム</span>
+<span style="background: #FFFFFF; border: 1px solid #D5C8C6; padding: 4px 14px; font-size: 14px">クラウドストレージ</span>
+</div>
+<p style="margin: 0; font-size: 12px; color: #6B5F61">※侵入経路は複数あります。本図は認証情報窃取型フィッシングの典型例です。</p>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 24px">
+<h3 style="margin: 0; font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: clamp(24px, 2.4vw, 32px); line-height: 1.5">「100％見抜く」は、現実的ではない。</h3>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(360px, 100%), 1fr)); gap: 0; border: 1px solid #1D1416">
+<div style="padding: 32px; display: flex; flex-direction: column; gap: 18px">
+<span style="font-size: 14px; font-weight: 700; letter-spacing: 0.1em; color: #4A3F41">社員教育でできること</span>
+<div style="display: flex; flex-direction: column; gap: 12px; font-size: 18px; font-weight: 500">
+<span style="padding-bottom: 12px; border-bottom: 1px solid #E4DAD8">怪しいメールに気付く</span>
+<span style="padding-bottom: 12px; border-bottom: 1px solid #E4DAD8">URLを慎重に確認する</span>
+<span>不審なメールを報告する</span>
+</div>
+</div>
+<div style="padding: 32px; display: flex; flex-direction: column; gap: 18px; background: #150A0C; color: #FFFFFF">
+<span style="font-size: 14px; font-weight: 700; letter-spacing: 0.1em; color: #E3C78C">現実の課題</span>
+<div style="display: flex; flex-direction: column; gap: 12px; font-size: 18px; font-weight: 700">
+<span style="padding-bottom: 12px; border-bottom: 1px solid #3A2226">忙しいと判断を誤る</span>
+<span style="padding-bottom: 12px; border-bottom: 1px solid #3A2226">急いでいると確認を省く</span>
+<span>AIでメールが自然になる</span>
+</div>
+</div>
+</div>
+<p style="margin: 0; font-size: 18px; font-weight: 700; text-align: center">「社員が必ず見抜く」ことを前提にしない対策が必要です。</p>
+</div>
+</div>
+</section>
+
+<!-- 03 解決 -->
+<section id="solution" style="background: #150A0C; color: #FFFFFF">
+<div style="max-width: 1160px; margin: 0 auto; padding: 104px 24px; display: flex; flex-direction: column; gap: 64px">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; align-items: center; gap: 14px; font-size: 13px; letter-spacing: 0.2em; color: #E3C78C; font-weight: 700"><span style="font-family: 'Shippori Mincho B1', serif; font-size: 22px">03</span><span style="width: 40px; height: 1px; background: #E3C78C"></span><span>SOLUTION</span></div>
+<h2 style="margin: 0; font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: clamp(30px, 3.6vw, 48px); line-height: 1.4">FIDO2認証は、<br>正規サイトでしか成立しない。</h2>
+<p style="margin: 0; max-width: 44em; color: #EDE6E4">公開鍵暗号方式を利用した、フィッシングに強い認証です。秘密鍵はデバイスの外に出ず、偽のログイン画面では認証そのものが成立しません。教育を補完する「最後の防波堤」になります。</p>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 24px">
+<div style="border: 1px solid #5A4347; padding: 36px; display: flex; flex-direction: column; gap: 20px">
+<span style="font-size: 14px; letter-spacing: 0.14em; color: #C9BCBD">従来の認証</span>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; padding: 14px 18px; border: 1px solid #5A4347"><strong>ID</strong><span style="color: #C9BCBD; font-size: 14px">盗まれる</span></div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; padding: 14px 18px; border: 1px solid #5A4347"><strong>パスワード</strong><span style="color: #C9BCBD; font-size: 14px">偽サイトに入力してしまう</span></div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; padding: 14px 18px; border: 1px solid #5A4347"><strong>OTP（ワンタイムパスワード）</strong><span style="color: #C9BCBD; font-size: 14px">中継されて横取りされる</span></div>
+</div>
+</div>
+<div style="background: #FFFFFF; color: #1D1416; padding: 36px; display: flex; flex-direction: column; gap: 20px; box-shadow: 12px 12px 0 var(--accent, #C10230)">
+<span style="font-size: 14px; letter-spacing: 0.14em; color: #A10228; font-weight: 700">FIDO2認証（ATKey）</span>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; padding: 14px 18px; border: 1px solid #1D1416"><strong>秘密鍵はデバイス内</strong><span style="color: #A10228; font-size: 14px; font-weight: 700">外に出ない</span></div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; padding: 14px 18px; border: 1px solid #1D1416"><strong>指紋などで本人確認</strong><span style="color: #A10228; font-size: 14px; font-weight: 700">パスワードレス</span></div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; padding: 14px 18px; border: 1px solid #1D1416"><strong>正規サイトでのみ成立</strong><span style="color: #A10228; font-size: 14px; font-weight: 700">フィッシング耐性</span></div>
+</div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 24px">
+<h3 style="margin: 0; font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: clamp(24px, 2.4vw, 32px)">認証レベルの比較</h3>
+<p class="sp-only" style="margin: 0; font-size: 13px; color: #C9BCBD">横にスクロールできます →</p>
+<div style="overflow-x: auto">
+<div style="min-width: 760px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; align-items: end">
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-size: 14px; color: #C9BCBD">弱い</span><div style="height: 56px; background: #3A2226"></div><strong style="font-size: 15px">電話 / SMS</strong><span style="font-size: 13px; color: #C9BCBD; line-height: 1.6">フィッシング・中間者攻撃に非常に脆弱</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-size: 14px; color: #C9BCBD">まぁまぁ</span><div style="height: 104px; background: #4E3035"></div><strong style="font-size: 15px">プッシュ / OTP</strong><span style="font-size: 13px; color: #C9BCBD; line-height: 1.6">フィッシング・MFA疲労攻撃のリスクあり</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-size: 14px; color: #C9BCBD">まぁまぁ強い</span><div style="height: 152px; background: #654046"></div><strong style="font-size: 15px">Authenticatorアプリ</strong><span style="font-size: 13px; color: #C9BCBD; line-height: 1.6">Push Bombingのリスクあり</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-size: 14px; color: #C9BCBD">強い</span><div style="height: 200px; background: #80545B"></div><strong style="font-size: 15px">Windows Hello</strong><span style="font-size: 13px; color: #C9BCBD; line-height: 1.6">デバイス固定・リスク低</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-size: 15px; font-weight: 700; color: #E3C78C">最強 ／ ATKeyはここ</span><div style="height: 256px; background: var(--accent, #C10230); display: flex; align-items: center; justify-content: center; font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: 30px">FIDO2</div><strong style="font-size: 15px">FIDO2（ATKey）</strong><span style="font-size: 13px; color: #EDE6E4; line-height: 1.6">フィッシング耐性 最高レベル</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 04 導入メリット -->
+<section style="background: #FFFFFF">
+<div style="max-width: 1160px; margin: 0 auto; padding: 104px 24px; display: flex; flex-direction: column; gap: 56px">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; align-items: center; gap: 14px; font-size: 13px; letter-spacing: 0.2em; color: #A10228; font-weight: 700"><span style="font-family: 'Shippori Mincho B1', serif; font-size: 22px">04</span><span style="width: 40px; height: 1px; background: #A10228"></span><span>BENEFIT</span></div>
+<h2 style="margin: 0; font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: clamp(30px, 3.6vw, 48px); line-height: 1.4">セキュリティを強化しながら、<br>利用者の負担は増やさない。</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 0; border-top: 1px solid #1D1416; border-left: 1px solid #1D1416">
+<div style="padding: 32px; border-right: 1px solid #1D1416; border-bottom: 1px solid #1D1416; display: flex; flex-direction: column; gap: 12px"><span style="font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: 40px; line-height: 1; color: var(--accent, #C10230)">1</span><strong style="font-size: 20px">フィッシング耐性が極めて高い</strong><span style="font-size: 15px; color: #4A3F41">秘密鍵はデバイスから外に出ません。中間者攻撃・偽ログインページを無効化します。</span></div>
+<div style="padding: 32px; border-right: 1px solid #1D1416; border-bottom: 1px solid #1D1416; display: flex; flex-direction: column; gap: 12px"><span style="font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: 40px; line-height: 1; color: var(--accent, #C10230)">2</span><strong style="font-size: 20px">指紋も秘密鍵も、サーバーに送らない</strong><span style="font-size: 15px; color: #4A3F41">生体情報・秘密鍵はキー内のセキュアエレメントに格納。大規模データ漏洩の影響を受けません。</span></div>
+<div style="padding: 32px; border-right: 1px solid #1D1416; border-bottom: 1px solid #1D1416; display: flex; flex-direction: column; gap: 12px"><span style="font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: 40px; line-height: 1; color: var(--accent, #C10230)">3</span><strong style="font-size: 20px">パスワードが不要に</strong><span style="font-size: 15px; color: #4A3F41">作成・記憶・定期変更が不要。パスワード流出や辞書攻撃のリスクをなくします。</span></div>
+<div style="padding: 32px; border-right: 1px solid #1D1416; border-bottom: 1px solid #1D1416; display: flex; flex-direction: column; gap: 12px"><span style="font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: 40px; line-height: 1; color: var(--accent, #C10230)">4</span><strong style="font-size: 20px">既存環境に統合できる</strong><span style="font-size: 15px; color: #4A3F41">Entra ID・Google Workspace等と連携。SSO・ゼロトラスト運用にも対応します。</span></div>
+<div style="padding: 32px; border-right: 1px solid #1D1416; border-bottom: 1px solid #1D1416; display: flex; flex-direction: column; gap: 12px"><span style="font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: 40px; line-height: 1; color: var(--accent, #C10230)">5</span><strong style="font-size: 20px">IT管理の負荷を削減</strong><span style="font-size: 15px; color: #4A3F41">パスワードリセット対応が激減。BYOD不要でコストも抑えられます。</span></div>
+<div style="padding: 32px; border-right: 1px solid #1D1416; border-bottom: 1px solid #1D1416; display: flex; flex-direction: column; gap: 12px"><span style="font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: 40px; line-height: 1; color: var(--accent, #C10230)">6</span><strong style="font-size: 20px">各省庁ガイドラインに適合</strong><span style="font-size: 15px; color: #4A3F41">金融庁・総務省・文部科学省など、多数のガイドラインが多要素認証を推奨しています。</span></div>
+</div>
+</div>
+</section>
+
+<!-- 05 製品 -->
+<section id="product" style="background: #F7F3F1; border-top: 1px solid #E4DAD8">
+<div style="max-width: 1160px; margin: 0 auto; padding: 104px 24px; display: flex; flex-direction: column; gap: 56px">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; align-items: center; gap: 14px; font-size: 13px; letter-spacing: 0.2em; color: #A10228; font-weight: 700"><span style="font-family: 'Shippori Mincho B1', serif; font-size: 22px">05</span><span style="width: 40px; height: 1px; background: #A10228"></span><span>PRODUCT</span></div>
+<h2 style="margin: 0; font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: clamp(30px, 3.6vw, 48px); line-height: 1.4">働き方に合わせて選べる、2つの形。</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); gap: 24px">
+<div style="background: #FFFFFF; border: 1px solid #1D1416; display: flex; flex-direction: column">
+<div style="background: #150A0C; height: 280px; display: flex; align-items: center; justify-content: center; padding: 24px"><img src="images/atkey-pro.png" alt="ATKey.Pro 製品写真" style="max-width: 70%; max-height: 220px; filter: drop-shadow(0 18px 18px rgba(0,0,0,0.6))"></div>
+<div style="padding: 36px; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 13px; letter-spacing: 0.14em; color: #A10228; font-weight: 700">USB型 ／ Type-A・Type-C</span><h3 style="margin: 0; font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: 34px; line-height: 1.3">ATKey.Pro</h3><span style="font-size: 15px; color: #4A3F41">PCに直接接続して利用。横からタッチする設計で、PCとUSBソケットに負担をかけません。</span></div>
+<div style="display: flex; flex-direction: column; font-size: 15px">
+<div style="display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-top: 1px solid #E4DAD8"><span style="color: #4A3F41; white-space: nowrap">認証速度</span><strong>1秒以下</strong></div>
+<div style="display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-top: 1px solid #E4DAD8"><span style="color: #4A3F41; white-space: nowrap">指紋登録数</span><strong>10指</strong></div>
+<div style="display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-top: 1px solid #E4DAD8"><span style="color: #4A3F41; white-space: nowrap">指紋登録</span><strong>アプリ不要（特許技術）</strong></div>
+<div style="display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-top: 1px solid #E4DAD8"><span style="color: #4A3F41; white-space: nowrap">対応OS</span><strong style="text-align: right">Windows 11 / macOS / ChromeOS / Linux / iOS / Android</strong></div>
+<div style="display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-top: 1px solid #E4DAD8; border-bottom: 1px solid #E4DAD8"><span style="color: #4A3F41; white-space: nowrap">準拠</span><strong style="text-align: right">FIDO2 / NIST IAL-3・AAL-3 / NIS2 / DORA</strong></div>
+</div>
+</div>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #1D1416; display: flex; flex-direction: column">
+<div style="background: #150A0C; height: 280px; display: flex; align-items: center; justify-content: center; padding: 24px"><img src="images/atkey-card.png" alt="ATKey.Card NFC 製品写真" style="max-width: 70%; max-height: 220px; filter: drop-shadow(0 18px 18px rgba(0,0,0,0.6))"></div>
+<div style="padding: 36px; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 13px; letter-spacing: 0.14em; color: #A10228; font-weight: 700">カード型 ／ NFC 非接触・接触</span><h3 style="margin: 0; font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: 34px; line-height: 1.3">ATKey.Card NFC</h3><span style="font-size: 15px; color: #4A3F41">社員証ケースに収納でき、携帯しやすく紛失リスクを低減。USBポートのない端末でも使えます。</span></div>
+<div style="display: flex; flex-direction: column; font-size: 15px">
+<div style="display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-top: 1px solid #E4DAD8"><span style="color: #4A3F41; white-space: nowrap">電源</span><strong>バッテリーレス（特許取得）</strong></div>
+<div style="display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-top: 1px solid #E4DAD8"><span style="color: #4A3F41; white-space: nowrap">指紋登録数</span><strong>2指</strong></div>
+<div style="display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-top: 1px solid #E4DAD8"><span style="color: #4A3F41; white-space: nowrap">耐環境</span><strong>防水・防塵設計</strong></div>
+<div style="display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-top: 1px solid #E4DAD8"><span style="color: #4A3F41; white-space: nowrap">対応端末</span><strong style="text-align: right">Windows / Mac / iPhone / iPad / Android</strong></div>
+<div style="display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-top: 1px solid #E4DAD8; border-bottom: 1px solid #E4DAD8"><span style="color: #4A3F41; white-space: nowrap">準拠</span><strong style="text-align: right">FIDO2 / NIST SP 800-73-5 / AAL3 / FIPS 201</strong></div>
+</div>
+</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<strong style="font-size: 16px">連携できる主なサービス</strong>
+<div style="display: flex; flex-wrap: wrap; gap: 10px">
+<span style="background: #FFFFFF; border: 1px solid #D5C8C6; padding: 6px 16px; font-size: 14px">Microsoft Entra ID</span>
+<span style="background: #FFFFFF; border: 1px solid #D5C8C6; padding: 6px 16px; font-size: 14px">Microsoft 365</span>
+<span style="background: #FFFFFF; border: 1px solid #D5C8C6; padding: 6px 16px; font-size: 14px">Google Workspace</span>
+<span style="background: #FFFFFF; border: 1px solid #D5C8C6; padding: 6px 16px; font-size: 14px">AWS</span>
+<span style="background: #FFFFFF; border: 1px solid #D5C8C6; padding: 6px 16px; font-size: 14px">Salesforce</span>
+<span style="background: #FFFFFF; border: 1px solid #D5C8C6; padding: 6px 16px; font-size: 14px">Okta</span>
+<span style="background: #FFFFFF; border: 1px solid #D5C8C6; padding: 6px 16px; font-size: 14px">GitHub</span>
+<span style="background: #FFFFFF; border: 1px solid #D5C8C6; padding: 6px 16px; font-size: 14px">Dropbox</span>
+<span style="background: #FFFFFF; border: 1px solid #D5C8C6; padding: 6px 16px; font-size: 14px">Duo</span>
+<span style="background: #FFFFFF; border: 1px solid #D5C8C6; padding: 6px 16px; font-size: 14px">Soliton OneGate</span>
+<span style="background: #FFFFFF; border: 1px solid #D5C8C6; padding: 6px 16px; font-size: 14px">GMOトラスト・ログイン</span>
+</div>
+<span style="font-size: 12px; color: #6B5F61">※一部のサービスをご紹介しています。ほかにもFIDO対応サービスは多数ございます。各社名・サービス名は各社の商標または登録商標です。</span>
+</div>
+</div>
+</section>
+
+<!-- 06 導入事例 -->
+<section id="cases" style="background: #FFFFFF">
+<div style="max-width: 1160px; margin: 0 auto; padding: 104px 24px; display: flex; flex-direction: column; gap: 56px">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; align-items: center; gap: 14px; font-size: 13px; letter-spacing: 0.2em; color: #A10228; font-weight: 700"><span style="font-family: 'Shippori Mincho B1', serif; font-size: 22px">06</span><span style="width: 40px; height: 1px; background: #A10228"></span><span>USE CASE</span></div>
+<h2 style="margin: 0; font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: clamp(30px, 3.6vw, 48px); line-height: 1.4">企業から教育・医療・現場まで。</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 20px">
+<div style="border-top: 4px solid var(--accent, #C10230); background: #F7F3F1; padding: 28px; display: flex; flex-direction: column; gap: 10px"><strong style="font-family: 'Shippori Mincho B1', serif; font-size: 22px">企業利用</strong><span style="font-size: 15px; color: #4A3F41">ATKey.Proを従業員に配布。Windows OSやSSOサービス、Entra ID・Google Workspaceと連携。</span></div>
+<div style="border-top: 4px solid var(--accent, #C10230); background: #F7F3F1; padding: 28px; display: flex; flex-direction: column; gap: 10px"><strong style="font-family: 'Shippori Mincho B1', serif; font-size: 22px">公立学校・教育現場</strong><span style="font-size: 15px; color: #4A3F41">校務用Windows端末の認証に。教員のテレワーク時、自宅から校内サービスへのアクセスにも利用。</span></div>
+<div style="border-top: 4px solid var(--accent, #C10230); background: #F7F3F1; padding: 28px; display: flex; flex-direction: column; gap: 10px"><strong style="font-family: 'Shippori Mincho B1', serif; font-size: 22px">国立大学・私立大学</strong><span style="font-size: 15px; color: #4A3F41">研究ラボの端末認証、教員のアカウント認証（Google Workspace・Microsoft 365）、ポータルサイトへのアクセスに。</span></div>
+<div style="border-top: 4px solid var(--accent, #C10230); background: #F7F3F1; padding: 28px; display: flex; flex-direction: column; gap: 10px"><strong style="font-family: 'Shippori Mincho B1', serif; font-size: 22px">会計事務所・士業</strong><span style="font-size: 15px; color: #4A3F41">端末認証用にATKey.Proを利用。複数OS・複数デバイスに対応し、SSOサービスと連携。</span></div>
+<div style="border-top: 4px solid var(--accent, #C10230); background: #F7F3F1; padding: 28px; display: flex; flex-direction: column; gap: 10px"><strong style="font-family: 'Shippori Mincho B1', serif; font-size: 22px">小売チェーン店舗</strong><span style="font-size: 15px; color: #4A3F41">従業員バッジ兼認証キーとして採用。Android・iPad・Windowsを横断し、物理ドアやプリンターのアクセスも統合。</span></div>
+<div style="border-top: 4px solid var(--accent, #C10230); background: #F7F3F1; padding: 28px; display: flex; flex-direction: column; gap: 10px"><strong style="font-family: 'Shippori Mincho B1', serif; font-size: 22px">インフラ・工場現場</strong><span style="font-size: 15px; color: #4A3F41">ATKey.Card（NFC）をバッジ兼認証に。USBポートのないWindowsタブレットでパスワードレス認証を実現。</span></div>
+</div>
+
+<div style="border: 1px solid #1D1416; padding: 36px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 28px; align-items: center">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<h3 style="margin: 0; font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: 26px; line-height: 1.5">各省庁のガイドラインが、<br>多要素認証を求めています。</h3>
+<span style="font-size: 15px; color: #4A3F41">ATKey＋指紋認証は「所持」×「生体」の多要素認証。業種別ガイドラインへの対応を後押しします。</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 10px">
+<span style="background: #150A0C; color: #FFFFFF; padding: 8px 16px; font-size: 14px">自治体・公共 ／ NISC・総務省</span>
+<span style="background: #150A0C; color: #FFFFFF; padding: 8px 16px; font-size: 14px">金融 ／ 金融庁</span>
+<span style="background: #150A0C; color: #FFFFFF; padding: 8px 16px; font-size: 14px">医療 ／ 厚生労働省・経済産業省</span>
+<span style="background: #150A0C; color: #FFFFFF; padding: 8px 16px; font-size: 14px">教育 ／ 文部科学省</span>
+<span style="background: #150A0C; color: #FFFFFF; padding: 8px 16px; font-size: 14px">製造 ／ 経済産業省</span>
+<span style="background: #150A0C; color: #FFFFFF; padding: 8px 16px; font-size: 14px">自動車 ／ 日本自動車工業会</span>
+<span style="background: #150A0C; color: #FFFFFF; padding: 8px 16px; font-size: 14px">建設 ／ 日本建設業連合会</span>
+<span style="background: #150A0C; color: #FFFFFF; padding: 8px 16px; font-size: 14px">航空・鉄道・物流 ／ 国土交通省</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 07 導入ステップ + CTA -->
+<section style="background: #F7F3F1; border-top: 1px solid #E4DAD8">
+<div style="max-width: 1160px; margin: 0 auto; padding: 104px 24px; display: flex; flex-direction: column; gap: 56px">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; align-items: center; gap: 14px; font-size: 13px; letter-spacing: 0.2em; color: #A10228; font-weight: 700"><span style="font-family: 'Shippori Mincho B1', serif; font-size: 22px">07</span><span style="width: 40px; height: 1px; background: #A10228"></span><span>FLOW</span></div>
+<h2 style="margin: 0; font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: clamp(30px, 3.6vw, 48px); line-height: 1.4">導入から運用まで、トータルサポート。</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 16px">
+<div style="background: #FFFFFF; padding: 28px; display: flex; flex-direction: column; gap: 10px; border-bottom: 4px solid #1D1416"><span style="font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: 44px; line-height: 1; color: var(--accent, #C10230)">01</span><strong style="font-size: 18px; line-height: 1.5">現状の認証環境の<br>確認・診断</strong></div>
+<div style="background: #FFFFFF; padding: 28px; display: flex; flex-direction: column; gap: 10px; border-bottom: 4px solid #1D1416"><span style="font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: 44px; line-height: 1; color: var(--accent, #C10230)">02</span><strong style="font-size: 18px; line-height: 1.5">FIDO2対応可否の<br>評価</strong></div>
+<div style="background: #FFFFFF; padding: 28px; display: flex; flex-direction: column; gap: 10px; border-bottom: 4px solid #1D1416"><span style="font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: 44px; line-height: 1; color: var(--accent, #C10230)">03</span><strong style="font-size: 18px; line-height: 1.5">デモ・評価機の<br>貸し出し</strong></div>
+<div style="background: #FFFFFF; padding: 28px; display: flex; flex-direction: column; gap: 10px; border-bottom: 4px solid #1D1416"><span style="font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: 44px; line-height: 1; color: var(--accent, #C10230)">04</span><strong style="font-size: 18px; line-height: 1.5">導入支援・<br>運用サポート</strong></div>
+</div>
+</div>
+</section>
+
+<section id="contact" style="background: var(--accent, #C10230); color: #FFFFFF">
+<div style="max-width: 1160px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; align-items: center; gap: 28px; text-align: center">
+<h2 style="margin: 0; font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: clamp(32px, 4.2vw, 56px); line-height: 1.4">教育 × FIDO2。<br>フィッシングに強い会社へ。</h2>
+<p style="margin: 0; font-size: 18px; max-width: 36em">現状確認から、小さく評価を始められます。デモ・評価機の貸し出しもご相談ください。</p>
+<a href="form.html" style="display: inline-flex; align-items: center; gap: 12px; min-height: 72px; padding: 0 48px; background: #FFFFFF; color: #A10228; font-size: 20px; font-weight: 700; text-decoration: none; border-radius: 2px; box-shadow: 0 10px 0 #62011A">資料請求・お問い合わせはこちら
+<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+<span style="font-size: 14px">入力は3ステップ・約1分</span>
+</div>
+</section>
+
+<footer style="background: #150A0C; color: #C9BCBD">
+<div style="max-width: 1160px; margin: 0 auto; padding: 48px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; font-size: 14px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-family: 'Shippori Mincho B1', serif; font-weight: 800; font-size: 22px; color: #FFFFFF">ATKey</span>
+<span>ACT株式会社 ATkey事業部</span>
+<span style="font-size: 12px">© A.C.T. / AuthenTrend</span>
+</div>
+<nav style="display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: flex-start">
+<a href="https://a-c-t.co.jp/" style="color: #EDE6E4">会社紹介</a>
+<a href="#privacy" style="color: #EDE6E4">プライバシーポリシー</a>
+<a href="#cookie" style="color: #EDE6E4">Cookieポリシー</a>
+<a href="form.html" style="color: #EDE6E4">お問い合わせ</a>
+</nav>
+</div>
+</footer>
+
+</div>
+</body>
+</html>

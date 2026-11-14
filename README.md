@@ -4,6 +4,8 @@
 
 | プレビュー | URL |
 |---|---|
+| ACT株式会社 ATKey LP（BtoB・FIDO2指紋認証キー）【デザイン案v1】 | https://810eigo-droid.github.io/lp-preview/act-atkey/ |
+| 同 お問い合わせフォーム（3ステップ案・送信なし） | https://810eigo-droid.github.io/lp-preview/act-atkey/form.html |
 | Good Pluck メンズアニソンD&Vプロジェクト オーディションLP（AIラフ忠実再現・画像はプレースホルダー） | https://810eigo-droid.github.io/lp-preview/goodpluck/ |
 | 包丁人よしのり 宴会LP【v2・実データ版】(透かしなし) | https://810eigo-droid.github.io/lp-preview/yoshinori/ |
 | 旧バージョン(v1・仮データ) | https://810eigo-droid.github.io/lp-preview/yoshinori/index-v1.html |
@@ -83,3 +85,13 @@
 | assets/IMG_0297.jpeg | レッスン |
 | assets/IMG_1036.jpeg | 東京・SHINKAホール |
 | assets/IMG_1037.jpeg | 名古屋・ローゼンシュトラウス |
+
+## 画像ファイル名一覧（ACT ATKey LP）
+
+`act-atkey/images/` に同じ名前で上書きすると差し替わる。
+
+| ファイル名 | 内容 | 現状 / 必要サイズ |
+|---|---|---|
+| atkey-pro.png | ATKey.Pro（USB型）製品写真・背景透過 | 資料PDFから切り出し 446×286 → 1600×1100以上がほしい |
+| atkey-card.png | ATKey.Card NFC（カード型）製品写真・背景透過 | 資料PDFから切り出し 676×450 → 1600×1100以上がほしい |
+| logo-atkey.svg / logo-act.svg | ロゴ（未着・いまは文字で表示） | SVG または 横600px以上のPNG |
