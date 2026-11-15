@@ -361,6 +361,44 @@ h2:after{content:"";position:absolute;left:0;bottom:0;width:76px;height:3px;back
 .feat .ph img.photo{max-width:100%;max-height:150px;filter:none}
 @media (max-width:640px){.feat .ph img.photo{max-height:96px}}
 @media (min-width:901px){#contact{background-size:auto,150% auto;background-position:center,100% 28%}}
+
+/* ===== スマホ最優先の作り直し（2026-11-15） ===== */
+.ph-band,.swipe{display:none}
+.case-img{display:block;width:calc(100% + 56px);max-width:none;margin:-28px -28px 18px;aspect-ratio:16/10;object-fit:cover}
+.risk svg{width:52px;height:52px;padding:11px;box-sizing:border-box;background:#FBE9ED;border-radius:50%}
+@media (max-width:640px){
+.ph-band{display:block;position:relative;height:50vw;max-height:230px;background-size:cover;background-position:center 30%}
+.ph-band:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,0) 50%,rgba(255,255,255,.75) 82%,#fff 100%)}
+.ph-band:before{content:"";position:absolute;left:0;bottom:22px;width:56px;height:4px;background:var(--red);z-index:1}
+#solution,#how,#cases,#contact{background-image:none!important;background-color:#fff;padding-top:0}
+#solution>.in,#how>.in,#cases>.in,#contact>.in{margin-top:6px}
+#solution:before,#how:before,#cases:before,#contact:before{top:calc(min(50vw,230px) + 8px)}
+#solution .ph-band{background-position:84% 22%}
+#how .ph-band{background-position:86% 30%}
+#contact .ph-band{background-position:36% 34%;background-size:150% auto}
+#cases .ph-band{background-position:center 62%}
+.swipe{display:flex;align-items:center;gap:8px;justify-content:flex-end;margin-top:22px;font-size:13px;font-weight:700;color:var(--red-t)}
+.cases{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:10px -18px 0;padding:0 18px 16px;scrollbar-width:none}
+.cases::-webkit-scrollbar{display:none}
+#cases .case{flex:0 0 80%;scroll-snap-align:center;padding:20px;background:#fff;border:1px solid var(--line);border-top:4px solid var(--red);box-shadow:0 10px 24px rgba(40,10,16,.1)}
+.case-img{width:calc(100% + 40px);margin:-20px -20px 14px}
+.feat>div{display:flex;flex-direction:column;position:relative;padding:0 0 20px;overflow:hidden;row-gap:0}
+.feat .ph{order:-1;height:150px;background:var(--paper);justify-content:center;width:100%}
+.feat .ph img.photo{width:100%;height:150px;max-height:none;object-fit:cover}
+.feat .ph svg{width:76px;height:76px}
+.feat .n{position:absolute;top:12px;left:12px;margin:0;z-index:2}
+.feat strong{margin:16px 20px 6px;padding-top:0;border-top:0;font-size:19px}
+.feat>div>span:last-child{margin:0 20px}
+.risk svg{width:44px;height:44px;padding:9px}
+.prod-box{padding:28px 20px}
+.prod-box img{max-height:180px}
+}
+
+/* 透かし：全体はごく薄く、要所（製品・写真・カード）だけ濃いめ */
+.wm{opacity:.06}
+.hero-v:after,.prod-box:after,.case:after,.feat>div:after,.gloss:after,.checks:after,.ex:after{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22520%22%20height%3D%22300%22%3E%3Cg%20transform%3D%22rotate%28-24%20260%20150%29%22%20font-family%3D%22sans-serif%22%20font-weight%3D%22700%22%20fill%3D%22%238A8A8A%22%20fill-opacity%3D%220.2%22%3E%3Ctext%20x%3D%2220%22%20y%3D%22130%22%20font-size%3D%2219%22%20letter-spacing%3D%222%22%3ETAF%20Design%20SAMPLE%20%EF%BD%9C%20%E7%A2%BA%E8%AA%8D%E7%94%A8%E3%81%AE%E8%A6%8B%E6%9C%AC%3C/text%3E%3Ctext%20x%3D%2220%22%20y%3D%22160%22%20font-size%3D%2213%22%20letter-spacing%3D%221%22%3E%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%81%AE%E7%84%A1%E6%96%AD%E4%BD%BF%E7%94%A8%E3%83%BB%E8%A4%87%E8%A3%BD%E3%81%AF%E3%81%94%E9%81%A0%E6%85%AE%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%3C/text%3E%3C/g%3E%3C/svg%3E");background-size:520px 300px;pointer-events:none;z-index:3}
+.prod-box,.case,.feat>div,.gloss,.checks,.ex{position:relative}
+.ph-band:after{background-image:linear-gradient(180deg,rgba(255,255,255,0) 50%,rgba(255,255,255,.75) 82%,#fff 100%),url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22520%22%20height%3D%22300%22%3E%3Cg%20transform%3D%22rotate%28-24%20260%20150%29%22%20font-family%3D%22sans-serif%22%20font-weight%3D%22700%22%20fill%3D%22%238A8A8A%22%20fill-opacity%3D%220.2%22%3E%3Ctext%20x%3D%2220%22%20y%3D%22130%22%20font-size%3D%2219%22%20letter-spacing%3D%222%22%3ETAF%20Design%20SAMPLE%20%EF%BD%9C%20%E7%A2%BA%E8%AA%8D%E7%94%A8%E3%81%AE%E8%A6%8B%E6%9C%AC%3C/text%3E%3Ctext%20x%3D%2220%22%20y%3D%22160%22%20font-size%3D%2213%22%20letter-spacing%3D%221%22%3E%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%81%AE%E7%84%A1%E6%96%AD%E4%BD%BF%E7%94%A8%E3%83%BB%E8%A4%87%E8%A3%BD%E3%81%AF%E3%81%94%E9%81%A0%E6%85%AE%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%3C/text%3E%3C/g%3E%3C/svg%3E");background-size:auto,520px 300px}
 </style>
 </head>
 <body>
@@ -431,7 +469,7 @@ h2:after{content:"";position:absolute;left:0;bottom:0;width:76px;height:3px;back
 </div></section>
 
 <!-- ③ 選択肢 -->
-<section id="solution" data-n="02" class="sec"><div class="in two">
+<section id="solution" data-n="02" class="sec"><div class="ph-band" aria-hidden="true" style="background-image:url(images/bg-02.jpg)"></div><div class="in two">
 <div>
 <div class="label"><b>02</b><i></i><span>SOLUTION</span></div>
 <h2>不正アクセス対策の<em>選択肢</em>、ATKey</h2>
@@ -485,17 +523,18 @@ h2:after{content:"";position:absolute;left:0;bottom:0;width:76px;height:3px;back
 </div></section>
 
 <!-- ⑤ 導入事例 -->
-<section id="cases" data-n="04" class="sec paper"><div class="in">
+<section id="cases" data-n="04" class="sec paper"><div class="ph-band" aria-hidden="true" style="background-image:url(images/bg-04.jpg)"></div><div class="in">
 <div class="label"><b>04</b><i></i><span>USE CASE</span></div>
 <h2>導入<em>事例</em></h2>
 <p class="lead">さまざまな業種・組織で活用される<em>FIDO2セキュリティキー</em></p>
 <div class="body"><p>企業や教育機関など、認証セキュリティの強化が求められるさまざまな環境で、ATKeyシリーズの活用事例が紹介されています。</p></div>
+<p class="swipe" aria-hidden="true">横にスワイプできます<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></p>
 <div class="cases">
-<div class="case"><strong>企業</strong><ul><li>Windows環境やEntra IDなどと連携した認証</li><li>従業員のログインセキュリティ強化</li><li>Microsoftアカウント不正アクセス対策</li></ul></div>
-<div class="case"><strong>教育機関</strong><ul><li>教職員のWindows PCへのログイン</li><li>教育システムへのアクセス時の認証強化</li></ul></div>
-<div class="case"><strong>会計事務所・士業</strong><ul><li>複数PC・デバイスへの認証対策</li><li>SSOサービス連携</li></ul></div>
-<div class="case"><strong>国立大学・私立大学での活用</strong><ul><li>研究活動</li><li>教員・学生向けシステムの認証強化</li></ul></div>
-<div class="case"><strong>医療機関</strong><ul><li>多要素認証やSSOサービスとの連携</li></ul></div>
+<div class="case"><img class="case-img" src="images/case-01.jpg" alt="" onerror="this.remove()"><strong>企業</strong><ul><li>Windows環境やEntra IDなどと連携した認証</li><li>従業員のログインセキュリティ強化</li><li>Microsoftアカウント不正アクセス対策</li></ul></div>
+<div class="case"><img class="case-img" src="images/case-02.jpg" alt="" onerror="this.remove()"><strong>教育機関</strong><ul><li>教職員のWindows PCへのログイン</li><li>教育システムへのアクセス時の認証強化</li></ul></div>
+<div class="case"><img class="case-img" src="images/case-03.jpg" alt="" onerror="this.remove()"><strong>会計事務所・士業</strong><ul><li>複数PC・デバイスへの認証対策</li><li>SSOサービス連携</li></ul></div>
+<div class="case"><img class="case-img" src="images/case-04.jpg" alt="" onerror="this.remove()"><strong>国立大学・私立大学での活用</strong><ul><li>研究活動</li><li>教員・学生向けシステムの認証強化</li></ul></div>
+<div class="case"><img class="case-img" src="images/case-05.jpg" alt="" onerror="this.remove()"><strong>医療機関</strong><ul><li>多要素認証やSSOサービスとの連携</li></ul></div>
 </div>
 <p class="note">※導入環境や利用できる機能は、システム・サービスによって異なります。</p>
 </div></section>
@@ -517,7 +556,7 @@ h2:after{content:"";position:absolute;left:0;bottom:0;width:76px;height:3px;back
 </div></section>
 
 <!-- ⑦ 導入方法・購入案内 -->
-<section id="how" data-n="06" class="sec"><div class="in">
+<section id="how" data-n="06" class="sec"><div class="ph-band" aria-hidden="true" style="background-image:url(images/bg-06.jpg)"></div><div class="in">
 <div class="label"><b>06</b><i></i><span>HOW TO</span></div>
 <h2>導入方法・<em>購入案内</em></h2>
 <p class="lead">貴社の環境に合った<em>導入方法</em>をご案内します</p>
@@ -550,7 +589,7 @@ h2:after{content:"";position:absolute;left:0;bottom:0;width:76px;height:3px;back
 </div></section>
 
 <!-- ⑨ お問い合わせ -->
-<section id="contact" data-n="08" class="sec dark ct"><div class="in">
+<section id="contact" data-n="08" class="sec dark ct"><div class="ph-band" aria-hidden="true" style="background-image:url(images/bg-08.jpg)"></div><div class="in">
 <div class="label"><b>08</b><i></i><span>CONTACT</span></div>
 <h2>「<em>不正アクセス対策</em>の見直しを、<br>ATKey.Proから」</h2>
 <div class="body">
