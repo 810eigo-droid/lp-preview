@@ -212,7 +212,7 @@ h1 .mk{padding:0 14px;margin-top:4px}
 .sp-cta{display:none}
 @media (max-width:640px){
 .hero{background-image:linear-gradient(#24141766 1px,transparent 1px),linear-gradient(90deg,#24141766 1px,transparent 1px),linear-gradient(180deg,rgba(21,10,12,.9) 0%,rgba(21,10,12,.72) 55%,rgba(21,10,12,.86) 100%),url(images/fv-bg-sp.jpg)}
-body{padding-bottom:76px}
+body{padding-bottom:52px}
 .logo b{font-size:22px}
 .hd .cta{padding:0 12px;font-size:13px}
 .hd nav{padding-left:18px;padding-right:18px}
@@ -238,9 +238,9 @@ body{padding-bottom:76px}
 .ex li{padding:16px 18px}
 .ct .btn{width:100%;justify-content:center;padding:0 16px!important;font-size:18px!important}
 .lead{margin-top:20px}
-.sp-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(21,10,12,.94);border-top:1px solid #3A2226;transition:transform .3s}
+.sp-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:40;padding:4px 10px calc(4px + env(safe-area-inset-bottom));background:rgba(21,10,12,.94);border-top:1px solid #3A2226;transition:transform .3s}
 .sp-cta.off{transform:translateY(110%)}
-.sp-cta a{flex:1;display:flex;align-items:center;justify-content:center;gap:10px;min-height:54px;background:var(--red);color:#fff;font-weight:700;font-size:17px;text-decoration:none;border-radius:2px}
+.sp-cta a{flex:1;display:flex;align-items:center;justify-content:center;gap:10px;min-height:44px;background:var(--red);color:#fff;font-weight:700;font-size:15px;text-decoration:none;border-radius:2px}
 .in{padding:0 18px}
 .sec{padding:64px 0}
 .hero-v{min-height:340px}
@@ -358,6 +358,8 @@ h2:after{content:"";position:absolute;left:0;bottom:0;width:76px;height:3px;back
 .feat .n,.one .steps b{width:44px;height:44px;font-size:22px}
 .feat strong{padding-top:10px}
 }
+.feat .ph img.photo{max-width:100%;max-height:150px;filter:none}
+@media (max-width:640px){.feat .ph img.photo{max-height:96px}}
 </style>
 </head>
 <body>
@@ -440,7 +442,7 @@ h2:after{content:"";position:absolute;left:0;bottom:0;width:76px;height:3px;back
 </div>
 </div>
 <div>
-<div class="prod-box"><img src="images/atkey-pro.png" alt="ATKey.Pro 製品写真"></div>
+<div class="prod-box"><img src="images/atkey-pro-c.png" alt="ATKey.Pro（USB Type-C）製品写真"></div>
 </div>
 <div style="grid-column:1/-1">
 <div class="checks">
@@ -465,9 +467,9 @@ h2:after{content:"";position:absolute;left:0;bottom:0;width:76px;height:3px;back
 <p class="lead">「<em>指紋認証とFIDO2</em>で、より安全なログインへ」</p>
 <div class="body"><p>ATKey.Proは、指紋認証機能を搭載したセキュリティキー。FIDO2対応サービスと組み合わせてフィッシングに強い認証を実現します。</p></div>
 <div class="feat">
-<div><span class="n">1</span><div class="ph"><img src="images/atkey-pro.png" alt=""></div><strong>指紋認証による本人確認</strong><span>キーに搭載された指紋センサーで本人確認。対応する認証設定に応じて、ログイン時の本人確認を行います。</span></div>
+<div><span class="n">1</span><div class="ph"><img class="photo" src="images/use-fingerprint.png" alt="ATKey.Proの指紋センサーに指を当てている様子"></div><strong>指紋認証による本人確認</strong><span>キーに搭載された指紋センサーで本人確認。対応する認証設定に応じて、ログイン時の本人確認を行います。</span></div>
 <div><span class="n">2</span><div class="ph"><svg aria-hidden="true" width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.100"><path d="M12 2l8 3v6c0 5-3.500 9-8 11-4.500-2-8-6-8-11V5z"/><path d="M8.500 12l2.500 2.500 4.500-5"/></svg></div><strong>フィッシングに強い認証</strong><span>FIDO2対応の認証方式により、偽サイトなどを使って認証情報を盗み取るフィッシング攻撃への耐性を高めます。</span></div>
-<div><span class="n">3</span><div class="ph"><img src="images/atkey-card.png" alt=""><img src="images/atkey-pro.png" alt=""></div><strong>既存環境に合わせて活用</strong><span>カード型、USB型の2つのラインアップ。いずれもFIDO2対応サービスとの連携が可能です。</span></div>
+<div><span class="n">3</span><div class="ph"><img class="photo" src="images/use-card-phone.png" alt="カード型のATKeyをスマートフォンにかざしている様子"></div><strong>既存環境に合わせて活用</strong><span>カード型、USB型の2つのラインアップ。いずれもFIDO2対応サービスとの連携が可能です。</span></div>
 </div>
 <p class="note">※実際のご利用の際は、導入先のシステムや認証環境をご確認ください。</p>
 
