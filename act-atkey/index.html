@@ -453,6 +453,30 @@ html.fx .after .em strong:not(.on),html.fx .one .call:not(.on){opacity:0;filter:
 html.fx .after .em strong em{background:linear-gradient(transparent 62%,rgba(224,51,79,.16) 62%,rgba(193,2,48,.24) 94%,transparent 94%) no-repeat 0 0/0 100%;transition:background-size 1s cubic-bezier(.2,.7,.2,1) 1s}
 html.fx .after .em strong.on em{background-size:100% 100%}
 @media (prefers-reduced-motion:reduce){html.fx .lead em,html.fx .sec h2 em,html.fx .sec h2 em:before,html.fx .after .em strong,html.fx .one .call,html.fx .after .em strong em{transition:none}}
+/* カードの入り方：場所ごとに方向を変える（画面に入ったら1回だけ） */
+html.mv [data-in]{transition:opacity .8s ease var(--dl,0s),transform .9s cubic-bezier(.2,.75,.2,1) var(--dl,0s)}
+html.mv [data-in]:not(.in){opacity:0}
+html.mv [data-in="l"]:not(.in){transform:translateX(-36px)}
+html.mv [data-in="r"]:not(.in){transform:translateX(36px)}
+html.mv [data-in="u"]:not(.in){transform:translateY(34px)}
+html.mv [data-in="d"]:not(.in){transform:translateY(-30px)}
+html.mv [data-in="z"]:not(.in){transform:scale(.9)}
+html.mv [data-in="t"]:not(.in){transform:translateX(40px) rotate(3deg)}
+/* 導入事例の写真：カードが入ったあと、写真だけ少し寄る */
+html.mv .case-img{transition:transform 2.4s cubic-bezier(.2,.7,.2,1) .2s}
+html.mv .case:not(.in) .case-img{transform:scale(1.12)}
+.case{overflow:hidden}
+/* 人物の写真の帯：ゆっくり寄ったり引いたり */
+.ph-band{overflow:hidden}
+.ph-band .kb{position:absolute;inset:0;background-image:inherit;background-size:inherit;background-position:inherit;background-repeat:no-repeat;animation:kb 16s ease-in-out infinite alternate;will-change:transform}
+.ph-band:after{z-index:1}
+@keyframes kb{0%{transform:scale(1) translate(0,0)}100%{transform:scale(1.09) translate(-1.6%,-1.2%)}}
+/* スマホのファーストビューの女性：ゆっくり息をするように上下 */
+@media (max-width:640px){
+.hero{animation:fvBreath 7s ease-in-out 3s infinite alternate}
+@keyframes fvBreath{0%{background-position:0 0,left 47.2vw top 67px}100%{background-position:0 0,left 47.6vw top 60px}}
+}
+@media (prefers-reduced-motion:reduce){.ph-band .kb,.hero{animation:none}html.mv [data-in],html.mv .case-img{transition:none}}
 </style>
 </head>
 <body>
@@ -715,6 +739,17 @@ var t=document.querySelectorAll('.lead em,.sec h2 em,.after .em strong,.one .cal
 document.documentElement.classList.add('fx');
 var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');o.unobserve(e.target);}});},{rootMargin:'0px 0px -18% 0px',threshold:.6});
 t.forEach(function(el){o.observe(el);});})();
+</script>
+<script>
+(function(){if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+document.querySelectorAll('.ph-band').forEach(function(b){var k=document.createElement('span');k.className='kb';k.setAttribute('aria-hidden','true');b.insertBefore(k,b.firstChild);});
+var plan=[['.grid4 > .risk',function(i){return i%2?'r':'l';},.08],['.feat > div',function(){return 'u';},.15],['#cases .case',function(){return 'r';},.12],
+['.prod-box','t',0],['.after','u',0],['.gloss','d',0],['.checks','z',0],['.ex li',function(i){return i%2?'r':'l';},.06],['.one .steps > div',function(i){return i%2?'r':'l';},.12]];
+var els=[];
+plan.forEach(function(p){document.querySelectorAll(p[0]).forEach(function(el,i){if(el.hasAttribute('data-in'))return;el.setAttribute('data-in',typeof p[1]==='function'?p[1](i):p[1]);var col=el.parentNode&&getComputedStyle(el.parentNode).display==='grid'?i%2:i;el.style.setProperty('--dl',(Math.min(i,4)*p[2])+'s');els.push(el);});});
+if(!els.length)return;document.documentElement.classList.add('mv');
+var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target);}});},{rootMargin:'0px 0px -10% 0px',threshold:.15});
+els.forEach(function(el){o.observe(el);});})();
 </script>
 </body>
 </html>
