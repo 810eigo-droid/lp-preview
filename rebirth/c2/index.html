@@ -20,8 +20,8 @@ font-family:'Yu Gothic','Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;co
 #rb-c .red{background:var(--red-bg);color:#fff}
 #rb-c .red.rose{background:radial-gradient(ellipse at 50% 50%,#a8001ed9 0,#a8001ebf 55%,#a8001e70 100%),url(../images/bg-rose.jpg) center/520px auto repeat}
 #rb-c .wave{background:linear-gradient(180deg,#5c000fd0 0,#5c000f55 40%,#5c000f55 60%,#3a0008dd 100%),url(../images/bg-wave.jpg) center/cover #3a0008;color:#fff}
-#rb-c .light{background:radial-gradient(ellipse at 0 0,#ffe4e4aa 0,transparent 45%),radial-gradient(ellipse at 100% 100%,#fbe7c2aa 0,transparent 45%),linear-gradient(180deg,#fffaf2,#fffdf9)}
-#rb-c .goldbg{background:linear-gradient(180deg,#fffdf6ee,#fffaf0e0 60%,#fffdf6f2),url(../images/bg-gold.jpg) center top/cover}
+#rb-c .light{background:radial-gradient(ellipse at 0 0,#ffd9d088 0,transparent 45%),radial-gradient(ellipse at 100% 100%,#f3d9a088 0,transparent 50%),linear-gradient(180deg,#fdf4e4,#fbefdc)}
+#rb-c .goldbg{background:linear-gradient(180deg,#fdf3e2e6,#fbecd2cc 60%,#fdf3e2ee),url(../images/bg-gold.jpg) center top/cover}
 
 /* headings */
 #rb-c h2{display:flex;align-items:center;justify-content:center;gap:10px;margin:0 0 26px;text-align:center;font:700 26px/1.55 'Shippori Mincho','Yu Mincho',serif;color:var(--red-d)}
@@ -50,22 +50,25 @@ font-family:'Yu Gothic','Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;co
 
 /* hero */
 #rb-c .hero{padding:0 0 26px;background:var(--red-bg);color:#fff;text-align:center}
-#rb-c .hv{position:relative;height:310px;z-index:2}
-#rb-c .hv-photo{position:absolute;top:0;right:0;width:76%;height:100%;object-fit:cover;object-position:8% 30%}
-#rb-c .hv-shade{position:absolute;inset:0;background:linear-gradient(90deg,#b0001d 0,#b0001d 26%,#b0001dcc 38%,#b0001d00 66%),linear-gradient(180deg,transparent 60%,#a0001b 100%)}
-#rb-c .hv-text{position:absolute;left:0;top:0;width:63%;padding:14px 0 0 14px;text-align:center}
-#rb-c .hv-text .logo{width:150px;height:auto;margin:0 auto 8px;filter:drop-shadow(0 1px 2px #0006)}
-#rb-c .where{display:inline-block;margin:0 0 10px;padding:3px 0;font-size:12.5px;font-weight:700;line-height:1.5;color:#fff;border-top:1px solid #f6e3a6aa;border-bottom:1px solid #f6e3a6aa;text-shadow:0 1px 3px #000a;white-space:nowrap}
-#rb-c h1{margin:0;font-weight:700;font-size:20px;line-height:1.35;color:#fff;text-shadow:0 2px 6px #0009}
-#rb-c h1 em{display:block;margin:2px -10px;font-style:normal;font-weight:800;font-size:37px;line-height:1.2;text-shadow:none}
+#rb-c .brandbar{position:relative;z-index:3;display:flex;justify-content:center;align-items:center;height:54px;background:linear-gradient(180deg,#1e0004,#4a000c);border-bottom:2px solid transparent;border-image:var(--metal-gold) 1;box-shadow:0 2px 10px #0008}
+#rb-c .brandbar img{width:200px;height:auto;filter:drop-shadow(0 0 6px #ffd56a55)}
+#rb-c .hv{position:relative;z-index:2;height:190px;overflow:hidden}
+#rb-c .hv img{width:100%;height:100%;object-fit:cover;object-position:45% 38%}
+#rb-c .hv:before{content:'';position:absolute;inset:0;z-index:1;mix-blend-mode:screen;background:radial-gradient(circle at 8% 22%,#ffc86a99 0 6px,transparent 14px),radial-gradient(circle at 18% 12%,#ffd98a88 0 4px,transparent 11px),radial-gradient(circle at 26% 30%,#ffbf5a77 0 8px,transparent 18px),radial-gradient(circle at 6% 48%,#ffd27a66 0 5px,transparent 12px),radial-gradient(circle at 34% 8%,#ffe0a066 0 3px,transparent 9px),radial-gradient(ellipse at 15% 25%,#d98a2a66 0,transparent 45%)}
+#rb-c .hv:after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,#3a000822 0,transparent 25%,transparent 55%,#a8001ecc 85%,#a8001e 100%)}
 #rb-c .hero .spk{z-index:3}
-#rb-c .hero-copy{position:relative;z-index:2;padding:0 18px}
+#rb-c .hero-copy{position:relative;z-index:2;margin-top:-18px;padding:0 18px}
+#rb-c .where{display:flex;align-items:center;gap:8px;margin:0 0 6px;font-size:14px;font-weight:700;line-height:1.5;color:var(--gold-l);text-shadow:0 1px 3px #000a;white-space:nowrap}
+#rb-c .where:before,#rb-c .where:after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,#f6e3a6)}
+#rb-c .where:after{transform:scaleX(-1)}
+#rb-c h1{margin:0 0 8px;font-weight:700;font-size:22px;line-height:1.35;color:#fff;text-shadow:0 2px 6px #0009}
+#rb-c h1 em{display:block;margin:2px -10px;font-style:normal;font-weight:800;font-size:46px;line-height:1.18;text-shadow:none}
 #rb-c .menu{margin:0;font-weight:700;font-size:clamp(22px,6.6vw,28px);line-height:1.45;color:#fff;white-space:nowrap;text-shadow:0 2px 6px #0009}
 #rb-c .menu-sub{margin:0 0 10px;font-size:13px;line-height:1.5;color:var(--gold-l)}
 #rb-c .menu:after{content:'';display:block;height:1px;margin:4px 20px 0;background:linear-gradient(90deg,transparent,#f6e3a6,transparent)}
 
 /* price */
-#rb-c .price{position:relative;padding:9px 10px 10px;background:linear-gradient(180deg,#fff 0,#fffaf0 100%);color:var(--ink);border:2px solid transparent;border-image:var(--metal-gold) 1;box-shadow:0 0 0 1px #fff6,0 10px 24px #0006;text-align:center}
+#rb-c .price{position:relative;padding:12px 12px 12px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cg transform='' fill='none' stroke='%23c9963a'%3E%3Cpath d='M2 28V6Q2 2 6 2H28' stroke-width='1.8'/%3E%3Cpath d='M6.5 24V9.5q0-3 3-3H24' stroke-width='.9'/%3E%3Cpath d='M10 18c0-5 3-8 8-8' stroke-width='1.2'/%3E%3C/g%3E%3Cg transform=''%3E%3Ccircle cx='16' cy='16' r='1.9' fill='%23c9963a'/%3E%3C/g%3E%3C/svg%3E") left 4px top 4px/24px 24px no-repeat,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cg transform='translate%2830 0%29 scale%28-1 1%29' fill='none' stroke='%23c9963a'%3E%3Cpath d='M2 28V6Q2 2 6 2H28' stroke-width='1.8'/%3E%3Cpath d='M6.5 24V9.5q0-3 3-3H24' stroke-width='.9'/%3E%3Cpath d='M10 18c0-5 3-8 8-8' stroke-width='1.2'/%3E%3C/g%3E%3Cg transform='translate%2830 0%29 scale%28-1 1%29'%3E%3Ccircle cx='16' cy='16' r='1.9' fill='%23c9963a'/%3E%3C/g%3E%3C/svg%3E") right 4px top 4px/24px 24px no-repeat,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cg transform='translate%280 30%29 scale%281 -1%29' fill='none' stroke='%23c9963a'%3E%3Cpath d='M2 28V6Q2 2 6 2H28' stroke-width='1.8'/%3E%3Cpath d='M6.5 24V9.5q0-3 3-3H24' stroke-width='.9'/%3E%3Cpath d='M10 18c0-5 3-8 8-8' stroke-width='1.2'/%3E%3C/g%3E%3Cg transform='translate%280 30%29 scale%281 -1%29'%3E%3Ccircle cx='16' cy='16' r='1.9' fill='%23c9963a'/%3E%3C/g%3E%3C/svg%3E") left 4px bottom 4px/24px 24px no-repeat,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cg transform='translate%2830 30%29 scale%28-1 -1%29' fill='none' stroke='%23c9963a'%3E%3Cpath d='M2 28V6Q2 2 6 2H28' stroke-width='1.8'/%3E%3Cpath d='M6.5 24V9.5q0-3 3-3H24' stroke-width='.9'/%3E%3Cpath d='M10 18c0-5 3-8 8-8' stroke-width='1.2'/%3E%3C/g%3E%3Cg transform='translate%2830 30%29 scale%28-1 -1%29'%3E%3Ccircle cx='16' cy='16' r='1.9' fill='%23c9963a'/%3E%3C/g%3E%3C/svg%3E") right 4px bottom 4px/24px 24px no-repeat,linear-gradient(180deg,#fffdf7 0,#fbf1dc 100%);color:var(--ink);border:3px solid transparent;border-image:var(--metal-gold) 1;box-shadow:inset 0 0 0 3px #fffaf0,inset 0 0 0 4px #d9b25a99,0 0 16px #ffd56a55,0 10px 24px #0006;text-align:center}
 #rb-c .price p{margin:0;line-height:1.45}
 #rb-c .regular{font-size:17px}
 #rb-c .regular small,#rb-c .trial small{font-size:13px;font-weight:500}
@@ -87,7 +90,7 @@ font-family:'Yu Gothic','Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;co
 
 /* concerns */
 #rb-c .worry{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 22px;padding:0;list-style:none}
-#rb-c .worry li{padding:12px 8px 14px;text-align:center;font-size:17px;font-weight:700;line-height:1.6;background:#fff;border:1px solid #ecd9a8;border-radius:12px;box-shadow:0 4px 14px #a8001e14}
+#rb-c .worry li{padding:12px 8px 14px;text-align:center;font-size:17px;font-weight:700;line-height:1.6;background:#fffbf3;border:1px solid #ecd9a8;border-radius:12px;box-shadow:0 4px 14px #a8001e14}
 #rb-c .worry .ph{min-height:90px;margin-bottom:8px;border-width:1px;font-size:12px;border-radius:8px}
 #rb-c .lead{display:flex;align-items:center;gap:10px;justify-content:center;text-align:center;font:700 22px/1.7 'Shippori Mincho','Yu Mincho',serif;color:var(--red-d);margin:0}
 #rb-c .lead:before,#rb-c .lead:after{content:'';flex:1;max-width:40px;height:1px;background:var(--gold)}
@@ -112,7 +115,7 @@ font-family:'Yu Gothic','Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;co
 #rb-c .movie .cap{margin:24px 20px 0;text-align:center;font:700 21px/1.8 'Shippori Mincho',serif;color:#fff;text-shadow:0 2px 5px #0008}
 
 /* points */
-#rb-c .point{margin:0 0 26px;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 0 0 1px #ecd9a8,0 6px 18px #a8001e1a;text-align:center}
+#rb-c .point{margin:0 0 26px;background:#fffbf3;border-radius:12px;overflow:hidden;box-shadow:0 0 0 1px #ecd9a8,0 6px 18px #a8001e1a;text-align:center}
 #rb-c .point .ph{aspect-ratio:16/9;min-height:0;border:0}
 #rb-c .point h3{position:relative;display:inline-block;margin:-20px auto 0;padding:6px 22px;font:700 19px/1.5 'Shippori Mincho',serif;color:#fff;background:linear-gradient(180deg,#e8203d,#a8001e);border:1px solid #f6e3a6;border-radius:3px;box-shadow:0 0 0 2px #c9a24e,0 4px 10px #0004;z-index:2}
 #rb-c .point h3 small{margin-right:6px;font:700 19px Georgia,serif;color:var(--gold-l)}
@@ -125,7 +128,7 @@ font-family:'Yu Gothic','Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;co
 #rb-c .promise-catch .rose-r{right:-80px;top:-60px}
 
 /* voices */
-#rb-c .voice{margin:0 0 18px;padding:18px 16px;background:#fff;color:var(--ink);border-radius:10px;border:1px solid #c9a24e;box-shadow:0 0 0 3px #fff,0 0 0 5px #d9b566,0 8px 18px #0005}
+#rb-c .voice{margin:0 0 18px;padding:18px 16px;background:#fffbf3;color:var(--ink);border-radius:10px;border:1px solid #c9a24e;box-shadow:0 0 0 3px #fff,0 0 0 5px #d9b566,0 8px 18px #0005}
 #rb-c .voice h3{margin:0 0 10px;font:700 20px/1.6 'Shippori Mincho',serif;color:var(--red)}
 #rb-c .voice p{margin:0 0 10px;font-size:17px;line-height:1.9}
 #rb-c .voice cite{display:block;margin-top:4px;padding:5px 10px;background:linear-gradient(#fff8e2,#f6e7bd);border-radius:4px;font-style:normal;font-size:15px;font-weight:700;color:#6b4e1a;text-align:center}
@@ -144,7 +147,7 @@ font-family:'Yu Gothic','Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;co
 #rb-c .owner-top{display:flex;gap:14px;align-items:center;margin:0 0 22px}
 #rb-c .owner-top>img{flex:0 0 132px;width:132px;height:170px;object-fit:cover;border-radius:70px 70px 10px 10px;border:3px solid #fff;box-shadow:0 0 0 2px var(--gold),0 6px 14px #0002}
 #rb-c .stats{margin:0;padding:0;list-style:none;flex:1;display:grid;gap:10px}
-#rb-c .stats li{position:relative;padding:8px 4px;font:700 15px/1.4 'Shippori Mincho',serif;text-align:center;background:#fff;border:1px solid #e3c983;border-radius:8px;box-shadow:inset 0 0 0 3px #fff,inset 0 0 0 4px #f1e1b4}
+#rb-c .stats li{position:relative;padding:8px 4px;font:700 15px/1.4 'Shippori Mincho',serif;text-align:center;background:#fffbf3;border:1px solid #e3c983;border-radius:8px;box-shadow:inset 0 0 0 3px #fff,inset 0 0 0 4px #f1e1b4}
 #rb-c .stats strong{display:block;font:700 32px/1.15 Georgia,serif;color:var(--red)}
 #rb-c .stats strong small{font:700 15px 'Shippori Mincho',serif;color:var(--ink);margin-left:3px}
 #rb-c .owner-key{font:700 22px/1.7 'Shippori Mincho',serif;color:var(--red-d);text-align:center;padding:12px 0;border-top:2px solid var(--gold);border-bottom:2px solid var(--gold)}
@@ -157,7 +160,7 @@ font-family:'Yu Gothic','Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;co
 #rb-c .offer .rose-r{top:-70px;right:-90px;opacity:.85}
 #rb-c .tag{display:block;width:max-content;max-width:100%;margin:0 auto 14px;padding:4px 18px;font:700 19px/1.5 'Shippori Mincho',serif;color:#fff;background:linear-gradient(180deg,#e8203d,#a8001e);border-radius:3px;box-shadow:0 0 0 2px #fff,0 0 0 3px var(--gold)}
 #rb-c .flow{counter-reset:f;margin:22px 0;padding:0;list-style:none}
-#rb-c .flow li{counter-increment:f;display:flex;align-items:center;gap:12px;margin:0 0 12px;padding:10px;background:#fff;border:1px solid #ecd9a8;border-radius:10px;box-shadow:0 3px 10px #a8001e10}
+#rb-c .flow li{counter-increment:f;display:flex;align-items:center;gap:12px;margin:0 0 12px;padding:10px;background:#fffbf3;border:1px solid #ecd9a8;border-radius:10px;box-shadow:0 3px 10px #a8001e10}
 #rb-c .flow li:before{content:counter(f);flex:0 0 34px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:linear-gradient(#e8203d,#a8001e);box-shadow:0 0 0 2px #fff,0 0 0 3px var(--gold);color:#fff;font:700 18px Georgia,serif}
 #rb-c .flow .ph{flex:0 0 78px;min-height:70px;border-width:1px;font-size:11px;padding:4px;border-radius:6px}
 #rb-c .flow b{font-size:17px;line-height:1.5}
@@ -196,10 +199,10 @@ font-family:'Yu Gothic','Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;co
 #rb-c .bar a{display:flex;justify-content:center;align-items:baseline;gap:10px;padding:8px 10px;border-radius:32px;border:1px solid var(--gold);background:linear-gradient(#ff3552,#a8001e);color:#fff;font-weight:700;font-size:17px;line-height:1.5;text-decoration:none}
 #rb-c .bar small{font-size:13px}
 
-@media(max-width:360px){#rb-c h1{font-size:18px}#rb-c h1 em{font-size:32px}#rb-c .where{font-size:11.5px}#rb-c .trial strong{font-size:46px}#rb-c .trial{font-size:17px}#rb-c .cta{font-size:18px}#rb-c h2{font-size:23px}#rb-c .bar a{font-size:15px;gap:6px}#rb-c .owner-top>img{flex-basis:112px;width:112px;height:146px}}
+@media(max-width:360px){#rb-c h1{font-size:19px}#rb-c h1 em{font-size:38px}#rb-c .where{font-size:12.5px}#rb-c .trial strong{font-size:46px}#rb-c .trial{font-size:17px}#rb-c .cta{font-size:18px}#rb-c h2{font-size:23px}#rb-c .bar a{font-size:15px;gap:6px}#rb-c .owner-top>img{flex-basis:112px;width:112px;height:146px}}
 @media(max-width:374px){#rb-c .time{font-size:12.5px}#rb-c .time i{padding:2px 3px}}
-@media(max-height:700px) and (max-width:480px){#rb-c .hv{height:262px}#rb-c .hv-text .logo{width:132px;margin-bottom:5px}#rb-c .where{margin-bottom:6px}#rb-c h1 em{font-size:34px}#rb-c .trial strong{font-size:48px}#rb-c .hero .cta{margin-top:12px;padding:12px 10px}}
-@media(max-height:600px) and (max-width:480px){#rb-c .hv{height:236px}#rb-c .hv-text{padding-top:10px}#rb-c h1{font-size:18px}#rb-c h1 em{font-size:31px}}
+@media(max-height:700px) and (max-width:480px){#rb-c .brandbar{height:46px}#rb-c .brandbar img{width:176px}#rb-c .hv{height:150px}#rb-c h1{font-size:20px;margin-bottom:4px}#rb-c h1 em{font-size:40px}#rb-c .trial strong{font-size:48px}#rb-c .hero .cta{margin-top:12px;padding:12px 10px}#rb-c .price{padding:9px 12px}}
+@media(max-height:600px) and (max-width:480px){#rb-c .brandbar{height:40px}#rb-c .brandbar img{width:160px}#rb-c .hv{height:112px}#rb-c .where{font-size:12.5px;margin-bottom:2px}#rb-c h1{font-size:18px}#rb-c h1 em{font-size:35px}#rb-c .menu{font-size:21px}}
 @media(prefers-reduced-motion:reduce){#rb-c .cta:before{animation:none;display:none}#rb-c .spk{animation:none}}
 </style></head><body><div id="rb-c"><div class="c-page">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -211,22 +214,19 @@ font-family:'Yu Gothic','Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;co
 <main>
 
 <section class="hero" id="top">
-<div class="hv">
-<img class="hv-photo" src="../images/hero.webp" width="1290" height="844" alt="両手で顔を包み込むフェイシャル施術">
-<div class="hv-shade"></div>
-<div class="hv-text">
-<img class="logo" src="../images/logo-rebirth-t.png" width="941" height="145" alt="RE:BIRTH">
-<p class="where">奈良・学園前｜1日2組限定・完全予約制</p>
-<h1 class="m">昔はこんなに<em class="gold-txt">顔が下がって</em>いなかったのに…</h1>
-</div>
-<svg class="deco spk" style="left:6px;top:150px"><use href="#star"/></svg>
-<svg class="deco spk s" style="left:62%;top:128px"><use href="#star"/></svg>
-<svg class="deco spk xs" style="left:52%;top:212px"><use href="#star"/></svg>
-</div>
-<img class="deco rose-l" src="../images/rose-a.webp" alt="" style="top:330px">
-<img class="deco rose-r" src="../images/rose-b.webp" alt="" style="top:250px">
-<svg class="deco streak" style="top:380px"><use href="#streak"/></svg>
+<div class="brandbar"><img src="../images/logo-rebirth-t.png" width="941" height="145" alt="RE:BIRTH"></div>
+<div class="hv"><img src="../images/hero-warm.jpg" width="1100" height="720" alt="両手で顔を包み込むフェイシャル施術"></div>
+<img class="deco rose-l" src="../images/rose-a.webp" alt="" style="top:250px;left:-92px">
+<img class="deco rose-r" src="../images/rose-b.webp" alt="" style="top:205px;right:-96px">
+<img class="deco rose-r" src="../images/rose-a.webp" alt="" style="bottom:-70px;right:-80px;width:170px;height:170px">
+<svg class="deco streak" style="top:215px"><use href="#streak"/></svg>
+<svg class="deco streak" style="top:420px;transform:scaleX(-1)"><use href="#streak"/></svg>
+<svg class="deco spk" style="left:14px;top:300px"><use href="#star"/></svg>
+<svg class="deco spk s" style="right:22px;top:268px"><use href="#star"/></svg>
+<svg class="deco spk xs" style="right:44px;top:360px"><use href="#star"/></svg>
 <div class="hero-copy">
+<p class="where m">奈良・学園前｜1日2組限定・完全予約制</p>
+<h1 class="m">昔はこんなに<em class="gold-txt">顔が下がって</em>いなかったのに…</h1>
 <p class="menu m">たるみ悩み特化フェイシャル</p>
 <p class="menu-sub">初回体験（マーメイドセル）</p>
 <div class="price"><p class="regular">通常 <s>16,500円</s><small>（税込）</small></p><p class="trial m"><span>初回体験</span><strong>9,900</strong><b>円</b><small>（税込）</small></p><p class="time"><i>基本70分</i>＋<i>LINE登録特典20分無料</i>＝<i class="total">約90分</i></p></div>
@@ -269,7 +269,7 @@ font-family:'Yu Gothic','Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;co
 <section class="light">
 <h2>RE:BIRTHの<br>3つのこだわり</h2>
 <div class="point"><div class="ph has"><img src="../images/movie-poster.jpg" alt="" loading="lazy" style="object-position:50% 30%"></div><h3><small>1</small>顔だけで終わらない</h3><p>顔・首・肩・デコルテまで<br>しっかりケア。</p></div>
-<div class="point"><div class="ph has"><img src="../images/treatment.webp" alt="" loading="lazy" style="object-position:30% 40%"></div><h3><small>2</small>あなただけのセミオーダー</h3><p>その日の肌と身体に合わせた施術。</p></div>
+<div class="point"><div class="ph has"><img src="../images/counseling-warm.jpg" alt="" loading="lazy" style="object-position:30% 40%"></div><h3><small>2</small>あなただけのセミオーダー</h3><p>その日の肌と身体に合わせた施術。</p></div>
 <div class="point"><div class="ph has"><img src="../images/hands-face.jpg" alt="" loading="lazy" style="object-position:40% 50%"></div><h3><small>3</small>最高に気持ちいい</h3><p>吸いつくような密着感で、<br>身体の深部まで<br>ゆるめるような心地よさ。</p></div>
 <div class="promise-catch">
 <img class="deco rose-l" src="../images/rose-a.webp" alt="" loading="lazy">
@@ -299,14 +299,14 @@ font-family:'Yu Gothic','Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;co
 
 <section class="goldbg">
 <h2>オーナー紹介</h2>
-<div class="owner-top"><img src="../images/owner-front.jpg" alt="RE:BIRTHオーナー 櫻井朋子" loading="lazy" style="object-position:50% 20%"><ul class="stats"><li>美容歴<strong>25<small>年以上</small></strong></li><li>施術経験<strong>15,000<small>人以上</small></strong></li></ul></div>
+<div class="owner-top"><img src="../images/owner-front-warm.jpg" alt="RE:BIRTHオーナー 櫻井朋子" loading="lazy" style="object-position:50% 20%"><ul class="stats"><li>美容歴<strong>25<small>年以上</small></strong></li><li>施術経験<strong>15,000<small>人以上</small></strong></li></ul></div>
 <p>私が一番したいことは、</p>
 <p class="owner-key">目の前のお客様の<br>お悩みを解決すること！</p>
 <p>たるみ、不調、肌トラブル…。</p>
 <p>経験も技術も、そのためにあります。</p>
 <p>だからこそ、今も学び続けています。</p>
 <p class="sign">RE:BIRTHオーナー<strong>櫻井 朋子</strong></p>
-<img class="owner-photo" src="../images/owner-natural.jpg" width="900" height="572" loading="lazy" alt="施術中の櫻井朋子">
+<img class="owner-photo" src="../images/owner-natural-warm.jpg" width="900" height="572" loading="lazy" alt="施術中の櫻井朋子">
 </section>
 
 <section class="light offer" id="offer">
@@ -317,10 +317,10 @@ font-family:'Yu Gothic','Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;co
 <div class="price"><p class="regular">通常 <s>16,500円</s><small>（税込）</small></p><p class="trial m"><span>初回体験</span><strong>9,900</strong><b>円</b><small>（税込）</small></p><p class="time"><i>基本70分</i>＋<i>LINE登録特典20分無料</i>＝<i class="total">約90分</i></p></div>
 <h2 style="margin-top:40px">当日の流れ</h2>
 <ol class="flow">
-<li><div class="ph has"><img src="../images/treatment.webp" alt="" loading="lazy" style="object-position:30% 50%"></div><b>カウンセリング・<br>状態確認</b></li>
-<li><div class="ph has"><img src="../images/hero.webp" alt="" loading="lazy"></div><b>施術<small>（顔・首・肩・デコルテ）</small></b></li>
-<li><div class="ph has"><img src="../images/smile.webp" alt="" loading="lazy" style="object-position:60% 50%"></div><b>仕上がりを鏡で確認</b></li>
-<li><div class="ph has"><img src="../images/products.webp" alt="" loading="lazy"></div><b>ホームケアアドバイス</b></li>
+<li><div class="ph has"><img src="../images/counseling-warm.jpg" alt="" loading="lazy" style="object-position:30% 50%"></div><b>カウンセリング・<br>状態確認</b></li>
+<li><div class="ph has"><img src="../images/hero-warm.jpg" alt="" loading="lazy"></div><b>施術<small>（顔・首・肩・デコルテ）</small></b></li>
+<li><div class="ph has"><img src="../images/smile-warm.jpg" alt="" loading="lazy" style="object-position:60% 50%"></div><b>仕上がりを鏡で確認</b></li>
+<li><div class="ph has"><img src="../images/products-warm.jpg" alt="" loading="lazy"></div><b>ホームケアアドバイス</b></li>
 </ol>
 <p class="promise">高額なコース契約は不要。<br>ご自身のペースで<br>無理なく通っていただけます。</p>
 <p class="limit">1日2組限定・完全予約制</p>
@@ -349,7 +349,7 @@ font-family:'Yu Gothic','Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;co
 <p class="catch">諦める前に、<br>一度この手を<br>体感してください。</p>
 <div class="price"><p class="regular" style="font-weight:700">たるみ悩み特化フェイシャル</p><p class="trial m"><span>初回体験</span><strong>9,900</strong><b>円</b><small>（税込）</small></p><p class="time"><i class="total">約90分</i>（LINE特典込み）</p></div>
 <a class="cta" href="https://page.line.me/954miweg" target="_blank" rel="noopener">空き状況を見て予約する <span>›</span></a><small class="cta-note">公式LINEへ進みます</small>
-<img class="salon-photo" src="../images/IMG_8528.webp" width="781" height="401" loading="lazy" alt="RE:BIRTHの施術ルーム">
+<img class="salon-photo" src="../images/salon-warm.jpg" width="781" height="401" loading="lazy" alt="RE:BIRTHの施術ルーム">
 <div class="access"><strong>RE:BIRTH｜奈良・学園前</strong>
 <dl>
 <dt>所在地</dt><dd>奈良県奈良市学園大和町4丁目<small>※詳しくはご予約後にご案内いたします</small></dd>
