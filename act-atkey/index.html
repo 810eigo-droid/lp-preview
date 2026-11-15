@@ -405,8 +405,16 @@ h2:after{content:"";position:absolute;left:0;bottom:0;width:76px;height:3px;back
 }
 @media (min-width:1000px){.cases .case{flex:0 0 calc((100% - 40px)/3)}}
 @media (max-width:640px){
-.hero{background-image:linear-gradient(#F1EAE8 1px,transparent 1px),linear-gradient(90deg,#F1EAE8 1px,transparent 1px),linear-gradient(180deg,rgba(255,255,255,0) 330px,#fff 500px),linear-gradient(90deg,rgba(255,255,255,.92) 0%,rgba(255,255,255,.84) 45%,rgba(255,255,255,.64) 100%),url(images/fv-bg-sp.jpg);background-size:56px 56px,56px 56px,100% 100%,100% 100%,118% auto;background-position:0 0,0 0,0 0,0 0,right -34px top 0;background-repeat:repeat,repeat,no-repeat,no-repeat,no-repeat}
+.hero{background-image:linear-gradient(#F1EAE8 1px,transparent 1px),linear-gradient(90deg,#F1EAE8 1px,transparent 1px),linear-gradient(180deg,rgba(255,255,255,0) 360px,#fff 520px),linear-gradient(90deg,rgba(255,255,255,.94) 0%,rgba(255,255,255,.8) 42%,rgba(255,255,255,.42) 100%),url(images/fv-bg-sp.jpg);background-size:56px 56px,56px 56px,100% 100%,100% 100%,112% auto;background-position:0 0,0 0,0 0,0 0,left 26vw top 56px;background-repeat:repeat,repeat,no-repeat,no-repeat,no-repeat}
 }
+/* 02：「お任せください」の女性モデル。PCでは製品枠を下に寄せて顔を見せる */
+@media (min-width:901px){
+#solution{background-position:center top}
+#solution .two>div:nth-child(2){align-self:end}
+#solution .prod-box{max-width:360px;margin-left:auto;padding:26px 24px}
+#solution .prod-box img{max-height:170px}
+}
+@media (max-width:640px){#solution .ph-band{background-position:88% 18%}}
 </style>
 </head>
 <body>
