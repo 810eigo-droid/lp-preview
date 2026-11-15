@@ -3,7 +3,7 @@
 ## 11/16 追記②：冒頭をスマホ用デザインイメージ（B3C23AE6…png）の構成に変更
 
 - 上からロゴの帯 → 施術写真（横長）→ 中央に大きな金文字のキャッチ → 金の飾り枠の料金 → 予約ボタン
-- 写真は「白っぽすぎる」とのことで、温かみのある色味に調整した版を作成：`*-warm.jpg`（hero / counseling / smile / salon / owner-front / owner-natural / products）。色調整のスクリプトは使っていない元画像から再生成できる
+- 写真は「白っぽすぎる」とのことで、温かみのある色味に調整した版を作成：`*-warm.jpg`（hero / counseling / smile / salon / owner-front / owner-natural / products）。元の画像（IMG_5292 など）はそのまま残してある
 - 白い背景のセクションもクリーム〜シャンパン色に変更
 
 ## 11/16 追記：c2 のデザインをデザインイメージ（A330942F…png）に寄せた
