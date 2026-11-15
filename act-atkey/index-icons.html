@@ -455,17 +455,17 @@ html.fx .after .em strong.on em{background-size:100% 100%}
 @media (prefers-reduced-motion:reduce){html.fx .lead em,html.fx .sec h2 em,html.fx .sec h2 em:before,html.fx .after .em strong,html.fx .one .call,html.fx .after .em strong em{transition:none}}
 /* カードの入り方：場所ごとに方向を変える（画面に入ったら1回だけ） */
 html.mv [data-in]{transition:opacity .8s ease var(--dl,0s),transform .9s cubic-bezier(.2,.75,.2,1) var(--dl,0s)}
-html.mv [data-in]:not(.in){opacity:0}
-html.mv [data-in="l"]:not(.in){transform:translateX(-36px)}
-html.mv [data-in="r"]:not(.in){transform:translateX(36px)}
-html.mv [data-in="u"]:not(.in){transform:translateY(34px)}
-html.mv [data-in="d"]:not(.in){transform:translateY(-30px)}
-html.mv [data-in="z"]:not(.in){transform:scale(.9)}
-html.mv [data-in="t"]:not(.in){transform:translateX(40px) rotate(3deg)}
+html.mv [data-in]:not(.shown){opacity:0}
+html.mv [data-in="l"]:not(.shown){transform:translateX(-36px)}
+html.mv [data-in="r"]:not(.shown){transform:translateX(36px)}
+html.mv [data-in="u"]:not(.shown){transform:translateY(34px)}
+html.mv [data-in="d"]:not(.shown){transform:translateY(-30px)}
+html.mv [data-in="z"]:not(.shown){transform:scale(.9)}
+html.mv [data-in="t"]:not(.shown){transform:translateX(40px) rotate(3deg)}
 html.mv [data-in="o"]{transition-duration:.7s,.7s}
 /* 導入事例の写真：カードが入ったあと、写真だけ少し寄る */
 html.mv .case-img{transition:transform 2.4s cubic-bezier(.2,.7,.2,1) .2s}
-html.mv .case:not(.in) .case-img{transform:scale(1.12)}
+html.mv .case:not(.shown) .case-img{transform:scale(1.12)}
 .case{overflow:hidden}
 /* 人物の写真の帯：ゆっくり寄ったり引いたり */
 .ph-band{overflow:hidden}
@@ -790,7 +790,7 @@ var plan=[['.grid4 > .risk',function(i){return i%2?'r':'l';},.08],['.feat > div'
 var els=[];
 plan.forEach(function(p){document.querySelectorAll(p[0]).forEach(function(el,i){if(el.hasAttribute('data-in'))return;el.setAttribute('data-in',typeof p[1]==='function'?p[1](i):p[1]);var col=el.parentNode&&getComputedStyle(el.parentNode).display==='grid'?i%2:i;el.style.setProperty('--dl',(Math.min(i,4)*p[2])+'s');els.push(el);});});
 if(!els.length)return;document.documentElement.classList.add('mv');
-var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target);}});},{rootMargin:'0px 0px -10% 0px',threshold:.15});
+var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('shown');o.unobserve(e.target);}});},{rootMargin:'0px 0px -10% 0px',threshold:.15});
 els.forEach(function(el){o.observe(el);});})();
 </script>
 </body>
