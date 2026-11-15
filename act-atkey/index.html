@@ -184,6 +184,22 @@ h1 .mk{display:inline-block;white-space:nowrap;background:var(--red);padding:0 1
 }
 @media (max-width:900px){
 .hero-grid{grid-template-columns:minmax(0,1fr)}
+.hero-tx{display:contents}
+.hero-grid{gap:12px;padding-top:24px;padding-bottom:48px}
+.eyebrow{order:1;font-size:12px}
+h1{order:2;font-size:min(10.5vw,60px);line-height:1.22}
+h1 .mk{padding:0 14px;margin-top:4px}
+.hero-sub{order:3;font-size:clamp(16px,4.4vw,22px);line-height:1.6}
+.hero-sub br{display:none}
+.hero-v{order:4;min-height:0;aspect-ratio:1/0.78;width:100%;max-width:460px;margin:2px auto 0}
+.hero-v .fr{inset:6% 6% 10% 14%}
+.hero-v .pn{inset:13% 12% 4% 6%}
+.hero-v .i1{width:66%;transform:rotate(-8deg) translate(-10%,-16%)}
+.hero-v .i2{right:10%;bottom:8%;width:42%}
+.hero-p{order:5;font-size:15px;margin-top:10px}
+.hero-tag{order:6;font-size:17px;margin-top:6px}
+.hero-cta{order:7;margin-top:8px}
+.pv-band{font-size:11px;padding:4px 10px}
 .hd{position:relative;z-index:45}
 .hd .in{flex-wrap:nowrap;padding-top:10px;padding-bottom:10px}
 .logo span{display:none}
@@ -200,19 +216,6 @@ body{padding-bottom:76px}
 .logo b{font-size:22px}
 .hd .cta{padding:0 12px;font-size:13px}
 .hd nav{padding-left:18px;padding-right:18px}
-.hero-tx{display:contents}
-.hero-grid{gap:18px}
-.eyebrow{order:1;font-size:12px}
-h1{order:2;font-size:12vw;line-height:1.25}
-h1 .mk{padding:0 14px;margin-top:6px}
-.hero-sub{order:3;font-size:19px}
-.hero-v{order:4;min-height:0;aspect-ratio:1/0.82;margin:6px 0 0}
-.hero-v .fr{inset:8% 6% 10% 14%}
-.hero-v .pn{inset:16% 12% 4% 6%}
-.hero-v .i1{width:66%;transform:rotate(-8deg) translate(-10%,-16%)}
-.hero-v .i2{right:10%;bottom:8%;width:42%}
-.hero-p{order:5;font-size:15px}
-.hero-tag{order:6;font-size:17px}
 .hero-cta{display:none}
 .hero-cta .btn{width:100%;justify-content:center}
 .grid4{grid-template-columns:1fr 1fr;gap:10px;margin-top:32px}
@@ -240,7 +243,6 @@ h1 .mk{padding:0 14px;margin-top:6px}
 .sp-cta a{flex:1;display:flex;align-items:center;justify-content:center;gap:10px;min-height:54px;background:var(--red);color:#fff;font-weight:700;font-size:17px;text-decoration:none;border-radius:2px}
 .in{padding:0 18px}
 .sec{padding:64px 0}
-.hero-grid{padding-top:48px;padding-bottom:56px;gap:24px}
 .hero-v{min-height:340px}
 .btn{padding:0 24px;font-size:17px}
 .after,.gloss{padding:28px 22px}
