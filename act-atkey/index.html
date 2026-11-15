@@ -250,6 +250,51 @@ body{padding-bottom:76px}
 }
 .wm{position:fixed;inset:0;z-index:50;pointer-events:none;opacity:.16;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22520%22%20height%3D%22300%22%3E%3Cg%20transform%3D%22rotate%28-24%20260%20150%29%22%20font-family%3D%22sans-serif%22%20font-weight%3D%22700%22%20fill%3D%22%238A8A8A%22%3E%3Ctext%20x%3D%2220%22%20y%3D%22130%22%20font-size%3D%2219%22%20letter-spacing%3D%222%22%3ETAF%20Design%20SAMPLE%20%EF%BD%9C%20%E7%A2%BA%E8%AA%8D%E7%94%A8%E3%81%AE%E8%A6%8B%E6%9C%AC%3C/text%3E%3Ctext%20x%3D%2220%22%20y%3D%22160%22%20font-size%3D%2213%22%20letter-spacing%3D%221%22%3E%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%81%AE%E7%84%A1%E6%96%AD%E4%BD%BF%E7%94%A8%E3%83%BB%E8%A4%87%E8%A3%BD%E3%81%AF%E3%81%94%E9%81%A0%E6%85%AE%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%3C/text%3E%3C/g%3E%3C/svg%3E");background-size:520px 300px}
 .ai-note{background:#0E0607;color:#C9BCBD;font-size:12px;line-height:1.8;text-align:center;padding:14px 18px;border-top:1px solid #3A2226}
+
+/* ===== ホワイトバック版（2026-11-15 坂本様ご指示） ===== */
+:root{--gold:#8A6A1E;--on-d:#4A3F41;--mut-d:#6B5F61}
+.dark{background:#fff;color:var(--tx)}
+.dark .label{color:var(--red-t)}
+.hd{background:#fff;border-bottom:1px solid var(--line)}
+.logo b{color:var(--tx)}
+.logo span{color:var(--mut)}
+.hd nav a{color:var(--tx)}
+.hb{border-color:var(--tx)}
+.hb span{background:var(--tx)}
+a:focus-visible,.hb:focus-visible{outline-color:var(--tx)}
+.hero{background-color:#fff;color:var(--tx);background-image:linear-gradient(#F1EAE8 1px,transparent 1px),linear-gradient(90deg,#F1EAE8 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.84) 45%,rgba(255,255,255,.55) 100%),url(images/fv-bg.jpg)}
+h1{color:var(--tx)}
+h1 .mk{color:#fff}
+.hero-tag{color:var(--tx)}
+.hero-v .i1{filter:drop-shadow(0 22px 24px rgba(40,10,16,.3))}
+.hero-v .i2{filter:drop-shadow(0 18px 20px rgba(40,10,16,.35))}
+.fv-mq{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.fv-mq b{color:var(--red-t)}
+.after{background:#fff;border:1px solid var(--tx);color:var(--tx)}
+.after strong{color:var(--tx)}
+.prod-box{background:var(--paper);border:1px solid var(--line)}
+.prod-box img{filter:drop-shadow(0 18px 18px rgba(40,10,16,.3))}
+#about{background:var(--paper);border-top:1px solid var(--line)}
+.feat>div{background:#fff;border:1px solid var(--tx)}
+.feat .n,.feat .ph svg{color:var(--red)}
+.feat .ph img{filter:drop-shadow(0 12px 12px rgba(40,10,16,.28))}
+#cases{background:#fff;border-top:0}
+.case{background:var(--paper)}
+#contact{border-top:1px solid var(--line)}
+.ft{background:var(--paper);color:var(--mut);border-top:1px solid var(--line)}
+.ft b{color:var(--tx)}
+.ft a{color:var(--tx)}
+.sp-cta{background:rgba(255,255,255,.96);border-top:1px solid var(--line)}
+.ai-note{background:#fff;color:var(--mut);border-top:1px solid var(--line)}
+@media (max-width:900px){
+.hd nav{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);box-shadow:0 18px 30px rgba(40,10,16,.14)}
+.hd nav a{border-bottom:1px solid var(--line)}
+.hd nav a:after{border-color:var(--red)}
+}
+@media (max-width:640px){
+.hero{background-image:linear-gradient(#F1EAE8 1px,transparent 1px),linear-gradient(90deg,#F1EAE8 1px,transparent 1px),linear-gradient(180deg,rgba(255,255,255,.92) 0%,rgba(255,255,255,.78) 55%,rgba(255,255,255,.9) 100%),url(images/fv-bg-sp.jpg)}
+}
+@media (prefers-reduced-motion:reduce){.fv-img.i1{filter:drop-shadow(0 22px 24px rgba(40,10,16,.3))}}
 </style>
 </head>
 <body>
@@ -358,7 +403,7 @@ body{padding-bottom:76px}
 <div class="body"><p>ATKey.Proは、指紋認証機能を搭載したセキュリティキー。FIDO2対応サービスと組み合わせてフィッシングに強い認証を実現します。</p></div>
 <div class="feat">
 <div><span class="n">1</span><div class="ph"><img src="images/atkey-pro.png" alt=""></div><strong>指紋認証による本人確認</strong><span>キーに搭載された指紋センサーで本人確認。対応する認証設定に応じて、ログイン時の本人確認を行います。</span></div>
-<div><span class="n">2</span><div class="ph"><svg aria-hidden="true" width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="#E3C78C" stroke-width="1.100"><path d="M12 2l8 3v6c0 5-3.500 9-8 11-4.500-2-8-6-8-11V5z"/><path d="M8.500 12l2.500 2.500 4.500-5"/></svg></div><strong>フィッシングに強い認証</strong><span>FIDO2対応の認証方式により、偽サイトなどを使って認証情報を盗み取るフィッシング攻撃への耐性を高めます。</span></div>
+<div><span class="n">2</span><div class="ph"><svg aria-hidden="true" width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.100"><path d="M12 2l8 3v6c0 5-3.500 9-8 11-4.500-2-8-6-8-11V5z"/><path d="M8.500 12l2.500 2.500 4.500-5"/></svg></div><strong>フィッシングに強い認証</strong><span>FIDO2対応の認証方式により、偽サイトなどを使って認証情報を盗み取るフィッシング攻撃への耐性を高めます。</span></div>
 <div><span class="n">3</span><div class="ph"><img src="images/atkey-card.png" alt=""><img src="images/atkey-pro.png" alt=""></div><strong>既存環境に合わせて活用</strong><span>カード型、USB型の2つのラインアップ。いずれもFIDO2対応サービスとの連携が可能です。</span></div>
 </div>
 <p class="note">※実際のご利用の際は、導入先のシステムや認証環境をご確認ください。</p>
