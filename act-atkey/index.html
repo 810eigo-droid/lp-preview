@@ -314,6 +314,50 @@ h1 .mk{color:#fff}
 @media (max-width:640px){
 .hero{background-image:linear-gradient(#F1EAE8 1px,transparent 1px),linear-gradient(90deg,#F1EAE8 1px,transparent 1px),linear-gradient(rgba(255,255,255,.9),rgba(255,255,255,.9)),url(images/fv-bg-sp.jpg);background-position:0 0,0 0,center,70% center}
 }
+
+/* ===== 見出しの工夫（2026-11-15） ===== */
+h2 em,.lead em,.after em{font-style:normal;color:var(--red)}
+.one h2 em,.one .lead em{color:#fff}
+.sec>.in{position:relative;z-index:1}
+.sec[data-n]{position:relative;overflow:hidden}
+.sec[data-n]:before{content:attr(data-n);position:absolute;right:max(24px,calc(50% - 556px));top:44px;font:800 clamp(96px,13vw,190px)/1 var(--min);color:transparent;-webkit-text-stroke:1px rgba(193,2,48,.26);letter-spacing:.02em;pointer-events:none;z-index:0}
+.sec.one[data-n]:before{-webkit-text-stroke:1px rgba(255,255,255,.35)}
+.sec>.in>*{position:relative;z-index:1}
+.label{gap:12px}
+.label b{display:inline-flex;align-items:center;justify-content:center;min-width:44px;height:26px;padding:0 8px;background:var(--red);color:#fff;font-size:15px;letter-spacing:.08em}
+.one .label b{background:#fff;color:var(--red)}
+h2{padding-bottom:24px;position:relative}
+h2:after{content:"";position:absolute;left:0;bottom:0;width:76px;height:3px;background:linear-gradient(90deg,var(--red) 0 52px,transparent 52px 58px,var(--gold) 58px 76px)}
+.one h2:after{background:linear-gradient(90deg,#fff 0 52px,transparent 52px 58px,rgba(255,255,255,.6) 58px 76px)}
+.ct h2:after{left:50%;transform:translateX(-50%)}
+.lead{position:relative;padding-left:20px}
+.lead:before{content:"";position:absolute;left:0;top:.35em;bottom:.35em;width:4px;background:var(--red)}
+.one .lead:before{background:#fff}
+.co .lead{margin-top:24px}
+/* 小見出し（h3相当）：赤い四角＋右へ伸びる線 */
+.checks h3,.gloss h3,.ex h3{display:flex;align-items:center;gap:12px;background:none;color:var(--tx);padding:0;font-family:var(--min);font-weight:800;font-size:20px;letter-spacing:.04em}
+.checks h3:before,.gloss h3:before,.ex h3:before{content:"";width:10px;height:10px;background:var(--red);transform:rotate(45deg);flex:none}
+.checks h3:after,.gloss h3:after,.ex h3:after{content:"";flex:1;height:1px;background:var(--tx);opacity:.25}
+.ex{border:1px solid var(--tx);padding:26px 28px 6px}
+.ex h3{margin-bottom:14px}
+.ex li{padding:18px 4px;border-right:0}
+/* 番号バッジ */
+.feat .n,.one .steps b{display:flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:50%;background:var(--red);color:#fff;font-size:26px;line-height:1;flex:none;box-shadow:0 0 0 4px #fff,0 0 0 5px var(--red)}
+.feat .n{margin:4px 0 0 4px}
+.one .steps b{margin:4px 2px 4px 4px}
+.feat strong{padding-top:14px;border-top:1px solid var(--line)}
+/* カード見出し */
+.risk strong{padding-bottom:10px;border-bottom:2px solid var(--red)}
+.case strong{display:flex;align-items:center;gap:10px}
+.case strong:before{content:"";width:8px;height:8px;background:var(--red);transform:rotate(45deg);flex:none}
+.gloss dt{display:flex;gap:10px;align-items:baseline}
+.gloss dt:before{content:"Q";font-family:var(--min);font-weight:800;font-size:22px;color:var(--red);line-height:1}
+@media (max-width:640px){
+.sec[data-n]:before{top:22px;right:14px}
+.ex{padding:20px 18px 4px}
+.feat .n,.one .steps b{width:44px;height:44px;font-size:22px}
+.feat strong{padding-top:10px}
+}
 </style>
 </head>
 <body>
@@ -363,10 +407,10 @@ h1 .mk{color:#fff}
 </section>
 
 <!-- ② リスク -->
-<section id="risk" class="sec paper"><div class="in">
+<section id="risk" data-n="01" class="sec paper"><div class="in">
 <div class="label"><b>01</b><i></i><span>RISK</span></div>
-<h2>不正アクセスが企業にもたらすリスク</h2>
-<p class="lead">不正アクセスは、企業の信頼や事業活動に大きな影響を及ぼします。</p>
+<h2>不正アクセスが企業にもたらす<em>リスク</em></h2>
+<p class="lead">不正アクセスは、企業の信頼や事業活動に<em>大きな影響</em>を及ぼします。</p>
 <div class="body">
 <p>不正アクセスの原因には、フィッシングによる認証情報の窃取や、パスワードの使いまわしなどがあります。</p>
 <p>同じパスワードを複数のサービスで使いまわすことで、ひとつの情報漏えいが、ほかのサービスへの不正ログインにつながるおそれがあります。</p>
@@ -379,16 +423,16 @@ h1 .mk{color:#fff}
 </div>
 <div class="after">
 <div><strong>セキュリティ事故の事後処理には、大きな負担がかかります。</strong><span>原因調査、顧客・取引先への説明、システム復旧、再発防止策の実施など、事故後の対応は多岐にわたります。</span></div>
-<div class="em"><strong>だからこそ、システム攻撃への事後処理より、不正アクセスを防ぐための事前対策が重要です。</strong></div>
+<div class="em"><strong>だからこそ、システム攻撃への事後処理より、不正アクセスを防ぐための<em>事前対策</em>が重要です。</strong></div>
 </div>
 </div></section>
 
 <!-- ③ 選択肢 -->
-<section id="solution" class="sec"><div class="in two">
+<section id="solution" data-n="02" class="sec"><div class="in two">
 <div>
 <div class="label"><b>02</b><i></i><span>SOLUTION</span></div>
-<h2>不正アクセス対策の選択肢、ATKey</h2>
-<p class="lead">「不正アクセス対策は、認証の仕組みを見直すことから」</p>
+<h2>不正アクセス対策の<em>選択肢</em>、ATKey</h2>
+<p class="lead">「不正アクセス対策は、<em>認証の仕組み</em>を見直すことから」</p>
 <div class="body">
 <p>不正アクセス対策は、ネットワークでの監視や端末の保護など、複数の方法があります。</p>
 <p>その中でも重要なのが「認証」です。</p>
@@ -415,10 +459,10 @@ h1 .mk{color:#fff}
 </div></section>
 
 <!-- ④ ATKeyとは -->
-<section id="about" class="sec dark"><div class="in">
+<section id="about" data-n="03" class="sec dark"><div class="in">
 <div class="label"><b>03</b><i></i><span>ABOUT</span></div>
-<h2>ATKeyとは？</h2>
-<p class="lead">「指紋認証とFIDO2で、より安全なログインへ」</p>
+<h2><em>ATKey</em>とは？</h2>
+<p class="lead">「<em>指紋認証とFIDO2</em>で、より安全なログインへ」</p>
 <div class="body"><p>ATKey.Proは、指紋認証機能を搭載したセキュリティキー。FIDO2対応サービスと組み合わせてフィッシングに強い認証を実現します。</p></div>
 <div class="feat">
 <div><span class="n">1</span><div class="ph"><img src="images/atkey-pro.png" alt=""></div><strong>指紋認証による本人確認</strong><span>キーに搭載された指紋センサーで本人確認。対応する認証設定に応じて、ログイン時の本人確認を行います。</span></div>
@@ -438,10 +482,10 @@ h1 .mk{color:#fff}
 </div></section>
 
 <!-- ⑤ 導入事例 -->
-<section id="cases" class="sec paper"><div class="in">
+<section id="cases" data-n="04" class="sec paper"><div class="in">
 <div class="label"><b>04</b><i></i><span>USE CASE</span></div>
-<h2>導入事例</h2>
-<p class="lead">さまざまな業種・組織で活用されるFIDO2セキュリティキー</p>
+<h2>導入<em>事例</em></h2>
+<p class="lead">さまざまな業種・組織で活用される<em>FIDO2セキュリティキー</em></p>
 <div class="body"><p>企業や教育機関など、認証セキュリティの強化が求められるさまざまな環境で、ATKeyシリーズの活用事例が紹介されています。</p></div>
 <div class="cases">
 <div class="case"><strong>企業</strong><ul><li>Windows環境やEntra IDなどと連携した認証</li><li>従業員のログインセキュリティ強化</li><li>Microsoftアカウント不正アクセス対策</li></ul></div>
@@ -454,7 +498,7 @@ h1 .mk{color:#fff}
 </div></section>
 
 <!-- ⑥ まずは1台から -->
-<section id="one" class="sec one"><div class="in">
+<section id="one" data-n="05" class="sec one"><div class="in">
 <div class="label" style="color:#fff"><b>05</b><i></i><span>START</span></div>
 <h2>まずは1台から始められます</h2>
 <p class="lead">導入の前に、まずは1台からチェック</p>
@@ -470,10 +514,10 @@ h1 .mk{color:#fff}
 </div></section>
 
 <!-- ⑦ 導入方法・購入案内 -->
-<section id="how" class="sec"><div class="in">
+<section id="how" data-n="06" class="sec"><div class="in">
 <div class="label"><b>06</b><i></i><span>HOW TO</span></div>
-<h2>導入方法・購入案内</h2>
-<p class="lead">貴社の環境に合った導入方法をご案内します</p>
+<h2>導入方法・<em>購入案内</em></h2>
+<p class="lead">貴社の環境に合った<em>導入方法</em>をご案内します</p>
 <div class="body">
 <p>ATKey.Pro導入は、まず貴社のシステムや認証サービスの対応状況の確認をお願いいたします。</p>
 <p>お問い合わせいただいた状況に応じて、製品や導入方法についてご案内します。</p>
@@ -491,10 +535,10 @@ h1 .mk{color:#fff}
 </div></section>
 
 <!-- ⑧ 会社案内 -->
-<section id="company" class="sec paper"><div class="in co">
+<section id="company" data-n="07" class="sec paper"><div class="in co">
 <div>
 <div class="label"><b>07</b><i></i><span>COMPANY</span></div>
-<h2>会社案内</h2>
+<h2>会社<em>案内</em></h2>
 <p class="lead">私たちについて</p>
 <a class="txt-link" href="https://a-c-t.co.jp/">会社概要を見る
 <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -503,9 +547,9 @@ h1 .mk{color:#fff}
 </div></section>
 
 <!-- ⑨ お問い合わせ -->
-<section id="contact" class="sec dark ct"><div class="in">
+<section id="contact" data-n="08" class="sec dark ct"><div class="in">
 <div class="label"><b>08</b><i></i><span>CONTACT</span></div>
-<h2>「不正アクセス対策の見直しを、<br>ATKey.Proから」</h2>
+<h2>「<em>不正アクセス対策</em>の見直しを、<br>ATKey.Proから」</h2>
 <div class="body">
 <p>ATKey.Proの機能や対応環境、導入方法などについて不明な点は、お気軽にお問い合わせください。</p>
 <p>またご質問や、お見積もりのご依頼を受け付けています。</p>
