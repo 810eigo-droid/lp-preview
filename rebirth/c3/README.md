@@ -47,3 +47,7 @@ images/真紅の薔薇が彩る贅沢フェイシャル.png を使用。画像�
 ## セクション08差し替え
 
 images/rebirth-owner-section.png を使用。
+
+## お客様の声の色味・FAQ
+
+⑥はCSS saturate(.95)で彩度のみ約5%抑制。元画像を保持。FAQは支給の「深紅と金彩の上質FAQ.png」を参考に赤帯・金枠へ変更し、確定原稿を編集可能なHTMLとして維持。

@@ -262,6 +262,22 @@ font-family:'Yu Gothic','Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;co
 #rb-c .fv-art .section-image{width:100%;height:auto;max-width:none}
 #rb-c #top+.html-cta{background:radial-gradient(ellipse at 50% 0,#bd001e,#80000e 85%);padding-top:14px}
 #rb-c #top+.html-cta .cta{box-shadow:inset 0 2px 0 #fff9,inset 0 -3px 6px #5c000f88,0 0 0 2px #c9a24e,0 0 20px #ffd56a77,0 8px 16px #0006}
+
+/* Subtle requested testimonial color adjustment; original asset retained. */
+#rb-c [aria-label="セクション6"]>.section-image{filter:saturate(.95)}
+/* Supplied FAQ design, kept as editable and responsive HTML. */
+#rb-c .faq{padding:40px 16px;background:radial-gradient(ellipse at 50% 0,#fffdf7,transparent 65%),#fdf4e4}
+#rb-c .faq h2{font-size:30px;letter-spacing:.08em;margin-bottom:30px}
+#rb-c .faq h2:before,#rb-c .faq h2:after{flex-basis:30px}
+#rb-c .faq .faq-card{margin:0 0 25px;border:1.5px solid #c9a24e;border-radius:13px;background:linear-gradient(135deg,#fffefa,#fffaf2);box-shadow:0 5px 9px #80602026;overflow:hidden}
+#rb-c .faq .faq-card:last-child{margin-bottom:0}
+#rb-c .faq dt{border:0;padding:15px 12px 15px 52px;background:linear-gradient(120deg,#8f0015,#bb0b2a 55%,#8f0015);color:white;font:700 18px/1.65 'Shippori Mincho','Yu Mincho',serif}
+#rb-c .faq dt:before{left:12px;top:15px;width:30px;height:30px;background:linear-gradient(135deg,#fff7d4,#d5ad51);color:#a8001e;font:700 22px/1 Georgia,serif}
+#rb-c .faq dd{margin:0;padding:18px 14px 18px 52px;color:#171212;font:500 17px/1.85 'Yu Gothic','Meiryo',sans-serif}
+#rb-c .faq dd:before{left:12px;top:19px;width:30px;height:30px;background:linear-gradient(135deg,#e4c471,#b78a2a);color:white;font:700 22px/1 Georgia,serif}
+#rb-c .faq dd p:last-child{margin-bottom:0}
+#rb-c .faq .faq-card:first-child dd p:first-child{color:#a8001e;font:700 25px/1.5 'Shippori Mincho','Yu Mincho',serif;margin-bottom:12px}
+@media(max-width:360px){#rb-c .faq{padding-left:12px;padding-right:12px}#rb-c .faq dt{font-size:17px}#rb-c .faq dd{padding-left:48px}}
 </style></head><body><div id="rb-c"><div class="c-page">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
 <symbol id="star" viewBox="0 0 24 24"><path d="M12 0C12.8 8 16 11.2 24 12C16 12.8 12.8 16 12 24C11.2 16 8 12.8 0 12C8 11.2 11.2 8 12 0Z" fill="#fffbe8"/></symbol>
@@ -281,12 +297,12 @@ font-family:'Yu Gothic','Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;co
 <section class="light faq" data-section="10">
 <h2>よくある質問</h2>
 <dl>
-<dt>エステが初めてでも大丈夫ですか？</dt>
-<dd><p>はい！</p><p>きちんとカウンセリングの上、お肌の状態、お身体の状態を確認して、最善の方法を考えて施術をさせて頂きます。</p><p>初回体験後、お得な2回券や都度払いなどもご用意しておりますので、ご自身のペースに合わせて無理なく安心して通って頂けます。</p></dd>
-<dt>施術時間は？</dt>
-<dd><p>基本70分、LINE特典込みで約90分です。</p></dd>
-<dt>予約前に相談できますか？</dt>
-<dd><p>公式LINEからご相談いただけます。</p></dd>
+<div class="faq-card"><dt>エステが初めてでも大丈夫ですか？</dt>
+<dd><p>はい！</p><p>きちんとカウンセリングの上、お肌の状態、お身体の状態を確認して、最善の方法を考えて施術をさせて頂きます。</p><p>初回体験後、お得な2回券や都度払いなどもご用意しておりますので、ご自身のペースに合わせて無理なく安心して通って頂けます。</p></dd></div>
+<div class="faq-card"><dt>施術時間は？</dt>
+<dd><p>基本70分、LINE特典込みで約90分です。</p></dd></div>
+<div class="faq-card"><dt>予約前に相談できますか？</dt>
+<dd><p>公式LINEからご相談いただけます。</p></dd></div>
 </dl>
 </section>
 <section class="image-section" aria-label="セクション11"><img class="section-image" src="images/section-11.webp" width="1080" height="918" alt="" loading="lazy"><div class="sr-only">諦める前に、<br>一度この手を<br>体感してください。<br><br>たるみ悩み特化フェイシャル<br><br>初回体験<br>9,900<br>円<br>（税込）<br><br>約90分<br>（LINE特典込み）</div></section><div class="html-cta red"><a class="cta" href="https://page.line.me/954miweg" target="_blank" rel="noopener">空き状況を見て予約する <span>›</span></a><small class="cta-note">公式LINEへ進みます</small></div><div class="html-access"><img class="salon-photo" src="images/IMG_8528.webp" width="781" height="401" loading="eager" alt="RE:BIRTHの施術ルーム"><div class="access"><strong>RE:BIRTH｜奈良・学園前</strong>
