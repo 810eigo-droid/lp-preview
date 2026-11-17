@@ -478,6 +478,20 @@ html.mv .case:not(.shown) .case-img{transform:scale(1.12)}
 @keyframes fvBreath{0%{background-position:0 0,left 47.2vw top 67px}100%{background-position:0 0,left 47.6vw top 60px}}
 }
 @media (prefers-reduced-motion:reduce){.ph-band .kb,.hero{animation:none}html.mv [data-in],html.mv .case-img{transition:none}}
+/* 07 会社案内 */
+.co .box.co-box{border:1px solid var(--line);border-top:4px solid var(--red);color:var(--tx);padding:30px 30px 32px;box-shadow:0 14px 30px rgba(40,10,16,.07)}
+.co-box p{margin:0 0 12px;font-size:15px;line-height:1.95;color:#3A3133}
+.co-box .co-h{font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--red);margin-bottom:8px}
+.co-box .co-catch{font-family:var(--min);font-weight:800;font-size:clamp(19px,2vw,23px);line-height:1.6;color:var(--tx);margin-bottom:18px}
+.co-badges{list-style:none;margin:0 0 20px;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.co-badges li{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:96px;padding:12px 6px;background:linear-gradient(160deg,#fff 0%,#FBF3F4 100%);border:1px solid #EBDCDE;border-radius:10px}
+.co-badges b{font-family:var(--min);font-weight:800;font-size:19px;line-height:1.2;color:var(--red);display:flex;align-items:baseline;gap:2px;justify-content:center;flex-wrap:wrap}
+.co-badges .cnt{font-size:30px;font-variant-numeric:tabular-nums}
+.co-badges small{font-size:12px;font-weight:700;color:#5A4F51;margin-top:4px}
+.co-badges b small{margin-top:0;font-size:13px;color:var(--tx)}
+.co-box .co-last{font-weight:700;color:var(--tx);margin-top:4px}
+.co-btn{margin-top:10px}
+@media (max-width:640px){.co .box.co-box{padding:24px 18px 26px}.co-badges{grid-template-columns:repeat(2,minmax(0,1fr))}.co-btn{width:100%;justify-content:center;padding:0 14px!important;font-size:15px!important;gap:8px}}
 </style>
 </head>
 <body>
@@ -724,11 +738,25 @@ html.mv .case:not(.shown) .case-img{transform:scale(1.12)}
 <div>
 <div class="label"><b>07</b><i></i><span>COMPANY</span></div>
 <h2>会社<em>案内</em></h2>
-<p class="lead">私たちについて</p>
-<a class="txt-link" href="https://a-c-t.co.jp/">会社概要を見る
+<p class="lead">私たち、株式会社エイ・シー・ティについて</p>
+<a class="txt-link" href="https://a-c-t.co.jp/about.html">会社概要を見る
 <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
 </div>
-<div class="box">［ACT株式会社様の会社紹介・事業内容を掲載します。原稿をいただき次第、こちらに入れます。］</div>
+<div class="box co-box">
+<p class="co-h">株式会社エイ・シー・ティの会社概要</p>
+<p class="co-catch">1989年設立。38期目を迎えるIT企業として、安心と信頼をお届けします。</p>
+<ul class="co-badges">
+<li><b><span class="cnt" data-to="38">38</span><small>期目</small></b></li>
+<li><b><span class="cnt" data-to="1989" data-from="1950">1989</span><small>年設立</small></b></li>
+<li><b>Pマーク</b><small>プライバシーマーク</small></li>
+<li><b>大手企業</b><small>取引実績</small></li>
+</ul>
+<p>株式会社エイ・シー・ティは、1989年の設立以来、企業向けシステム開発を中心に、Web・アプリケーション開発など幅広いIT分野で実績を積み重ねてきました。</p>
+<p>大手企業をはじめとする多様な取引先との実績に加え、2006年にはプライバシーマークを取得。個人情報の適切な取り扱いにも取り組んでいます。</p>
+<p>これまでに培った技術と経験を活かし、企業のセキュリティ対策をサポートします。</p>
+<p class="co-last">ATKey.Proの導入につきましても、まずはお気軽にご相談ください。</p>
+<a class="btn co-btn" href="#contact">ATKey.Proの導入について相談する <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</div>
 </div></section>
 
 <!-- ⑨ お問い合わせ -->
@@ -754,8 +782,8 @@ new IntersectionObserver(function(e){b.classList.toggle('off',e[0].isIntersectin
 <footer class="ft"><div class="in">
 <div><b>ATKey</b><span>ACT株式会社 ATkey事業部</span></div>
 <nav>
-<a href="https://a-c-t.co.jp/">会社概要</a>
-<a href="#privacy">プライバシーポリシー</a>
+<a href="https://a-c-t.co.jp/about.html">会社概要</a>
+<a href="https://a-c-t.co.jp/privacy.html">プライバシーポリシー</a>
 <a href="#cookie">Cookieポリシー</a>
 <a href="form.html">お問い合わせ</a>
 </nav>
@@ -786,12 +814,19 @@ t.forEach(function(el){o.observe(el);});})();
 (function(){if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
 document.querySelectorAll('.ph-band').forEach(function(b){var k=document.createElement('span');k.className='kb';k.setAttribute('aria-hidden','true');b.insertBefore(k,b.firstChild);});
 var plan=[['.grid4 > .risk',function(i){return i%2?'r':'l';},.08],['.feat > div',function(){return 'u';},.15],['#cases .case',function(){return 'r';},.12],
-['.prod-box','t',0],['.after','u',0],['.gloss','d',0],['.checks','z',0],['.ex li','o',.12],['.one .steps > div',function(i){return i%2?'r':'l';},.12]];
+['.prod-box','t',0],['.after','u',0],['.gloss','d',0],['.checks','z',0],['.ex li','o',.12],['.co-badges li','z',.1],['.one .steps > div',function(i){return i%2?'r':'l';},.12]];
 var els=[];
 plan.forEach(function(p){document.querySelectorAll(p[0]).forEach(function(el,i){if(el.hasAttribute('data-in'))return;el.setAttribute('data-in',typeof p[1]==='function'?p[1](i):p[1]);var col=el.parentNode&&getComputedStyle(el.parentNode).display==='grid'?i%2:i;el.style.setProperty('--dl',(Math.min(i,4)*p[2])+'s');els.push(el);});});
 if(!els.length)return;document.documentElement.classList.add('mv');
 var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('shown');o.unobserve(e.target);}});},{rootMargin:'0px 0px -10% 0px',threshold:.15});
 els.forEach(function(el){o.observe(el);});})();
+</script>
+<script>
+(function(){var c=document.querySelectorAll('.co-badges .cnt');if(!c.length||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+c.forEach(function(el){var to=+el.dataset.to,fr=+(el.dataset.from||0);el.textContent=fr;
+var o=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;o.disconnect();var t0=null;
+function step(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/1400),e=1-Math.pow(1-k,3);el.textContent=Math.round(fr+(to-fr)*e);if(k<1)requestAnimationFrame(step);}
+requestAnimationFrame(step);},{threshold:.6});o.observe(el);});})();
 </script>
 </body>
 </html>
