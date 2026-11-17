@@ -23,3 +23,7 @@ C案修正版の確定原稿に基づく画像LP。写真は黄色みを加え�
 - `images/section-08.webp`
 - `images/section-09.webp`
 - `images/section-11.webp`
+
+## お悩みセクション差し替え
+
+②はアップロードされた images/50代女性の自然な美しさ.png を使用。従来の section-02.webp は比較用として保持。
