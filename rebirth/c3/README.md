@@ -43,3 +43,7 @@ images/真紅の薔薇が彩る贅沢フェイシャル.png を使用。画像�
 ## 顔・首・肩・デコルテのケア差し替え
 
 ③は images/rebirth-real-treatment-section.png を使用。
+
+## セクション08差し替え
+
+images/rebirth-owner-section.png を使用。
