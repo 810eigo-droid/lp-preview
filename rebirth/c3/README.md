@@ -55,3 +55,7 @@ images/rebirth-owner-section.png を使用。
 ## サロン案内更新
 
 images/赤と金の優雅なサロン案内.png の上部写真・装飾をCSSで表示。住所・駅・送迎・駐車場・営業時間・定休日は既存の確定原稿をHTMLのまま保持し、赤・金・クリーム色で整形。
+
+## 写真の修正
+
+⑤のカウンセリング写真は支給原本をそのまま再配置して section-05-original-photo.webp に書き出し。人物の再生成なし。⑨は既存の組版から施術サムネイルだけを暖色に調整した section-09-warm-treatment.webp に更新。
