@@ -924,7 +924,7 @@ requestAnimationFrame(step);},{threshold:.6});o.observe(el);});})();
 </script>
 <script>
 /* お問い合わせフォーム：WordPress では Contact Form 7 のフォーム（LPの下の「ショートコード」ブロック）を、08 の中へ移す */
-(function(){var slot=document.getElementById('atk-form-slot');if(!slot)return;
+(function(){function go(){var slot=document.getElementById('atk-form-slot');if(!slot)return;
 var real=[].slice.call(document.querySelectorAll('.wpcf7')).filter(function(w){return w.id!=='atk-mock'&&!slot.contains(w);})[0];
 if(real){slot.innerHTML='';slot.appendChild(real);}
 document.addEventListener('wpcf7mailsent',function(){window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'atk_form_sent'});});
@@ -936,7 +936,8 @@ f.querySelectorAll('[required]').forEach(function(el){var w=el.closest('.wpcf7-f
 if(!el.value.trim()||!el.checkValidity()){bad++;el.classList.add('wpcf7-not-valid');var s=document.createElement('span');s.className='wpcf7-not-valid-tip';s.textContent=el.type==='email'&&el.value.trim()?'メールアドレスの形をご確認ください。':'入力してください。';w.appendChild(s);}});
 var out=f.querySelector('.wpcf7-response-output');f.classList.remove('sent','invalid');
 if(bad){f.classList.add('invalid');out.textContent='入力内容をご確認ください。';var x=f.querySelector('.wpcf7-not-valid');if(x)x.focus();return;}
-f.classList.add('sent');out.textContent='（確認用の見本のため、送信はされません）ありがとうございます。メッセージは送信されました。';});})();
+f.classList.add('sent');out.textContent='（確認用の見本のため、送信はされません）ありがとうございます。メッセージは送信されました。';});}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go();})();
 </script>
 </body>
 </html>
