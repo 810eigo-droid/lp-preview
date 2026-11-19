@@ -623,6 +623,10 @@ p,li,dd{text-wrap:pretty}
 /* 08：新しい握手の写真（人物は左）。PCは画面幅に合わせて上に1枚・下は白へ消える（大きくなりすぎない・くり返さない） */
 @media (min-width:641px){#contact{background-image:linear-gradient(180deg,rgba(255,255,255,.78) 0,rgba(255,255,255,.84) 320px,#fff min(56vw,780px)),url(images/bg-08-2.jpg)!important;background-size:100% 100%,100% auto!important;background-position:0 0,center top!important;background-repeat:no-repeat!important;background-color:#fff!important}}
 #contact .ph-band{background-size:cover!important;background-position:8% 22%!important}
+/* Contact Form 7 が自動で入れる見えない部品（空の枠に見えるので消す） */
+.atk-form fieldset.hidden-fields-container{display:none!important}
+.atk-form .screen-reader-response{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;white-space:nowrap!important;border:0!important;padding:0!important;margin:-1px!important}
+.atk-f-row>p{margin:0}
 </style>
 </head>
 <body>
