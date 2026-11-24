@@ -328,6 +328,22 @@ h1,h2,h3,p,li,dt,dd{word-break:auto-phrase;line-break:strict}
   .fv .fv-sub{max-width:56%;font-size:clamp(13px,3.9vw,18px);line-height:1.75;word-break:keep-all}
   .fv .fv-sub .mk{background-size:100% .5em}
 }
+/* C案：収録データ（ChatGPT の画像を見本に）：巻物の見出し・カードごとにアイコン・見出しに黄色いマーカー。絵は手描き風のSVG */
+.legend-h span{position:relative;display:inline-flex;align-items:center;gap:.5em;border:0;padding:.45em 2.2em .5em;background:linear-gradient(180deg,#f8e6b8 0%,#ecd296 60%,#dcb877 100%);border-top:2px solid #b8894a;border-bottom:2px solid #8a5f2c;color:var(--ink);box-shadow:0 4px 0 rgba(42,28,13,.18)}
+.legend-h span::before,.legend-h span::after{content:"";position:absolute;top:-6px;bottom:-6px;width:20px;background:linear-gradient(90deg,#c9a062,#f3dca4 45%,#b8894a);border:2px solid #8a5f2c;border-radius:10px}
+.legend-h span::before{left:-12px}.legend-h span::after{right:-12px}
+.legend-h svg{width:1.4em;height:1.4em;color:#a8781e;flex:none}
+.legend li{background:rgba(255,253,246,.92);border:2px solid #b8955e;border-radius:14px;padding:22px 128px 18px 22px;min-height:132px;box-shadow:0 4px 0 rgba(42,28,13,.12)}
+.legend h4 span,.legend h4{display:inline}
+.legend h4{background:linear-gradient(transparent 62%,#f9dd6b 62%);padding:0 .15em 0 .1em;margin-left:26px}
+.legend p{margin-top:12px}
+.legend .lg-ic{position:absolute;right:12px;top:50%;width:108px;height:auto;transform:translateY(-50%)}
+@media(max-width:820px){
+  .legend li{padding:22px 104px 18px 20px;min-height:0}
+  .legend .lg-ic{width:84px;right:10px}
+  .legend-h{font-size:18px}
+  .legend-h span{padding:.45em 1.6em .5em;gap:.35em}
+}
 </style>
 </head>
 <body>
@@ -479,13 +495,13 @@ h1,h2,h3,p,li,dt,dd{word-break:auto-phrase;line-break:strict}
       <p>その調査の手間を減らし、<span class="mk">新しい市場を発見するための情報源</span>として活用いただけます。</p>
     </div>
 
-    <h3 class="legend-h"><span>収録データ ― この地図の読み方</span></h3>
+    <h3 class="legend-h"><span><svg aria-hidden="true"><use href="#compass"/></svg>収録データ ― この地図の読み方</span></h3>
     <ul class="legend">
-      <li><i>1</i><h4>キーワード</h4><p>調査対象となった検索キーワードを一覧で確認できます。</p></li>
-      <li><i>2</i><h4>広告出稿の有無</h4><p>調査時点で広告出稿が確認できたかどうかを確認できます。</p></li>
-      <li><i>3</i><h4>広告の遷移先URL</h4><p>広告のリンク先を確認し、関連する商品やサービス、事業者を調べるための手掛かりにできます。</p></li>
-      <li><i>4</i><h4>調査日</h4><p>いつ調査された情報なのかを確認できます。</p></li>
-      <li><i>5</i><h4>検索ステータス</h4><p>調査処理の状況を確認できます。</p></li>
+      <li><i>1</i><h4>キーワード</h4><svg class="lg-ic" viewBox="0 0 120 96" aria-hidden="true"><rect x="22" y="12" width="76" height="52" rx="5" fill="#fffdf6" stroke="#2a1c0d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M10 72h100l-8 12H18z" fill="#c8962a" stroke="#2a1c0d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="32" y="30" width="48" height="14" rx="7" fill="#fff" stroke="#2a1c0d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><circle cx="72" cy="37" r="4" fill="none" stroke="#f2690f" stroke-width="3"/><path d="M75 40l4 4" stroke="#f2690f" stroke-width="3" stroke-linecap="round"/><path d="M40 37h18" stroke="#c9b48a" stroke-width="3" stroke-linecap="round"/></svg><p>調査対象となった検索キーワードを一覧で確認できます。</p></li>
+      <li><i>2</i><h4>広告出稿の有無</h4><svg class="lg-ic" viewBox="0 0 120 96" aria-hidden="true"><rect x="12" y="10" width="92" height="66" rx="5" fill="#fffdf6" stroke="#2a1c0d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M12 24h92" stroke="#2a1c0d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><circle cx="21" cy="17" r="2.5" fill="#d5311a"/><circle cx="29" cy="17" r="2.5" fill="#f4cf5e"/><circle cx="37" cy="17" r="2.5" fill="#14344b"/><rect x="30" y="34" width="44" height="26" rx="3" fill="#f2690f" stroke="#2a1c0d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><text x="52" y="53" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-weight="900" font-size="15" fill="#fff">AD</text><path d="M72 54l22 10-9 3 6 10-5 3-6-10-7 6z" fill="#fff" stroke="#2a1c0d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/></svg><p>調査時点で広告出稿が確認できたかどうかを確認できます。</p></li>
+      <li><i>3</i><h4>広告の遷移先URL</h4><svg class="lg-ic" viewBox="0 0 120 96" aria-hidden="true"><rect x="8" y="10" width="84" height="62" rx="5" fill="#fffdf6" stroke="#2a1c0d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M8 24h84" stroke="#2a1c0d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><circle cx="17" cy="17" r="2.5" fill="#d5311a"/><circle cx="25" cy="17" r="2.5" fill="#f4cf5e"/><circle cx="33" cy="17" r="2.5" fill="#14344b"/><path d="M22 34h5l5 18h22l4-12H30" fill="none" stroke="#2a1c0d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><circle cx="35" cy="58" r="3" fill="#2a1c0d"/><circle cx="51" cy="58" r="3" fill="#2a1c0d"/><circle cx="90" cy="66" r="20" fill="#f2690f" stroke="#2a1c0d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M86 70l-4 4a5 5 0 0 1-7-7l4-4M94 62l4-4a5 5 0 0 0-7-7l-4 4M85 71l10-10" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round"/></svg><p>広告のリンク先を確認し、関連する商品やサービス、事業者を調べるための手掛かりにできます。</p></li>
+      <li><i>4</i><h4>調査日</h4><svg class="lg-ic" viewBox="0 0 120 96" aria-hidden="true"><rect x="14" y="16" width="70" height="66" rx="5" fill="#fffdf6" stroke="#2a1c0d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M14 32h70" stroke="#2a1c0d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="14" y="16" width="70" height="16" rx="5" fill="#d5311a" stroke="#2a1c0d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M28 10v12M44 10v12M60 10v12M74 10v12" stroke="#2a1c0d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><g fill="#14344b" opacity=".75"><rect x="22" y="40" width="9" height="8" rx="1"/><rect x="36" y="40" width="9" height="8" rx="1"/><rect x="50" y="40" width="9" height="8" rx="1"/><rect x="22" y="54" width="9" height="8" rx="1"/><rect x="36" y="54" width="9" height="8" rx="1"/><rect x="22" y="68" width="9" height="8" rx="1"/></g><circle cx="88" cy="68" r="20" fill="#fffdf6" stroke="#c8962a" stroke-width="5"/><path d="M88 56v12l8 5" fill="none" stroke="#2a1c0d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/></svg><p>いつ調査された情報なのかを確認できます。</p></li>
+      <li><i>5</i><h4>検索ステータス</h4><svg class="lg-ic" viewBox="0 0 120 96" aria-hidden="true"><path d="M10 82h88" stroke="#2a1c0d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="16" y="58" width="13" height="24" fill="#8fbf4a" stroke="#2a1c0d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="35" y="46" width="13" height="36" fill="#8fbf4a" stroke="#2a1c0d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="54" y="32" width="13" height="50" fill="#8fbf4a" stroke="#2a1c0d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="73" y="16" width="13" height="66" fill="#8fbf4a" stroke="#2a1c0d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><circle cx="92" cy="66" r="18" fill="#3f9a3a" stroke="#2a1c0d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M84 66l6 6 11-12" fill="none" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p>調査処理の状況を確認できます。</p></li>
     </ul>
   </div>
 </section>
