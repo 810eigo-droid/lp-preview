@@ -602,6 +602,12 @@ html.nav-open .fix,html.nav-open #pop,html.nav-open .totop{opacity:0;pointer-eve
 /* 画面下の申込バーは、ファーストビューの申込ボックスを過ぎてから出す（2026-11-25 大村さん） */
 .fix{transition:transform .5s cubic-bezier(.2,.8,.2,1),opacity .4s}
 .fix:not(.show){transform:translateY(calc(100% + 90px));opacity:0;pointer-events:none}
+/* ついてくるのはハンバーガーだけ（2026-11-25 大村さん：下の申込バーとダブるので、ヘッダーは上に置いたまま） */
+.hd{position:relative}
+.hd-r{padding-right:62px}
+.burger{position:fixed;top:6px;right:max(14px,calc((100vw - 1040px)/2 - 70px))}
+@media(max-width:1180px){.burger{right:14px}}
+@media(max-width:820px){.hd-r{padding-right:52px}.burger{top:7px;right:10px}}
 </style>
 </head>
 <body>
