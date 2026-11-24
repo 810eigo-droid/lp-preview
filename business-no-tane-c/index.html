@@ -429,6 +429,21 @@ h1,h2,h3,p,li,dt,dd{word-break:auto-phrase;line-break:strict}
 /* C案：背景の写真（大村さんの ChatGPT 画像）。帯＝古い海図を紺で暗く／最後に＝羊皮紙の地図をうすく */
 .band{background:linear-gradient(rgba(20,52,75,.88),rgba(20,52,75,.9)),url(img/bg-oldmap.webp) center/cover no-repeat}
 .last{background:linear-gradient(rgba(250,240,215,.55),rgba(250,240,215,.55)),url(img/bg-parchment.webp) center/cover no-repeat}
+/* スマホで宝箱が「契約期間の縛りはありません」にかぶるので、小さくして角の下へ（2026-11-25） */
+@media(max-width:820px){.chest{width:66px;right:-14px;bottom:-48px}}
+/* C案：最後の見出しもファーストビューと同じ文字（焦げ茶＋赤→オレンジ・白いふちどり・立体の影・筆の線） */
+.last p.copy.hl{transform:rotate(-1.5deg);filter:none;isolation:isolate;position:relative;line-height:1.16;display:flex;flex-direction:column;align-items:center}
+.last p.copy.hl span{position:relative;display:block;width:max-content;max-width:100%;font-family:"Noto Sans JP",sans-serif;font-weight:900;letter-spacing:.01em;-webkit-text-stroke:0;filter:none;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;white-space:nowrap}
+.last p.copy.hl span::before{content:attr(data-t);position:absolute;left:0;top:0;z-index:-1;-webkit-text-fill-color:#fff;-webkit-text-stroke:.17em #fff;paint-order:stroke fill;filter:drop-shadow(0 .055em 0 #7a3d12) drop-shadow(.02em .12em .1em rgba(42,28,13,.45))}
+.last p.copy.hl .l1{font-size:clamp(28px,5vw,56px);background-image:linear-gradient(180deg,#6b4220 0%,#3a2410 55%,#2a1c0d 100%)}
+.last p.copy.hl .l2{font-size:clamp(34px,6vw,68px);background-image:linear-gradient(90deg,#c41d0e 0%,#e23a17 45%,#f2690f 80%,#f58a1c 100%)}
+.last p.copy.hl .swoosh{display:block;width:min(90%,520px);height:clamp(10px,1.6vw,16px);margin-top:.1em}
+@media(max-width:820px){
+  .last p.copy.hl span{letter-spacing:.03em}
+  .last p.copy.hl span::before{-webkit-text-stroke-width:.15em}
+  .last p.copy.hl .l1{font-size:clamp(26px,8.4vw,56px)}
+  .last p.copy.hl .l2{font-size:clamp(30px,9.8vw,68px)}
+}
 </style>
 </head>
 <body>
@@ -725,7 +740,7 @@ h1,h2,h3,p,li,dt,dd{word-break:auto-phrase;line-break:strict}
     <h2 class="ttl" style="margin-bottom:28px">最後に。</h2>
     <p>世の中には、まだあなたが知らない市場があります。<br>まだあなたが気づいていない商品があります。<br>まだあなたが思いついていないサービスがあります。</p>
     <p style="margin-top:1.4em">そして、そのヒントは、<br>何気ない一つの言葉（キーワード）の中に<br>眠っているかもしれません。</p>
-    <p class="copy"><span>言葉の数だけ、</span><span><i>ビジネスがある。</i></span></p>
+    <p class="copy hl"><span class="l1" data-t="言葉の数だけ、">言葉の数だけ、</span><span class="l2" data-t="ビジネスがある。">ビジネスがある。</span><svg class="swoosh" viewBox="0 0 600 40" preserveAspectRatio="none" aria-hidden="true"><path d="M4 31C130 20 330 9 596 3 586 8 420 17 300 24 190 30 90 35 30 38 14 38 4 35 4 31Z" fill="url(#sw)"/></svg></p>
     <p class="fin">「ビジネスの種」は、1.6億の日本語キーワードから新しい市場やビジネスの可能性を発見するためのデータベースです。毎月トレンドキーワードを更新することで、急成長の市場や商品の発見とほとんど知られていないニッチ市場や商品の発見を同時に実現できるのが絶対的な強みです。あなたに合ったビジネスの種を見つけてみませんか？</p>
     <a class="btn" href="#order">ビジネスの種を申し込む</a>
   </div>
