@@ -270,6 +270,27 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 22px;justify-content:center;margi
 /* 小さい漢字（「種」「億」など）が太すぎてつぶれるため、ロゴと単位はゴシックの極太に（2026-11-24） */
 .logo{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;font-size:23px;letter-spacing:.02em}
 .medal b em{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;-webkit-text-stroke:3px #fff}
+/* 改行を整える（2026-11-24）：ことばの途中で折り返さない・1文字だけ次の行に落ちないように */
+h1,h2,h3,p,li,dt,dd{word-break:auto-phrase;line-break:strict}
+.logo span,.btn,.hd-p,.fix p,.medal div,.ribbon{white-space:nowrap}
+.ribbon{word-break:keep-all}
+@media(max-width:820px){
+  .ribbon{font-size:clamp(11px,3.6vw,15px);padding:.3em 1em .35em;letter-spacing:.03em}
+  .fv-sub{font-size:clamp(13px,4.3vw,21px)}
+}
+.band h3{word-break:keep-all}.band h3 em{white-space:nowrap}.embed{word-break:keep-all}
+.t-l h3{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;letter-spacing:.04em}
+@media(max-width:430px){
+  .hd .in{height:56px;gap:8px}
+  .logo{font-size:clamp(17px,5.4vw,23px);gap:6px}
+  .logo svg{width:28px;height:28px;flex:none}
+  .logo small{font-size:clamp(7.5px,2.3vw,10px);letter-spacing:.06em}
+  .hd .btn{font-size:clamp(12px,3.6vw,14px);padding:.5em .8em;gap:6px}
+  .fix{gap:10px;padding:8px 10px 10px}
+  .fix p{font-size:clamp(10px,2.9vw,11px)}
+  .fix p b{font-size:clamp(14px,4.4vw,17px)}
+  .fix .btn{font-size:clamp(13px,4vw,16px);padding:.6em 1em}
+}
 </style>
 </head>
 <body>
@@ -342,7 +363,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 22px;justify-content:center;margi
 
   <div class="in">
     <div>
-      <p class="ribbon">1.6億の日本語キーワードから掘り当てる</p>
+      <p class="ribbon">1.6億の日本語キーワードから<wbr>掘り当てる</p>
       <h1>
         <span class="l1">言葉の数だけ、</span>
         <span class="l2">ビジネス<i>がある。</i></span>
@@ -433,7 +454,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 22px;justify-content:center;margi
   <div class="in">
     <svg class="cmp" viewBox="0 0 120 120" aria-hidden="true"><use href="#compass" color="#f4cf5e"/></svg>
     <div>
-      <h3>まだ知らない市場を、<em>掘り当てに行こう。</em></h3>
+      <h3>まだ知らない市場を、<wbr><em>掘り当てに行こう。</em></h3>
       <p>月額4,980円（税込）／週5回・月20回の配信保証／1ファイルあたり249円</p>
     </div>
     <div class="btn-wrap"><a class="btn" href="#order">今すぐ申し込む</a><span>いつでも解約可能です</span></div>
@@ -528,7 +549,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 22px;justify-content:center;margi
 
     <div class="order" id="order">
       <h3>新しいビジネスのヒントを探すための情報源として、<br>ぜひご活用ください。</h3>
-      <div class="embed"><b>注文フォーム</b>ここにフォームを埋め込みます（埋め込みコード受領後に設置）</div>
+      <div class="embed"><b>注文フォーム</b>パワーレスポンダーの注文フォームを、<wbr>ここに設置します</div>
       <p class="ok">いつでも解約可能です。</p>
     </div>
   </div>
