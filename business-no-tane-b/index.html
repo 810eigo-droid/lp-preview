@@ -10,7 +10,7 @@
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Montserrat:wght@800;900&family=Noto+Sans+JP:wght@500;700;900&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Montserrat:wght@800;900&family=M+PLUS+1:wght@800;900&family=Noto+Sans+JP:wght@500;700;900&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap" rel="stylesheet">
 <style>
 :root{
   --paper:#f5ead0; --paper2:#ecdcb6; --ink:#2a1c0d; --ink2:#5b4630;
@@ -296,6 +296,9 @@ h1,h2,h3,p,li,dt,dd{word-break:auto-phrase;line-break:strict}
 /* 数字の書体を Montserrat に（2026-11-25 大村さん「この数字のフォントが好きではない」→ ②） */
 .medal b,.entry .yen b,.t-l .y b,.pop b,.legend i,.case .no,.hd-p b,.fix p b{font-family:"Montserrat","Noto Sans JP",sans-serif;font-weight:900;letter-spacing:-.01em}
 .medal b em,.entry .yen b em{font-family:"Noto Sans JP",sans-serif}
+/* 見出しの書体を Montserrat（英数字）＋ M PLUS 1（日本語）に（2026-11-25 大村さん B）。Dela Gothic One を置きかえる */
+.logo,.fv h1 span,.band h3,.case::after,.t-l h3,.faq dt::before,.faq dd::before,.last .copy span,.legend i,.case .no{font-family:"Montserrat","M PLUS 1","Noto Sans JP",sans-serif;font-weight:900}
+.logo{font-family:"M PLUS 1","Noto Sans JP",sans-serif}
 </style>
 </head>
 <body>
