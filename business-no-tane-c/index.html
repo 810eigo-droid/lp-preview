@@ -599,6 +599,9 @@ html.nav-open .fix,html.nav-open #pop,html.nav-open .totop{opacity:0;pointer-eve
 .totop span{position:absolute;bottom:11px;font-family:"Montserrat",sans-serif;font-weight:800;font-size:8.5px;letter-spacing:.12em;color:#fff}
 @media(max-width:820px){.totop{width:50px;height:50px;left:10px}.totop span{bottom:8px;font-size:7.5px}.totop-ic{width:19px;height:19px}}
 @media (prefers-reduced-motion:reduce){.gnav,.gnav.open{transition:none}.gnav-bg{animation:none}}
+/* 画面下の申込バーは、ファーストビューの申込ボックスを過ぎてから出す（2026-11-25 大村さん） */
+.fix{transition:transform .5s cubic-bezier(.2,.8,.2,1),opacity .4s}
+.fix:not(.show){transform:translateY(calc(100% + 90px));opacity:0;pointer-events:none}
 </style>
 </head>
 <body>
@@ -1011,7 +1014,10 @@ html.nav-open .fix,html.nav-open #pop,html.nav-open .totop{opacity:0;pointer-eve
   document.addEventListener("keydown",function(e){if(e.key==="Escape")set(false);});
   var t=document.querySelector(".totop"),bar=document.querySelector(".totop-bar"),fx=document.querySelector(".fix");
   function u(){var h=R.scrollHeight-innerHeight,k=h>0?scrollY/h:0;bar.style.strokeDashoffset=(100-k*100).toFixed(1);t.classList.toggle("show",scrollY>600);
-    if(fx){var r=fx.getBoundingClientRect();t.style.setProperty("--tb",(innerHeight-r.top+14)+"px");}}
+    var fv=document.querySelector(".fv .entry")||document.querySelector(".fv");
+    if(fx){var on=fv?fv.getBoundingClientRect().bottom<0:scrollY>700;fx.classList.toggle("show",on);
+      var bd=document.querySelector(".taf-mihon-band"),bh=bd?bd.offsetHeight:0;
+      t.style.setProperty("--tb",((on?fx.offsetHeight:0)+bh+14)+"px");}}
   addEventListener("scroll",u,{passive:true});addEventListener("resize",u);addEventListener("load",u);u();
   t.addEventListener("click",function(e){e.preventDefault();scrollTo({top:0,behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});});
 })();
