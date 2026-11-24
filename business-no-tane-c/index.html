@@ -386,8 +386,9 @@ h1,h2,h3,p,li,dt,dd{word-break:auto-phrase;line-break:strict}
 .story .aha .think{flex:none;width:clamp(70px,11vw,120px);height:auto}
 @media(min-width:821px){
   .story .aha .t1{position:absolute;top:-10px;left:-40px}
-  .story .aha .t2{position:static;flex:none;width:clamp(80px,8vw,110px);margin-left:14px;transform:translateY(-14px)}
-  .story .big .scroll{white-space:nowrap;font-size:clamp(22px,2.6vw,30px)}
+  .story .aha .t2{position:static;flex:none;width:clamp(76px,7vw,96px);margin-left:12px;transform:translateY(-14px)}
+  .story .aha .big{flex:none}
+  .story .big .scroll{white-space:nowrap;font-size:clamp(20px,2.2vw,28px)}
 }
 /* 考えこむ男性（ChatGPT で作った人物・白背景を切り抜き） */
 .story{position:relative;overflow:hidden}
@@ -472,6 +473,11 @@ h1,h2,h3,p,li,dt,dd{word-break:auto-phrase;line-break:strict}
   .price .t-r::before{left:50%;top:-9px;transform:translateX(-50%)}
   .price .ttl::after{width:240px}
 }
+/* C案：リードの挿絵（大村さんの ChatGPT 画像・虫めがねと宝の地図）。白い背景は切り抜き */
+.story .narrow{position:relative}
+.story-ill{display:block;height:auto}
+@media(min-width:1300px){.story-ill{position:absolute;right:-290px;width:250px;margin-top:-20px;transform:rotate(3deg)}}
+@media(max-width:1299px){.story-ill{width:min(64vw,280px);margin:.4em auto 1.2em}}
 </style>
 </head>
 <body>
@@ -588,6 +594,7 @@ h1,h2,h3,p,li,dt,dd{word-break:auto-phrase;line-break:strict}
     </ul>
     <div class="aha"><img class="story-man" src="img/man.webp" width="700" height="933" alt="あごに手を当てて考えこむ男性"><svg class="think t1" viewBox="0 0 120 110" aria-hidden="true"><path d="M30 70c-16 0-24-16-14-26-6-14 10-26 22-18 6-14 30-14 36 0 14-6 28 6 22 20 12 8 6 26-10 24-4 10-22 12-30 4-8 6-22 4-26-4z" fill="#fffdf6" stroke="#2a1c0d" stroke-width="2.4"/><path d="M44 46c10-12 34-8 34 4s-26 14-30 2 18-20 26-10 0 22-14 20-18-14-6-20 22 0 18 10" fill="none" stroke="#6b4220" stroke-width="2.4" stroke-linecap="round"/><circle cx="26" cy="88" r="6" fill="#fffdf6" stroke="#2a1c0d" stroke-width="2.2"/><circle cx="14" cy="102" r="4" fill="#fffdf6" stroke="#2a1c0d" stroke-width="2"/></svg><p class="big"><span class="scroll">でも、肝心のアイデアが<wbr><span class="or">思い浮かばない。</span></span></p><svg class="think t2" viewBox="0 0 120 110" aria-hidden="true"><path d="M90 70c16 0 24-16 14-26 6-14-10-26-22-18-6-14-30-14-36 0-14-6-28 6-22 20-12 8-6 26 10 24 4 10 22 12 30 4 8 6 22 4 26-4z" fill="#fffdf6" stroke="#2a1c0d" stroke-width="2.4"/><path d="M60 24c-10 0-16 8-16 15 0 6 4 9 6 13v4h20v-4c2-4 6-7 6-13 0-7-6-15-16-15z" fill="#f9dd6b" stroke="#2a1c0d" stroke-width="2.4" stroke-linejoin="round"/><path d="M52 60h16M54 64h12" stroke="#2a1c0d" stroke-width="2.4" stroke-linecap="round"/><path d="M60 14v-5M42 22l-4-4M78 22l4-4M36 38h-5M84 38h5" stroke="#f2690f" stroke-width="2.6" stroke-linecap="round"/><circle cx="94" cy="88" r="6" fill="#fffdf6" stroke="#2a1c0d" stroke-width="2.2"/><circle cx="106" cy="102" r="4" fill="#fffdf6" stroke="#2a1c0d" stroke-width="2"/></svg></div>
     <ul class="qs"><li>そんなとき、あなたは何をヒントにしますか？</li><li>SNSのトレンド？ニュース？競合他社の商品？</li><li>それとも、自分の思いつきでしょうか？</li></ul>
+    <img class="story-ill" src="img/illust-magnifier.webp" width="700" height="700" alt="虫めがねで宝の地図を調べると、検索窓と広告（AD）の旗が見つかるイラスト">
     <p>私たちが着目したのは、<br class="pc">日々生まれる<span class="mk">無数の検索キーワード</span>と、<br class="pc">そこに集まる<span class="mk">企業の広告活動</span>です。</p>
     <p>企業が広告費をかけてまでアプローチしようとしている言葉には、<br class="pc">何らかのビジネス上の狙いや顧客との接点が隠されています。</p>
     <p>そこに目を向けることで、これまで気づかなかった市場や、<br class="pc">新しい商品・サービスの可能性が見えてきます。</p>
