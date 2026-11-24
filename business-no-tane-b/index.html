@@ -308,9 +308,13 @@ h1,h2,h3,p,li,dt,dd{word-break:auto-phrase;line-break:strict}
   .fv .medal b{font-size:clamp(25px,8.4vw,38px)}
   .fv .medal small{font-size:clamp(7.5px,2.2vw,11px)}
 }
+.lh-b::before{content:"―";margin:0 .5em}
+@media(max-width:820px){.legend-h .lh-a,.legend-h .lh-b{display:block;font-weight:inherit}.legend-h .lh-b::before{display:none}.legend-h .lh-a{font-size:.72em;letter-spacing:.08em}}
+/* ことばの区切りで折り返す（BudouX で <wbr> を入れた。iPhone でも効く） */
+p,li,h2,h3,h4,dt,dd,a,span{word-break:keep-all;overflow-wrap:anywhere}
 </style>
 </head>
-<body>
+<body data-wbr="1">
 
 <!-- SVG 素材 -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -385,7 +389,7 @@ h1,h2,h3,p,li,dt,dd{word-break:auto-phrase;line-break:strict}
         <span class="l1">言葉の数だけ、</span>
         <span class="l2">ビジネス<i>がある。</i></span>
       </h1>
-      <p class="fv-sub">世の中には、あなたがまだ知らない<br><span class="mk">ビジネスチャンスが眠っている。</span></p>
+      <p class="fv-sub">世の<wbr>中には、<wbr>あなたが<wbr>まだ<wbr>知らない<br><span class="mk">ビジネスチャンスが<wbr>眠っている。</span></p>
       <div class="medals">
         <div class="medal"><svg><use href="#laurel"/></svg><div>収録キーワード<b>1.6<em>億</em></b><small>日本語キーワード</small></div></div>
         <div class="medal"><svg><use href="#laurel"/></svg><div>CSVをお届け<b><em>週</em>5<em>回</em></b><small>月20回の配信保証</small></div></div>
@@ -395,15 +399,15 @@ h1,h2,h3,p,li,dt,dd{word-break:auto-phrase;line-break:strict}
 
     <div class="entry">
       <span class="entry-tab">＼ いつでも解約可能 ／</span>
-      <h2>新しい市場を探すための情報源を、<br>毎月お手元に。</h2>
+      <h2>新しい<wbr>市場を<wbr>探すための<wbr>情報源を、<br>毎月<wbr>お手元に。</h2>
       <p class="yen">月額 <b>4,980</b>円<span>（税込）</span></p>
       <ul>
-        <li>キーワードデータベースの利用</li>
-        <li>広告出稿状況・遷移先URLの確認</li>
-        <li>CSVのダウンロードURLを週5回メールでお届け</li>
+        <li>キーワードデータベースの<wbr>利用</li>
+        <li>広告出稿状況・遷移先URLの<wbr>確認</li>
+        <li>CSVの<wbr>ダウンロードURLを<wbr>週5回メールで<wbr>お届け</li>
       </ul>
       <a class="btn" href="#order">今すぐ申し込む</a>
-      <p>契約期間の縛りはありません</p>
+      <p>契約期間の<wbr>縛りは<wbr>ありません</p>
       <svg class="chest" aria-hidden="true"><use href="#chest"/></svg>
     </div>
   </div>
@@ -413,16 +417,16 @@ h1,h2,h3,p,li,dt,dd{word-break:auto-phrase;line-break:strict}
 <section class="story">
   <div class="narrow">
     <ul class="wishes">
-      <li>新しい事業を始めたい</li>
-      <li>新しい商品を開発したい</li>
-      <li>副業のアイデアを見つけたい</li>
-      <li>今までにないサービスを作りたい</li>
+      <li>新しい<wbr>事業を<wbr>始めたい</li>
+      <li>新しい<wbr>商品を<wbr>開発したい</li>
+      <li>副業の<wbr>アイデアを<wbr>見つけたい</li>
+      <li>今までに<wbr>ない<wbr>サービスを<wbr>作りたい</li>
     </ul>
-    <p class="big">でも、肝心のアイデアが<wbr><span class="or" style="display:inline-block">思い浮かばない。</span></p>
-    <p>そんなとき、あなたは何をヒントにしますか？<br>SNSのトレンド？ニュース？競合他社の商品？<br>それとも、自分の思いつきでしょうか？</p>
-    <p>私たちが着目したのは、<br class="pc">日々生まれる<span class="mk">無数の検索キーワード</span>と、<br class="pc">そこに集まる<span class="mk">企業の広告活動</span>です。</p>
-    <p>企業が広告費をかけてまでアプローチしようとしている言葉には、<br class="pc">何らかのビジネス上の狙いや顧客との接点が隠されています。</p>
-    <p>そこに目を向けることで、これまで気づかなかった市場や、<br class="pc">新しい商品・サービスの可能性が見えてきます。</p>
+    <p class="big">でも、<wbr>肝心の<wbr>アイデアが<wbr><span class="or" style="display:inline-block">思い浮かばない。</span></p>
+    <p>そんな<wbr>とき、<wbr>あなたは<wbr>何を<wbr>ヒントに<wbr>しますか？<br>SNSの<wbr>トレンド？<wbr>ニュース？<wbr>競合他社の<wbr>商品？<br>それとも、<wbr>自分の<wbr>思いつきでしょうか？</p>
+    <p>私たちが<wbr>着目したのは、<br class="pc">日々<wbr>生まれる<span class="mk">無数の<wbr>検索キーワード</span>と、<br class="pc">そこに<wbr>集まる<span class="mk">企業の<wbr>広告活動</span>です。</p>
+    <p>企業が<wbr>広告費を<wbr>かけてまで<wbr>アプローチしようと<wbr>している<wbr>言葉には、<br class="pc">何らかの<wbr>ビジネス上の<wbr>狙いや<wbr>顧客との<wbr>接点が<wbr>隠されています。</p>
+    <p>そこに<wbr>目を<wbr>向ける<wbr>ことで、<wbr>これまで<wbr>気づかなかった<wbr>市場や、<br class="pc">新しい<wbr>商品・<wbr>サービスの<wbr>可能性が<wbr>見えてきます。</p>
   </div>
 </section>
 
@@ -430,17 +434,17 @@ h1,h2,h3,p,li,dt,dd{word-break:auto-phrase;line-break:strict}
 <section class="worry">
   <div class="narrow">
     <p class="pt"><svg><use href="#flag"/></svg>POINT 01</p>
-    <h2 class="ttl">こんな<span class="or">悩み</span>はありませんか？</h2>
+    <h2 class="ttl">こんな<span class="or">悩み</span>は<wbr>ありませんか？</h2>
     <ul class="note">
-      <li><svg><use href="#chk"/></svg>新規事業を始めたいけれど、何をすればいいかわからない</li>
-      <li><svg><use href="#chk"/></svg>売れる商品のアイデアが思いつかない</li>
-      <li><svg><use href="#chk"/></svg>競合が存在するニッチな市場を探したい</li>
-      <li><svg><use href="#chk"/></svg>他社がどんなキーワードで広告を出しているのか知りたい</li>
-      <li><svg><use href="#chk"/></svg>新しいビジネスのヒントを継続的に集めたい</li>
-      <li><svg><use href="#chk"/></svg>市場調査に時間がかかっている</li>
-      <li><svg><use href="#chk"/></svg>自分では思いつかないような商品やサービスを発見したい</li>
+      <li><svg><use href="#chk"/></svg>新規事業を<wbr>始めたいけれど、<wbr>何を<wbr>すればいいかわからない</li>
+      <li><svg><use href="#chk"/></svg>売れる<wbr>商品の<wbr>アイデアが<wbr>思いつかない</li>
+      <li><svg><use href="#chk"/></svg>競合が<wbr>存在する<wbr>ニッチな<wbr>市場を<wbr>探したい</li>
+      <li><svg><use href="#chk"/></svg>他社が<wbr>どんな<wbr>キーワードで<wbr>広告を<wbr>出しているのか<wbr>知りたい</li>
+      <li><svg><use href="#chk"/></svg>新しい<wbr>ビジネスの<wbr>ヒントを<wbr>継続的に<wbr>集めたい</li>
+      <li><svg><use href="#chk"/></svg>市場調査に<wbr>時間が<wbr>かかっている</li>
+      <li><svg><use href="#chk"/></svg>自分では<wbr>思いつかないような<wbr>商品や<wbr>サービスを<wbr>発見したい</li>
     </ul>
-    <p class="to">ひとつでも当てはまるなら、<br><span class="mk">「ビジネスの種」を活用してください。</span></p>
+    <p class="to">ひとつでも<wbr>当ては<wbr>まるなら、<br><span class="mk">「ビジネスの<wbr>種」を<wbr>活用してください。</span></p>
   </div>
 </section>
 
@@ -448,20 +452,20 @@ h1,h2,h3,p,li,dt,dd{word-break:auto-phrase;line-break:strict}
 <section class="about paper">
   <div class="in">
     <p class="pt"><svg><use href="#flag"/></svg>POINT 02</p>
-    <h2 class="ttl">「ビジネスの種」<span class="or">とは？</span></h2>
+    <h2 class="ttl">「ビジネスの<wbr>種」<span class="or">とは？</span></h2>
     <div class="box narrow">
-      <p><strong>広告出稿が確認できる検索キーワードを中心に、ビジネスアイデアの発掘に活用できる情報をまとめたデータベースです。</strong></p>
-      <p>通常、自分で儲かりそうな市場を調べようと思うと、さまざまなキーワードを横断的に検索し、広告の有無を確認し、広告のリンク先を調べる必要があります。</p>
-      <p>その調査の手間を減らし、<span class="mk">新しい市場を発見するための情報源</span>として活用いただけます。</p>
+      <p><strong>広告出稿が<wbr>確認できる<wbr>検索キーワードを<wbr>中心に、<wbr>ビジネスアイデアの<wbr>発掘に<wbr>活用できる<wbr>情報を<wbr>まとめた<wbr>データベースです。</strong></p>
+      <p>通常、<wbr>自分で<wbr>儲かりそうな<wbr>市場を<wbr>調べようと<wbr>思うと、<wbr>さまざまな<wbr>キーワードを<wbr>横断的に<wbr>検索し、<wbr>広告の<wbr>有無を<wbr>確認し、<wbr>広告の<wbr>リンク先を<wbr>調べる<wbr>必要が<wbr>あります。</p>
+      <p>その<wbr>調査の<wbr>手間を<wbr>減らし、<span class="mk">新しい<wbr>市場を<wbr>発見する<wbr>ための<wbr>情報源</span>と<wbr>して<wbr>活用いただけます。</p>
     </div>
 
-    <h3 class="legend-h"><span>収録データ ― この地図の読み方</span></h3>
+    <h3 class="legend-h"><span><b class="lh-a">収録データ</b><b class="lh-b">この<wbr>地図の<wbr>読み方</b></span></h3>
     <ul class="legend">
-      <li><i>1</i><h4>キーワード</h4><p>調査対象となった検索キーワードを一覧で確認できます。</p></li>
-      <li><i>2</i><h4>広告出稿の有無</h4><p>調査時点で広告出稿が確認できたかどうかを確認できます。</p></li>
-      <li><i>3</i><h4>広告の遷移先URL</h4><p>広告のリンク先を確認し、関連する商品やサービス、事業者を調べるための手掛かりにできます。</p></li>
-      <li><i>4</i><h4>調査日</h4><p>いつ調査された情報なのかを確認できます。</p></li>
-      <li><i>5</i><h4>検索ステータス</h4><p>調査処理の状況を確認できます。</p></li>
+      <li><i>1</i><h4>キーワード</h4><p>調査対象と<wbr>なった<wbr>検索キーワードを<wbr>一覧で<wbr>確認できます。</p></li>
+      <li><i>2</i><h4>広告出稿の<wbr>有無</h4><p>調査時点で<wbr>広告出稿が<wbr>確認できたか<wbr>どうかを<wbr>確認できます。</p></li>
+      <li><i>3</i><h4>広告の<wbr>遷移先URL</h4><p>広告の<wbr>リンク先を<wbr>確認し、<wbr>関連する<wbr>商品や<wbr>サービス、<wbr>事業者を<wbr>調べる<wbr>ための<wbr>手掛かりに<wbr>できます。</p></li>
+      <li><i>4</i><h4>調査日</h4><p>いつ<wbr>調査された<wbr>情報なのかを<wbr>確認できます。</p></li>
+      <li><i>5</i><h4>検索ステータス</h4><p>調査処理の<wbr>状況を<wbr>確認できます。</p></li>
     </ul>
   </div>
 </section>
@@ -471,8 +475,8 @@ h1,h2,h3,p,li,dt,dd{word-break:auto-phrase;line-break:strict}
   <div class="in">
     <svg class="cmp" viewBox="0 0 120 120" aria-hidden="true"><use href="#compass" color="#f4cf5e"/></svg>
     <div>
-      <h3>まだ知らない市場を、<wbr><em>掘り当てに行こう。</em></h3>
-      <p>月額4,980円（税込）／週5回・月20回の配信保証／1ファイルあたり249円</p>
+      <h3>まだ<wbr>知らない<wbr>市場を、<wbr><em>掘り<wbr>当てに<wbr>行こう。</em></h3>
+      <p>月額4,980円<wbr>（税込）<wbr>／週5回・月20回の<wbr>配信保証／1ファイルあたり249円</p>
     </div>
     <div class="btn-wrap"><a class="btn" href="#order">今すぐ申し込む</a><span>いつでも解約可能です</span></div>
   </div>
@@ -482,13 +486,13 @@ h1,h2,h3,p,li,dt,dd{word-break:auto-phrase;line-break:strict}
 <section class="cases paper">
   <div class="in">
     <p class="pt"><svg><use href="#flag"/></svg>POINT 03</p>
-    <h2 class="ttl">こんな<span class="or">使い方</span>ができます。</h2>
+    <h2 class="ttl">こんな<span class="or">使い方</span>が<wbr>できます。</h2>
     <div class="route">
-      <article class="case"><p class="no">CASE 01</p><h3>新規事業のアイデア発掘</h3><p>世の中にはどんな市場があるのか。自分の知らないジャンルやニッチな需要を発見することで、新規事業の着想につなげられます。</p></article>
-      <article class="case"><p class="no">CASE 02</p><h3>新商品の開発</h3><p>既存の商品や関連する市場を調査し、新しい商品の企画や改良のヒントにできます。</p></article>
-      <article class="case"><p class="no">CASE 03</p><h3>副業・個人ビジネス</h3><p>自分で商品やサービスを作りたい人が、ビジネスのテーマを探すための情報源として利用できます。</p></article>
-      <article class="case"><p class="no">CASE 04</p><h3>競合・市場調査</h3><p>広告のリンク先を確認することで、関連する事業者や提供されているサービスを調べるきっかけになります。</p></article>
-      <article class="case"><p class="no">CASE 05</p><h3>マーケティング・営業提案</h3><p>顧客に提案する新しい市場やサービスのアイデアを探すためのリサーチ材料として活用できます。</p></article>
+      <article class="case"><p class="no">CASE 01</p><h3>新規事業の<wbr>アイデア発掘</h3><p>世の<wbr>中には<wbr>どんな<wbr>市場が<wbr>あるのか。<wbr>自分の<wbr>知らない<wbr>ジャンルや<wbr>ニッチな<wbr>需要を<wbr>発見する<wbr>ことで、<wbr>新規事業の<wbr>着想に<wbr>つなげられます。</p></article>
+      <article class="case"><p class="no">CASE 02</p><h3>新商品の<wbr>開発</h3><p>既存の<wbr>商品や<wbr>関連する<wbr>市場を<wbr>調査し、<wbr>新しい<wbr>商品の<wbr>企画や<wbr>改良の<wbr>ヒントに<wbr>できます。</p></article>
+      <article class="case"><p class="no">CASE 03</p><h3>副業・<wbr>個人ビジネス</h3><p>自分で<wbr>商品や<wbr>サービスを<wbr>作りたい<wbr>人が、<wbr>ビジネスの<wbr>テーマを<wbr>探すための<wbr>情報源と<wbr>して<wbr>利用できます。</p></article>
+      <article class="case"><p class="no">CASE 04</p><h3>競合・市場調査</h3><p>広告の<wbr>リンク先を<wbr>確認する<wbr>ことで、<wbr>関連する<wbr>事業者や<wbr>提供されている<wbr>サービスを<wbr>調べる<wbr>きっかけに<wbr>なります。</p></article>
+      <article class="case"><p class="no">CASE 05</p><h3>マーケティング・営業提案</h3><p>顧客に<wbr>提案する<wbr>新しい<wbr>市場や<wbr>サービスの<wbr>アイデアを<wbr>探すための<wbr>リサーチ材料と<wbr>して<wbr>活用できます。</p></article>
     </div>
   </div>
 </section>
@@ -499,26 +503,26 @@ h1,h2,h3,p,li,dt,dd{word-break:auto-phrase;line-break:strict}
     <p class="pt"><svg><use href="#flag"/></svg>POINT 04</p>
     <h2 class="ttl">こんな方に<span class="or">おすすめ</span>です。</h2>
     <ul class="who-list">
-      <li>起業を考えている方</li>
-      <li>新規事業を担当している方</li>
+      <li>起業を<wbr>考えている<wbr>方</li>
+      <li>新規事業を<wbr>担当している<wbr>方</li>
       <li>経営者・事業開発担当者</li>
       <li>Webマーケター</li>
       <li>広告代理店・コンサルタント</li>
       <li>EC事業者・商品開発担当者</li>
-      <li>副業や個人ビジネスに取り組んでいる方</li>
+      <li>副業や<wbr>個人ビジネスに<wbr>取り組んでいる<wbr>方</li>
     </ul>
-    <p class="lead-c">特に、新しいビジネスのアイデアを<br>継続的に探している方におすすめです。</p>
+    <p class="lead-c">特に、<wbr>新しい<wbr>ビジネスの<wbr>アイデアを<br>継続的に<wbr>探している<wbr>方に<wbr>おすすめです。</p>
   </div>
 </section>
 
 <!-- ===== メッセージ ===== -->
 <section class="msg">
   <div class="narrow">
-    <h2>情報を探す時間を、<br><span class="mk">アイデアを考える時間に。</span></h2>
-    <p>自分の頭の中だけで考えていると、<br class="pc">どうしてもアイデアは似たようなものになりがちです。</p>
-    <p>しかし、自分が知らない市場やキーワードに触れることで、<br class="pc">発想の幅は大きく広がります。</p>
-    <p>今まで興味のなかった分野が、<br class="pc">新しいビジネスのきっかけになるかもしれません。</p>
-    <p class="q">毎月、新しい市場を探すための情報源を<br>手元に置いておきませんか？</p>
+    <h2>情報を<wbr>探す<wbr>時間を、<br><span class="mk">アイデアを<wbr>考える<wbr>時間に。</span></h2>
+    <p>自分の<wbr>頭の<wbr>中だけで<wbr>考えていると、<br class="pc">どうしても<wbr>アイデアは<wbr>似たような<wbr>ものに<wbr>なりがちです。</p>
+    <p>しかし、<wbr>自分が<wbr>知らない<wbr>市場や<wbr>キーワードに<wbr>触れる<wbr>ことで、<br class="pc">発想の<wbr>幅は<wbr>大きく<wbr>広がります。</p>
+    <p>今まで<wbr>興味の<wbr>なかった<wbr>分野が、<br class="pc">新しい<wbr>ビジネスの<wbr>きっかけに<wbr>なるかもしれません。</p>
+    <p class="q">毎月、<wbr>新しい<wbr>市場を<wbr>探すための<wbr>情報源を<br>手元に<wbr>置いて<wbr>おきませんか？</p>
   </div>
 </section>
 
@@ -529,19 +533,19 @@ h1,h2,h3,p,li,dt,dd{word-break:auto-phrase;line-break:strict}
     <h2 class="ttl">利用<span class="or">料金</span></h2>
     <div class="ticket">
       <div class="t-l">
-        <h3>ビジネスの種</h3>
+        <h3>ビジネスの<wbr>種</h3>
         <p class="y">月額 <b>4,980</b>円<br><span>（税込）</span></p>
         <p><span class="per">1ファイルあたり 249円</span></p>
       </div>
       <div class="t-r">
         <ul>
-          <li>キーワードデータベースの利用</li>
-          <li>広告出稿状況の確認</li>
-          <li>広告遷移先URLの確認</li>
-          <li>調査日・調査ステータスの確認</li>
-          <li>データのビジネスリサーチへの活用</li>
+          <li>キーワードデータベースの<wbr>利用</li>
+          <li>広告出稿状況の<wbr>確認</li>
+          <li>広告遷移先URLの<wbr>確認</li>
+          <li>調査日・調査ステータスの<wbr>確認</li>
+          <li>データの<wbr>ビジネスリサーチへの<wbr>活用</li>
         </ul>
-        <p class="nt">※週5回（月20回の配信保証）<br>※1ファイルあたり249円。<br>※下記のようなCSVファイルをダウンロードできるURLを、ご登録のメールアドレスに週5回お届けします。</p>
+        <p class="nt">※週5回<wbr>（月20回の<wbr>配信保証）<br>※1ファイルあたり249円。<br>※下記のような<wbr>CSVファイルを<wbr>ダウンロードできる<wbr>URLを、<wbr>ご登録の<wbr>メールアドレスに<wbr>週5回お届けします。</p>
       </div>
     </div>
 
@@ -561,13 +565,13 @@ h1,h2,h3,p,li,dt,dd{word-break:auto-phrase;line-break:strict}
           </tbody>
         </table>
       </div>
-      <p class="cap">※仮の表示です。実際の納品ファイルの画面に差し替えます。</p>
+      <p class="cap">※仮の<wbr>表示です。<wbr>実際の<wbr>納品ファイルの<wbr>画面に<wbr>差し替えます。</p>
     </div>
 
     <div class="order" id="order">
-      <h3>新しいビジネスのヒントを探すための情報源として、<br>ぜひご活用ください。</h3>
-      <div class="embed"><b>注文フォーム</b>パワーレスポンダーの注文フォームを、<wbr>ここに設置します</div>
-      <p class="ok">いつでも解約可能です。</p>
+      <h3>新しい<wbr>ビジネスの<wbr>ヒントを<wbr>探すための<wbr>情報源と<wbr>して、<br>ぜひご活用ください。</h3>
+      <div class="embed"><b>注文フォーム</b>パワーレスポンダーの<wbr>注文フォームを、<wbr>ここに<wbr>設置します</div>
+      <p class="ok">いつでも<wbr>解約可能です。</p>
     </div>
   </div>
 </section>
@@ -578,10 +582,10 @@ h1,h2,h3,p,li,dt,dd{word-break:auto-phrase;line-break:strict}
     <p class="pt"><svg><use href="#flag"/></svg>POINT 06</p>
     <h2 class="ttl">よくある<span class="or">質問</span></h2>
     <dl>
-      <div><dt>ビジネス初心者でも使えますか？</dt><dd>はい。キーワードを眺めながら、自分が興味を持てる分野や新しい市場を探す使い方ができます。</dd></div>
-      <div><dt>広告が出ている市場は儲かるということですか？</dt><dd>必ずしもそうではありません。広告出稿は事業者が広告活動を行っていることを示す調査上の手掛かりです。市場規模、売上、利益、需要の大きさを保証するものではありません。</dd></div>
-      <div><dt>どのように活用すればいいですか？</dt><dd>気になるキーワードを見つけ、その関連商品やサービス、広告の遷移先などを調査してください。その上で、顧客の悩みや既存商品の改善点を考えることで、新しいビジネスのアイデアにつなげられます。</dd></div>
-      <div><dt>解約はできますか？</dt><dd>契約期間の縛りはありません。いつでも解約が可能です。退会のお手続きは<a href="#">こちらから</a>。</dd></div>
+      <div><dt>ビジネス初心者でも<wbr>使えますか？</dt><dd>はい。<wbr>キーワードを<wbr>眺めながら、<wbr>自分が<wbr>興味を<wbr>持てる<wbr>分野や<wbr>新しい<wbr>市場を<wbr>探す<wbr>使い方が<wbr>できます。</dd></div>
+      <div><dt>広告が<wbr>出ている<wbr>市場は<wbr>儲かると<wbr>いう<wbr>ことですか？</dt><dd>必ずしも<wbr>そうではありません。<wbr>広告出稿は<wbr>事業者が<wbr>広告活動を<wbr>行っている<wbr>ことを<wbr>示す調査上の<wbr>手掛かりです。<wbr>市場規模、<wbr>売上、<wbr>利益、<wbr>需要の<wbr>大きさを<wbr>保証する<wbr>ものではありません。</dd></div>
+      <div><dt>どのように<wbr>活用すればいいですか？</dt><dd>気に<wbr>なる<wbr>キーワードを<wbr>見つけ、<wbr>その<wbr>関連<wbr>商品や<wbr>サービス、<wbr>広告の<wbr>遷移先などを<wbr>調査してください。<wbr>その<wbr>上で、<wbr>顧客の<wbr>悩みや<wbr>既存商品の<wbr>改善点を<wbr>考える<wbr>ことで、<wbr>新しい<wbr>ビジネスの<wbr>アイデアに<wbr>つなげられます。</dd></div>
+      <div><dt>解約は<wbr>できますか？</dt><dd>契約期間の<wbr>縛りは<wbr>ありません。<wbr>いつでも<wbr>解約が<wbr>可能です。<wbr>退会の<wbr>お手続きは<a href="#">こちらから</a>。</dd></div>
     </dl>
   </div>
 </section>
@@ -596,10 +600,10 @@ h1,h2,h3,p,li,dt,dd{word-break:auto-phrase;line-break:strict}
   <div class="narrow">
     <p class="pt"><svg><use href="#flag"/></svg>GOAL</p>
     <h2 class="ttl" style="margin-bottom:28px">最後に。</h2>
-    <p>世の中には、まだあなたが知らない市場があります。<br>まだあなたが気づいていない商品があります。<br>まだあなたが思いついていないサービスがあります。</p>
-    <p style="margin-top:1.4em">そして、そのヒントは、<br>何気ない一つの言葉（キーワード）の中に<br>眠っているかもしれません。</p>
+    <p>世の<wbr>中には、<wbr>まだ<wbr>あなたが<wbr>知らない<wbr>市場が<wbr>あります。<br>まだ<wbr>あなたが<wbr>気づいていない<wbr>商品が<wbr>あります。<br>まだ<wbr>あなたが<wbr>思いついていない<wbr>サービスが<wbr>あります。</p>
+    <p style="margin-top:1.4em">そして、<wbr>その<wbr>ヒントは、<br>何気ない<wbr>一つの<wbr>言葉<wbr>（キーワード）の<wbr>中に<br>眠っているかもしれません。</p>
     <p class="copy"><span>言葉の数だけ、</span><span><i>ビジネスがある。</i></span></p>
-    <p class="fin">「ビジネスの種」は、1.6億の日本語キーワードから新しい市場やビジネスの可能性を発見するためのデータベースです。毎月トレンドキーワードを更新することで、急成長の市場や商品の発見とほとんど知られていないニッチ市場や商品の発見を同時に実現できるのが絶対的な強みです。あなたに合ったビジネスの種を見つけてみませんか？</p>
+    <p class="fin">「ビジネスの<wbr>種」は、<wbr>1.6億の<wbr>日本語キーワードから<wbr>新しい<wbr>市場や<wbr>ビジネスの<wbr>可能性を<wbr>発見する<wbr>ための<wbr>データベースです。<wbr>毎月<wbr>トレンドキーワードを<wbr>更新する<wbr>ことで、<wbr>急成長の<wbr>市場や<wbr>商品の<wbr>発見と<wbr>ほとんど<wbr>知られていない<wbr>ニッチ市場や<wbr>商品の<wbr>発見を<wbr>同時に<wbr>実現できるのが<wbr>絶対的な<wbr>強みです。<wbr>あなたに<wbr>合った<wbr>ビジネスの<wbr>種を<wbr>見つけてみませんか？</p>
     <a class="btn" href="#order">ビジネスの種を申し込む</a>
   </div>
 </section>
@@ -608,8 +612,8 @@ h1,h2,h3,p,li,dt,dd{word-break:auto-phrase;line-break:strict}
 
 <footer>
   <div class="in">
-    <nav><a href="#">特定商取引法に基づく表記</a><a href="#">プライバシーポリシー</a><a href="#">退会のお手続き</a></nav>
-    <p>&copy; ビジネスの種</p>
+    <nav><a href="#">特定商取引法に<wbr>基づく<wbr>表記</a><a href="#">プライバシーポリシー</a><a href="#">退会の<wbr>お手続き</a></nav>
+    <p>&copy; ビジネスの<wbr>種</p>
   </div>
 </footer>
 
