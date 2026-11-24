@@ -532,6 +532,7 @@ h1,h2,h3,p,li,dt,dd{word-break:auto-phrase;line-break:strict}
 /* 見出しの書体を Montserrat（英数字）＋ M PLUS 1（日本語）に（2026-11-25 大村さん B）。Dela Gothic One を置きかえる */
 .logo,.fv h1 span,.band h3,.case::after,.t-l h3,.faq dt::before,.faq dd::before,.last .copy span,.legend i,.case .no{font-family:"Montserrat","M PLUS 1","Noto Sans JP",sans-serif;font-weight:900}
 .logo{font-family:"M PLUS 1","Noto Sans JP",sans-serif}
+.price .t-l .y b{display:inline-block}
 </style>
 </head>
 <body>
@@ -893,7 +894,9 @@ h1,h2,h3,p,li,dt,dd{word-break:auto-phrase;line-break:strict}
   /* 数字が 0 から増える（料金） */
   function countUp(el){var to=parseInt(el.textContent.replace(/,/g,""),10);if(!to)return;var t0=null,d=1200;function f(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/d),v=Math.round(to*(1-Math.pow(1-k,3)));el.textContent=v.toLocaleString("ja-JP");if(k<1)requestAnimationFrame(f);}requestAnimationFrame(f);}
   var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){countUp(e.target);cio.unobserve(e.target);}});},{threshold:.6});
-  document.querySelectorAll(".entry .yen b, .price .t-l .y b").forEach(function(e){cio.observe(e);});
+  document.querySelectorAll(".entry .yen b").forEach(function(e){cio.observe(e);});
+  /* 利用料金の数字は、数えずに上から落ちてはずむ（2026-11-25 大村さん） */
+  add(".price .t-l .y b",'drop');document.querySelectorAll(".price .t-l .y b").forEach(function(e){e.style.setProperty("--d",".45s");io.observe(e);});
   /* パララックス（背景の飾りがゆっくり動く） */
   var px=[[".fv-map",.18],[".story-deco",.12],[".cases .wmap",.1],[".who-deco",.15]];
   var items=[];px.forEach(function(a){document.querySelectorAll(a[0]).forEach(function(e){e.setAttribute("data-px","");items.push([e,a[1]]);});});
