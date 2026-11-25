@@ -632,6 +632,23 @@ p,li,h2,h3,h4,dt,dd,a,span{word-break:keep-all;overflow-wrap:anywhere}
 @media(max-width:820px){.story .key{font-size:1.25em}}
 @media (prefers-reduced-motion:no-preference){.js-anim .story .key.is-on{animation:keyPop .7s cubic-bezier(.3,1.6,.5,1) .9s both}}
 @keyframes keyPop{0%{scale:1}45%{scale:1.12}100%{scale:1}}
+/* C案：悩みのチェックが、上から順に「ポン！→シュッ」と入る（2026-11-25 大村さん） */
+.note li .ck{flex:none;width:34px;height:34px;margin-top:-4px;overflow:visible}
+.note li .ck-pop{opacity:0}
+@media (prefers-reduced-motion:no-preference){
+  .js-anim .note li{opacity:.35;translate:-14px 0}
+  .js-anim .note.go li{transition:opacity .4s,translate .45s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i)*.42s)}
+  .js-anim .note li .ck-box{transform-box:fill-box;transform-origin:center;scale:0;rotate:-25deg}
+  .js-anim .note li .ck-mark{stroke-dasharray:1;stroke-dashoffset:1}
+  .js-anim .note.go li{opacity:1;translate:0 0;background-color:rgba(249,221,107,0);animation:rowFlash .9s ease calc(var(--i)*.42s + .25s) both}
+  .js-anim .note.go li .ck-box{animation:boxPop .45s cubic-bezier(.3,1.7,.5,1) calc(var(--i)*.42s) both}
+  .js-anim .note.go li .ck-mark{animation:drawChk .35s cubic-bezier(.6,0,.3,1) calc(var(--i)*.42s + .22s) both}
+  .js-anim .note.go li .ck-pop{animation:popLines .5s ease-out calc(var(--i)*.42s + .5s) both}
+  @keyframes boxPop{0%{scale:0;rotate:-25deg}70%{scale:1.25;rotate:6deg}100%{scale:1;rotate:0deg}}
+  @keyframes drawChk{to{stroke-dashoffset:0}}
+  @keyframes popLines{0%{opacity:0;scale:.4}40%{opacity:1;scale:1.2}100%{opacity:0;scale:1.4}}
+  @keyframes rowFlash{0%{background-color:rgba(249,221,107,0)}35%{background-color:rgba(249,221,107,.55)}100%{background-color:rgba(249,221,107,0)}}
+}
 </style>
 </head>
 <body data-wbr="1">
@@ -793,13 +810,13 @@ p,li,h2,h3,h4,dt,dd,a,span{word-break:keep-all;overflow-wrap:anywhere}
     <p class="pt"><svg><use href="#flag"/></svg>POINT 01</p>
     <h2 class="ttl">こんな<span class="or">悩み</span>は<wbr>ありませんか？</h2>
     <ul class="note">
-      <li><svg><use href="#chk"/></svg>新規事業を<wbr>始めたいけれど、<wbr>何を<wbr>すればいいかわからない</li>
-      <li><svg><use href="#chk"/></svg>売れる<wbr>商品の<wbr>アイデアが<wbr>思いつかない</li>
-      <li><svg><use href="#chk"/></svg>競合が<wbr>存在する<wbr>ニッチな<wbr>市場を<wbr>探したい</li>
-      <li><svg><use href="#chk"/></svg>他社が<wbr>どんな<wbr>キーワードで<wbr>広告を<wbr>出しているのか<wbr>知りたい</li>
-      <li><svg><use href="#chk"/></svg>新しい<wbr>ビジネスの<wbr>ヒントを<wbr>継続的に<wbr>集めたい</li>
-      <li><svg><use href="#chk"/></svg>市場調査に<wbr>時間が<wbr>かかっている</li>
-      <li><svg><use href="#chk"/></svg>自分では<wbr>思いつかないような<wbr>商品や<wbr>サービスを<wbr>発見したい</li>
+      <li style="--i:0"><svg class="ck" viewBox="0 0 34 34" aria-hidden="true"><rect class="ck-box" x="2.5" y="7.5" width="20" height="20" rx="2" fill="#fff" stroke="#2a1c0d" stroke-width="2.2"/><path class="ck-mark" d="M7 16l6 7L30 4" pathLength="1" fill="none" stroke="#d5311a" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/><g class="ck-pop" stroke="#f2690f" stroke-width="2.4" stroke-linecap="round"><path d="M30 10l3-2M31 15h3M27 5l1-3"/></g></svg>新規事業を<wbr>始めたいけれど、<wbr>何を<wbr>すればいいかわからない</li>
+      <li style="--i:1"><svg class="ck" viewBox="0 0 34 34" aria-hidden="true"><rect class="ck-box" x="2.5" y="7.5" width="20" height="20" rx="2" fill="#fff" stroke="#2a1c0d" stroke-width="2.2"/><path class="ck-mark" d="M7 16l6 7L30 4" pathLength="1" fill="none" stroke="#d5311a" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/><g class="ck-pop" stroke="#f2690f" stroke-width="2.4" stroke-linecap="round"><path d="M30 10l3-2M31 15h3M27 5l1-3"/></g></svg>売れる<wbr>商品の<wbr>アイデアが<wbr>思いつかない</li>
+      <li style="--i:2"><svg class="ck" viewBox="0 0 34 34" aria-hidden="true"><rect class="ck-box" x="2.5" y="7.5" width="20" height="20" rx="2" fill="#fff" stroke="#2a1c0d" stroke-width="2.2"/><path class="ck-mark" d="M7 16l6 7L30 4" pathLength="1" fill="none" stroke="#d5311a" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/><g class="ck-pop" stroke="#f2690f" stroke-width="2.4" stroke-linecap="round"><path d="M30 10l3-2M31 15h3M27 5l1-3"/></g></svg>競合が<wbr>存在する<wbr>ニッチな<wbr>市場を<wbr>探したい</li>
+      <li style="--i:3"><svg class="ck" viewBox="0 0 34 34" aria-hidden="true"><rect class="ck-box" x="2.5" y="7.5" width="20" height="20" rx="2" fill="#fff" stroke="#2a1c0d" stroke-width="2.2"/><path class="ck-mark" d="M7 16l6 7L30 4" pathLength="1" fill="none" stroke="#d5311a" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/><g class="ck-pop" stroke="#f2690f" stroke-width="2.4" stroke-linecap="round"><path d="M30 10l3-2M31 15h3M27 5l1-3"/></g></svg>他社が<wbr>どんな<wbr>キーワードで<wbr>広告を<wbr>出しているのか<wbr>知りたい</li>
+      <li style="--i:4"><svg class="ck" viewBox="0 0 34 34" aria-hidden="true"><rect class="ck-box" x="2.5" y="7.5" width="20" height="20" rx="2" fill="#fff" stroke="#2a1c0d" stroke-width="2.2"/><path class="ck-mark" d="M7 16l6 7L30 4" pathLength="1" fill="none" stroke="#d5311a" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/><g class="ck-pop" stroke="#f2690f" stroke-width="2.4" stroke-linecap="round"><path d="M30 10l3-2M31 15h3M27 5l1-3"/></g></svg>新しい<wbr>ビジネスの<wbr>ヒントを<wbr>継続的に<wbr>集めたい</li>
+      <li style="--i:5"><svg class="ck" viewBox="0 0 34 34" aria-hidden="true"><rect class="ck-box" x="2.5" y="7.5" width="20" height="20" rx="2" fill="#fff" stroke="#2a1c0d" stroke-width="2.2"/><path class="ck-mark" d="M7 16l6 7L30 4" pathLength="1" fill="none" stroke="#d5311a" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/><g class="ck-pop" stroke="#f2690f" stroke-width="2.4" stroke-linecap="round"><path d="M30 10l3-2M31 15h3M27 5l1-3"/></g></svg>市場調査に<wbr>時間が<wbr>かかっている</li>
+      <li style="--i:6"><svg class="ck" viewBox="0 0 34 34" aria-hidden="true"><rect class="ck-box" x="2.5" y="7.5" width="20" height="20" rx="2" fill="#fff" stroke="#2a1c0d" stroke-width="2.2"/><path class="ck-mark" d="M7 16l6 7L30 4" pathLength="1" fill="none" stroke="#d5311a" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/><g class="ck-pop" stroke="#f2690f" stroke-width="2.4" stroke-linecap="round"><path d="M30 10l3-2M31 15h3M27 5l1-3"/></g></svg>自分では<wbr>思いつかないような<wbr>商品や<wbr>サービスを<wbr>発見したい</li>
     </ul>
     <p class="to">ひとつでも<wbr>当ては<wbr>まるなら、<br><span class="mk">「ビジネスの<wbr>種」を<wbr>活用してください。</span></p>
   </div>
@@ -1012,8 +1029,10 @@ p,li,h2,h3,h4,dt,dd,a,span{word-break:keep-all;overflow-wrap:anywhere}
   add(".ttl",'mask');
   add(".pt",'rv');
   add(".story .qs li, .story > .narrow > p, .story-ill",'rv',.12);
-  add(".note li, .legend li, .case, .who-list li, .faq dl > div, .ticket, .sample, .msg p, .msg h2, .last p:not(.copy), .who-end, .legend-h, .band p, .band .btn-wrap",'rv',.1);
+  add(".legend li, .case, .who-list li, .faq dl > div, .ticket, .sample, .msg p, .msg h2, .last p:not(.copy), .who-end, .legend-h, .band p, .band .btn-wrap",'rv',.1);
   add(".mk",'mk');
+  /* 悩みのチェック：一覧が見えたら順に入れる */
+  var nio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("go");nio.unobserve(e.target);}});},{threshold:.3});document.querySelectorAll(".note").forEach(function(e){nio.observe(e);});
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("is-on");io.unobserve(e.target);}});},{rootMargin:"0px 0px -8% 0px",threshold:.12});
   document.querySelectorAll(".rv,.drop,.mk").forEach(function(e){io.observe(e);});
   /* マスクは切りぬかれていて見えない扱いになるので、親を見はって出す */
