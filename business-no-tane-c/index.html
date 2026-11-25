@@ -662,6 +662,12 @@ p,li,h2,h3,h4,dt,dd,a,span{word-break:keep-all;overflow-wrap:anywhere}
 footer .bt-logo{justify-content:center;margin-bottom:16px;color:#fff}
 footer .bt-logo small{color:#f4cf5e}
 .gnav .bt-logo{color:#fff;margin-bottom:6px}.gnav .bt-logo small{color:#f4cf5e}
+/* ヘッダーの料金：「いつでも解約可能」を札にして左、料金を1行で右。ボタンと高さをそろえる（2026-11-25 大村さん） */
+.hd-p.hd-p2{display:flex;align-items:center;gap:10px;text-align:left;line-height:1}
+.hd-p2 .hd-tag{font-size:11px;font-weight:900;color:#fff;background:var(--ink);border-radius:99px;padding:.45em .9em;white-space:nowrap}
+.hd-p2 .hd-yen{display:flex;align-items:baseline;gap:3px;font-size:13px;font-weight:900;white-space:nowrap}
+.hd-p2 .hd-yen b{font-size:24px;color:var(--red);letter-spacing:-.01em;line-height:1}
+.hd-p2 .hd-yen small{font-size:10px;font-weight:700;color:var(--ink2)}
 </style>
 </head>
 <body data-wbr="1">
@@ -701,7 +707,7 @@ footer .bt-logo small{color:#f4cf5e}
   <div class="in">
     <a class="logo bt-logo" href="#top"><img src="img/logo-mark.webp" width="256" height="252" alt=""><span><b>ビジ<i>たね</i></b><small>ビジネスの種<em>KEYWORD DATABASE</em></small></span></a>
     <div class="hd-r">
-      <p class="hd-p">月額 <b>4,980</b>円（税込）<br>いつでも解約可能</p>
+      <p class="hd-p hd-p2"><span class="hd-tag">いつでも解約可能</span><span class="hd-yen">月額<b>4,980</b>円<small>（税込）</small></span></p>
       <a class="btn" href="#order">申し込む</a>
       <button class="burger" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="gnav"><span></span><span></span><span></span><em>MENU</em></button>
     </div>
