@@ -155,40 +155,43 @@ header{position:sticky;top:0;background:rgba(250,247,243,.97);z-index:40;border-
     box-shadow: 0 2px 8px #35212e12;
   }
 }
-/* Decorative bubbles stay behind the hero content. */
-.hero-bubbles {
+/* Petals fall over the photograph and behind the copy and actions. */
+.hero-petals {
   position: absolute;
   inset: 0;
+  z-index: 1;
   pointer-events: none;
+  container-type: size;
+  animation: petals-clear 5s linear both;
 }
-.hero-bubbles span {
+.hero-petals span {
   position: absolute;
+  left: var(--x);
+  top: -20px;
   width: var(--size);
-  aspect-ratio: 1;
-  border: 1px solid #ffffffcc;
-  border-radius: 50%;
-  background:
-    radial-gradient(ellipse at 29% 24%, #fffffff2 0%, transparent 24%),
-    linear-gradient(145deg, #ffffff36 25%, #e8bddd38 62%, #a8d5db66);
-  box-shadow: inset 2px 3px 8px #ffffff99, inset -2px -3px 8px #b285b435, 0 2px 8px #98588019;
-  animation: hero-bubble-rise 4.8s ease-out both;
+  aspect-ratio: 1.5;
+  border-radius: 72% 32% 68% 32%;
+  background: linear-gradient(125deg, #fff7fb, var(--petal-color));
+  box-shadow: 0 1px 2px #69425233;
+  animation: petal-fall var(--fall-time) linear var(--delay) infinite;
 }
-.hero-bubbles span:nth-child(1) { --size: 68px; top: 10%; right: 7%; }
-.hero-bubbles span:nth-child(2) { --size: 36px; top: 20%; right: 3%; }
-.hero-bubbles span:nth-child(3) { --size: 53px; bottom: 9%; left: 4%; }
-@keyframes hero-bubble-rise {
-  from { transform: translate(-9px, 28px); opacity: .28; }
-  to { transform: translate(0, 0); opacity: 1; }
+@keyframes petal-fall {
+  0% { transform: translate(0, 0) rotate(12deg) scaleX(.85); }
+  25% { transform: translate(var(--drift), 26cqh) rotate(115deg) scaleX(.44); }
+  50% { transform: translate(calc(var(--drift) * -.55), 53cqh) rotate(205deg) scaleX(1); }
+  75% { transform: translate(var(--drift), 80cqh) rotate(286deg) scaleX(.5); }
+  100% { transform: translate(calc(var(--drift) * .25), calc(100cqh + 24px)) rotate(372deg) scaleX(.85); }
+}
+@keyframes petals-clear {
+  0%, 74% { opacity: .85; }
+  100% { opacity: 0; visibility: hidden; }
 }
 @media (max-width: 760px) {
-  .hero-bubbles span:nth-child(1) { --size: 39px; top: 33px; right: 9%; }
-  .hero-bubbles span:nth-child(2) { --size: 19px; top: 13px; right: 4%; }
-  .hero-bubbles span:nth-child(3) { display: none; }
+  .hero-petals span:nth-child(n+25) { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .hero-bubbles span { animation: none; }
+  .hero-petals { display: none; }
 }
-
 @font-face {
   font-family: "Yuji Syuku";
   src: url("fonts/yuji-syuku-sotto.ttf") format("truetype");
@@ -206,7 +209,7 @@ header{position:sticky;top:0;background:rgba(250,247,243,.97);z-index:40;border-
   row-gap: 18px;
   padding-block: clamp(54px, 7.5vw, 102px);
 }
-.hero-lavender .hero-copy, .hero-lavender .hero-actions { position: relative; grid-column: 1; z-index: 1; }
+.hero-lavender .hero-copy, .hero-lavender .hero-actions { position: relative; grid-column: 1; z-index: 2; }
 .hero-lavender .tag {
   padding: 4px 17px;
   border-radius: 99px;
@@ -550,7 +553,40 @@ header{position:sticky;top:0;background:rgba(250,247,243,.97);z-index:40;border-
 
 <!-- ① 最初の画面 -->
 <section class="hero hero-lavender">
-<div class="hero-bubbles" aria-hidden="true"><span></span><span></span><span></span></div>
+<div class="hero-petals" aria-hidden="true">
+  <span style="--x:1%;--size:15px;--drift:18px;--fall-time:5.27s;--delay:-0.00s;--petal-color:#da8dae"></span>
+  <span style="--x:38%;--size:9px;--drift:35px;--fall-time:6.09s;--delay:-3.77s;--petal-color:#c4a1d5"></span>
+  <span style="--x:75%;--size:12px;--drift:35px;--fall-time:6.76s;--delay:-1.59s;--petal-color:#efb2cb"></span>
+  <span style="--x:15%;--size:10px;--drift:-16px;--fall-time:5.98s;--delay:-5.11s;--petal-color:#da8dae"></span>
+  <span style="--x:52%;--size:9px;--drift:-28px;--fall-time:6.81s;--delay:-3.22s;--petal-color:#c4a1d5"></span>
+  <span style="--x:89%;--size:14px;--drift:-30px;--fall-time:5.85s;--delay:-0.53s;--petal-color:#efb2cb"></span>
+  <span style="--x:29%;--size:13px;--drift:-36px;--fall-time:7.14s;--delay:-5.05s;--petal-color:#da8dae"></span>
+  <span style="--x:66%;--size:15px;--drift:13px;--fall-time:6.27s;--delay:-2.04s;--petal-color:#c4a1d5"></span>
+  <span style="--x:6%;--size:13px;--drift:-31px;--fall-time:6.75s;--delay:-6.38s;--petal-color:#efb2cb"></span>
+  <span style="--x:43%;--size:10px;--drift:-21px;--fall-time:6.60s;--delay:-3.71s;--petal-color:#da8dae"></span>
+  <span style="--x:80%;--size:8px;--drift:-14px;--fall-time:5.90s;--delay:-1.06s;--petal-color:#c4a1d5"></span>
+  <span style="--x:20%;--size:10px;--drift:26px;--fall-time:7.19s;--delay:-5.74s;--petal-color:#efb2cb"></span>
+  <span style="--x:57%;--size:10px;--drift:-23px;--fall-time:6.67s;--delay:-2.78s;--petal-color:#da8dae"></span>
+  <span style="--x:94%;--size:13px;--drift:11px;--fall-time:5.54s;--delay:-0.19s;--petal-color:#c4a1d5"></span>
+  <span style="--x:34%;--size:15px;--drift:20px;--fall-time:4.83s;--delay:-3.15s;--petal-color:#efb2cb"></span>
+  <span style="--x:71%;--size:10px;--drift:14px;--fall-time:5.96s;--delay:-1.61s;--petal-color:#da8dae"></span>
+  <span style="--x:11%;--size:16px;--drift:-25px;--fall-time:5.40s;--delay:-4.79s;--petal-color:#c4a1d5"></span>
+  <span style="--x:48%;--size:11px;--drift:26px;--fall-time:5.02s;--delay:-2.54s;--petal-color:#efb2cb"></span>
+  <span style="--x:85%;--size:13px;--drift:-21px;--fall-time:5.62s;--delay:-0.70s;--petal-color:#da8dae"></span>
+  <span style="--x:25%;--size:9px;--drift:17px;--fall-time:6.71s;--delay:-4.98s;--petal-color:#c4a1d5"></span>
+  <span style="--x:62%;--size:9px;--drift:23px;--fall-time:5.91s;--delay:-2.13s;--petal-color:#efb2cb"></span>
+  <span style="--x:2%;--size:16px;--drift:-27px;--fall-time:4.85s;--delay:-4.75s;--petal-color:#da8dae"></span>
+  <span style="--x:39%;--size:12px;--drift:-33px;--fall-time:5.95s;--delay:-3.54s;--petal-color:#c4a1d5"></span>
+  <span style="--x:76%;--size:16px;--drift:-9px;--fall-time:6.22s;--delay:-1.33s;--petal-color:#efb2cb"></span>
+  <span style="--x:16%;--size:13px;--drift:-18px;--fall-time:6.48s;--delay:-5.39s;--petal-color:#da8dae"></span>
+  <span style="--x:53%;--size:9px;--drift:-26px;--fall-time:5.81s;--delay:-2.62s;--petal-color:#c4a1d5"></span>
+  <span style="--x:90%;--size:15px;--drift:-14px;--fall-time:6.95s;--delay:-0.47s;--petal-color:#efb2cb"></span>
+  <span style="--x:30%;--size:13px;--drift:-28px;--fall-time:5.26s;--delay:-3.61s;--petal-color:#da8dae"></span>
+  <span style="--x:67%;--size:14px;--drift:-35px;--fall-time:6.59s;--delay:-2.00s;--petal-color:#c4a1d5"></span>
+  <span style="--x:7%;--size:14px;--drift:-20px;--fall-time:7.16s;--delay:-6.61s;--petal-color:#efb2cb"></span>
+  <span style="--x:44%;--size:8px;--drift:-11px;--fall-time:6.84s;--delay:-3.70s;--petal-color:#da8dae"></span>
+  <span style="--x:81%;--size:12px;--drift:-13px;--fall-time:7.08s;--delay:-1.12s;--petal-color:#c4a1d5"></span>
+</div>
 <div class="wrap hero-in">
   <div class="hero-copy">
     <span class="tag">恋する大人のサポート</span>
