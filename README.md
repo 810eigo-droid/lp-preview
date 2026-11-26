@@ -8,6 +8,7 @@
 | 同 黒バック版の控え（2026-11-15 に白バックへ変更する前の版） | https://810eigo-droid.github.io/lp-preview/act-atkey/index-dark.html ／ https://810eigo-droid.github.io/lp-preview/act-atkey/fv-dark.html |
 | 同 ファーストビューだけ（アニメーション確認用・「もう一度再生」ボタン付き） | https://810eigo-droid.github.io/lp-preview/act-atkey/fv.html |
 | 同 お問い合わせフォーム（3ステップ案・送信なし） | https://810eigo-droid.github.io/lp-preview/act-atkey/form.html |
+| 結-yui-繋がる様 HP（1ページ7セクション・WordPress化の前の見本 v1・電話番号は伏せ字・確認用の帯と目印入り・2026-11-26） | https://810eigo-droid.github.io/lp-preview/yui-tsunagaru/ |
 | ビジネスの種 LP（キーワードデータベース・サンプル初版・確認用の帯と目印入り・2026-11-24） | https://810eigo-droid.github.io/lp-preview/business-no-tane/ |
 | ビジネスの種 LP【B案・フォントをブロック体に・確認用の帯と目印入り・2026-11-24】 | https://810eigo-droid.github.io/lp-preview/business-no-tane-b/ |
 | ビジネスの種 LP【C案・見出しのふちどり文字・巻物風の帯・モデル入り・確認用の帯と目印入り・2026-11-25】 | https://810eigo-droid.github.io/lp-preview/business-no-tane-c/ |
