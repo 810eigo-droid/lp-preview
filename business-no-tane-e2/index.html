@@ -724,6 +724,11 @@ footer .bt-logo small{color:#f4cf5e}
 @media(max-width:820px){.fv-what{display:flex;margin-top:12px;font-size:clamp(14px,4.2vw,18px)}}
 /* PC：白い札が女性の髪にかぶらないよう、2行にして幅を狭く（2026-11-26） */
 @media(min-width:821px){.fv-what{max-width:min(100%,440px)}}
+/* 白い札の右の空きに「CSV 週5回配信」の札（2026-11-26） */
+.fv-what{width:100%}
+.fv-what-tag{margin-left:auto;flex:none;display:grid;place-items:center;text-align:center;font-style:normal;font-weight:900;font-size:11px;line-height:1.25;color:#fff;background:linear-gradient(160deg,#f7a13a,#ea5a06);border:2px solid #b54300;border-radius:10px;padding:.45em .7em;transform:rotate(4deg);box-shadow:0 3px 0 #b54300}
+.fv-what-tag b{display:block;font-family:"Montserrat",sans-serif;font-size:15px;letter-spacing:.04em}
+@media(max-width:820px){.fv-what-tag{display:none}}
 </style>
 </head>
 <body data-wbr="1">
@@ -834,7 +839,7 @@ footer .bt-logo small{color:#f4cf5e}
         <span class="l2" data-t="ビジネスがある。">ビジネスがある。</span>
         <svg class="swoosh" viewBox="0 0 600 40" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="sw" x1="0" x2="1"><stop offset="0" stop-color="#f2690f" stop-opacity="0"/><stop offset=".22" stop-color="#f2690f"/><stop offset=".75" stop-color="#f39a1e"/><stop offset="1" stop-color="#f4cf5e" stop-opacity=".9"/></linearGradient></defs><path d="M4 31C130 20 330 9 596 3 586 8 420 17 300 24 190 30 90 35 30 38 14 38 4 35 4 31Z" fill="url(#sw)"/></svg>
       </h1>
-      <p class="fv-what"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 4h16v16H4zM4 9h16M4 14h16M10 4v16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg><span>企業が広告を出している<wbr>検索キーワードの一覧を<wbr>お届け</span></p>
+      <p class="fv-what"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 4h16v16H4zM4 9h16M4 14h16M10 4v16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg><span>企業が広告を出している<wbr>検索キーワードの一覧を<wbr>お届け</span><em class="fv-what-tag"><b>CSV</b>週5回<br>配信</em></p>
       <div class="fv-mid">
         <img class="fv-model" src="img/model.webp" width="800" height="1146" alt="地図を手に、遠くを指さす冒険家の女性のイラスト">
         <p class="fv-sub">世の<wbr>中には、<wbr>あなたが<wbr>まだ<wbr>知らない<br><span class="mk">ビジネスチャンスが<wbr>眠っている。</span></p>
