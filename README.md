@@ -13,6 +13,7 @@
 | ビジネスの種 LP【C案・見出しのふちどり文字・巻物風の帯・モデル入り・確認用の帯と目印入り・2026-11-25】 | https://810eigo-droid.github.io/lp-preview/business-no-tane-c/ |
 | ビジネスの種 LP【D案・キャラクター版（C案の人物をイラストに）・確認用の帯と目印入り・2026-11-25】 | https://810eigo-droid.github.io/lp-preview/business-no-tane-d/ |
 | ビジネスの種 LP【E案・D案のFVの女性を別バージョンに・確認用の帯と目印入り・2026-11-25】 | https://810eigo-droid.github.io/lp-preview/business-no-tane-e/ |
+| ビジネスの種 LP【E案2・FVに「何が届くか」の一文とCSVの見本・確認用の帯と目印入り・2026-11-26】 | https://810eigo-droid.github.io/lp-preview/business-no-tane-e2/ |
 | Good Pluck メンズアニソンD&Vプロジェクト オーディションLP（AIラフ忠実再現・画像はプレースホルダー） | https://810eigo-droid.github.io/lp-preview/goodpluck/ |
 | 包丁人よしのり 宴会LP【v2・実データ版】(透かしなし) | https://810eigo-droid.github.io/lp-preview/yoshinori/ |
 | 旧バージョン(v1・仮データ) | https://810eigo-droid.github.io/lp-preview/yoshinori/index-v1.html |
