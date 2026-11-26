@@ -169,6 +169,11 @@ nav a{font-size:13px;text-decoration:none;margin-left:18px;color:var(--sub)}
 footer{text-align:center;padding:30px 20px 110px;font-size:12px;color:var(--sub);background:var(--bg)}
 footer img{width:64px;height:64px;border-radius:50%;margin:0 auto 10px}
 
+.svc-img{margin:-34px -28px 22px;aspect-ratio:3/2;overflow:hidden;position:relative}
+.svc.big .svc-img{margin:-40px -32px 24px}
+.svc-img img{width:100%;height:100%;object-fit:cover}
+.omoi{background:linear-gradient(rgba(255,253,251,.88),rgba(255,253,251,.88)),url(img/omoi.webp) center/cover}
+.contact{background:linear-gradient(160deg,rgba(234,217,217,.9),rgba(239,232,240,.9)),url(img/contact.webp) center/cover}
 /* sticky (mobile) */
 .sticky{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,253,251,.95);border-top:1px solid var(--line);backdrop-filter:blur(6px)}
 .sticky a{flex:1;padding:12px 8px;font-size:14.5px}
@@ -201,7 +206,7 @@ footer img{width:64px;height:64px;border-radius:50%;margin:0 auto 10px}
       <a class="btn btn-line" href="#contact">公式LINEで相談する</a>
     </div>
   </div>
-  <div class="hero-visual"><img src="img/flowers.jpg" alt="紫の花が咲く木"><div class="hero-name"><b>結-yui-繋がる</b><i>Yui-Tsunagaru</i></div></div>
+  <div class="hero-visual"><img src="img/hero.webp" alt="" onerror="this.onerror=null;this.src='img/flowers.jpg'"><div class="hero-name"><b>結-yui-繋がる</b><i>Yui-Tsunagaru</i></div></div>
 </div>
 </section>
 
@@ -230,6 +235,7 @@ footer img{width:64px;height:64px;border-radius:50%;margin:0 auto 10px}
   <div class="svc-list">
 
     <article class="svc s1 big fade">
+      <figure class="svc-img"><img src="img/svc-henshin.webp" alt="" loading="lazy" onerror="this.parentNode.remove()"></figure>
       <span class="no">01</span>
       <h3>大人の恋愛 変身サポート</h3>
       <p class="catch">大人だって、<br>まだまだ恋を楽しみたい。</p>
@@ -240,6 +246,7 @@ footer img{width:64px;height:64px;border-radius:50%;margin:0 auto 10px}
     </article>
 
     <article class="svc s2 big fade">
+      <figure class="svc-img"><img src="img/svc-doko.webp" alt="" loading="lazy" onerror="this.parentNode.remove()"></figure>
       <span class="no">02</span>
       <h3>同行サポート<em>女性限定</em></h3>
       <p class="catch">「ひとりでは、ちょっと勇気がいる」<br>場所へ、ご一緒します。</p>
@@ -250,6 +257,7 @@ footer img{width:64px;height:64px;border-radius:50%;margin:0 auto 10px}
     </article>
 
     <article class="svc s3 fade">
+      <figure class="svc-img"><img src="img/svc-sentei.webp" alt="" loading="lazy" onerror="this.parentNode.remove()"></figure>
       <span class="no">03</span>
       <h3>ネット商品 選定サポート</h3>
       <p class="catch">「人とは少し違う」ひと品を、<br>とことん調べてご提案します。</p>
@@ -258,6 +266,7 @@ footer img{width:64px;height:64px;border-radius:50%;margin:0 auto 10px}
     </article>
 
     <article class="svc s4 fade">
+      <figure class="svc-img"><img src="img/svc-keicho.webp" alt="" loading="lazy" onerror="this.parentNode.remove()"></figure>
       <span class="no">04</span>
       <h3>傾聴サポート（電話・対面）</h3>
       <p class="catch">否定しません。アドバイスもしません。<br>どんなお話も、受け止めます。</p>
