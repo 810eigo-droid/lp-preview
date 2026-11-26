@@ -4,6 +4,7 @@
 
 | プレビュー | URL |
 |---|---|
+| 結-yui-繋がる様 HP【デザイン V2・V1は保存・SEO/AIO用構造整備・確認用】 | https://810eigo-droid.github.io/lp-preview/yui-tsunagaru-v2/ |
 | ACT株式会社 ATKey.Pro LP（BtoB・不正アクセス対策）【v3・白バック・11月12日ドラフト原稿版・透かし入り】 | https://810eigo-droid.github.io/lp-preview/act-atkey/ |
 | 同 黒バック版の控え（2026-11-15 に白バックへ変更する前の版） | https://810eigo-droid.github.io/lp-preview/act-atkey/index-dark.html ／ https://810eigo-droid.github.io/lp-preview/act-atkey/fv-dark.html |
 | 同 ファーストビューだけ（アニメーション確認用・「もう一度再生」ボタン付き） | https://810eigo-droid.github.io/lp-preview/act-atkey/fv.html |
