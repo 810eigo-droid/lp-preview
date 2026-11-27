@@ -1041,6 +1041,17 @@ main > :is(#service, #price, #flow, .profile, #faq, #contact) {
   border-color: var(--champagne);
   box-shadow: inset 0 1px #f5e6bd38;
 }
+/* A very light ivory veil softens the lifestyle photographs. */
+.hero-lavender .hero-visual::after, #service .svc-img::after {
+  background-color: #fff9ed12;
+  pointer-events: none;
+}
+#service .svc-img { position: relative; }
+#service .svc-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
 </style>
 <script type="application/ld+json">
 {
@@ -1353,7 +1364,7 @@ main > :is(#service, #price, #flow, .profile, #faq, #contact) {
     <h1><span>あなたの想いに、</span><span class="handwritten">そっと</span><span>寄り添います。</span></h1>
     <p class="lead">恋も、お出かけも、お買い物も、話したいことも。<br>「ひとりでは、ちょっと…」を、一緒に。</p>
   </div>
-  <figure class="hero-visual"><img src="img/cafe-terrace.webp" alt="カフェのテラスでコーヒーや読書を楽しむ女性と男性" width="1500" height="1000" fetchpriority="high"><figcaption class="preview-version"><span lang="en">Design V2</span> · AI生成イメージ</figcaption></figure>
+  <figure class="hero-visual"><img src="img/cafe-terrace.webp" alt="カフェのテラスでコーヒーや読書を楽しむ女性と男性" width="1500" height="1000" fetchpriority="high"><figcaption class="preview-version" lang="en">Design V2</figcaption></figure>
   <div class="hero-actions">
     <div class="btns">
       <a class="btn btn-tel" href="tel:07084632598"><svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg><span>電話で予約・相談する<small>受付 10:00〜22:00</small></span></a>
