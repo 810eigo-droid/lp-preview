@@ -620,7 +620,6 @@ body {
 .contact {
   position: relative;
   isolation: isolate;
-  overflow: hidden;
   padding-bottom: clamp(145px, 16vw, 225px);
   background: linear-gradient(145deg, #fcf6f3, #eee5ef 72%, #eddfeb);
 }
@@ -666,8 +665,7 @@ body {
   from { opacity: .65; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
 }
-/* Leave a separate top-right space for the contact illustration. */
-.contact-intro { position: relative; }
+/* Let the portrait bridge the space between FAQ and Contact. */
 .contact-intro .en {
   display: flex;
   align-items: flex-end;
@@ -675,19 +673,25 @@ body {
 }
 .contact-portrait {
   position: absolute;
-  top: -50px;
-  right: 10px;
-  width: 152px;
-  height: 134px;
+  top: -84px;
+  right: calc(50% + 16px);
+  z-index: 1;
+  width: 245px;
+  height: 246px;
   object-fit: contain;
   object-position: right bottom;
-  -webkit-mask-image: linear-gradient(#000 78%, transparent 100%);
-  mask-image: linear-gradient(#000 78%, transparent 100%);
+  -webkit-mask-image: linear-gradient(#000 65%, transparent 100%);
+  mask-image: linear-gradient(#000 65%, transparent 100%);
   pointer-events: none;
 }
 @media (max-width: 760px) {
   .contact-intro .en { min-height: 63px; }
-  .contact-portrait { top: -40px; right: 4px; width: 120px; height: 105px; }
+  .contact-portrait {
+    top: -64px;
+    right: 21px;
+    width: clamp(166px, 48vw, 198px);
+    height: clamp(176px, 50vw, 198px);
+  }
 }
 </style>
 <script type="application/ld+json">
@@ -1176,8 +1180,8 @@ body {
 
 <!-- ⑦ お問い合わせ -->
 <section class="contact" id="contact">
+<img class="contact-portrait" src="img/contact-portrait.webp?v=upper-body" alt="" width="480" height="540" loading="lazy">
 <div class="wrap"><div class="contact-intro">
-  <img class="contact-portrait" src="img/contact-portrait.webp?v=sage-side" alt="" width="320" height="320" loading="lazy">
   <span class="en">Contact</span>
   <h2><span class="text-marker">お電話または公式LINE<br>で、お気軽にどうぞ。</span></h2>
   <a class="tel-big" href="#contact">070-XXXX-XXXX</a>
