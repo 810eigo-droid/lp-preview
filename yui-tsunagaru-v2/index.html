@@ -265,9 +265,16 @@ header{position:sticky;top:0;background:rgba(250,247,243,.97);z-index:40;border-
 }
 .hero-lavender .lead, .hero-lavender .hero-area { color: #48394f; }
 .hero-lavender .lead { margin: 0; }
-.hero-lavender .btn-tel { background: var(--rose-surface); }
-.hero-lavender .btn-line { background: var(--cafe-green-surface); color: white; border-color: #536b4e; }
-.hero-lavender .btn-line:hover { background: #40573d; }
+.hero-lavender .btn-tel, #contact a.btn-tel {
+  background: var(--phone-button-surface);
+  color: #623b2a;
+}
+.hero-lavender .btn-line {
+  background: var(--line-button-surface);
+  color: #354c34;
+}
+.hero-lavender .btn-tel:hover, #contact a.btn-tel:hover { background: #f2d2b8; }
+.hero-lavender .btn-line:hover { background: #dce8d1; }
 .hero-lavender .hero-visual { position: absolute; inset: 0; border: 0; border-radius: 0; box-shadow: none; }
 .hero-lavender .hero-visual img { width: 100%; height: 100%; object-position: center 62%; }
 .hero-lavender .hero-visual::after {
@@ -443,14 +450,15 @@ main h3 {
     place-items: center;
     min-height: 44px;
     padding: 0 6px;
-    background: var(--rose-surface);
-    color: #fff;
+    background: var(--phone-button-surface);
+    box-shadow: inset 0 1px var(--champagne);
+    color: #623b2a;
     font-size: 13px;
     font-weight: 700;
     text-decoration: none;
   }
-  .mobile-booking a + a { background: var(--cafe-green-surface); }
-  .mobile-booking a:focus-visible { outline: 2px solid #fff; outline-offset: -4px; }
+  .mobile-booking a + a { background: var(--line-button-surface); color: #354c34; }
+  .mobile-booking a:focus-visible { outline: 2px solid currentColor; outline-offset: -4px; }
   footer { padding-bottom: calc(84px + var(--band-height) + env(safe-area-inset-bottom)); }
 }
 /* Each wrapped line gets its own soft caramel marker. */
@@ -512,6 +520,8 @@ main h3 {
 body {
   --sage-surface: linear-gradient(145deg, #4c664d, #3b553f);
   --rose-surface: linear-gradient(145deg, #a05a3d, #88472e);
+  --phone-button-surface: linear-gradient(145deg, #fff2e3, #f6d8bf);
+  --line-button-surface: linear-gradient(145deg, #f0f5e8, #dfead4);
   --cafe-green-surface: linear-gradient(145deg, #566e53, #41583e);
 }
 #service .svc h3 em, #price .pt h3 em { font-weight: 700; }
