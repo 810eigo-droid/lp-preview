@@ -917,16 +917,31 @@ main > :is(#service, #price, #flow, .profile, #faq, #contact) {
 }
 @media (min-width: 761px) {
   .wish-grid {
-    grid-template-rows: max-content 1fr;
-    row-gap: 14px;
+    grid-template-rows: auto auto;
+    row-gap: 26px;
   }
   .wish-photo { grid-area: 1 / 1; }
-  .wish-copy { grid-row: 1 / span 2; }
+  .wish-copy { grid-row: 1; }
+  .wish-copy .voices { margin-bottom: 0; }
   .wish-grid > .end {
-    grid-area: 2 / 1;
-    align-self: start;
+    grid-area: 2 / 1 / 3 / -1;
     text-align: center;
   }
+  .wish-grid > p.end strong { font-weight: 700; }
+}
+@media (min-width: 761px) {
+  #flow .flow-grid { position: relative; }
+  #flow .flow-grid::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: calc(100% - 20px);
+    width: calc((100% - 80px) * .45);
+    height: clamp(102px, 10vw, 140px);
+    background: url("img/flow-calendar-vignette.webp") center / contain no-repeat;
+    pointer-events: none;
+  }
+  #flow .cancel { margin-top: 38px; }
 }
 </style>
 <script type="application/ld+json">
