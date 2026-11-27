@@ -345,24 +345,27 @@ header{position:sticky;top:0;background:rgba(250,247,243,.97);z-index:40;border-
 @media (prefers-reduced-motion: reduce) {
   .wish-photo.is-entering img { animation: none; }
 }
-/* Pastel floral accents above the section labels. */
-main section .en::before {
+/* A small pastel flower and tapered lines finish each section heading. */
+main section .en + h2::after {
   content: "";
   display: block;
-  width: 112px;
-  height: 26px;
-  margin-bottom: 7px;
+  width: 128px;
+  height: 22px;
+  margin-top: 10px;
   background:
-    radial-gradient(circle, #9d7186 0 2px, transparent 2.6px) 9px 9px / 8px 8px,
-    radial-gradient(ellipse at 50% 70%, #caa2b7 0 3px, transparent 4px) 8px 0 / 10px 13px,
-    radial-gradient(ellipse at 30% 50%, #bba5ca 0 3px, transparent 4px) 13px 8px / 12px 10px,
-    radial-gradient(ellipse at 50% 30%, #d0a8b7 0 3px, transparent 4px) 8px 13px / 10px 13px,
-    radial-gradient(ellipse at 70% 50%, #c4adce 0 3px, transparent 4px) 1px 8px / 12px 10px,
-    linear-gradient(90deg, #a98cae, #ba91a4 55%, transparent) 29px 13px / 78px 1px,
-    radial-gradient(ellipse, #e6d9eb 8%, #eedde2 42%, transparent 72%) 6px 2px / 106px 23px;
+    radial-gradient(circle, #a4778b 0 1.8px, transparent 2.4px) 60px 7px / 8px 8px,
+    radial-gradient(ellipse at 50% 65%, #cda5b7 0 3.2px, transparent 4px) 58px 0 / 12px 11px,
+    radial-gradient(ellipse at 35% 50%, #bca7cc 0 3px, transparent 4px) 64px 6px / 13px 10px,
+    radial-gradient(ellipse at 50% 35%, #d6abba 0 3.2px, transparent 4px) 58px 11px / 12px 11px,
+    radial-gradient(ellipse at 65% 50%, #bca7cc 0 3px, transparent 4px) 51px 6px / 13px 10px,
+    linear-gradient(90deg, transparent, #b294b5) 0 10px / 46px 1px,
+    linear-gradient(90deg, #b294b5, transparent) 82px 10px / 46px 1px,
+    radial-gradient(ellipse, #e6d9eb 8%, #eedde2 40%, transparent 72%) center / 110px 22px;
   background-repeat: no-repeat;
 }
-#service .en::before, .price .en::before, .profile .en::before { margin-inline: auto; }
+#service .en + h2::after,
+.price .en + h2::after,
+.profile .en + h2::after { margin-inline: auto; }
 </style>
 <script type="application/ld+json">
 {
