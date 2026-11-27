@@ -289,9 +289,10 @@ header{position:sticky;top:0;background:rgba(250,247,243,.97);z-index:40;border-
         #fff0e1ad max(16px, calc((100vw - 1240px) / 2)),
         #fff0e1eb max(36px, calc((100vw - 1100px) / 2)),
         #fff0e1),
-      url("img/hero-street-left.webp") left center / cover no-repeat;
+      url("img/cafe-street-left.webp") left center / cover no-repeat;
   }
   .hero-lavender .hero-visual { left: 34%; }
+  .hero-lavender .hero-visual img { object-position: center 43%; }
   .hero-lavender .hero-visual::after {
     background: linear-gradient(90deg, #fff0e1 0%, #fff0e1cf 12%, #fff0e138 27%, transparent 43%);
   }
@@ -1014,6 +1015,7 @@ main > :is(#service, #price, #flow, .profile, #faq, #contact) {
 }
 #price-keicho .listening-phone { --price-alternate-row: #dbe6d3; }
 #price-keicho .listening-in-person { --price-alternate-row: #f3d8be; }
+#doko .svc-img img { object-position: center 24%; }
 </style>
 <script type="application/ld+json">
 {
@@ -1326,7 +1328,7 @@ main > :is(#service, #price, #flow, .profile, #faq, #contact) {
     <h1><span>あなたの想いに、</span><span class="handwritten">そっと</span><span>寄り添います。</span></h1>
     <p class="lead">恋も、お出かけも、お買い物も、話したいことも。<br>「ひとりでは、ちょっと…」を、一緒に。</p>
   </div>
-  <figure class="hero-visual"><img src="img/hero-lavender.webp" alt="花のある街並みを並んで歩く二人の女性" width="1500" height="1000" fetchpriority="high"><figcaption class="preview-version" lang="en">Design V2</figcaption></figure>
+  <figure class="hero-visual"><img src="img/cafe-terrace.webp" alt="カフェのテラスでコーヒーや読書を楽しむ女性と男性" width="1500" height="1000" fetchpriority="high"><figcaption class="preview-version"><span lang="en">Design V2</span> · AI生成イメージ</figcaption></figure>
   <div class="hero-actions">
     <div class="btns">
       <a class="btn btn-tel" href="tel:07084632598"><svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg><span>電話で予約・相談する<small>受付 10:00〜22:00</small></span></a>
@@ -1366,7 +1368,7 @@ main > :is(#service, #price, #flow, .profile, #faq, #contact) {
   <div class="svc-list">
 
     <article id="henshin" class="svc s1 big fade">
-      <figure class="svc-img"><img src="img/svc-henshin.webp" alt="洋服や小物を選ぶ変身サポートのイメージ" width="1170" height="780" loading="lazy"></figure>
+      <figure class="svc-img"><img src="img/cafe-style-shopping.webp" alt="明るい洋服店でシャツを選ぶ男性" width="1170" height="780" loading="lazy"></figure>
       <div class="svc-copy">
       <h3>大人の恋愛 変身サポート</h3>
       <p class="catch">大人だって、<br>まだまだ恋を楽しみたい。</p>
@@ -1377,7 +1379,7 @@ main > :is(#service, #price, #flow, .profile, #faq, #contact) {
     <a class="service-price-link" href="#price-henshin"><span>料金を見る（税込）</span><strong>5,000円〜</strong></a></div></article>
 
     <article id="doko" class="svc s2 big fade">
-      <figure class="svc-img"><img src="img/svc-doko.webp" alt="お出かけに寄り添う同行サポートのイメージ" width="1170" height="780" loading="lazy"></figure>
+      <figure class="svc-img"><img src="img/cafe-women-outing.webp" alt="カフェのある通りを笑顔で歩く二人の女性" width="960" height="1200" loading="lazy"></figure>
       <div class="svc-copy">
       <h3>同行サポート<em>女性限定</em></h3>
       <p class="catch">「ひとりでは、ちょっと勇気が<br>いる」場所へ、ご一緒します。</p>
@@ -1388,7 +1390,7 @@ main > :is(#service, #price, #flow, .profile, #faq, #contact) {
     <a class="service-price-link" href="#price-doko"><span>料金を見る（税込）</span><strong>6,000円〜</strong></a></div></article>
 
     <article id="sentei" class="svc s3 fade">
-      <figure class="svc-img"><img src="img/svc-sentei.webp" alt="贈り物やネット商品を選ぶサポートのイメージ" width="1170" height="780" loading="lazy"></figure>
+      <figure class="svc-img"><img src="img/cafe-gift-search.webp" alt="カフェで贈り物を選ぶ男性" width="1170" height="780" loading="lazy"></figure>
       <div class="svc-copy">
       <h3>ネット商品 選定サポート</h3>
       <p class="catch">「人とは少し違う」ひと品を、<br>とことん調べてご提案します。</p>
@@ -1397,7 +1399,7 @@ main > :is(#service, #price, #flow, .profile, #faq, #contact) {
     <a class="service-price-link" href="#price-sentei"><span>料金を見る（税込）</span><strong>2,000円〜</strong></a></div></article>
 
     <article id="keicho" class="svc s4 fade">
-      <figure class="svc-img"><img src="img/svc-keicho.webp" alt="お話をゆっくりうかがう傾聴サポートのイメージ" width="1170" height="780" loading="lazy"></figure>
+      <figure class="svc-img"><img src="img/cafe-listening-call.webp" alt="明るい窓辺で電話の話を聞く女性" width="1170" height="780" loading="lazy"></figure>
       <div class="svc-copy">
       <h3>傾聴サポート（電話・対面）</h3>
       <p class="catch">否定しません。<br>アドバイスもしません。<br><strong class="text-marker">どんなお話も、受け止めます。</strong></p>
