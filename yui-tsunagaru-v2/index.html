@@ -277,6 +277,20 @@ header{position:sticky;top:0;background:rgba(250,247,243,.97);z-index:40;border-
   background: linear-gradient(90deg, #ece4ef 0%, #ece4effa 25%, #ece4efe6 39%, #ece4ef75 53%, transparent 74%);
 }
 @media (min-width: 761px) {
+  .hero-lavender::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 44%;
+    pointer-events: none;
+    background:
+      linear-gradient(90deg,
+        #ece4ef18,
+        #ece4efad max(16px, calc((100vw - 1240px) / 2)),
+        #ece4efeb max(36px, calc((100vw - 1100px) / 2)),
+        #ece4ef),
+      url("img/hero-street-left.webp") left center / cover no-repeat;
+  }
   .hero-lavender .hero-visual { left: 34%; }
   .hero-lavender .hero-visual::after {
     background: linear-gradient(90deg, #ece4ef 0%, #ece4efcf 12%, #ece4ef38 27%, transparent 43%);
