@@ -915,6 +915,19 @@ main > :is(#service, #price, #flow, .profile, #faq, #contact) {
     pointer-events: none;
   }
 }
+@media (min-width: 761px) {
+  .wish-grid {
+    grid-template-rows: max-content 1fr;
+    row-gap: 14px;
+  }
+  .wish-photo { grid-area: 1 / 1; }
+  .wish-copy { grid-row: 1 / span 2; }
+  .wish-grid > .end {
+    grid-area: 2 / 1;
+    align-self: start;
+    text-align: center;
+  }
+}
 </style>
 <script type="application/ld+json">
 {
@@ -1246,8 +1259,9 @@ main > :is(#service, #price, #flow, .profile, #faq, #contact) {
     <li>月に1回でいいから、話を聞いてほしい。</li>
     <li>誰かと繋がっている安心がほしい。</li>
   </ul>
+</div>
   <p class="end">そんな想いを抱えている方に、そっと寄り添いたい。<br>その気持ちから、結-yui-繋がるは始まりました。<strong>ひとときでも、心がふわっと温まる時間を。</strong></p>
-</div></div>
+</div>
 </section>
 
 <!-- ③ サービス -->
