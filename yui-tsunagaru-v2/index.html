@@ -317,16 +317,15 @@ header{position:sticky;top:0;background:rgba(250,247,243,.97);z-index:40;border-
 }
 .wish-grid {
   display: grid;
-  grid-template-columns: 47% 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(24px, 4vw, 56px);
   align-items: center;
 }
 .wish-copy { grid-column: 2; position: relative; }
 .wish-photo {
-  position: absolute;
-  inset: 50% auto auto 0;
-  width: 54%;
+  position: relative;
+  width: 100%;
   margin: 0;
-  transform: translateY(-50%);
   overflow: hidden;
 }
 .wish-photo img {
@@ -341,7 +340,7 @@ header{position:sticky;top:0;background:rgba(250,247,243,.97);z-index:40;border-
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, transparent 64%, var(--wish-background) 99%),
+    linear-gradient(90deg, var(--wish-background), transparent 9%, transparent 76%, var(--wish-background)),
     linear-gradient(180deg, var(--wish-background), transparent 15%, transparent 77%, var(--wish-background));
 }
 .wish-photo.is-entering img { animation: wish-photo-enter 1.15s ease-out both; }
@@ -849,8 +848,8 @@ main > :is(#service, #price, #flow, .profile, #faq, #contact) {
 }
 .prof-img {
   flex: 0 0 auto;
-  width: 52px;
-  height: 52px;
+  width: 64px;
+  height: 64px;
   overflow: hidden;
   border: 1px solid #cdb9c8;
   border-radius: 50%;
@@ -866,6 +865,30 @@ main > :is(#service, #price, #flow, .profile, #faq, #contact) {
 @media (max-width: 760px) {
   .prof-img { width: 44px; height: 44px; }
   .prof .nm { font-size: 22px; }
+}
+@media (min-width: 761px) {
+  .contact {
+    --contact-art-inset: max(28px, calc((100% - 1180px) / 2 + 76px));
+  }
+  .contact .wrap {
+    align-items: start;
+    row-gap: 38px;
+  }
+  .contact-intro .en { min-height: 0; }
+  .contact .info {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+  .contact-portrait {
+    right: var(--contact-art-inset);
+    width: clamp(220px, 30vw, 365px);
+    height: clamp(270px, 31vw, 382px);
+  }
+  .contact::after {
+    right: max(0px, calc(var(--contact-art-inset) - 40px));
+    width: clamp(310px, 43vw, 565px);
+    height: clamp(245px, 29vw, 355px);
+  }
 }
 </style>
 <script type="application/ld+json">
