@@ -695,30 +695,6 @@ body {
   from { opacity: .65; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
 }
-/* A soft living-room vignette sits behind the portrait. */
-.contact::after, .contact-art::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: calc(50% - 58px);
-  width: 415px;
-  height: 234px;
-  z-index: -1;
-  pointer-events: none;
-  background: url("img/contact-living-room.webp") center / cover no-repeat;
-  -webkit-mask-image: radial-gradient(ellipse 61% 67% at 58% 30%, #000 33%, #0009 59%, transparent 89%), linear-gradient(180deg, transparent, #000 13%);
-  mask-image: radial-gradient(ellipse 61% 67% at 58% 30%, #000 33%, #0009 59%, transparent 89%), linear-gradient(180deg, transparent, #000 13%);
-  -webkit-mask-composite: source-in;
-  mask-composite: intersect;
-  opacity: .63;
-}
-@media (max-width: 760px) {
-  .contact::after {
-    right: 0;
-    width: min(78%, 330px);
-    height: clamp(157px, 46vw, 196px);
-  }
-}
 /* Let the portrait bridge the space between FAQ and Contact. */
 .contact-intro .en {
   display: flex;
@@ -731,20 +707,17 @@ body {
   right: calc(50% + 16px);
   z-index: 1;
   width: 245px;
-  height: 246px;
-  object-fit: contain;
-  object-position: right bottom;
-  -webkit-mask-image: linear-gradient(#000 65%, transparent 100%);
-  mask-image: linear-gradient(#000 65%, transparent 100%);
+  height: auto;
+  mask-image: radial-gradient(ellipse 70% 75% at 54% 42%, #000 46%, #000b 62%, transparent 91%), linear-gradient(#000 65%, transparent);
+  mask-composite: intersect;
   pointer-events: none;
 }
 @media (max-width: 760px) {
   .contact-intro .en { min-height: 94px; }
   .contact-portrait {
-    top: -30px;
-    right: 21px;
-    width: clamp(166px, 48vw, 198px);
-    height: clamp(176px, 50vw, 198px);
+    top: -38px;
+    right: 12px;
+    width: clamp(174px, 52vw, 225px);
   }
 }
 /* Pair the FAQ heading with a quiet still life. */
@@ -898,7 +871,7 @@ main > :is(#service, #price, #flow, .profile, #faq, #contact) {
   .prof .nm { font-size: 22px; }
 }
 .contact-art { display: contents; }
-.contact-art::before, .contact-info-art { display: none; }
+.contact-info-art { display: none; }
 @media (min-width: 761px) {
   .contact { padding-bottom: 105px; }
   .contact::before { content: none; }
@@ -936,16 +909,7 @@ main > :is(#service, #price, #flow, .profile, #faq, #contact) {
   .contact-portrait {
     position: relative;
     inset: auto;
-    width: min(100%, 365px);
-    height: clamp(270px, 31vw, 382px);
-    object-position: center bottom;
-  }
-  .contact::after { content: none; }
-  .contact-art::before {
-    display: block;
-    inset: 0;
-    width: auto;
-    height: auto;
+    width: min(100%, 510px);
   }
 }
 @media (min-width: 761px) {
@@ -1568,7 +1532,7 @@ main > :is(#service, #price, #flow, .profile, #faq, #contact) {
     <span class="btn btn-line" aria-disabled="true">公式LINE（準備中）</span>
   </div>
   <p class="contact-links">公式LINEのリンクは準備中です。</p></div>
-  <div class="contact-art"><img class="contact-portrait" src="img/contact-portrait.webp?v=upper-body" alt="" width="480" height="540" loading="lazy"></div>
+  <div class="contact-art"><img class="contact-portrait" src="img/contact-portrait-photo.webp" alt="" width="900" height="720" loading="lazy"></div>
   <div class="contact-info-art" aria-hidden="true"></div>
   <div class="info">
     <dl>
