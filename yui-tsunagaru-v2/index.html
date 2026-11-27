@@ -728,11 +728,11 @@ body {
   pointer-events: none;
 }
 @media (max-width: 760px) {
-  .contact-intro .en { min-height: 94px; }
+  .contact-intro .en { min-height: clamp(116px, 32vw, 142px); }
   .contact-portrait {
-    top: -30px;
+    top: 8px;
     right: 12px;
-    width: clamp(174px, 52vw, 225px);
+    width: clamp(192px, 57vw, 250px);
   }
 }
 /* Pair the FAQ heading with a quiet still life. */
@@ -924,7 +924,7 @@ main > :is(#service, #price, #flow, .profile, #faq, #contact) {
   .contact-portrait {
     position: relative;
     inset: auto;
-    width: min(100%, 540px);
+    width: min(100%, 570px);
   }
 }
 @media (min-width: 761px) {
