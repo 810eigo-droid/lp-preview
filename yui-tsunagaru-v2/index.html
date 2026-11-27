@@ -652,9 +652,12 @@ body {
     position: static;
     display: block;
     height: auto;
-    aspect-ratio: 1000 / 667;
-    margin: 14px -22px 0;
-    background-position: center;
+    width: calc(100% + 44px);
+    max-width: 430px;
+    aspect-ratio: 16 / 9;
+    margin: 4px 0 0 50%;
+    transform: translateX(-50%);
+    background-position: right bottom;
     mask-image: linear-gradient(180deg, transparent, #000 15%);
     -webkit-mask-image: linear-gradient(180deg, transparent, #000 15%);
     opacity: .94;
