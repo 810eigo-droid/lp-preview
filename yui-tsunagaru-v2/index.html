@@ -215,21 +215,28 @@ header{position:sticky;top:0;background:rgba(250,247,243,.97);z-index:40;border-
   gap: 1px;
   max-width: 100%;
   padding: 6px 14px 8px;
-  border: 1px solid #bca8c8;
+  border: 1px solid #516b50;
   border-radius: 6px;
-  background: #f7eff6e8;
-  color: #60456c;
+  background: #405c43;
+  color: #f2ebd8;
   font-family: "Noto Serif JP", "Noto Serif CJK JP", serif;
   font-size: 12px;
   line-height: 1.5;
   letter-spacing: .04em;
 }
 .hero-lavender .tag strong {
-  color: #4e3659;
+  color: #fffaf1;
   font-size: clamp(12px, 1.2vw, 15px);
   letter-spacing: .02em;
 }
 .hero-lavender .tag::before { content: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .hero-lavender .tag { animation: hero-tag-appear .75s ease-out both; }
+}
+@keyframes hero-tag-appear {
+  from { opacity: .35; transform: translateY(7px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 .hero-lavender h1 {
   font-size: clamp(34px, 4.3vw, 64px);
   color: #30283d;
@@ -750,7 +757,7 @@ main h3 {
 </div>
 <div class="wrap hero-in">
   <div class="hero-copy">
-    <p class="tag"><span>大人のための、</span><strong>服選び、お出かけ・お買い物・傾聴サポート</strong></p>
+    <p class="tag"><span>大人のための、服選び、</span><strong>お出かけ・お買い物・傾聴サポート</strong></p>
     <h1><span>あなたの想いに、</span><span class="handwritten">そっと</span><span>寄り添います。</span></h1>
     <p class="lead">恋も、お出かけも、お買い物も、話したいことも。<br>「ひとりでは、ちょっと…」を、一緒に。</p>
   </div>
