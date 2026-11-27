@@ -366,14 +366,21 @@ main section .en + h2::after {
 #service .en + h2::after,
 .price .en + h2::after,
 .profile .en + h2::after { margin-inline: auto; }
+main h3 {
+  width: fit-content;
+  max-width: 100%;
+  padding: 4px 12px;
+  border-radius: 4px;
+  background: #eee4ef;
+}
 #service .svc h3 {
   position: relative;
-  padding-inline-start: 23px;
+  padding-inline-start: 31px;
 }
 #service .svc h3::before {
   content: "";
   position: absolute;
-  inset: .39em auto auto 0;
+  inset: calc(.39em + 4px) auto auto 9px;
   width: 16px;
   height: 16px;
   background:
