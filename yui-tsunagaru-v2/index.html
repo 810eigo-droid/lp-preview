@@ -436,7 +436,7 @@ main h3 {
   footer { padding-bottom: calc(84px + var(--band-height) + env(safe-area-inset-bottom)); }
 }
 /* Each wrapped line gets its own rose-to-lavender marker. */
-.heading-highlight {
+.text-marker {
   padding-inline: .1em;
   border-radius: 3px;
   background: linear-gradient(95deg, #e8c5d5, #dcd0e8) left 87% / 100% .43em no-repeat;
@@ -444,9 +444,9 @@ main h3 {
   box-decoration-break: clone;
 }
 @media (prefers-reduced-motion: no-preference) {
-  .heading-highlight.is-marking { animation: heading-marker .85s ease-out both; }
+  .text-marker.is-marking { animation: text-marker-sweep .85s ease-out both; }
 }
-@keyframes heading-marker {
+@keyframes text-marker-sweep {
   from { background-size: 0 .43em; }
   to { background-size: 100% .43em; }
 }
@@ -501,6 +501,7 @@ body {
   --rose-surface: linear-gradient(145deg, #94536e, #7e445d);
   --lavender-surface: linear-gradient(145deg, #73617e, #5d4d69);
 }
+#service .svc h3 em, #price .pt h3 em { font-weight: 700; }
 </style>
 <script type="application/ld+json">
 {
@@ -825,7 +826,7 @@ body {
 <section class="omoi">
 <div class="wrap wish-grid"><figure class="wish-photo"><img src="img/omoi.webp" alt="やわらかな光が入る、落ち着いた空間" loading="lazy" width="1170" height="780"></figure><div class="wish-copy">
   <span class="en">Our Wish</span>
-  <h2><span class="heading-highlight">「助けて」は、<br>いちばん言いにくい言葉。</span></h2>
+  <h2><span class="text-marker">「助けて」は、<br>いちばん言いにくい言葉。</span></h2>
   <ul class="voices">
     <li>身近な人だから、話せない。</li>
     <li>お祝いしたいのに、忙しくて買いに行けない。</li>
@@ -842,7 +843,7 @@ body {
 <section id="service">
 <div class="wrap">
   <span class="en">Service</span>
-  <h2><span class="heading-highlight">4つのサポート</span></h2>
+  <h2><span class="text-marker">4つのサポート</span></h2>
   <div class="svc-list">
 
     <article id="henshin" class="svc s1 big fade">
@@ -853,7 +854,7 @@ body {
       <p>あなたに合う色やスタイルを一緒に考えながら、新しい気持ちで明日を迎えるお手伝いをします。お洋服や小物選びも、一緒に楽しみましょう。</p>
       <p class="small-label">こんなときに</p>
       <ul class="chips"><li>再婚・婚活を始めたい</li><li>初デート・お見合いの前に</li><li>イメチェンしたい</li><li>服選びに悩んでいる</li><li>好きな人への接し方</li><li>パートナーとマンネリ気味</li></ul>
-      <p class="note">まずはLINEビデオ通話（1時間）から始められます。</p>
+      <p class="note">まずは<strong class="text-marker">LINEビデオ通話（1時間）</strong>から始められます。</p>
     <a class="service-price-link" href="#price-henshin"><span>料金を見る（税込）</span><strong>5,000円〜</strong></a></div></article>
 
     <article id="doko" class="svc s2 big fade">
@@ -873,14 +874,14 @@ body {
       <h3>ネット商品 選定サポート</h3>
       <p class="catch">「人とは少し違う」ひと品を、<br>とことん調べてご提案します。</p>
       <p>冠婚葬祭のお品、お祝い、忙しくて選ぶ時間がないときに。ご家族に知られたくないお荷物（サプライズ・人に言いにくい品など）は、ご指定の場所へお届けします。</p>
-      <p class="note">配送地域：香川県・徳島県・兵庫県南部（そのほかはご相談ください）／配送費は別途</p>
+      <p class="note">配送地域：香川県・徳島県・兵庫県南部（そのほかはご相談ください）／<strong>配送費は別途</strong></p>
     <a class="service-price-link" href="#price-sentei"><span>料金を見る（税込）</span><strong>3,000円〜</strong></a></div></article>
 
     <article id="keicho" class="svc s4 fade">
       <figure class="svc-img"><img src="img/svc-keicho.webp" alt="お話をゆっくりうかがう傾聴サポートのイメージ" width="1170" height="780" loading="lazy"></figure>
       <div class="svc-copy">
       <h3>傾聴サポート（電話・対面）</h3>
-      <p class="catch">否定しません。アドバイスもしません。<br>どんなお話も、受け止めます。</p>
+      <p class="catch">否定しません。アドバイスもしません。<br><strong class="text-marker">どんなお話も、受け止めます。</strong></p>
       <p>人間関係（ママ友・職場・ご近所）、ご夫婦のこと、ただ誰かと繋がっていたいとき。</p>
       <div class="sub2">
         <div><b>電話</b>　ご希望の時間に、こちらからお電話します。人に会うのが苦手な方、対面だと話しづらい方に。</div>
@@ -897,7 +898,7 @@ body {
 <section class="price" id="price">
 <div class="wrap">
   <span class="en">Price</span>
-  <h2><span class="heading-highlight">料金</span><small style="display:block;font-size:14px;color:var(--sub)">すべて税込</small></h2>
+  <h2><span class="text-marker">料金</span><small style="display:block;font-size:14px;color:var(--sub)">すべて税込</small></h2>
   <div class="ptables fade">
     <div class="pt" id="price-henshin"><h3>大人の恋愛 変身サポート</h3><table>
       <tr><th scope="row">LINEビデオ通話</th><td>1時間</td><td>5,000円</td></tr>
@@ -921,8 +922,8 @@ body {
     </div></div>
   </div>
   <ul class="pnote">
-    <li>出張費（往復の有料道路料金・ガソリン代・人件費）は、ご予約のときに総額でお知らせします。</li>
-    <li>お支払いは、事前決済です。お支払い方法は、ご予約のときにご案内します。</li>
+    <li>出張費（往復の有料道路料金・ガソリン代・人件費）は、ご予約のときに<strong class="text-marker">総額でお知らせ</strong>します。</li>
+    <li>お支払いは、<strong class="text-marker">事前決済</strong>です。お支払い方法は、ご予約のときにご案内します。</li>
   </ul>
 </div>
 </section>
@@ -931,11 +932,11 @@ body {
 <section id="flow">
 <div class="wrap">
   <span class="en">Flow</span>
-  <h2><span class="heading-highlight">ご予約からご利用当日までの流れ</span></h2>
+  <h2><span class="text-marker">ご予約からご利用当日までの流れ</span></h2>
   <div class="flow-grid"><ol class="steps fade">
-    <li>お電話または公式LINEでご予約</li>
+    <li><strong>お電話または公式LINEでご予約</strong></li>
     <li>出張費込みの総額を、公式LINEでお知らせ</li>
-    <li>ご了承いただいて、ご予約確定</li>
+    <li>ご了承いただいて、<strong class="text-marker">ご予約確定</strong></li>
     <li>公式LINEでお送りする決済URLからお支払い</li>
     <li>お支払いの確認</li>
     <li>ご利用日の前に、ヒアリング<span>公式LINEまたはお電話で。行きたいお店・ご予算など</span></li>
@@ -944,9 +945,9 @@ body {
   <div class="cancel fade">
     <h3>キャンセル・変更について</h3>
     <ul>
-      <li>前日までのご連絡で、全額返金いたします。</li>
-      <li>当日のキャンセルは、返金いたしかねますのでご了承ください。</li>
-      <li>日時の変更は、ご利用日の3日前までにお電話または公式LINEでご連絡ください。</li>
+      <li>前日までのご連絡で、<strong>全額返金</strong>いたします。</li>
+      <li><strong>当日のキャンセルは、返金いたしかねます</strong>のでご了承ください。</li>
+      <li>日時の変更は、<strong>ご利用日の3日前まで</strong>にお電話または公式LINEでご連絡ください。</li>
       <li>ご連絡なく15分を過ぎても合流できない場合は、キャンセル扱いとなります。</li>
     </ul>
   </div></div>
@@ -957,7 +958,7 @@ body {
 <section class="profile">
 <div class="wrap">
   <span class="en">Greeting</span>
-  <h2><span class="heading-highlight">ごあいさつ</span></h2>
+  <h2><span class="text-marker">ごあいさつ</span></h2>
   <div class="prof fade">
     <div class="prof-img"><img src="img/profile.webp" alt="結-yui-繋がる代表 空 -sora-（お顔をぼかした写真）" width="400" height="500" loading="lazy"></div>
     <div>
@@ -976,9 +977,9 @@ body {
 <section id="faq">
 <div class="wrap">
   <span class="en">Q &amp; A</span>
-  <h2><span class="heading-highlight">よくある質問</span></h2>
+  <h2><span class="text-marker">よくある質問</span></h2>
   <div class="faq fade">
-    <details><summary>秘密は守ってもらえますか？</summary><p>ご相談内容や個人情報は適切に管理し、ご本人の同意なく第三者にお伝えすることはございません。</p></details>
+    <details><summary>秘密は守ってもらえますか？</summary><p>ご相談内容や個人情報は適切に管理し、<strong>ご本人の同意なく第三者にお伝えすることはございません</strong>。</p></details>
     <details><summary>知り合いに見られたくないのですが…</summary><p>待ち合わせの場所や時間は、ご希望に合わせてご相談いただけます。</p></details>
     <details><summary>時間を延長できますか？</summary><p>はい。変身・同行サポートは30分3,000円、傾聴サポートは15分1,000円で延長いただけます。</p></details>
     <details><summary>銀行振込はできますか？</summary><p>お支払い方法は、ご予約のときにご案内いたします。</p></details>
@@ -992,7 +993,7 @@ body {
 <section class="contact" id="contact">
 <div class="wrap"><div>
   <span class="en">Contact</span>
-  <h2><span class="heading-highlight">お電話または公式LINEで、<br>お気軽にどうぞ。</span></h2>
+  <h2><span class="text-marker">お電話または公式LINEで、<br>お気軽にどうぞ。</span></h2>
   <a class="tel-big" href="#contact">070-XXXX-XXXX</a>
   <p class="tel-note">お電話の受付　10:00〜22:00</p>
   <div class="btns">
@@ -1055,11 +1056,11 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
   const markerObserver = new IntersectionObserver((entries) => {
     for (const entry of entries) {
       if (!entry.isIntersecting) continue;
-      entry.target.querySelector('.heading-highlight').classList.add('is-marking');
+      entry.target.classList.add('is-marking');
       markerObserver.unobserve(entry.target);
     }
   }, { threshold: .4 });
-  document.querySelectorAll('main .en + h2').forEach(heading => markerObserver.observe(heading));
+  document.querySelectorAll('main .text-marker').forEach(marker => markerObserver.observe(marker));
 }
 const toggle=document.querySelector('.menu-toggle'),nav=document.querySelector('#site-nav');
 function closeMenu(){nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');}
