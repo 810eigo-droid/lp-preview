@@ -506,6 +506,45 @@ body {
   --lavender-surface: linear-gradient(145deg, #73617e, #5d4d69);
 }
 #service .svc h3 em, #price .pt h3 em { font-weight: 700; }
+/* Match the listening options across their descriptions and pricing. */
+.listening-phone {
+  --listening-bg: linear-gradient(135deg, #f3edf8, #eae0f0);
+  --listening-label: #59466d;
+  --listening-accent: #bba6ce;
+}
+.listening-in-person {
+  --listening-bg: linear-gradient(135deg, #faedf1, #f1dee5);
+  --listening-label: #79455b;
+  --listening-accent: #cea4b5;
+}
+.sub2 .listening-option {
+  padding: 12px 15px;
+  border: 0;
+  border-inline-start: 3px solid var(--listening-accent);
+  border-radius: 4px;
+  background: var(--listening-bg);
+}
+.sub2 .listening-option b,
+#price-keicho .two h4 {
+  display: block;
+  width: fit-content;
+  margin: 0 0 5px;
+  color: var(--listening-label);
+  font-weight: 700;
+}
+#price-keicho .listening-option {
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid #ffffff4d;
+  border-top: 2px solid var(--listening-accent);
+  border-radius: 5px;
+  background: linear-gradient(145deg, #ffffff12, #ffffff04);
+}
+#price-keicho .two h4 {
+  padding: 1px 12px;
+  border-radius: 4px;
+  background: var(--listening-bg);
+}
 </style>
 <script type="application/ld+json">
 {
@@ -886,8 +925,8 @@ body {
       <p class="catch">否定しません。アドバイスもしません。<br><strong class="text-marker">どんなお話も、受け止めます。</strong></p>
       <p>人間関係（ママ友・職場・ご近所）、ご夫婦のこと、ただ誰かと繋がっていたいとき。</p>
       <div class="sub2">
-        <div><b>電話</b>　ご希望の時間に、こちらからお電話します。人に会うのが苦手な方、対面だと話しづらい方に。</div>
-        <div><b>対面</b>　ご希望の場所で、お会いしてお話をうかがいます。</div>
+        <div class="listening-option listening-phone"><b>電話</b>ご希望の時間に、こちらからお電話します。人に会うのが苦手な方、対面だと話しづらい方に。</div>
+        <div class="listening-option listening-in-person"><b>対面</b>ご希望の場所で、お会いしてお話をうかがいます。</div>
       </div>
       <span class="unavailable">ココナラの電話傾聴サービス：リンク準備中</span>
     <a class="service-price-link" href="#price-keicho"><span>料金を見る（税込）</span><strong>3,000円〜</strong></a></div></article>
@@ -919,8 +958,8 @@ body {
       <tr><th scope="row">3商品をご提案</th><td></td><td>5,000円</td></tr>
       <tr><th scope="row">ご希望の場所への配送</th><td></td><td>＋5,000円</td></tr></table></div>
     <div class="pt" id="price-keicho"><h3>傾聴サポート</h3><div class="two">
-      <div><h4>電話</h4><table><tr><th scope="row">30分</th><td></td><td>3,000円</td></tr><tr><th scope="row">60分</th><td></td><td>5,000円</td></tr><tr><th scope="row">90分</th><td></td><td>7,500円</td></tr><tr><th scope="row">120分</th><td></td><td>9,500円</td></tr><tr><th scope="row">延長15分</th><td></td><td>1,000円</td></tr></table></div>
-      <div><h4>対面</h4><table><tr><th scope="row">60分</th><td></td><td>6,000円</td></tr><tr><th scope="row">90分</th><td></td><td>9,000円</td></tr><tr><th scope="row">120分</th><td></td><td>11,000円</td></tr><tr><th scope="row">180分</th><td></td><td>16,000円</td></tr><tr><th scope="row">延長15分</th><td></td><td>1,000円</td></tr></table></div>
+      <div class="listening-option listening-phone"><h4>電話</h4><table aria-label="電話の料金"><tr><th scope="row">30分</th><td></td><td>3,000円</td></tr><tr><th scope="row">60分</th><td></td><td>5,000円</td></tr><tr><th scope="row">90分</th><td></td><td>7,500円</td></tr><tr><th scope="row">120分</th><td></td><td>9,500円</td></tr><tr><th scope="row">延長15分</th><td></td><td>1,000円</td></tr></table></div>
+      <div class="listening-option listening-in-person"><h4>対面</h4><table aria-label="対面の料金"><tr><th scope="row">60分</th><td></td><td>6,000円</td></tr><tr><th scope="row">90分</th><td></td><td>9,000円</td></tr><tr><th scope="row">120分</th><td></td><td>11,000円</td></tr><tr><th scope="row">180分</th><td></td><td>16,000円</td></tr><tr><th scope="row">延長15分</th><td></td><td>1,000円</td></tr></table></div>
     </div></div>
   </div>
   <ul class="pnote">
