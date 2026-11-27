@@ -384,6 +384,31 @@ main section .en + h2::after {
     radial-gradient(ellipse, #bba7cb 0 56%, transparent 73%) left center / 9px 6px;
   background-repeat: no-repeat;
 }
+/* Keep the mobile booking bar to one row, just above the preview notice. */
+.mobile-booking { display: none; }
+@media (max-width: 760px) {
+  .mobile-booking.is-visible {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: fixed;
+    inset: auto 0 var(--band-height) 0;
+    z-index: 35;
+  }
+  .mobile-booking a {
+    display: grid;
+    place-items: center;
+    min-height: 44px;
+    padding: 0 6px;
+    background: #884765;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .mobile-booking a + a { background: #675573; }
+  .mobile-booking a:focus-visible { outline: 2px solid #fff; outline-offset: -4px; }
+  footer { padding-bottom: calc(84px + var(--band-height) + env(safe-area-inset-bottom)); }
+}
 </style>
 <script type="application/ld+json">
 {
@@ -643,7 +668,7 @@ main section .en + h2::after {
 <header>
 <div class="wrap hd">
   <a class="brand" href="#top"><img src="img/logo-temp.png" alt="結-yui-繋がる ロゴ"><span><small>恋する大人のサポート</small><b>結-yui-繋がる</b></span></a>
-  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">メニュー</button><nav id="site-nav" aria-label="メインナビゲーション"><a href="#service">サービス</a><a href="#price">料金</a><a href="#flow">ご予約の流れ</a><a href="#faq">よくある質問</a><a href="#contact">お問い合わせ</a></nav>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span lang="en">Menu</span></button><nav id="site-nav" aria-label="メインナビゲーション"><a href="#service">サービス</a><a href="#price">料金</a><a href="#flow">ご予約の流れ</a><a href="#faq">よくある質問</a><a href="#contact">お問い合わせ</a></nav>
 </div>
 </header>
 
@@ -902,8 +927,21 @@ main section .en + h2::after {
   © 結-yui-繋がる
 </footer>
 
+<div class="mobile-booking" role="group" aria-label="ご予約・ご相談">
+  <a href="#contact">電話で予約</a>
+  <a href="#contact">公式LINE</a>
+</div>
+
+
 
 <div class="taf-mihon-band" style="position:fixed;left:0;right:0;bottom:0;z-index:2147483647;background:rgba(36,55,43,.88);color:#fff;font:700 12px/1.6 sans-serif;padding:7px 12px;text-align:center;pointer-events:none">確認用の見本ページです。完成版は納品時にお渡しします。© TAF Design</div><script>
+const hero = document.querySelector('.hero');
+const bookingBar = document.querySelector('.mobile-booking');
+if ('IntersectionObserver' in window) {
+  new IntersectionObserver(([entry]) => {
+    bookingBar.classList.toggle('is-visible', entry.boundingClientRect.bottom <= 0);
+  }).observe(hero);
+}
 const wishPhoto = document.querySelector('.wish-photo');
 if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
   const wishObserver = new IntersectionObserver(([entry]) => {
