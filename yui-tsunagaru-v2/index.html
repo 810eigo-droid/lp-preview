@@ -211,11 +211,23 @@ header{position:sticky;top:0;background:rgba(250,247,243,.97);z-index:40;border-
 }
 .hero-lavender .hero-copy, .hero-lavender .hero-actions { position: relative; grid-column: 1; z-index: 2; }
 .hero-lavender .tag {
-  padding: 4px 17px;
-  border-radius: 99px;
-  background: #695575;
-  color: #fff;
+  display: inline-grid;
+  gap: 1px;
+  max-width: 100%;
+  padding: 6px 14px 8px;
+  border: 1px solid #bca8c8;
+  border-radius: 6px;
+  background: #f7eff6e8;
+  color: #60456c;
   font-family: "Noto Serif JP", "Noto Serif CJK JP", serif;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: .04em;
+}
+.hero-lavender .tag strong {
+  color: #4e3659;
+  font-size: clamp(12px, 1.2vw, 15px);
+  letter-spacing: .02em;
 }
 .hero-lavender .tag::before { content: none; }
 .hero-lavender h1 {
@@ -416,13 +428,20 @@ main h3 {
   .mobile-booking a:focus-visible { outline: 2px solid #fff; outline-offset: -4px; }
   footer { padding-bottom: calc(84px + var(--band-height) + env(safe-area-inset-bottom)); }
 }
-/* Keep the highlight on each line of the title as it wraps. */
+/* Each wrapped line gets its own rose-to-lavender marker. */
 .heading-highlight {
   padding-inline: .1em;
   border-radius: 3px;
-  background: linear-gradient(transparent 53%, #f4e6b1 53%, #f8edc9 94%, transparent 94%);
+  background: linear-gradient(95deg, #e8c5d5, #dcd0e8) left 87% / 100% .43em no-repeat;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .heading-highlight.is-marking { animation: heading-marker .85s ease-out both; }
+}
+@keyframes heading-marker {
+  from { background-size: 0 .43em; }
+  to { background-size: 100% .43em; }
 }
 @media (max-width: 360px) {
   .omoi h2 { letter-spacing: .01em; }
@@ -685,7 +704,7 @@ main h3 {
 
 <header>
 <div class="wrap hd">
-  <a class="brand" href="#top"><img src="img/logo-temp.png" alt="結-yui-繋がる ロゴ"><span><small>恋する大人のサポート</small><b>結-yui-繋がる</b></span></a>
+  <a class="brand" href="#top"><img src="img/logo-temp.png" alt="結-yui-繋がる ロゴ"><span><small>大人のためのサポート</small><b>結-yui-繋がる</b></span></a>
   <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span lang="en">Menu</span></button><nav id="site-nav" aria-label="メインナビゲーション"><a href="#service">サービス</a><a href="#price">料金</a><a href="#flow">ご予約の流れ</a><a href="#faq">よくある質問</a><a href="#contact">お問い合わせ</a></nav>
 </div>
 </header>
@@ -730,7 +749,7 @@ main h3 {
 </div>
 <div class="wrap hero-in">
   <div class="hero-copy">
-    <span class="tag">恋する大人のサポート</span>
+    <p class="tag"><span>大人のための、</span><strong>服選び、お出かけ・お買い物・傾聴サポート</strong></p>
     <h1><span>あなたの想いに、</span><span class="handwritten">そっと</span><span>寄り添います。</span></h1>
     <p class="lead">恋も、お出かけも、お買い物も、話したいことも。<br>「ひとりでは、ちょっと…」を、一緒に。</p>
   </div>
@@ -968,6 +987,15 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
     wishObserver.disconnect();
   }, { threshold: .12 });
   wishObserver.observe(wishPhoto);
+
+  const markerObserver = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      entry.target.querySelector('.heading-highlight').classList.add('is-marking');
+      markerObserver.unobserve(entry.target);
+    }
+  }, { threshold: .4 });
+  document.querySelectorAll('main .en + h2').forEach(heading => markerObserver.observe(heading));
 }
 const toggle=document.querySelector('.menu-toggle'),nav=document.querySelector('#site-nav');
 function closeMenu(){nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');}
