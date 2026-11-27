@@ -470,7 +470,7 @@ main h3 {
   color: #573646;
 }
 #price .pt:nth-child(even) h3 em { border-color: #aa8294; }
-#price .pt:nth-child(even) :is(h4, caption, td:nth-child(2)) { color: #f0e1e8; }
+#price .pt:nth-child(even) :is(caption, td:nth-child(2)) { color: #f0e1e8; }
 #price .pt:nth-child(even) :is(th, td) { border-bottom-color: #ffffff40; }
 /* Keep the return button clear of the mobile booking bar and preview notice. */
 .back-to-top { display: none; }
@@ -509,12 +509,10 @@ body {
 /* Match the listening options across their descriptions and pricing. */
 .listening-phone {
   --listening-bg: linear-gradient(135deg, #f3edf8, #eae0f0);
-  --listening-label: #59466d;
   --listening-accent: #bba6ce;
 }
 .listening-in-person {
   --listening-bg: linear-gradient(135deg, #faedf1, #f1dee5);
-  --listening-label: #79455b;
   --listening-accent: #cea4b5;
 }
 .sub2 .listening-option {
@@ -529,7 +527,7 @@ body {
   display: block;
   width: fit-content;
   margin: 0 0 5px;
-  color: var(--listening-label);
+  color: #29252b;
   font-weight: 700;
 }
 #price-keicho .listening-option {
