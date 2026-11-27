@@ -666,6 +666,27 @@ body {
   from { opacity: .65; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
 }
+/* Leave a separate top-right space for the contact illustration. */
+.contact-intro { position: relative; }
+.contact-intro .en {
+  display: flex;
+  align-items: flex-end;
+  min-height: 78px;
+}
+.contact-portrait {
+  position: absolute;
+  top: -12px;
+  right: 10px;
+  width: 112px;
+  height: 94px;
+  object-fit: contain;
+  object-position: right bottom;
+  pointer-events: none;
+}
+@media (max-width: 760px) {
+  .contact-intro .en { min-height: 63px; }
+  .contact-portrait { right: 4px; width: 94px; height: 77px; }
+}
 </style>
 <script type="application/ld+json">
 {
@@ -1153,7 +1174,8 @@ body {
 
 <!-- ⑦ お問い合わせ -->
 <section class="contact" id="contact">
-<div class="wrap"><div>
+<div class="wrap"><div class="contact-intro">
+  <img class="contact-portrait" src="img/contact-portrait.webp" alt="" width="320" height="320" loading="lazy">
   <span class="en">Contact</span>
   <h2><span class="text-marker">お電話または公式LINE<br>で、お気軽にどうぞ。</span></h2>
   <a class="tel-big" href="#contact">070-XXXX-XXXX</a>
