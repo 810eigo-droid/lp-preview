@@ -453,7 +453,20 @@ main h3 {
 @media (max-width: 360px) {
   .omoi h2 { letter-spacing: .01em; }
 }
-#price .pt tbody tr:nth-child(even) { background-color: #f5edf5; }
+#price .pt tbody tr:nth-child(even) { background-color: var(--price-alternate-row, #f5edf5); }
+#price .pt:nth-child(even) {
+  --price-alternate-row: #425b47;
+  background-color: #354c3a;
+  border-top-color: #b5c4a5;
+  color: #fffaf1;
+}
+#price .pt:nth-child(even) h3 {
+  background-color: #e6eddf;
+  color: #324b37;
+}
+#price .pt:nth-child(even) h3 em { border-color: #7a8c72; }
+#price .pt:nth-child(even) :is(h4, caption, td:nth-child(2)) { color: #e5e9dc; }
+#price .pt:nth-child(even) :is(th, td) { border-bottom-color: #6d8069; }
 </style>
 <script type="application/ld+json">
 {
