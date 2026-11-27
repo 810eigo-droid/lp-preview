@@ -448,7 +448,7 @@ main h3 {
   box-decoration-break: clone;
 }
 @media (prefers-reduced-motion: no-preference) {
-  .text-marker.is-marking { animation: text-marker-sweep .85s ease-out both; }
+  .text-marker.is-entering { animation: text-marker-sweep .85s ease-out both; }
 }
 @keyframes text-marker-sweep {
   from { background-size: 0 .43em; }
@@ -648,6 +648,23 @@ body {
 @media (max-width: 360px) {
   .contact h2 { letter-spacing: 0; }
   .contact h2 .text-marker { padding-inline: .04em; }
+}
+/* Let photographs and booking actions enter once without shifting layout. */
+@media (prefers-reduced-motion: no-preference) {
+  :is(#service .svc-img, .profile .prof-img).is-entering img {
+    animation: photo-entrance .9s ease-out;
+  }
+  :is(.hero-actions, #contact) .btns.is-entering {
+    animation: booking-entrance .62s ease-out;
+  }
+}
+@keyframes photo-entrance {
+  from { opacity: .55; transform: scale(1.045); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes booking-entrance {
+  from { opacity: .65; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 </style>
 <script type="application/ld+json">
@@ -1198,14 +1215,17 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
   }, { threshold: .12 });
   wishObserver.observe(wishPhoto);
 
-  const markerObserver = new IntersectionObserver((entries) => {
+  const entranceObserver = new IntersectionObserver((entries) => {
     for (const entry of entries) {
       if (!entry.isIntersecting) continue;
-      entry.target.classList.add('is-marking');
-      markerObserver.unobserve(entry.target);
+      entry.target.classList.add('is-entering');
+      entranceObserver.unobserve(entry.target);
     }
   }, { threshold: .4 });
-  document.querySelectorAll('main .text-marker').forEach(marker => markerObserver.observe(marker));
+  const animatedItems = document.querySelectorAll(
+    'main .text-marker, #service .svc-img, .profile .prof-img, .hero-actions .btns, #contact .btns'
+  );
+  animatedItems.forEach(item => entranceObserver.observe(item));
 }
 const toggle=document.querySelector('.menu-toggle'),nav=document.querySelector('#site-nav');
 function closeMenu(){nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');}
