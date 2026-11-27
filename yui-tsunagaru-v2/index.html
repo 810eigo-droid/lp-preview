@@ -750,6 +750,27 @@ body {
 @media (max-width: 760px) {
   .business-name-break { display: inline; }
 }
+/* Shape the transitions without adding height to the sections. */
+main > :is(#service, #price, #flow, .profile, #faq, #contact) {
+  position: relative;
+}
+.section-divider {
+  position: absolute;
+  inset: 0 0 auto;
+  height: clamp(22px, 3.2vw, 42px);
+  pointer-events: none;
+  background: linear-gradient(180deg, var(--divider-from, var(--bg)), var(--divider-tint, #e8dce9));
+}
+.section-divider--curve { clip-path: ellipse(71% 100% at 40% 0); }
+.section-divider--point {
+  clip-path: polygon(0 0, 100% 0, 100% 28%, 54% 28%, 50% 100%, 46% 28%, 0 28%);
+}
+#service { --divider-from: #fbf6f1; }
+#price { --divider-tint: #d9c4d7; }
+#flow { --divider-from: var(--bg2); --divider-tint: #e5d2dc; }
+.profile { --divider-tint: #eaddd9; }
+#faq { --divider-from: var(--card); --divider-tint: #ded0e5; }
+#contact { --divider-tint: #e4d3e6; }
 </style>
 <script type="application/ld+json">
 {
@@ -1087,6 +1108,7 @@ body {
 
 <!-- ③ サービス -->
 <section id="service">
+<div class="section-divider section-divider--curve" aria-hidden="true"></div>
 <div class="wrap">
   <span class="en">Service</span>
   <h2><span class="text-marker">4つのサポート</span></h2>
@@ -1142,6 +1164,7 @@ body {
 
 <!-- ④ 料金 -->
 <section class="price" id="price">
+<div class="section-divider section-divider--point" aria-hidden="true"></div>
 <div class="wrap">
   <span class="en">Price</span>
   <h2><span class="text-marker">料金</span><small style="display:block;font-size:14px;color:var(--sub)">すべて税込</small></h2>
@@ -1176,6 +1199,7 @@ body {
 
 <!-- ⑤ ご予約の流れ -->
 <section id="flow">
+<div class="section-divider section-divider--curve" aria-hidden="true"></div>
 <div class="wrap">
   <span class="en">Flow</span>
   <h2><span class="text-marker">ご予約からご利用当日までの流れ</span></h2>
@@ -1202,6 +1226,7 @@ body {
 
 <!-- ⑥ ごあいさつ -->
 <section class="profile">
+<div class="section-divider section-divider--curve" aria-hidden="true"></div>
 <div class="wrap">
   <span class="en">Greeting</span>
   <h2><span class="text-marker">ごあいさつ</span></h2>
@@ -1221,6 +1246,7 @@ body {
 
 <!-- ⑥ よくある質問 -->
 <section id="faq">
+<div class="section-divider section-divider--point" aria-hidden="true"></div>
 <div class="wrap">
   <img class="faq-illustration" src="img/faq-plant-notebook.webp" alt="" width="420" height="330" loading="lazy">
   <span class="en">Q &amp; A</span>
@@ -1238,6 +1264,7 @@ body {
 
 <!-- ⑦ お問い合わせ -->
 <section class="contact" id="contact">
+<div class="section-divider section-divider--curve" aria-hidden="true"></div>
 <img class="contact-portrait" src="img/contact-portrait.webp?v=upper-body" alt="" width="480" height="540" loading="lazy">
 <div class="wrap"><div class="contact-intro">
   <span class="en">Contact</span>
