@@ -904,6 +904,17 @@ main > :is(#service, #price, #flow, .profile, #faq, #contact) {
     height: clamp(245px, 29vw, 355px);
   }
 }
+@media (min-width: 761px) {
+  #sentei .svc-copy::after {
+    content: "";
+    display: block;
+    width: min(92%, 440px);
+    height: clamp(112px, 13vw, 190px);
+    margin-top: 18px;
+    background: url("img/sentei-gift-vignette.webp") left center / contain no-repeat;
+    pointer-events: none;
+  }
+}
 </style>
 <script type="application/ld+json">
 {
