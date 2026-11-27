@@ -217,7 +217,7 @@ header{position:sticky;top:0;background:rgba(250,247,243,.97);z-index:40;border-
   padding: 6px 14px 8px;
   border: 1px solid #516b50;
   border-radius: 6px;
-  background: #405c43;
+  background: var(--sage-surface);
   color: #f2ebd8;
   font-family: "Noto Serif JP", "Noto Serif CJK JP", serif;
   font-size: 12px;
@@ -265,8 +265,8 @@ header{position:sticky;top:0;background:rgba(250,247,243,.97);z-index:40;border-
 }
 .hero-lavender .lead, .hero-lavender .hero-area { color: #48394f; }
 .hero-lavender .lead { margin: 0; }
-.hero-lavender .btn-tel { background: #884765; }
-.hero-lavender .btn-line { background: #675573; color: white; border-color: #675573; }
+.hero-lavender .btn-tel { background: var(--rose-surface); }
+.hero-lavender .btn-line { background: var(--lavender-surface); color: white; border-color: #675573; }
 .hero-lavender .btn-line:hover { background: #52425e; }
 .hero-lavender .hero-visual { position: absolute; inset: 0; border: 0; border-radius: 0; box-shadow: none; }
 .hero-lavender .hero-visual img { width: 100%; height: 100%; object-position: center 62%; }
@@ -298,7 +298,7 @@ header{position:sticky;top:0;background:rgba(250,247,243,.97);z-index:40;border-
   .hero-lavender .hero-actions {
     margin-top: -14px;
     padding: 18px 24px 15px;
-    background: #fff9f3;
+    background: linear-gradient(165deg, #fffaf3, #f8eff2);
     border-radius: 50% 50% 0 0 / 14px 14px 0 0;
     text-align: center;
   }
@@ -390,7 +390,7 @@ main h3 {
   max-width: 100%;
   padding: 4px 12px;
   border-radius: 4px;
-  background: #eee4ef;
+  background: linear-gradient(115deg, #f1e9f1, #ebe0ed);
 }
 #service .svc h3 {
   position: relative;
@@ -425,13 +425,13 @@ main h3 {
     place-items: center;
     min-height: 44px;
     padding: 0 6px;
-    background: #884765;
+    background: var(--rose-surface);
     color: #fff;
     font-size: 13px;
     font-weight: 700;
     text-decoration: none;
   }
-  .mobile-booking a + a { background: #675573; }
+  .mobile-booking a + a { background: var(--lavender-surface); }
   .mobile-booking a:focus-visible { outline: 2px solid #fff; outline-offset: -4px; }
   footer { padding-bottom: calc(84px + var(--band-height) + env(safe-area-inset-bottom)); }
 }
@@ -454,19 +454,20 @@ main h3 {
   .omoi h2 { letter-spacing: .01em; }
 }
 #price .pt tbody tr:nth-child(even) { background-color: var(--price-alternate-row, #f5edf5); }
+#price .pt:nth-child(odd) { background: linear-gradient(145deg, #fffdf9, #faf4f7); }
 #price .pt:nth-child(even) {
-  --price-alternate-row: #425b47;
-  background-color: #354c3a;
-  border-top-color: #b5c4a5;
-  color: #fffaf1;
+  --price-alternate-row: #fff1f715;
+  background: linear-gradient(145deg, #71424f, #603b4c 55%, #503747);
+  border-top-color: #ba8b9d;
+  color: #fff9f5;
 }
 #price .pt:nth-child(even) h3 {
-  background-color: #e6eddf;
-  color: #324b37;
+  background: linear-gradient(115deg, #f4e3e9, #eaddea);
+  color: #573646;
 }
-#price .pt:nth-child(even) h3 em { border-color: #7a8c72; }
-#price .pt:nth-child(even) :is(h4, caption, td:nth-child(2)) { color: #e5e9dc; }
-#price .pt:nth-child(even) :is(th, td) { border-bottom-color: #6d8069; }
+#price .pt:nth-child(even) h3 em { border-color: #aa8294; }
+#price .pt:nth-child(even) :is(h4, caption, td:nth-child(2)) { color: #f0e1e8; }
+#price .pt:nth-child(even) :is(th, td) { border-bottom-color: #ffffff40; }
 /* Keep the return button clear of the mobile booking bar and preview notice. */
 .back-to-top { display: none; }
 .back-to-top.is-visible {
@@ -481,7 +482,7 @@ main h3 {
   padding: 0;
   border: 1px solid #e5dfd2;
   border-radius: 50%;
-  background: #405c43;
+  background: var(--sage-surface);
   color: #fffaf1;
   font: 22px/1 system-ui, sans-serif;
   box-shadow: 0 2px 8px #26392b36;
@@ -494,6 +495,11 @@ main h3 {
     right: 14px;
     bottom: calc(var(--band-height) + 54px);
   }
+}
+body {
+  --sage-surface: linear-gradient(145deg, #4c664d, #3b553f);
+  --rose-surface: linear-gradient(145deg, #94536e, #7e445d);
+  --lavender-surface: linear-gradient(145deg, #73617e, #5d4d69);
 }
 </style>
 <script type="application/ld+json">
