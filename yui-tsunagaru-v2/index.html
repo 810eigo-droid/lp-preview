@@ -416,6 +416,14 @@ main h3 {
   .mobile-booking a:focus-visible { outline: 2px solid #fff; outline-offset: -4px; }
   footer { padding-bottom: calc(84px + var(--band-height) + env(safe-area-inset-bottom)); }
 }
+/* Keep the highlight on each line of the title as it wraps. */
+.heading-highlight {
+  padding-inline: .1em;
+  border-radius: 3px;
+  background: linear-gradient(transparent 53%, #f4e6b1 53%, #f8edc9 94%, transparent 94%);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
 </style>
 <script type="application/ld+json">
 {
@@ -740,7 +748,7 @@ main h3 {
 <section class="omoi">
 <div class="wrap wish-grid"><figure class="wish-photo"><img src="img/omoi.webp" alt="やわらかな光が入る、落ち着いた空間" loading="lazy" width="1170" height="780"></figure><div class="wish-copy">
   <span class="en">Our Wish</span>
-  <h2>「助けて」は、<br>いちばん言いにくい言葉。</h2>
+  <h2><span class="heading-highlight">「助けて」は、<br>いちばん言いにくい言葉。</span></h2>
   <ul class="voices">
     <li>身近な人だから、話せない。</li>
     <li>お祝いしたいのに、忙しくて買いに行けない。</li>
@@ -757,7 +765,7 @@ main h3 {
 <section id="service">
 <div class="wrap">
   <span class="en">Service</span>
-  <h2>4つのサポート</h2>
+  <h2><span class="heading-highlight">4つのサポート</span></h2>
   <div class="svc-list">
 
     <article id="henshin" class="svc s1 big fade">
@@ -812,7 +820,7 @@ main h3 {
 <section class="price" id="price">
 <div class="wrap">
   <span class="en">Price</span>
-  <h2>料金<small style="display:block;font-size:14px;color:var(--sub)">すべて税込</small></h2>
+  <h2><span class="heading-highlight">料金</span><small style="display:block;font-size:14px;color:var(--sub)">すべて税込</small></h2>
   <div class="ptables fade">
     <div class="pt" id="price-henshin"><h3>大人の恋愛 変身サポート</h3><table>
       <tr><th scope="row">LINEビデオ通話</th><td>1時間</td><td>5,000円</td></tr>
@@ -846,7 +854,7 @@ main h3 {
 <section id="flow">
 <div class="wrap">
   <span class="en">Flow</span>
-  <h2>ご予約からご利用当日までの流れ</h2>
+  <h2><span class="heading-highlight">ご予約からご利用当日までの流れ</span></h2>
   <div class="flow-grid"><ol class="steps fade">
     <li>お電話または公式LINEでご予約</li>
     <li>出張費込みの総額を、公式LINEでお知らせ</li>
@@ -872,7 +880,7 @@ main h3 {
 <section class="profile">
 <div class="wrap">
   <span class="en">Greeting</span>
-  <h2>ごあいさつ</h2>
+  <h2><span class="heading-highlight">ごあいさつ</span></h2>
   <div class="prof fade">
     <div class="prof-img"><img src="img/profile.webp" alt="結-yui-繋がる代表 空 -sora-（お顔をぼかした写真）" width="400" height="500" loading="lazy"></div>
     <div>
@@ -891,7 +899,7 @@ main h3 {
 <section id="faq">
 <div class="wrap">
   <span class="en">Q &amp; A</span>
-  <h2>よくある質問</h2>
+  <h2><span class="heading-highlight">よくある質問</span></h2>
   <div class="faq fade">
     <details><summary>秘密は守ってもらえますか？</summary><p>ご相談内容や個人情報は適切に管理し、ご本人の同意なく第三者にお伝えすることはございません。</p></details>
     <details><summary>知り合いに見られたくないのですが…</summary><p>待ち合わせの場所や時間は、ご希望に合わせてご相談いただけます。</p></details>
@@ -907,7 +915,7 @@ main h3 {
 <section class="contact" id="contact">
 <div class="wrap"><div>
   <span class="en">Contact</span>
-  <h2>お電話または公式LINEで、<br>お気軽にどうぞ。</h2>
+  <h2><span class="heading-highlight">お電話または公式LINEで、<br>お気軽にどうぞ。</span></h2>
   <a class="tel-big" href="#contact">070-XXXX-XXXX</a>
   <p class="tel-note">お電話の受付　10:00〜22:00</p>
   <div class="btns">
