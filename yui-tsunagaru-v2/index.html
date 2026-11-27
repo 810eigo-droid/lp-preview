@@ -345,6 +345,23 @@ header{position:sticky;top:0;background:rgba(250,247,243,.97);z-index:40;border-
 @media (prefers-reduced-motion: reduce) {
   .wish-photo.is-entering img { animation: none; }
 }
+/* Pastel floral accents above the section labels. */
+main section .en::before {
+  content: "";
+  display: block;
+  width: 112px;
+  height: 26px;
+  margin-bottom: 7px;
+  background:
+    radial-gradient(circle, #9d7186 0 2px, transparent 2.6px) 9px 9px / 8px 8px,
+    radial-gradient(ellipse at 50% 70%, #caa2b7 0 3px, transparent 4px) 8px 0 / 10px 13px,
+    radial-gradient(ellipse at 30% 50%, #bba5ca 0 3px, transparent 4px) 13px 8px / 12px 10px,
+    radial-gradient(ellipse at 50% 30%, #d0a8b7 0 3px, transparent 4px) 8px 13px / 10px 13px,
+    radial-gradient(ellipse at 70% 50%, #c4adce 0 3px, transparent 4px) 1px 8px / 12px 10px,
+    linear-gradient(90deg, #a98cae, #ba91a4 55%, transparent) 29px 13px / 78px 1px,
+    radial-gradient(ellipse, #e6d9eb 8%, #eedde2 42%, transparent 72%) 6px 2px / 106px 23px;
+  background-repeat: no-repeat;
+}
 </style>
 <script type="application/ld+json">
 {
