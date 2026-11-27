@@ -695,7 +695,7 @@ body {
   from { opacity: .65; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
 }
-/* Let the portrait bridge the space between FAQ and Contact. */
+/* Keep the room visible around the portrait and blend the edges into Contact. */
 .contact-intro .en {
   display: flex;
   align-items: flex-end;
@@ -708,14 +708,15 @@ body {
   z-index: 1;
   width: 245px;
   height: auto;
-  mask-image: radial-gradient(ellipse 70% 75% at 54% 42%, #000 46%, #000b 62%, transparent 91%), linear-gradient(#000 65%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 13%, #000 87%, transparent),
+    linear-gradient(180deg, transparent, #000 9%, #000 87%, transparent);
   mask-composite: intersect;
   pointer-events: none;
 }
 @media (max-width: 760px) {
   .contact-intro .en { min-height: 94px; }
   .contact-portrait {
-    top: -38px;
+    top: -30px;
     right: 12px;
     width: clamp(174px, 52vw, 225px);
   }
@@ -909,7 +910,7 @@ main > :is(#service, #price, #flow, .profile, #faq, #contact) {
   .contact-portrait {
     position: relative;
     inset: auto;
-    width: min(100%, 510px);
+    width: min(100%, 540px);
   }
 }
 @media (min-width: 761px) {
